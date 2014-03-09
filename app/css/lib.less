@@ -1,0 +1,57 @@
+// Var
+@imgPath: 'http://episodehunter.tv/img/';
+@darkGray: #333;
+@gray: #4f4f4f;
+@lightGray: #CCC;
+@green: #03A37E;
+@background: #FDFDFD;
+@bordergray: #D8D8D8;
+@font: 'Lato', sans-serif;
+@headline: 'Lato', sans-serif;
+
+// Functions
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.box-shadow (@x: 0, @y: 0, @blur: 0, @color: #fff) {
+  -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+
+.text-shadow (@x: 1px, @y: -1px, @blur: 0, @color: #fff) {
+  text-shadow: @arguments;
+}
+
+.ease-transition (@s: 0.5s) {
+  -webkit-transition: all @s ease-out;
+     -moz-transition: all @s ease-out;
+      -ms-transition: all @s ease-out;
+       -o-transition: all @s ease-out;
+          transition: all @s ease-out;
+}
+
+.transform (@t) {
+  -webkit-transform: @t;
+     -moz-transform: @t;
+      -ms-transform: @t;
+       -o-transform: @t;
+          transform: @t;
+}
+
+.background-size (@type: cover) {
+  -webkit-background-size: @type;
+     -moz-background-size: @type;
+       -o-background-size: @type;
+          background-size: @type;
+}
+
+.blur (@f: 10px) {
+  -webkit-filter: blur(@f);
+     -moz-filter: blur(@f);
+       -o-filter: blur(@f);
+          filter: blur(@f);
+}

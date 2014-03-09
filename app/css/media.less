@@ -1,0 +1,403 @@
+// Import
+@import "lib.less";
+
+.episode-wrapper {
+  padding-top: 60px !important;
+}
+
+ul.watched_list {
+    margin-top: 10px;
+    display: none;
+
+    li {
+        font-size: 14px;
+        color: @green;
+        margin-bottom: 3px;
+
+        span {
+            color: red;
+            cursor: pointer;
+        }
+    }
+}
+
+button.media {
+    margin-top: 10px;
+    -webkit-appearance: none;
+    border: none;
+    display: inline-block;
+    background: @darkGray;
+    text-shadow: 1px -1px 0 rgba(0, 0, 0, .4);
+    .border-radius(5px);
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    .ease-transition(1s);
+
+    &:hover {
+        background: @green;
+    }
+}
+
+.episode-button-list {
+    margin: -15px 0 -10px 0;
+}
+
+#fanart {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    .background-size(cover);
+    height: 700px;
+    min-width: 960px;
+    border-bottom-width: 5px solid #999;
+}
+
+#summary {
+    background: rgba(58, 58, 58, 0.8);
+    min-height: 200px;
+    width: 100%;
+    margin-top: -60px;
+}
+
+#summary-poster {
+    margin-top: -20px;
+    position: absolute;
+    height: 203px;
+    width: 138px;
+}
+
+#summary-info {
+    margin: 5px 0 20px 160px;
+    position: relative;
+
+    p {
+        color: #e4e4e4;
+        font-size: 15px;
+        line-height: 20px;
+        overflow: hidden;
+        &.collapse {
+            height: 100px;
+            cursor: pointer;
+        }
+    }
+    h1 {
+        font-size: 35px;
+        margin-top: 10px;
+        padding-bottom: 12px;
+        color: @lightGray;
+        border-bottom: initial;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 900px;
+    overflow: hidden;
+}
+
+/*#see-nav {
+    float: left;
+    display: block;
+    width: 500px;
+    height: 118px;
+
+    ul {
+        list-style: none;
+
+        li {
+            list-style: none;
+            float: left;
+            margin: 10px;
+            padding: 3px;
+            background-color: #3E3E3E;
+        }
+    }
+
+    a {
+        font-size: 12px;
+        color: #E3E3E3;
+        display: block;
+        letter-spacing: -0.08px;
+        padding: 5px 5px 5px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+            color: #0a735b;
+        }
+    }
+}*/
+
+.media-info {
+    margin: 20px 45px 0 0;
+    width: 270px;
+    float: left;
+
+    span {
+        font-size: 14px;
+        color: @green;
+    }
+
+}
+
+/*#quick-info, #progress-info, #episode-info,  {
+    margin: 20px 30px 0 0;
+    width: 270px;
+    float: left;
+}*/
+
+/*#quick-info span {
+    font-size: 14px;
+    color: #0a735b;
+}*/
+
+/*#episode-info span.airs, #progress-info span {
+    font-size: 12px;
+    color: #0a735b;
+}*/
+
+#info-content {
+    background: rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+    .box-shadow(0, 0, 10px, #B4B4B4)
+}
+
+
+// eg. history
+.episode-list-img {
+    float: left;
+    margin: 0 6px 30px 0;
+    position: relative;
+    width: 218px;
+    height: 175px;
+    padding: 1px 0 0 1px;
+
+    span {
+        color: #fff;
+        display: block;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        background: @darkGray;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 2px 5px 2px 5px;
+        -webkit-border-top-left-radius: 5px;
+        -moz-border-radius-top-left: 5px;
+        border-top-left-radius: 5px;
+
+        &.clock {
+            top: 1px;
+            left: 1px;
+        }
+    }
+
+    img {
+        .border-radius(2px);
+        .box-shadow(0, 0, 2px, #111);
+        height: 123px;
+        max-width: 216px;
+
+        &.episode-list-no-img {
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            -moz-box-shadow: 0 0 0 #111;
+            -webkit-box-shadow: 0 0 0 #111;
+            box-shadow: 0 0 0 #111;
+            height: 123px;
+        }
+    }
+
+    p {
+        size: 13px;
+        white-space: nowrap;
+        width: 200px;
+        text-decoration: none;
+        overflow: hidden;
+        color: @darkGray;
+        font-size: 14px;
+        line-height: normal;
+    }
+}
+
+// show
+.episode-info-img {
+    float: left;
+    margin: 0 7px 30px 0;
+    position: relative;
+    width: 218px;
+    height: 123px;
+
+    span {
+        color: #fff;
+        display: block;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        background: @darkGray;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 2px 5px 2px 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottom-left: 5px;
+        border-bottom-left-radius: 5px;
+
+        &.watched {
+            bottom: 0;
+        }
+    }
+
+    img {
+        .border-radius(2px);
+        .box-shadow(0, 0, 2px, #111);
+        height: 123px;
+        max-width: 219px;
+
+        &.episode-info-no-img {
+            .border-radius(0);
+            .box-shadow(0, 0, 0, #111);
+            height: 123px;
+        }
+    }
+}
+
+// Is uesed in the episode list
+.episode-info {
+    float: left;
+    min-width: 650px;
+    padding-left: 10px;
+
+    span.date {
+        font-size: 12px;
+    }
+
+    p {
+        padding-top: 10px;
+        line-height: 20px;
+    }
+}
+
+// eg. show
+.singel-episode-img {
+    margin: 5px 0 5px 0;
+    position: relative;
+    width: 218px;
+    height: 123px;
+
+    span {
+        color: #fff;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        background: @darkGray;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 2px 5px 2px 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottom-left: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    img {
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        -moz-box-shadow: 0 0 2px #111;
+        -webkit-box-shadow: 0 0 2px #111;
+        box-shadow: 0 0 2px #111;
+        height: 123px;
+    }
+}
+
+.highlightepiosde {
+  background-color: wheat;
+  .ease-transition(1s);
+}
+
+// Youtube
+iframe {
+    width: 100%;
+}
+
+// Rating
+.rating-holder {
+  font-size: 28px;
+  line-height: initial;
+  font-weight: 300;
+  color: @green;
+  margin-right: 13px;
+  padding-bottom: 5px;
+
+  span {
+    font-size: 14px;
+    color: #000;
+    font-style: italic;
+  }
+
+  .rating-bar-holder {
+    width: 70%;
+    height: 20px;
+    border: 1px solid #7E7E7E;
+    float: left;
+    margin-top: 3px;
+    position: relative;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+  }
+
+  .rating-bar-content {
+    height: 100%;
+    background-color: #03a37e;
+  }
+
+  .text-holder {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  #user-vote {
+    float: left;
+    font-size: 24px;
+    margin-left: 50px;
+  }
+}
+
+.bar-rating {
+  height: 34px;
+  display: none;
+  position: absolute;
+  padding: 30px 0 0 70px;
+
+  a {
+    display: block;
+    width: 52px;
+    height: 24px;
+    float: left;
+    background-color: @green;
+    margin: 1px;
+    text-align: center;
+    opacity: 0.3;
+
+    &.active, &.selected {
+      opacity: 1;
+    }
+
+    span {
+      color: #ffffff;
+      font-size: 14px;
+      position: absolute;
+      margin: 3px 0px 0px -3px;
+    }
+  }
+}
+

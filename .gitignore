@@ -1,0 +1,12 @@
+.DS_Store
+
+/node_modules
+/node_modules
+/vendor/js/angular
+/vendor/js/angular-route
+/vendor/js/jquery
+
+/dist
+/generated
+
+.sass-cache
