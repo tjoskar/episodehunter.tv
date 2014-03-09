@@ -43,19 +43,24 @@ angular.module("EHW").factory('upcomingRepositories', function($http) {
     if (TBA.getEpisodes().length > 0) {
       $scope.episodeCollections.push(TBA);
     }
+
+    $scope.loading_complete = true;
   };
 
   upcomingRepositories.updateList = function($scope) {
+    EH.ajaxStart();
     $http.post(EH.url.api+'tv/upcoming', {
       'username': 'tjoskar',
       'apikey': 'something'
     }).success(function(episodes) {
+      EH.ajaxStop();
       if (EH.isset(episodes.value)) {
         populateCollection(episodes.value, $scope);
       } else {
         console.log('Can not connect to the server, try again later');
       }
     }).error(function() {
+      EH.ajaxStop();
       console.log('Can not connect to the server, try again later 2');
     });
   };

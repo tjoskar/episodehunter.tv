@@ -21,6 +21,7 @@ EH.url = {
 
 EH.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 EH.month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+EH.monthShortName = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 EH.isString = function(str) {
   return (typeof str === 'string' || str instanceof String);
@@ -53,6 +54,27 @@ EH.jsonParse = function(obj) {
   return obj;
 };
 
+EH.ajaxStart = function() {
+  var $loader = $('.loader');
+  $loader.fadeIn("fast");
+  $loader.animate({
+    width: "80%",
+  }, 800 );
+};
+
+EH.ajaxStop = function() {
+  var $loader = $('.loader');
+  $loader.animate({
+    width: "100%",
+  }, 200 );
+
+  setTimeout(function(){
+    $loader.fadeOut("slow", function() {
+      $loader.css({'width': '0%'});
+    });
+  }, 200);
+};
+
 EH.convertUTCDateToLocalDate = function(unixtimestamp) {
   var utcDate = new Date(unixtimestamp * 1000);
 
@@ -77,21 +99,4 @@ EH.getFutureDate = function(n) {
     (month < 10 ? '0' + month : month),
     (d.getDate() < 10 ? '0' + d.getDate() : d.getDate())
   ].join('-');
-};
-
-EH.ajaxStart = function() {
-  var $statusbar = $('#iosstatusbar');
-  $statusbar.css({
-    width: '0%'
-  });
-
-  $statusbar.animate({
-    width: '80%',
-  }, 800 );
-};
-
-EH.ajaxStop = function() {
-  $('#iosstatusbar').animate({
-    width: '100%',
-  }, 200 );
 };

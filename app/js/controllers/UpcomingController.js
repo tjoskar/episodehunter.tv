@@ -1,5 +1,7 @@
 angular.module("EHW").controller('UpcomingController', function($scope, upcomingRepositories) {
 
-  upcomingRepositories.populate($scope);
+    $scope.loading_complete = false;
+
+    upcomingRepositories.populate($scope);
 
 });
