@@ -3,6 +3,7 @@
 /node_modules
 /vendor/js/angular
 /vendor/js/angular-route
+/vendor/js/angular-mocks
 /vendor/js/jquery
 
 /dist
