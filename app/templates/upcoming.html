@@ -1,15 +1,19 @@
-<div ng-repeat="collection in episodeCollections">
-  <h2 ng-show="collection.getHeadline()">
-    {{collection.getHeadline()}}
-  </h2>
-  <div class="ui divided list">
-    <div class="item" ng-repeat="episode in collection.getEpisodes()">
-      <img ng-src="{{episode.image}}" alt="">
-      <div class="content">
-        <div class="header">{{episode.getShowName()}}</div>
-        <i class="gray">{{episode.getDate()}}</i><br>
-        {{episode.getEpisode()}} {{episode.getEpisodeName()}}
+<div class="wrapper">
+  <div class="content">
+    <h1>Upcoming</h1>
+    <div class="overflow_hidden poster_holder" ng-show="episodeCollections.length">
+      <div ng-repeat="collection in episodeCollections">
+        <div class="upcoming" ng-show="collection.size()">
+          <h4>{{ collection.getHeadline() }}</h4>
+          <div ng-repeat="episode in collection.getEpisodes()">
+            <div ng-include="'common/upcoming_episode.html'"></div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div ng-show="loading_complete && !episodeCollections.length">
+      <p id="no_upcoming_shows">It looks like you don't follow any series, maybe you can find a new series to follow <a href="/shows/popular">here</a></p>
+      <p>Or do you want to follow some <a href="shows/featured">featured</a> TV shows? - <a href="shows/followfeatured">Yes, give me</a></p>
     </div>
   </div>
 </div>

@@ -30,51 +30,44 @@ function EpisodeCollection(_headline, _episodes) {
     }
   };
 
+  this.size = function() {
+    return episodes.length;
+  };
+
 }
 
-function Episode(_episode, $scope) {
+function Episode(_episode) {
   if (!(this instanceof Episode)) {
     return null;
   }
 
   var _showID          = _episode.showid      || 0;
   var _episodeID       = _episode.episodeid   || 0;
-  var _show            = _episode.showname    || '';
   var _timestamp       = _episode.timestamp   || '';
   var _seasonNr        = _episode.season      || -1;
   var _episodeNr       = _episode.episode     || -1;
   var _episodeName     = _episode.episodename || '';
   var _image           = _episode.image       || '';
-  var _date            = '';
+  var _date            = null;
 
-  this.image = ''; // Default image
+  this.image = EH.url.shows.poster + EH.url.defaultImage.poster; // Default image
+  this.showName = _episode.showname || '';
 
   if (_image) {
-    this.image = EH.url.shows.fanart + _image + '/8';
+    this.image = EH.url.shows.poster + _image;
   }
-
-  this.getShowName = function() {
-    return _show;
-  };
 
   this.getDate = function() {
     if (_timestamp === '') {
-      return '';
+      return null;
     }
-    if (_date === '') {
-      var now = new Date();
-      var d = new Date(_timestamp);
-      if (d instanceof Date) {
-        _date = EH.days[d.getDay()] + ', ' + EH.month[d.getMonth()] + ' ' + d.getDate();
-        if (d.getFullYear() > now.getFullYear()) {
-          _date += ' ' + d.getFullYear();
-        }
-      }
+    if (_date === null) {
+      _date = new Date(_timestamp);
     }
     return _date;
   };
 
-  this.getEpisode = function() {
+  this.getEpisodeNumber = function() {
     if (_seasonNr < 0 && _episodeNr < 0) {
       return '';
     }
@@ -98,3 +91,50 @@ function Episode(_episode, $scope) {
   };
 
 }
+
+Episode.prototype.getDay = function() {
+  if (this.getDate()) {
+    var d = this.getDate().getDate();
+    return (d < 10) ? '0' + d : d;
+  }
+  return '';
+};
+
+Episode.prototype.getDayName = function() {
+  if (this.getDate()) {
+    var d = this.getDate().getDay();
+    return EH.days[d];
+  }
+  return '';
+};
+
+Episode.prototype.getMonth = function() {
+  if (this.getDate()) {
+    var d = this.getDate().getMonth() + 1;
+    return (d < 10) ? '0' + d : d;
+  }
+  return '';
+};
+
+Episode.prototype.getMonthShortName = function() {
+  if (this.getDate()) {
+    var d = this.getDate().getDay();
+    return EH.monthShortName[d];
+  }
+  return '';
+};
+
+Episode.prototype.getMonthName = function() {
+  if (this.getDate()) {
+    var d = this.getDate().getDay();
+    return EH.month[d];
+  }
+  return '';
+};
+
+Episode.prototype.getYear = function() {
+  if (this.getDate()) {
+    return this.getDate().getFullYear();
+  }
+  return '';
+};

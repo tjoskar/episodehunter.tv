@@ -14,7 +14,8 @@ module.exports = function(lineman) {
       vendor: [
         "vendor/js/jquery/dist/jquery.js",
         "vendor/js/angular/angular.js",
-        "vendor/js/angular-route/angular-route.js"
+        "vendor/js/angular-route/angular-route.js",
+        "vendor/js/jquery.lazyload.min.js"
       ],
 
       ehw: [

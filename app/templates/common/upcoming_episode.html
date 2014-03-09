@@ -1,0 +1,23 @@
+<a href="#">
+  <div class="poster">
+    <hgroup class="date-data" ng-show="this.episode.getDate()">
+      <p class="day">{{ this.episode.getDay() }}</p>
+      <p class="month">{{ this.episode.getMonthShortName() }}</p>
+      <p class="year">{{ this.episode.getYear() }}</p>
+    </hgroup>
+    <div ng-show="this.episode.getDate()">
+      <hgroup class="show-name">
+        <p>{{ this.episode.showName }}</p>
+      </hgroup>
+
+      <hgroup class="episode-data" show-on-parent-hover>
+        <p>{{ this.episode.getDayName() }}</p>
+        <p>{{ this.episode.getEpisodeNumber() }}</p>
+      </hgroup>
+    </div>
+    <hgroup class="media-name" ng-show="!this.episode.getDate()">
+      <p>{{ this.episode.showName }}</p>
+    </hgroup>
+    <img poster url="this.episode.image" />
+  </div>
+</a>
