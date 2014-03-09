@@ -38,7 +38,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "504242b7ca765.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "168",
@@ -48,7 +48,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "5203eb438c731.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "17",
@@ -58,7 +58,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "5042422b31a72.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "528",
@@ -68,7 +68,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "52415b9d98758.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "12",
@@ -78,7 +78,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "504241ddb05a1.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "20",
@@ -88,7 +88,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "5042424330b51.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "160",
@@ -98,7 +98,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "51aba6515d049.jpg"
+                      "image": ""
                     },
                     {
                       "showid": "67",
@@ -108,7 +108,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "506b560ddfb55.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "159",
@@ -118,7 +118,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "259866-5.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "144",
@@ -128,7 +128,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "512ae1e0c63e0.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "158",
@@ -138,7 +138,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "51aba64f781e1.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "26",
@@ -148,7 +148,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "504242c5e6610.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "8",
@@ -158,7 +158,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "504241ce81356.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "165",
@@ -168,7 +168,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "5203e5a16ffd4.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "23",
@@ -178,7 +178,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "504242af75cd7.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "10",
@@ -188,7 +188,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "504241d8bbe1d-1.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "139",
@@ -198,7 +198,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "5122f8cab6cc9.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "52",
@@ -208,7 +208,7 @@ module.exports = {
                       "season": null,
                       "episode": null,
                       "episodename": null,
-                      "image": "5060d41ee3959.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "74",
@@ -218,7 +218,7 @@ module.exports = {
                       "season": "3",
                       "episode": "12",
                       "episodename": "TBA",
-                      "image": "50b21fdebd663.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "14",
@@ -228,7 +228,7 @@ module.exports = {
                       "season": "9",
                       "episode": "13",
                       "episodename": "Bass Player Wanted",
-                      "image": "5042420779317.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "106",
@@ -238,7 +238,7 @@ module.exports = {
                       "season": "5",
                       "episode": "1",
                       "episodename": "A Murder Of Crowes",
-                      "image": "50bb4f6c9ce25.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "108",
@@ -248,7 +248,7 @@ module.exports = {
                       "season": "2",
                       "episode": "1",
                       "episodename": "Armies Of One",
-                      "image": "50e1526c80642.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "107",
@@ -258,7 +258,7 @@ module.exports = {
                       "season": "2",
                       "episode": "1",
                       "episodename": "Resurrection",
-                      "image": "50cdf863dfd5b.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "110",
@@ -268,7 +268,7 @@ module.exports = {
                       "season": "2",
                       "episode": "1",
                       "episodename": "Comrades",
-                      "image": "50e3b0f897b9b.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "111",
@@ -278,7 +278,7 @@ module.exports = {
                       "season": "2",
                       "episode": "1",
                       "episodename": "TBA",
-                      "image": "50e3b0f9db0eb.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "5",
@@ -288,7 +288,7 @@ module.exports = {
                       "season": "3",
                       "episode": "1",
                       "episodename": "TBA",
-                      "image": "504241956e53f.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     },
                     {
                       "showid": "7",
@@ -298,7 +298,7 @@ module.exports = {
                       "season": "4",
                       "episode": "1",
                       "episodename": "Ghost in the Machine",
-                      "image": "504241a7afd0f.jpg"
+                      "image": "525b1c9cf2968.jpg"
                     }]
                 });
     });
