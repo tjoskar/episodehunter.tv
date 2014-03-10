@@ -1,5 +1,5 @@
 /* global EpisodeCollection: true, Episode: true */
-angular.module("EHW").factory('upcomingRepositories', function($http) {
+angular.module("EHW").factory('upcomingRepositories', function(upcomingResource) {
   var upcomingRepositories = {};
 
   var populateCollection = function(episodes, $scope) {
@@ -47,26 +47,11 @@ angular.module("EHW").factory('upcomingRepositories', function($http) {
     $scope.loading_complete = true;
   };
 
-  upcomingRepositories.updateList = function($scope) {
-    EH.ajaxStart();
-    $http.post(EH.url.api+'tv/upcoming', {
-      'username': 'tjoskar',
-      'apikey': 'something'
-    }).success(function(episodes) {
-      EH.ajaxStop();
-      if (EH.isset(episodes.value)) {
-        populateCollection(episodes.value, $scope);
-      } else {
-        console.log('Can not connect to the server, try again later');
-      }
-    }).error(function() {
-      EH.ajaxStop();
-      console.log('Can not connect to the server, try again later 2');
+  upcomingRepositories.populate = function($scope, force) {
+    var promise = upcomingResource.get(force);
+    promise.then(function(episodes) {
+      populateCollection(episodes, $scope);
     });
-  };
-
-  upcomingRepositories.populate = function($scope) {
-    this.updateList($scope);
   };
 
   return upcomingRepositories;

@@ -25,7 +25,8 @@
 
 module.exports = {
   drawRoutes: function(app) {
-    app.post('/api/tv/upcoming', function(req, res) {
+    app.get('/api/tv/upcoming', function(req, res) {
+        // res.statusCode = 401;
         res.json({
                 'status': 200,
                 'msg': 'OK',
