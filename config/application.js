@@ -21,6 +21,36 @@ module.exports = function(lineman) {
         }
     },
 
+    jshint: {
+        options: {
+            "curly": true,
+            "eqeqeq": true,
+            "immed": true,
+            "latedef": true,
+            "newcap": true,
+            "noarg": true,
+            "sub": true,
+            "undef": true,
+            "unused": true,
+            "boss": true,
+            "eqnull": true,
+            "node": true,
+            "globals": {
+              "$": true,
+              "jQuery": false,
+              "angular": true,
+              "window": false,
+              "document": false,
+              "EH": true,
+              "describe": true,
+              "beforeEach": true,
+              "it": true,
+              "expect": true,
+              "spyOn": true
+            }
+        }
+    },
+
     // API Proxying
     //
     // During development, you'll likely want to make XHR (AJAX) requests to an API on the same
