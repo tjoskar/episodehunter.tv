@@ -3,9 +3,9 @@
     <h1>Upcoming</h1>
     <div class="overflow_hidden poster_holder" ng-show="episodeCollections.length">
       <div ng-repeat="collection in episodeCollections">
-        <div class="upcoming" ng-show="collection.size()">
-          <h4>{{ collection.getHeadline() }}</h4>
-          <div ng-repeat="episode in collection.getEpisodes()">
+        <div class="upcoming" ng-show="collection.length">
+          <h4>{{ collection.headline }}</h4>
+          <div ng-repeat="episode in collection.getAll()">
             <div ng-include="'common/upcoming_episode.html'"></div>
           </div>
         </div>
@@ -16,4 +16,21 @@
       <p>Or do you want to follow some <a href="shows/featured">featured</a> TV shows? - <a href="shows/followfeatured">Yes, give me</a></p>
     </div>
   </div>
+
+  <div class="content" ng-show="nowWatching.length">
+    <h1>What the community is watching right now</h1>
+    <div class="overflow_hidden poster_holder" id="watching">
+      <div ng-repeat="media in nowWatching.getAll()">
+        <a ng-href="{{ media.url }}">
+          <div class="poster">
+            <hgroup class="watchng-data">
+              <p>{{ media.title }}</p>
+            </hgroup>
+            <img poster url="media.poster" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
 </div>

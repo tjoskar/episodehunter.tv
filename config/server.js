@@ -25,283 +25,320 @@
 
 module.exports = {
   drawRoutes: function(app) {
-    app.get('/api/tv/upcoming', function(req, res) {
+
+    app.get('/api/v2/tv/upcoming', function(req, res) {
         // res.statusCode = 401;
         res.json({
                 'status': 200,
-                'msg': 'OK',
+                'message': 'OK',
                 'value':
                     [{
-                      "showid": "24",
-                      "episodeid": null,
-                      "showname": "The Walking Dead",
+                      "tv_id": "24",
+                      "episode_id": null,
+                      "shown_name": "The Walking Dead",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "168",
-                      "episodeid": null,
-                      "showname": "The Newsroom (2012)",
+                      "tv_id": "168",
+                      "episode_id": null,
+                      "shown_name": "The Newsroom (2012)",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "17",
-                      "episodeid": null,
-                      "showname": "Sons of Anarchy",
+                      "tv_id": "17",
+                      "episode_id": null,
+                      "shown_name": "Sons of Anarchy",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "528",
-                      "episodeid": null,
-                      "showname": "The Blacklist",
+                      "tv_id": "528",
+                      "episode_id": null,
+                      "shown_name": "The Blacklist",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "12",
-                      "episodeid": null,
-                      "showname": "Hell on Wheels",
+                      "tv_id": "12",
+                      "episode_id": null,
+                      "shown_name": "Hell on Wheels",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "20",
-                      "episodeid": null,
-                      "showname": "The Big Bang Theory",
+                      "tv_id": "20",
+                      "episode_id": null,
+                      "shown_name": "The Big Bang Theory",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "160",
-                      "episodeid": null,
-                      "showname": "Marvel's Agents of S.H.I.E.L.D.",
+                      "tv_id": "160",
+                      "episode_id": null,
+                      "shown_name": "Marvel's Agents of S.H.I.E.L.D.",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": ""
                     },
                     {
-                      "showid": "67",
-                      "episodeid": null,
-                      "showname": "Arrow",
+                      "tv_id": "67",
+                      "episode_id": null,
+                      "shown_name": "Arrow",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "159",
-                      "episodeid": null,
-                      "showname": "Ray Donovan",
+                      "tv_id": "159",
+                      "episode_id": null,
+                      "shown_name": "Ray Donovan",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "144",
-                      "episodeid": null,
-                      "showname": "Vikings",
+                      "tv_id": "144",
+                      "episode_id": null,
+                      "shown_name": "Vikings",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "158",
-                      "episodeid": null,
-                      "showname": "Under The Dome",
+                      "tv_id": "158",
+                      "episode_id": null,
+                      "shown_name": "Under The Dome",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "26",
-                      "episodeid": null,
-                      "showname": "True Blood",
+                      "tv_id": "26",
+                      "episode_id": null,
+                      "shown_name": "True Blood",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "8",
-                      "episodeid": null,
-                      "showname": "Family Guy",
+                      "tv_id": "8",
+                      "episode_id": null,
+                      "shown_name": "Family Guy",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "165",
-                      "episodeid": null,
-                      "showname": "Orange Is the New Black",
+                      "tv_id": "165",
+                      "episode_id": null,
+                      "shown_name": "Orange Is the New Black",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "23",
-                      "episodeid": null,
-                      "showname": "The Vampire Diaries",
+                      "tv_id": "23",
+                      "episode_id": null,
+                      "shown_name": "The Vampire Diaries",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "10",
-                      "episodeid": null,
-                      "showname": "Game of Thrones",
+                      "tv_id": "10",
+                      "episode_id": null,
+                      "shown_name": "Game of Thrones",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "139",
-                      "episodeid": null,
-                      "showname": "Suits",
+                      "tv_id": "139",
+                      "episode_id": null,
+                      "shown_name": "Suits",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "52",
-                      "episodeid": null,
-                      "showname": "Solsidan",
+                      "tv_id": "52",
+                      "episode_id": null,
+                      "shown_name": "Solsidan",
                       "timestamp": null,
                       "season": null,
                       "episode": null,
-                      "episodename": null,
+                      "episode_name": null,
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "74",
-                      "episodeid": "46266",
-                      "showname": "Homeland",
+                      "tv_id": "74",
+                      "episode_id": "46266",
+                      "shown_name": "Homeland",
                       "timestamp": getFutureDate(1),
                       "season": "3",
                       "episode": "12",
-                      "episodename": "TBA",
+                      "episode_name": "TBA",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "14",
-                      "episodeid": "16745",
-                      "showname": "How I Met Your Mother",
+                      "tv_id": "14",
+                      "episode_id": "16745",
+                      "shown_name": "How I Met Your Mother",
                       "timestamp": getFutureDate(2),
                       "season": "9",
                       "episode": "13",
-                      "episodename": "Bass Player Wanted",
+                      "episode_name": "Bass Player Wanted",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "106",
-                      "episodeid": "39390",
-                      "showname": "Justified",
+                      "tv_id": "106",
+                      "episode_id": "39390",
+                      "shown_name": "Justified",
                       "timestamp": getFutureDate(3),
                       "season": "5",
                       "episode": "1",
-                      "episodename": "A Murder Of Crowes",
+                      "episode_name": "A Murder Of Crowes",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "108",
-                      "episodeid": "14038",
-                      "showname": "Banshee",
+                      "tv_id": "108",
+                      "episode_id": "14038",
+                      "shown_name": "Banshee",
                       "timestamp": getFutureDate(7),
                       "season": "2",
                       "episode": "1",
-                      "episodename": "Armies Of One",
+                      "episode_name": "Armies Of One",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "107",
-                      "episodeid": "52557",
-                      "showname": "The Following",
+                      "tv_id": "107",
+                      "episode_id": "52557",
+                      "shown_name": "The Following",
                       "timestamp": getFutureDate(7),
                       "season": "2",
                       "episode": "1",
-                      "episodename": "Resurrection",
+                      "episode_name": "Resurrection",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "110",
-                      "episodeid": "77648",
-                      "showname": "The Americans (2013)",
+                      "tv_id": "110",
+                      "episode_id": "77648",
+                      "shown_name": "The Americans (2013)",
                       "timestamp": getFutureDate(8),
                       "season": "2",
                       "episode": "1",
-                      "episodename": "Comrades",
+                      "episode_name": "Comrades",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "111",
-                      "episodeid": "39130",
-                      "showname": "House Of Cards (2013)",
+                      "tv_id": "111",
+                      "episode_id": "39130",
+                      "shown_name": "House Of Cards (2013)",
                       "timestamp": getFutureDate(8),
                       "season": "2",
                       "episode": "1",
-                      "episodename": "TBA",
+                      "episode_name": "TBA",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "5",
-                      "episodeid": "37961",
-                      "showname": "Continuum",
+                      "tv_id": "5",
+                      "episode_id": "37961",
+                      "shown_name": "Continuum",
                       "timestamp": getFutureDate(100),
                       "season": "3",
                       "episode": "1",
-                      "episodename": "TBA",
+                      "episode_name": "TBA",
                       "image": "525b1c9cf2968.jpg"
                     },
                     {
-                      "showid": "7",
-                      "episodeid": "37960",
-                      "showname": "Falling Skies",
+                      "tv_id": "7",
+                      "episode_id": "37960",
+                      "shown_name": "Falling Skies",
                       "timestamp": getFutureDate(121),
                       "season": "4",
                       "episode": "1",
-                      "episodename": "Ghost in the Machine",
+                      "episode_name": "Ghost in the Machine",
                       "image": "525b1c9cf2968.jpg"
                     }]
                 });
     });
+
+    app.get('/api/v2/nowwatcing', function(req, res) {
+      res.json({
+        'status': 200,
+        'message': 'OK',
+        'value': {
+          'movies': [
+            {
+              'movie_id': '1',
+              'title': 'The Hunger Games',
+              'progress': '0.7',
+              'image': '504238b57b1e2.jpg'
+            }, {
+              'movie_id': '1178',
+              'title': 'The Hunger Games',
+              'progress': '0.3',
+              'image': '52261a42c6e5c.jpg'
+            }
+          ],
+          'tv_shows':[
+            {
+              'tv_id': '24',
+              'shown_name': 'The Walking Dead',
+              'progress': '0.4',
+              'image': '525b1c9cf2968.jpg'
+            },{
+              'tv_id': '24',
+              'shown_name': 'Sherlock',
+              'progress': '0.2',
+              'image': '50b220731c0b4.jpg'
+            }
+          ]
+        }
+      });
+    });
+
   }
 };

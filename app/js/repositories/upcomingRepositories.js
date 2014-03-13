@@ -1,13 +1,13 @@
-/* global EpisodeCollection: true, Episode: true */
+/* global Collection: true, UpcomingEpisode: true */
 angular.module("EHW").factory('upcomingRepositories', function(upcomingResource) {
   var upcomingRepositories = {};
 
   var populateCollection = function(episodes, $scope) {
     var episode, d;
-    var thisWeek = new EpisodeCollection('this week');
-    var nextWeek = new EpisodeCollection('next week');
-    var upcoming = new EpisodeCollection('upcoming');
-    var TBA      = new EpisodeCollection('TBA');
+    var thisWeek = new Collection('this week');
+    var nextWeek = new Collection('next week');
+    var upcoming = new Collection('upcoming');
+    var TBA      = new Collection('TBA');
 
     var now = new Date();
     var thisSunday = EH.getNextSunday(now);
@@ -16,31 +16,31 @@ angular.module("EHW").factory('upcomingRepositories', function(upcomingResource)
     for (var i in episodes) {
       episode = episodes[i];
       d = new Date((episode.timestamp || '2014-01-01') + ' 00:00:00');
-      if (!EH.isset(episode.episodeid) || d <= now) {
-        TBA.addEpisode(new Episode(episode, $scope));
+      if (!EH.isset(episode.episode_id) || d <= now) {
+        TBA.add(new UpcomingEpisode(episode, $scope));
         continue;
       }
 
       if (d <= thisSunday) {
-        thisWeek.addEpisode(new Episode(episode, $scope));
+        thisWeek.add(new UpcomingEpisode(episode, $scope));
       } else if (thisSunday < d && d <= nextSunday) {
-        nextWeek.addEpisode(new Episode(episode, $scope));
+        nextWeek.add(new UpcomingEpisode(episode, $scope));
       } else {
-        upcoming.addEpisode(new Episode(episode, $scope));
+        upcoming.add(new UpcomingEpisode(episode, $scope));
       }
     }
 
     $scope.episodeCollections = [];
-    if (thisWeek.getEpisodes().length > 0) {
+    if (thisWeek.length > 0) {
       $scope.episodeCollections.push(thisWeek);
     }
-    if (nextWeek.getEpisodes().length > 0) {
+    if (nextWeek.length > 0) {
       $scope.episodeCollections.push(nextWeek);
     }
-    if (upcoming.getEpisodes().length > 0) {
+    if (upcoming.length > 0) {
       $scope.episodeCollections.push(upcoming);
     }
-    if (TBA.getEpisodes().length > 0) {
+    if (TBA.length > 0) {
       $scope.episodeCollections.push(TBA);
     }
 
