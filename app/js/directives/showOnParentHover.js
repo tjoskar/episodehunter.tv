@@ -1,6 +1,6 @@
 angular.module("EHW").directive('showOnParentHover', function() {
   return {
-    link : function(scope, element, attrs) {
+    link : function(scope, element) {
       var poster = element.parent().parent();
       var show_name = element.parent().children('.show-name');
       poster.bind('mouseenter', function() {
