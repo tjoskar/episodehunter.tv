@@ -2,7 +2,7 @@
 describe('StorageTest', function(){
     var _storage;
 
-    beforeEach(module('EHM'));
+    beforeEach(module('EHW'));
 
     beforeEach(inject(function(storage) {
         _storage = storage;

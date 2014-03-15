@@ -4,7 +4,16 @@ describe("poster directive tests that", function() {
 
     beforeEach(module("EHW"));
 
-    beforeEach(inject(function($compile, $rootScope) {
+    beforeEach(inject(function($compile, $rootScope, $httpBackend) {
+        $httpBackend.when('GET', '/api/v2/user').respond({
+            'status': 200,
+            'message': 'OK',
+            'value': {
+                'username': 'john_doe',
+                'timezone': 'Europe/Stockholm'
+            }
+        });
+
         $rootScope.image_url = 'image.jpg';
         $rootScope.$apply();
         default_image = angular.element('<img eh-poster url="" />');
