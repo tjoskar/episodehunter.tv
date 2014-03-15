@@ -26,6 +26,17 @@
 module.exports = {
   drawRoutes: function(app) {
 
+    app.get('/api/v2/user', function(req, res) {
+        res.json({
+            'status': 200,
+            'message': 'OK',
+            'value': {
+                'username': 'john_doe',
+                'timezone': 'Europe/Stockholm'
+            }
+        });
+    });
+
     app.get('/api/v2/tv/upcoming', function(req, res) {
         // res.statusCode = 401;
         res.json({
