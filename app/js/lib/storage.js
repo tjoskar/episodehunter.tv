@@ -27,9 +27,9 @@ angular.module("EHW").factory('storage', function() {
 
   storage.get = function(key) {
     var v = window.localStorage.getItem(prefix + key);
-    if (EH.isset(v)) {
+    if (v) {
       try {
-        v = JSON.parse(v);
+        v = angular.fromJson(v);
       } catch(e) {
         storage.setObsolete(false);
         storage.removeItem(key);
@@ -40,16 +40,16 @@ angular.module("EHW").factory('storage', function() {
       } else {
         storage.setObsolete(true);
       }
-      return EH.jsonParse(v.value);
+      return angular.fromJson(v.value);
     }
     return undefined;
   };
 
   storage.refresh = function(key, expiration) {
-    var v = storage.get(key);
-    if (EH.isset(v) && !storage.isObsolete()) {
-      storage.set(key, v, expiration);
-      return v;
+    var value = storage.get(key);
+    if (value && !storage.isObsolete()) {
+      storage.set(key, value, expiration);
+      return value;
     }
     return undefined;
   };
@@ -59,16 +59,16 @@ angular.module("EHW").factory('storage', function() {
     if (expiration !== 0) {
       expiration += EH.time();
     }
-    if (!EH.isString(value)) {
-      value = JSON.stringify(value);
-    }
-    window.localStorage.setItem(prefix + key, JSON.stringify({
+
+    value = angular.toJson(value);
+
+    window.localStorage.setItem(prefix + key, angular.toJson({
       'expiration': expiration,
       'value': value
     }));
   };
 
-  storage.clear = function() {
+  storage.clearAll = function() {
     window.localStorage.clear();
   };
 

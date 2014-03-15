@@ -3,20 +3,20 @@ var EH = {};
 var local = true;
 
 EH.url = {
-  'api': '/api/',
-  'movie': {
-    'poster': 'http://img.episodehunter.tv/movie/poster/',
-    'fanart': 'http://img.episodehunter.tv/movie/fanart/'
-  },
-  'shows': {
-    'poster': 'http://img.episodehunter.tv/serie/poster/',
-    'fanart': 'http://img.episodehunter.tv/',
-    'episode': 'http://img.episodehunter.tv/episode/'
-  },
-  'defaultImage': {
-    'poster': '1363113862.png',
-    'episode': '1363113862.png'
-  }
+    'api': '/api/',
+    'movie': {
+        'poster': 'http://img.episodehunter.tv/movie/poster/',
+        'fanart': 'http://img.episodehunter.tv/movie/fanart/'
+    },
+    'shows': {
+        'poster': 'http://img.episodehunter.tv/serie/poster/',
+        'fanart': 'http://img.episodehunter.tv/',
+        'episode': 'http://img.episodehunter.tv/episode/'
+    },
+    'defaultImage': {
+        'poster': '1363113862.png',
+        'episode': '1363113862.png'
+    }
 };
 
 EH.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -30,8 +30,8 @@ EH.monthShortName = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SE
  * @return boolean
  */
 EH.isString = function(str) {
-  console.warn('EH.isString is obsolescent, use angular.isString(value) instead');
-  return (typeof str === 'string' || str instanceof String);
+    console.warn('EH.isString is obsolescent, use angular.isString(value) instead');
+    return (typeof str === 'string' || str instanceof String);
 };
 
 /**
@@ -40,8 +40,8 @@ EH.isString = function(str) {
  * @return boolean
  */
 EH.isArray = function(arr) {
-  console.warn('EH.isArray is obsolescent, use angular.isArray(value) instead');
-  return arr instanceof Array;
+    console.warn('EH.isArray is obsolescent, use angular.isArray(value) instead');
+    return arr instanceof Array;
 };
 
 /**
@@ -50,8 +50,8 @@ EH.isArray = function(arr) {
  * @return boolean
  */
 EH.isInt = function(n) {
-  console.warn('using EH.isInt');
-  return n === +n && n === (n|0);
+    console.warn('using EH.isInt');
+    return n === +n && n === (n|0);
 };
 
 /**
@@ -59,7 +59,7 @@ EH.isInt = function(n) {
  * @return undefined
  */
 EH.time = function() {
-  return new Date().getTime();
+    return new Date().getTime();
 };
 
 /**
@@ -68,8 +68,8 @@ EH.time = function() {
  * @return boolean
  */
 EH.isset = function(variable) {
-  console.warn('using EH.isset');
-  return (typeof(variable) !== 'undefined' && variable !== null);
+    console.warn('using EH.isset');
+    return (typeof(variable) !== 'undefined' && variable !== null);
 };
 
 /**
@@ -78,7 +78,7 @@ EH.isset = function(variable) {
  * @return int
  */
 EH.int = function(obj) {
-  return obj|0;
+    return obj|0;
 };
 
 /**
@@ -87,10 +87,11 @@ EH.int = function(obj) {
  * @return object
  */
 EH.jsonParse = function(obj) {
-  try {
-    obj = JSON.parse(obj);
-  } catch(e) {}
-  return obj;
+    console.warn('EH.jsonParse is obsolescent, use angular.fromJson(value) instead');
+    try {
+        obj = JSON.parse(obj);
+    } catch(e) {}
+    return obj;
 };
 
 /**
@@ -98,11 +99,11 @@ EH.jsonParse = function(obj) {
  * @return undefined
  */
 EH.ajaxStart = function() {
-  var $loader = $('.loader');
-  $loader.fadeIn("fast");
-  $loader.animate({
-    width: "80%",
-  }, 800 );
+    var $loader = $('.loader');
+    $loader.fadeIn("fast");
+    $loader.animate({
+        width: "80%",
+    }, 800 );
 };
 
 /**
@@ -110,16 +111,16 @@ EH.ajaxStart = function() {
  * @return undefined
  */
 EH.ajaxStop = function() {
-  var $loader = $('.loader');
-  $loader.animate({
-    width: "100%",
-  }, 200 );
+    var $loader = $('.loader');
+    $loader.animate({
+        width: "100%",
+    }, 200 );
 
-  setTimeout(function(){
-    $loader.fadeOut("slow", function() {
-      $loader.css({'width': '0%'});
-    });
-  }, 200);
+    setTimeout(function() {
+        $loader.fadeOut("slow", function() {
+            $loader.css({'width': '0%'});
+        });
+    }, 200);
 };
 
 /**
@@ -128,14 +129,14 @@ EH.ajaxStop = function() {
  * @return Date
  */
 EH.convertUTCDateToLocalDate = function(unixtimestamp) {
-  var utcDate = new Date(unixtimestamp * 1000);
+    var utcDate = new Date(unixtimestamp * 1000);
 
-  var offset = utcDate.getTimezoneOffset() / 60;
-  var hours = utcDate.getHours();
+    var offset = utcDate.getTimezoneOffset() / 60;
+    var hours = utcDate.getHours();
 
-  utcDate.setHours(hours - offset);
+    utcDate.setHours(hours - offset);
 
-  return utcDate;
+    return utcDate;
 };
 
 /**
@@ -144,7 +145,7 @@ EH.convertUTCDateToLocalDate = function(unixtimestamp) {
  * @return Date
  */
 EH.getNextSunday = function(d) {
-  return new Date(d.getFullYear(), d.getMonth(), d.getDate() - d.getDay() + 7);
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate() - d.getDay() + 7);
 };
 
 /**
@@ -153,14 +154,14 @@ EH.getNextSunday = function(d) {
  * @return string on form YYYY-MM-DD
  */
 EH.getFutureDate = function(n) {
-  var d = new Date();
-  d = new Date(this.time() + (n || 0) * 86400000);
-  var month = d.getMonth() + 1;
-  return [
-    d.getFullYear(),
-    (month < 10 ? '0' + month : month),
-    (d.getDate() < 10 ? '0' + d.getDate() : d.getDate())
-  ].join('-');
+    var d = new Date();
+    d = new Date(this.time() + (n || 0) * 86400000);
+    var month = d.getMonth() + 1;
+    return [
+        d.getFullYear(),
+        (month < 10 ? '0' + month : month),
+        (d.getDate() < 10 ? '0' + d.getDate() : d.getDate())
+    ].join('-');
 };
 
 /**
@@ -169,7 +170,7 @@ EH.getFutureDate = function(n) {
  * @return string
  */
 EH.urlTitle = function(text) {
-  return text.toLowerCase()
-             .replace(/[^\w ]+/g,'')
-             .replace(/ +/g,'-');
+    return text.toLowerCase()
+               .replace(/[^\w ]+/g,'')
+               .replace(/ +/g,'-');
 };

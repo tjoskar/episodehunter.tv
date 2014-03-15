@@ -8,7 +8,7 @@ angular.module("EHW").factory('resource', function($http, $q) {
 
       $http.get(url).success(function(data) {
         EH.ajaxStop();
-        if (EH.isset(data) && EH.isset(data.value)) {
+        if (data && angular.isDefined(data.value)) {
           deferred.resolve(data.value);
         } else {
           console.log('Show error message');
@@ -32,7 +32,7 @@ angular.module("EHW").factory('resource', function($http, $q) {
 
       $http.post(url, post_data).success(function(data) {
         EH.ajaxStop();
-        if (EH.isset(data) && EH.isset(data.value)) {
+        if (data && angular.isDefined(data.value)) {
           deferred.resolve(data.value);
         } else {
           console.log('Show error message');

@@ -16,7 +16,7 @@ angular.module("EHW").factory('upcomingRepositories', function(upcomingResource)
     for (var i in episodes) {
       episode = episodes[i];
       d = new Date((episode.timestamp || '2014-01-01') + ' 00:00:00');
-      if (!EH.isset(episode.episode_id) || d <= now) {
+      if (!episode.episode_id || d <= now) {
         TBA.add(new UpcomingEpisode(episode, $scope));
         continue;
       }

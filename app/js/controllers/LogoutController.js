@@ -1,6 +1,5 @@
-angular.module("EHW").controller('LogoutController', function(storage) {
+angular.module("EHW").controller('LogoutController', function(authentication) {
 
-    storage.clear();
-    window.location.replace('/logout');
+    authentication.logout();
 
 });
