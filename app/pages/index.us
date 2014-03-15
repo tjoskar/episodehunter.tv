@@ -57,7 +57,7 @@
                             <li><a href="/rating">Rated</a></li>
                             <li><a href="/rating/unrated">Unrated</a></li>
                             <li><a href="/user/settings">Settings</a></li>
-                            <li><a href="/logout">Sign Out</a></li>
+                            <li><a href="#/logout">Sign Out</a></li>
                         </ul>
                     </li>
                     <li><a id="search-button" href="#Search">Search</a></li>

@@ -5,6 +5,11 @@ angular.module("EHW", ["ngRoute"]).config(function($routeProvider) {
       controller: 'UpcomingController'
     });
 
+    $routeProvider.when('/logout', {
+      template: ' ',
+      controller: 'LogoutController'
+    });
+
     $routeProvider.otherwise({
       redirectTo: '/home'
     });
