@@ -1,4 +1,4 @@
-angular.module("EHW").directive('showSeriesNameOnPosterHover', function() {
+angular.module("EHW").directive('ehShowSeriesNameOnPosterHover', function() {
   return {
     link : function(scope, element) {
       var poster = element.parent().parent();
