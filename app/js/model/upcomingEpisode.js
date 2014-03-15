@@ -9,6 +9,7 @@ function UpcomingEpisode(_episode) {
   this.showName    = _episode.shown_name   || '';
   this.progress    = _episode.progress     || 0;
   this.image       = EH.url.shows.poster + EH.url.defaultImage.poster; // Default image
+  this.url         = '/tv/' + this.showID + '/' + EH.urlTitle(this.showName);
 
   if (_episode.image) {
     this.image = EH.url.shows.poster + _episode.image;

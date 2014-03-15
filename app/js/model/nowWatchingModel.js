@@ -4,8 +4,8 @@ function nowWatchingTvModel(_nowWatching) {
     return null;
   }
 
-  this.url = '/tv/' + _nowWatching.tv_id;
   this.title = _nowWatching.shown_name || '';
+  this.url = '/tv/' + _nowWatching.tv_id + '/' + EH.urlTitle(this.title);
   this.poster = EH.url.shows.poster + EH.url.defaultImage.poster;
   this.progress = _nowWatching.progress || 0;
 
@@ -20,8 +20,8 @@ function nowWatchingMovieModel(_nowWatching) {
     return null;
   }
 
-  this.url = '/movie/' + _nowWatching.movie_id;
   this.title = _nowWatching.title || '';
+  this.url = '/movie/' + _nowWatching.movie_id + '/' + EH.urlTitle(this.title);
   this.poster = EH.url.movie.poster + EH.url.defaultImage.poster;
   this.progress = _nowWatching.progress || 0;
 

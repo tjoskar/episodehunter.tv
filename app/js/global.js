@@ -100,3 +100,14 @@ EH.getFutureDate = function(n) {
     (d.getDate() < 10 ? '0' + d.getDate() : d.getDate())
   ].join('-');
 };
+
+/**
+ * Generate a URL friendly title
+ * @param  string text
+ * @return string
+ */
+EH.urlTitle = function(text) {
+  return text.toLowerCase()
+             .replace(/[^\w ]+/g,'')
+             .replace(/ +/g,'-');
+};
