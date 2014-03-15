@@ -6,7 +6,29 @@
         <div class="upcoming" ng-show="collection.length">
           <h4>{{ collection.headline }}</h4>
           <div ng-repeat="episode in collection.getAll()">
-            <div ng-include="'common/upcoming_episode.html'"></div>
+            <a href="#{{ episode.url }}">
+              <div class="poster">
+                <hgroup class="date-data" ng-show="episode.getAirDate()">
+                  <p class="day">{{ episode.getAirDay() }}</p>
+                  <p class="month">{{ episode.getAirMonthShortName() }}</p>
+                  <p class="year">{{ episode.getAirYear() }}</p>
+                </hgroup>
+                <div ng-show="episode.getAirDate()">
+                  <hgroup class="show-name">
+                    <p>{{ episode.showName }}</p>
+                  </hgroup>
+
+                  <hgroup class="episode-data" eh-show-series-name-on-poster-hover>
+                    <p>{{ episode.getAirDayName() }}</p>
+                    <p>{{ episode.episodeNumber }}</p>
+                  </hgroup>
+                </div>
+                <hgroup class="media-name" ng-show="!episode.getAirDate()">
+                  <p>{{ episode.showName }}</p>
+                </hgroup>
+                <img eh-poster url="episode.image" />
+              </div>
+            </a>
           </div>
         </div>
       </div>
