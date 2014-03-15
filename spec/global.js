@@ -45,14 +45,14 @@ describe('helper function', function(){
         expect(EH.int('1')).toEqual(1);
         expect(EH.int('1.9')).toEqual(1);
         expect(EH.int('-1')).toEqual(-1);
-        expect(EH.int('Not a number')).toBeNaN();
-        expect(EH.int('a')).toBeNaN();
-        expect(EH.int(NaN)).toBeNaN();
-        expect(EH.int(null)).toBeNaN();
-        expect(EH.int([])).toBeNaN();
-        expect(EH.int({})).toBeNaN();
-        expect(EH.int(undefined)).toBeNaN();
-        expect(EH.int(true)).toBeNaN();
+        expect(EH.int('Not a number')).toEqual(0);
+        expect(EH.int('a')).toEqual(0);
+        expect(EH.int(NaN)).toEqual(0);
+        expect(EH.int(null)).toEqual(0);
+        expect(EH.int([])).toEqual(0);
+        expect(EH.int({})).toEqual(0);
+        expect(EH.int(undefined)).toEqual(0);
+        expect(EH.int(true)).toEqual(1);
     });
 
     it('should convert json to object', function() {
@@ -88,4 +88,19 @@ describe('helper function', function(){
         spyOn(Date.prototype, 'getTime').andReturn(timestamp);
         expect(EH.getFutureDate(250)).toEqual('2014-11-13');
     });
+
+    it('should convert a URL slug', function() {
+        expect(EH.urlTitle('string'), 'string');
+
+        expect(EH.urlTitle('hello You'), 'hello-you');
+
+        expect(EH.urlTitle('hello - You'), 'hello-you');
+
+        expect(EH.urlTitle('hello - You å'), 'hello-you-');
+
+        expect(EH.urlTitle('hello - You åäö k'), 'hello-you-k');
+
+        expect(EH.urlTitle('hello - You-'), 'hello-you');
+    });
+
 });

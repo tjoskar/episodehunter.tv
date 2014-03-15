@@ -650,5 +650,3 @@
     };
 
 })(jQuery);
-
-console.log('knob');

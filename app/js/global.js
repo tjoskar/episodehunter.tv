@@ -23,30 +23,69 @@ EH.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sa
 EH.month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 EH.monthShortName = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
+
+/**
+ * Determines if a reference is a string
+ * @param  object str
+ * @return boolean
+ */
 EH.isString = function(str) {
+  console.warn('EH.isString is obsolescent, use angular.isString(value) instead');
   return (typeof str === 'string' || str instanceof String);
 };
 
+/**
+ * Determines if a reference is an Array
+ * @param  object arr
+ * @return boolean
+ */
 EH.isArray = function(arr) {
+  console.warn('EH.isArray is obsolescent, use angular.isArray(value) instead');
   return arr instanceof Array;
 };
 
+/**
+ * Determines if a reference is an integer
+ * @param  object n
+ * @return boolean
+ */
 EH.isInt = function(n) {
+  console.warn('using EH.isInt');
   return n === +n && n === (n|0);
 };
 
+/**
+ * Return the local time
+ * @return undefined
+ */
 EH.time = function() {
   return new Date().getTime();
 };
 
+/**
+ * Determines if a reference is defined
+ * @param  object variable
+ * @return boolean
+ */
 EH.isset = function(variable) {
+  console.warn('using EH.isset');
   return (typeof(variable) !== 'undefined' && variable !== null);
 };
 
-EH.int = function(str) {
-  return parseInt(str, 10);
+/**
+ * Convert object to int
+ * @param  object obj
+ * @return int
+ */
+EH.int = function(obj) {
+  return obj|0;
 };
 
+/**
+ * Convert JSON string to an object.
+ * @param  string obj
+ * @return object
+ */
 EH.jsonParse = function(obj) {
   try {
     obj = JSON.parse(obj);
@@ -54,6 +93,10 @@ EH.jsonParse = function(obj) {
   return obj;
 };
 
+/**
+ * Start "loading" effect
+ * @return undefined
+ */
 EH.ajaxStart = function() {
   var $loader = $('.loader');
   $loader.fadeIn("fast");
@@ -62,6 +105,10 @@ EH.ajaxStart = function() {
   }, 800 );
 };
 
+/**
+ * Stop "loading" effect
+ * @return undefined
+ */
 EH.ajaxStop = function() {
   var $loader = $('.loader');
   $loader.animate({
@@ -75,6 +122,11 @@ EH.ajaxStop = function() {
   }, 200);
 };
 
+/**
+ * Convert a UTC date to a local timezone
+ * @param  int unixtimestamp
+ * @return Date
+ */
 EH.convertUTCDateToLocalDate = function(unixtimestamp) {
   var utcDate = new Date(unixtimestamp * 1000);
 
@@ -86,10 +138,20 @@ EH.convertUTCDateToLocalDate = function(unixtimestamp) {
   return utcDate;
 };
 
+/**
+ * Generate next Sunday, basted on day d
+ * @param  Date d
+ * @return Date
+ */
 EH.getNextSunday = function(d) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate() - d.getDay() + 7);
 };
 
+/**
+ * Generate a date 'n' days from now
+ * @param  int n
+ * @return string on form YYYY-MM-DD
+ */
 EH.getFutureDate = function(n) {
   var d = new Date();
   d = new Date(this.time() + (n || 0) * 86400000);

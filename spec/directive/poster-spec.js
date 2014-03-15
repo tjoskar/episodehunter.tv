@@ -7,10 +7,10 @@ describe("poster directive tests that", function() {
     beforeEach(inject(function($compile, $rootScope) {
         $rootScope.image_url = 'image.jpg';
         $rootScope.$apply();
-        default_image = angular.element('<img poster url="" />');
+        default_image = angular.element('<img eh-poster url="" />');
         $compile(default_image)($rootScope);
 
-        image = angular.element('<img poster url="image_url" />');
+        image = angular.element('<img eh-poster url="image_url" />');
         $compile(image)($rootScope);
     }));
 
