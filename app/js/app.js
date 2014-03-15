@@ -13,5 +13,5 @@ angular.module("EHW", ["ngRoute"]).config(function($routeProvider) {
 
 
 angular.module("EHW").run(function($rootScope) {
-    $rootScope.user_name = "tjoskar";
+    $rootScope.username = "tjoskar";
 });
