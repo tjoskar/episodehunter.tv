@@ -10,6 +10,11 @@ angular.module("EHW", ["ngRoute"]).config(function($routeProvider) {
       controller: 'TvController'
     });
 
+    $routeProvider.when('/movie/:id/:name?', {
+      template: ' ',
+      controller: 'MovieController'
+    });
+
     $routeProvider.when('/logout', {
       template: ' ',
       controller: 'LogoutController'
