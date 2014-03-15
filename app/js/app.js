@@ -5,6 +5,11 @@ angular.module("EHW", ["ngRoute"]).config(function($routeProvider) {
       controller: 'UpcomingController'
     });
 
+    $routeProvider.when('/tv/:id/:name?/:episode_id?', {
+      template: ' ',
+      controller: 'TvController'
+    });
+
     $routeProvider.when('/logout', {
       template: ' ',
       controller: 'LogoutController'
