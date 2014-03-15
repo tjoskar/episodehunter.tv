@@ -1,4 +1,4 @@
-angular.module("EHW").directive('poster', function() {
+angular.module("EHW").directive('ehPoster', function() {
     return {
         scope: {
             url: '='
