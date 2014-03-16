@@ -11,11 +11,15 @@ angular.module("EHW").directive('ehPoster', function() {
             element.lazyload = element.lazyload || function() {};
 
             if (scope.url) {
-                element.attr('data-original', scope.url);
-                element.lazyload({
-                    effect: "fadeIn",
-                    threshold: 50
-                });
+                if (element.is(":in-viewport")) {
+                    element.attr('src', scope.url);
+                } else {
+                    element.attr('data-original', scope.url);
+                    element.lazyload({
+                        effect: "fadeIn",
+                        threshold: 50
+                    });
+                }
             }
         }
     };
