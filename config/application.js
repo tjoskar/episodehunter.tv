@@ -46,7 +46,8 @@ module.exports = function(lineman) {
               "beforeEach": true,
               "it": true,
               "expect": true,
-              "spyOn": true
+              "spyOn": true,
+              "inject": true
             }
         }
     },
