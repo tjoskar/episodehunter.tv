@@ -6,10 +6,12 @@
   "author": "Oskar Karlsson",
   "devDependencies": {
     "lineman": "~0.27.2",
-    "lineman-angular": "~0.2.0"
+    "lineman-angular": "~0.2.0",
+    "bower": ""
   },
   "scripts": {
     "start": "lineman run",
-    "test": "lineman spec-ci"
+    "test": "lineman spec-ci",
+    "postinstall": "node_modules/.bin/bower install"
   }
 }
