@@ -47,8 +47,8 @@
             <nav class="header_menu">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/movie/popular">Popular movies</a></li>
-                    <li><a href="/shows/popular">Popular Shows</a></li>
+                    <li><a href="#/movie/popular">Popular movies</a></li>
+                    <li><a href="#/tv/popular">Popular Shows</a></li>
                     <li>
                         <a>{{ username }}</a>
                         <ul>

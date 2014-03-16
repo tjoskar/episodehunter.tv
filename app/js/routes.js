@@ -5,6 +5,16 @@ angular.module("EHW").config(function($routeProvider) {
       controller: 'UpcomingController'
     });
 
+    $routeProvider.when('/tv/popular', {
+      templateUrl: 'popular.html',
+      controller: 'PopularTvController'
+    });
+
+    $routeProvider.when('/movie/popular', {
+      templateUrl: 'popular.html',
+      controller: 'PopularMovieController'
+    });
+
     $routeProvider.when('/tv/:id/:name?/:episode_id?', {
       template: ' ',
       controller: 'TvController'

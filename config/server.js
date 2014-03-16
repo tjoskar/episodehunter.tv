@@ -13,15 +13,15 @@
  */
 
  var getFutureDate = function(n) {
-   var d = new Date();
-   d = new Date((new Date()).getTime() + (n || 0) * 86400000);
-   var month = d.getMonth() + 1;
-   return [
-     d.getFullYear(),
-     (month < 10 ? '0' + month : month),
-     (d.getDate() < 10 ? '0' + d.getDate() : d.getDate())
-   ].join('-');
- };
+    var d = new Date();
+    d = new Date((new Date()).getTime() + (n || 0) * 86400000);
+    var month = d.getMonth() + 1;
+    return [
+        d.getFullYear(),
+        (month < 10 ? '0' + month : month),
+        (d.getDate() < 10 ? '0' + d.getDate() : d.getDate())
+    ].join('-');
+};
 
 module.exports = {
     drawRoutes: function(app) {
@@ -351,7 +351,7 @@ module.exports = {
           });
         });
 
-        app.get('/api/v2/tv/populate/:time', function(req, res) {
+        app.get('/api/v2/tv/popular/:time', function(req, res) {
             setTimeout(function() {
                 if (req.params.time == 31536000) {
                     res.json({
@@ -455,6 +455,118 @@ module.exports = {
                                 'shown_name': 'Sherlock',
                                 'views': '423',
                                 'image': '504241d7e6a13-2.jpg',
+                                'order': '5'
+                            }
+                        ]
+                    });
+                }
+            }, 1000);
+        });
+
+        app.get('/api/v2/movie/popular/:time', function(req, res) {
+            setTimeout(function() {
+                if (req.params.time == 31536000) {
+                    res.json({
+                        'status': 200,
+                        'message': 'OK',
+                        'value': [
+                            {
+                                'id': '24',
+                                'title': 'The Wolverine',
+                                'views': '1027',
+                                'image': '520a7b2c85e78.jpg',
+                                'order': '1'
+                            },{
+                                'id': '24',
+                                'title': 'Escape Plan',
+                                'views': '509',
+                                'image': '527d71a2c065c.jpg',
+                                'order': '2'
+                            },{
+                                'id': '24',
+                                'title': 'Escape Plan',
+                                'views': '1008',
+                                'image': '527d71a2c065c.jpg',
+                                'order': '3'
+                            },{
+                                'id': '24',
+                                'title': 'Escape Plan',
+                                'views': '1123',
+                                'image': '527d71a2c065c.jpg',
+                                'order': '4'
+                            },{
+                                'id': '24',
+                                'title': 'Escape Plan',
+                                'views': '423',
+                                'image': '527d71a2c065c.jpg',
+                                'order': '5'
+                            },{
+                                'id': '24',
+                                'title': 'Escape Plan',
+                                'views': '987',
+                                'image': '527d71a2c065c.jpg',
+                                'order': '6'
+                            },{
+                                'id': '24',
+                                'title': 'World War Z',
+                                'views': '223',
+                                'image': '52261a42c6e5c.jpg',
+                                'order': '7'
+                            },{
+                                'id': '24',
+                                'title': 'World War Z',
+                                'views': '123',
+                                'image': '52261a42c6e5c.jpg',
+                                'order': '8'
+                            },{
+                                'id': '24',
+                                'title': 'World War Z',
+                                'views': '58',
+                                'image': '52261a42c6e5c.jpg',
+                                'order': '9'
+                            },{
+                                'id': '24',
+                                'title': 'World War Z',
+                                'views': '79',
+                                'image': '52261a42c6e5c.jpg',
+                                'order': '10'
+                            }
+                        ]
+                    });
+                } else {
+                    res.json({
+                        'status': 200,
+                        'message': 'OK',
+                        'value': [
+                            {
+                                'id': '24',
+                                'title': 'World War Z',
+                                'views': '1027',
+                                'image': '52261a42c6e5c.jpg',
+                                'order': '1'
+                            },{
+                                'id': '24',
+                                'title': 'Prisoners',
+                                'views': '509',
+                                'image': '5288a1b355181.jpg',
+                                'order': '2'
+                            },{
+                                'id': '24',
+                                'title': 'Oblivion',
+                                'views': '1008',
+                                'image': '51f0984449972.jpg',
+                                'order': '3'
+                            },{
+                                'id': '24',
+                                'title': 'World War Z',
+                                'views': '1123',
+                                'image': '52261a42c6e5c.jpg',
+                                'order': '4'
+                            },{
+                                'id': '24',
+                                'title': 'World War Z',
+                                'views': '423',
+                                'image': '52261a42c6e5c.jpg',
                                 'order': '5'
                             }
                         ]
