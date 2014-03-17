@@ -10,7 +10,7 @@ Ongoing project to create a single-page app for [episodehunter.tv](episodehunter
 ## Installation
 ``` $ npm install ```
 
-## Runing
+## Running
 ``` $ lineman run ```   
 Visit [http://localhost:8000/](http://localhost:8000/)   
 Change the server API by modifying ```/config/server.js```
