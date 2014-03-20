@@ -36,19 +36,19 @@ module.exports = function(lineman) {
             "eqnull": true,
             "node": true,
             "globals": {
-              "$": true,
-              "jQuery": false,
-              "angular": true,
-              "window": false,
-              "document": false,
-              "EH": true,
-	      "moment": true,
-              "describe": true,
-              "beforeEach": true,
-              "it": true,
-              "expect": true,
-              "spyOn": true,
-              "inject": true
+                "$": true,
+                "jQuery": false,
+                "angular": true,
+                "window": false,
+                "document": false,
+                "EH": true,
+                "moment": true,
+                "describe": true,
+                "beforeEach": true,
+                "it": true,
+                "expect": true,
+                "spyOn": true,
+                "inject": true
             }
         }
     },

@@ -1,7 +1,7 @@
 /* exported popularMovieModel */
 function HistoryTvModel(_history) {
     if (!(this instanceof HistoryTvModel)) {
-	return null;
+        return null;
     }
 
     this.title = _history.show_name || '';
@@ -14,13 +14,13 @@ function HistoryTvModel(_history) {
     this.utcTimestamp = _history.utc_timestamp * 1000;
 
     if (_history.image) {
-	this.image = EH.url.shows.episode + _history.image;
+        this.image = EH.url.shows.episode + _history.image;
     }
 
     Object.defineProperty(this, 'episodeNumber', {
-	get: function () {
-	    return EH.episodeNumber(this.season, this.episode);
-	}
+        get: function () {
+            return EH.episodeNumber(this.season, this.episode);
+        }
     });
 
 }
@@ -31,7 +31,7 @@ HistoryTvModel.prototype.extraInfo = function() {
 
 function PopularMovieModel(_history) {
     if (!(this instanceof PopularMovieModel)) {
-	return null;
+        return null;
     }
 
     this.title = _history.title || '';
@@ -41,7 +41,7 @@ function PopularMovieModel(_history) {
     this.utcTimestamp = _history.utc_timestamp * 1000;
 
     if (_history.image) {
-	this.image = 'http://img.episodehunter.tv/' + _history.image + '/4';
+        this.image = 'http://img.episodehunter.tv/' + _history.image + '/4';
     }
 
 }

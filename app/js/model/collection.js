@@ -1,15 +1,15 @@
 var Collection = function(_headline, _media) {
     if (!(this instanceof Collection)) {
-	return null;
+        return null;
     }
 
     this.headline = _headline || '';
     this.media = _media || [];
 
     Object.defineProperty(this, 'length', {
-	get: function () {
-	    return this.media.length;
-	}
+        get: function () {
+            return this.media.length;
+        }
     });
 
 };
@@ -24,7 +24,7 @@ Collection.prototype.add = function(episode) {
 
 Collection.prototype.remove = function(index) {
     if (EH.isInt(index) && index >= 0) {
-	this.media.splice(index, 1);
+        this.media.splice(index, 1);
     }
 };
 
@@ -37,16 +37,19 @@ Collection.prototype.shuffle = function() {
 };
 
 Collection.prototype.sortOn = function(key, reverse) {
+
     this.media.sort(function(left, right) {
-	if (left[key] === right[key]) {
-	    return 0;
-	} else if (left[key] < right[key]) {
-	    return -1;
-	}
-	return 1;
+        if (left[key] === right[key]) {
+            return 0;
+        } else if (left[key] < right[key]) {
+            return -1;
+        }
+        return 1;
     });
+
     if (reverse) {
-	this.media.reverse();
+        this.media.reverse();
     }
+
     return this.media;
 };

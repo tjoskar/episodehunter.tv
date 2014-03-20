@@ -1,29 +1,29 @@
 <div class="wrapper-history">
     <div class="content">
-	<h1>History</h1>
-	<span class="history">You have watched {{numberOfWatchedMovies | number:0}} movies and {{ numberOfWatchedEpisodes | number:0 }} episodes in {{ numberOfWatchedTvShows | number:0}} TV shows</span>
-	<div class="dotted"></div>
+    <h1>History</h1>
+    <span class="history">You have watched {{numberOfWatchedMovies | number:0}} movies and {{ numberOfWatchedEpisodes | number:0 }} episodes in {{ numberOfWatchedTvShows | number:0}} TV shows</span>
+    <div class="dotted"></div>
 
-	<p ng-show="!history">Humm.. It seems that you haven't seen anything. Have you <a href="/xbmc">installed the plugin for xbmc</a></p>
+    <p ng-show="!history">Humm.. It seems that you haven't seen anything. Have you <a href="/xbmc">installed the plugin for xbmc</a></p>
 
-	<div class="overflow_hidden" ng-show="history">
-	    <div style="margin-top: 30px;">
-		<div ng-repeat="(key, collection) in history">
-		    <h4>{{ key }}</h4>
-		    <div ng-repeat="media in collection.getAll()">
-			<div class="episode-list-img left">
-			    <span class="clock">{{ media.utcTimestamp | moment:'HH:mm' }}</span>
-			    <span class="remove">remove</span>
+    <div class="overflow_hidden" ng-show="history">
+        <div style="margin-top: 30px;">
+        <div ng-repeat="(key, collection) in history">
+            <h4>{{ key }}</h4>
+            <div ng-repeat="media in collection.getAll()">
+            <div class="episode-list-img left">
+                <span class="clock">{{ media.utcTimestamp | moment:'HH:mm' }}</span>
+                <span class="remove">remove</span>
 
-			    <a ng-href="#{{ media.url }}">
-				<img eh-history-thumbnail url="media.image">
-			    </a>
-			    <p>{{ media.title }}</p>
-			    <p>{{ media.extraInfo() }}</p>
-			</div>
-		    </div>
-		</div>
-	    </div>
-	</div>
+                <a ng-href="#{{ media.url }}">
+                <img eh-history-thumbnail url="media.image">
+                </a>
+                <p>{{ media.title }}</p>
+                <p>{{ media.extraInfo() }}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
 </div>

@@ -11,21 +11,21 @@ module.exports = function(lineman) {
 
     js: {
 
-      vendor: [
-        "vendor/js/jquery/dist/jquery.js",
-        "vendor/js/angular/angular.js",
-        "vendor/js/angular-route/angular-route.js",
-        "vendor/js/jquery.lazyload.min.js",
-	"vendor/js/jquery.knob.js",
-	"vendor/js/momentjs/moment.js",
-	"vendor/js/moment-timezone/moment-timezone.js",
-	"vendor/js/moment-timezone-data.js"
-      ],
+        vendor: [
+            "vendor/js/jquery/dist/jquery.js",
+            "vendor/js/angular/angular.js",
+            "vendor/js/angular-route/angular-route.js",
+            "vendor/js/jquery.lazyload.min.js",
+            "vendor/js/jquery.knob.js",
+            "vendor/js/momentjs/moment.js",
+            "vendor/js/moment-timezone/moment-timezone.js",
+            "vendor/js/moment-timezone-data.js"
+        ],
 
-      ehw: [
-        "app/js/app.js",
-        "app/js/**/*.js"
-      ]
+        ehw: [
+            "app/js/app.js",
+            "app/js/**/*.js"
+        ]
 
     }
 

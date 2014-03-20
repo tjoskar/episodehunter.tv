@@ -16,17 +16,17 @@ function populareEpisodeModel(_popular) {
 }
 
 function popularMovieModel(_popular) {
-  if (!(this instanceof popularMovieModel)) {
-    return null;
-  }
+    if (!(this instanceof popularMovieModel)) {
+        return null;
+    }
 
-  this.title = _popular.title || '';
-  this.url = '/movie/' + _popular.id + '/' + EH.urlTitle(this.title);
-  this.poster = EH.url.movie.poster + EH.url.defaultImage.poster;
-  this.views = _popular.views || 0;
+    this.title = _popular.title || '';
+    this.url = '/movie/' + _popular.id + '/' + EH.urlTitle(this.title);
+    this.poster = EH.url.movie.poster + EH.url.defaultImage.poster;
+    this.views = _popular.views || 0;
 
-  if (_popular.image) {
-    this.poster = EH.url.movie.poster + _popular.image;
-  }
+    if (_popular.image) {
+        this.poster = EH.url.movie.poster + _popular.image;
+    }
 
 }
