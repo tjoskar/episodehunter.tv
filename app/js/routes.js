@@ -15,6 +15,11 @@ angular.module("EHW").config(function($routeProvider) {
         controller: 'PopularMovieController'
     });
 
+    $routeProvider.when('/history', {
+	templateUrl: 'history.html',
+	controller: 'HistoryController'
+    });
+
     $routeProvider.when('/tv/:id/:name?/:episode_id?', {
         template: ' ',
         controller: 'TvController'

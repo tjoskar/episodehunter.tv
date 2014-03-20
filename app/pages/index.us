@@ -52,7 +52,7 @@
                     <li>
                         <a>{{ username }}</a>
                         <ul>
-                            <li><a href="/history">History</a></li>
+			    <li><a href="#/history">History</a></li>
                             <li><a href="/shows/whattowatch">Episode to watch</a></li>
                             <li><a href="/rating">Rated</a></li>
                             <li><a href="/rating/unrated">Unrated</a></li>
