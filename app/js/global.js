@@ -174,3 +174,25 @@ EH.urlTitle = function(text) {
                .replace(/[^\w ]+/g,'')
                .replace(/ +/g,'-');
 };
+
+/**
+ * Generate a episode number on form SXXEXX
+ * @param  int|string season
+ * @param  int|string episode
+ * @return string
+ */
+EH.episodeNumber = function(season, episode) {
+    var SE = 'S';
+    if (season < 10) {
+	SE += '0' + season;
+    } else {
+	SE += season;
+    }
+    SE += 'E';
+    if (episode < 10) {
+	SE += '0' + episode;
+    } else {
+	SE += episode;
+    }
+    return SE;
+};
