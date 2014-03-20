@@ -7,4 +7,6 @@ angular.module("EHW").run(function($rootScope, authentication) {
         $rootScope.username = user.username;
     });
 
+    moment.lang('en');
+
 });

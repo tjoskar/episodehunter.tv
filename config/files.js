@@ -16,7 +16,10 @@ module.exports = function(lineman) {
         "vendor/js/angular/angular.js",
         "vendor/js/angular-route/angular-route.js",
         "vendor/js/jquery.lazyload.min.js",
-        "vendor/js/jquery.knob.js"
+	"vendor/js/jquery.knob.js",
+	"vendor/js/momentjs/moment.js",
+	"vendor/js/moment-timezone/moment-timezone.js",
+	"vendor/js/moment-timezone-data.js"
       ],
 
       ehw: [

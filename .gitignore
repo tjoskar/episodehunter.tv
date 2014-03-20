@@ -2,10 +2,9 @@
 
 /node_modules
 /node_modules
-/vendor/js/angular
-/vendor/js/angular-route
-/vendor/js/angular-mocks
-/vendor/js/jquery
+/vendor/js/
+!/vendor/js/jquery.knob.js
+!/vendor/js/jquery.lazyload.min.js
 
 /dist
 /generated

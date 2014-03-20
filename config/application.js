@@ -42,6 +42,7 @@ module.exports = function(lineman) {
               "window": false,
               "document": false,
               "EH": true,
+	      "moment": true,
               "describe": true,
               "beforeEach": true,
               "it": true,
