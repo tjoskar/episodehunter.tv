@@ -6,23 +6,23 @@
 
     <p ng-show="!history">Humm.. It seems that you haven't seen anything. Have you <a href="/xbmc">installed the plugin for xbmc</a></p>
 
-    <div class="overflow_hidden" ng-show="history">
+    <div class="overflow_hidden" ng-show="history" infinite-scroll="get()" infinite-scroll-disabled="infiniteScrollDisabled">
         <div style="margin-top: 30px;">
-        <div ng-repeat="(key, collection) in history">
-            <h4>{{ key }}</h4>
-            <div ng-repeat="media in collection.getAll()">
-            <div class="episode-list-img left">
-                <span class="clock">{{ media.utcTimestamp | moment:'HH:mm' }}</span>
-                <span class="remove">remove</span>
+            <div ng-repeat="collection in history">
+                <h4>{{ collection.headline }}</h4>
+                <div ng-repeat="media in collection.getAll()">
+                    <div class="episode-list-img left">
+                        <span class="clock">{{ media.utcTimestamp | moment:'HH:mm' }}</span>
+                        <span class="remove">remove</span>
 
-                <a ng-href="#{{ media.url }}">
-                <img eh-history-thumbnail url="media.image">
-                </a>
-                <p>{{ media.title }}</p>
-                <p>{{ media.extraInfo() }}</p>
+                        <a ng-href="#{{ media.url }}">
+                            <img eh-history-thumbnail url="media.image">
+                        </a>
+                        <p>{{ media.title }}</p>
+                        <p>{{ media.extraInfo() }}</p>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </div>
     </div>
     </div>

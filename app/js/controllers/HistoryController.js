@@ -1,11 +1,15 @@
 angular.module('EHW').controller('HistoryController', function($scope, historyRepositories) {
 
-    $scope.history = {};
+    var batch = 0;
 
-    historyRepositories.populate($scope, 0);
+    $scope.history = [];
 
-    $scope.numberOfWatchedMovies = 312;
-    $scope.numberOfWatchedEpisodes = 2157;
-    $scope.numberOfWatchedTvShows = 59;
+    historyRepositories.getNumberOfWatched($scope);
+
+    $scope.get = function() {
+        $scope.infiniteScrollDisabled = true;
+        historyRepositories.populate($scope, batch);
+        batch++;
+    };
 
 });
