@@ -37,19 +37,15 @@ Collection.prototype.shuffle = function() {
 };
 
 Collection.prototype.sortOn = function(key, reverse) {
-
-    this.media.sort(function(left, right) {
+    return this.media.sort(function(left, right) {
         if (left[key] === right[key]) {
             return 0;
-        } else if (left[key] < right[key]) {
-            return -1;
         }
-        return 1;
+
+        if (reverse) {
+            return (left[key] < right[key]) ? 1 : -1;
+        } else {
+            return (left[key] > right[key]) ? 1 : -1;
+        }
     });
-
-    if (reverse) {
-        this.media.reverse();
-    }
-
-    return this.media;
 };
