@@ -6,7 +6,7 @@ angular.module("EHW").directive('ehHistoryThumbnail', function() {
         },
 
         link: function(scope, element) {
-            element.attr('src', EH.url.shows.poster + EH.url.defaultImage.episode);
+            element.attr('src', EH.url.shows.episode + EH.url.defaultImage.episode);
             element.attr('class', 'episode-list-no-img');
             element.attr('alt', '');
 
