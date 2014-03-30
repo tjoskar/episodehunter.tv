@@ -1,14 +1,16 @@
-angular.module("EHW").factory('popularMovieResource', function($q, resource, storage) {
-    var popularMovieResource = {};
+angular.module('EHW').factory('upcomingResource', function($q, resource, storage) {
+    var upcomingResource = {};
+    var storageName = 'upcoming_episode';
     var cacheTime = 86400000; // 24*60*60*1000
 
-    popularMovieResource.get = function(time) {
+    upcomingResource.get = function(force) {
+        force = force || false;
         var deferred = $q.defer();
-        var storageName = 'popular_movie' + '_' + time;
 
+        // Check if cache exist, otherwise get new data from server
         var episodes = storage.get(storageName);
         if (!episodes || storage.isObsolete()) {
-            resource.get('/api/v2/movie/popular/' + time).then(function(episodes) {
+            resource.get('/api/v2/tv/upcoming').then(function(episodes) {
                 storage.set(storageName, episodes, cacheTime);
                 deferred.resolve(episodes);
             }, function() {
@@ -21,6 +23,6 @@ angular.module("EHW").factory('popularMovieResource', function($q, resource, sto
         return deferred.promise;
     };
 
-    return popularMovieResource;
+    return upcomingResource;
 
 });

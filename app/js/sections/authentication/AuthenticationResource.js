@@ -1,8 +1,23 @@
-angular.module("EHW").factory('authenticationResource', function($q, resource, storage) {
+/**
+ * Resource for users
+ */
+angular.module('EHW').factory('authenticationResource', function($q, resource, storage) {
 
-    var authenticationResource = {};
+    /**
+     * Prefix in storage
+     * @type {String}
+     */
     var storageName = 'user';
 
+    /**
+     * @type {Object}
+     */
+    var authenticationResource = {};
+
+    /**
+     * Get an user from storage of server if not exist
+     * @return {[type]} [description]
+     */
     authenticationResource.get = function() {
         var deferred = $q.defer();
         var user = storage.get(storageName);

@@ -1,22 +1,22 @@
-/* exported populareEpisodeModel, popularMovieModel */
-function populareEpisodeModel(_popular) {
-    if (!(this instanceof populareEpisodeModel)) {
+/* exported PopularEpisodeModel, PopularMovieModel */
+function PopularEpisodeModel(_popular) {
+    if (!(this instanceof PopularEpisodeModel)) {
         return null;
     }
 
-    this.title = _popular.shown_name || '';
+    this.title = _popular.show_name || '';
     this.url = '/tv/' + _popular.tv_id + '/' + EH.urlTitle(this.title);
-    this.poster = EH.url.shows.poster + EH.url.defaultImage.poster;
+    this.poster = EH.url.show.poster + EH.url.defaultImage.poster;
     this.views = _popular.views || 0;
 
     if (_popular.image) {
-        this.poster = EH.url.shows.poster + _popular.image;
+        this.poster = EH.url.show.poster + _popular.image;
     }
 
 }
 
-function popularMovieModel(_popular) {
-    if (!(this instanceof popularMovieModel)) {
+function PopularMovieModel(_popular) {
+    if (!(this instanceof PopularMovieModel)) {
         return null;
     }
 

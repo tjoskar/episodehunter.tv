@@ -1,10 +1,14 @@
-angular.module("EHW").directive('ehPoster', function() {
+angular.module('EHW').directive('ehPoster', function() {
     return {
+
+        restrict: 'A', // Only attribute
+
         scope: {
             url: '='
         },
+
         link: function(scope, element) {
-            element.attr('src', EH.url.shows.poster + EH.url.defaultImage.poster);
+            element.attr('src', EH.url.show.poster + EH.url.defaultImage.poster);
             element.attr('alt', '');
             element.attr('width', '160');
 
@@ -22,5 +26,6 @@ angular.module("EHW").directive('ehPoster', function() {
                 }
             }
         }
+
     };
 });

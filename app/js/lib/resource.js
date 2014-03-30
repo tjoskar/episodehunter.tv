@@ -1,7 +1,19 @@
+/**
+ * Helper function to make HTTP calls
+ */
 angular.module("EHW").factory('resource', function($rootScope, $http, $q) {
 
+    /**
+     * Number of ongoing HTTP calls
+     * @type {Number}
+     */
     var ongoingHTTPCounter = 0;
 
+    /**
+     * Start "loading" effect if it is the first call.
+     * Broadcast 'httpStart' on $rootScope
+     * @return {null}
+     */
     var httpStart = function() {
         ongoingHTTPCounter++;
 
@@ -12,6 +24,11 @@ angular.module("EHW").factory('resource', function($rootScope, $http, $q) {
         $rootScope.$broadcast('httpStart', ongoingHTTPCounter);
     };
 
+    /**
+     * Stop "loading" effect
+     * Broadcast 'httpEnd' on $rootScope
+     * @return {null}
+     */
     var httpEnd = function() {
         ongoingHTTPCounter--;
 
@@ -22,6 +39,12 @@ angular.module("EHW").factory('resource', function($rootScope, $http, $q) {
         $rootScope.$broadcast('httpEnd', ongoingHTTPCounter);
     };
 
+    /**
+     * An global error handler
+     * @param  {object} data   Response body
+     * @param  {int}    status HTTP status code
+     * @return {null}
+     */
     var errorHandler = function(data, status) {
         if (status === 401) {
             console.log('Logout user');
@@ -32,6 +55,11 @@ angular.module("EHW").factory('resource', function($rootScope, $http, $q) {
 
     return {
 
+        /**
+         * Create an GET request
+         * @param  {string} url
+         * @return {promise}
+         */
         get: function(url) {
             var deferred = $q.defer();
             httpStart();
@@ -53,6 +81,12 @@ angular.module("EHW").factory('resource', function($rootScope, $http, $q) {
             return deferred.promise;
         },
 
+        /**
+         * Create an POST request
+         * @param  {string} url
+         * @param  {object} postData
+         * @return {promise}
+         */
         post: function(url, postData) {
             var deferred = $q.defer();
             EH.ajaxStart();

@@ -1,6 +1,6 @@
 /* global Collection: true, UpcomingEpisode: true */
-angular.module("EHW").factory('upcomingRepositories', function(upcomingResource) {
-    var upcomingRepositories = {};
+angular.module("EHW").factory('upcomingRepository', function(upcomingResource) {
+    var upcomingRepository = {};
 
     var populateCollection = function(episodes, $scope) {
         var episode, d;
@@ -48,13 +48,13 @@ angular.module("EHW").factory('upcomingRepositories', function(upcomingResource)
         $scope.loading_complete = true;
     };
 
-    upcomingRepositories.populate = function($scope, force) {
+    upcomingRepository.populate = function($scope, force) {
         var promise = upcomingResource.get(force);
         promise.then(function(episodes) {
             populateCollection(episodes, $scope);
         });
     };
 
-    return upcomingRepositories;
+    return upcomingRepository;
 
 });

@@ -1,6 +1,6 @@
 # Based on Brandon Tilley's infiniteScroll: https://github.com/sroze/ngInfiniteScroll
 
-angular.module("EHW").directive 'infiniteScroll', ($rootScope, $window, $timeout) ->
+angular.module('EHW').directive 'infiniteScroll', ($rootScope, $window, $timeout) ->
 
     link: (scope, elem, attrs) ->
         $window = angular.element($window)

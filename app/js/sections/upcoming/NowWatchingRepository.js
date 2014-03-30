@@ -1,6 +1,6 @@
 /* global Collection: true, nowWatchingTvModel: true, nowWatchingMovieModel: true */
-angular.module("EHW").factory('nowWatchingRepositories', function(nowWatchingResource) {
-    var nowWatchingRepositories = {};
+angular.module('EHW').factory('nowWatchingRepository', function(nowWatchingResource) {
+    var nowWatchingRepository = {};
 
     var populateCollection = function(media, $scope) {
         var nowWatching = new Collection();
@@ -18,15 +18,15 @@ angular.module("EHW").factory('nowWatchingRepositories', function(nowWatchingRes
         $scope.nowWatching = nowWatching;
     };
 
-    nowWatchingRepositories.populate = function($scope, force) {
+    nowWatchingRepository.populate = function($scope, force) {
         var promise = nowWatchingResource.get(force);
 
         promise.then(function(episodes) {
             populateCollection(episodes, $scope);
         });
 
-  };
+    };
 
-  return nowWatchingRepositories;
+    return nowWatchingRepository;
 
 });

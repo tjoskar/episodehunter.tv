@@ -1,4 +1,4 @@
-angular.module("EHW").factory('nowWatchingResource', function($q, resource, storage) {
+angular.module('EHW').factory('nowWatchingResource', function($q, resource, storage) {
     var nowWatchingResource = {};
     var storageName = 'now_watching';
     var cacheTime = 600000; // 10*60*1000

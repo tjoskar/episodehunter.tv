@@ -8,7 +8,7 @@ EH.url = {
         'poster': 'http://img.episodehunter.tv/movie/poster/',
         'fanart': 'http://img.episodehunter.tv/movie/fanart/'
     },
-    'shows': {
+    'show': {
         'poster': 'http://img.episodehunter.tv/serie/poster/',
         'fanart': 'http://img.episodehunter.tv/',
         'episode': 'http://img.episodehunter.tv/episode/'
