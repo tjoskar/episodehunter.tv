@@ -15,16 +15,16 @@
                 </hgroup>
                 <div ng-show="episode.getAirDate()">
                   <hgroup class="show-name">
-                    <p>{{ episode.showName }}</p>
+                    <p>{{ episode.seriesName }}</p>
                   </hgroup>
 
-                  <hgroup class="episode-data" eh-show-series-name-on-poster-hover>
+                  <hgroup class="episode-data" eh-show-episode-number-on-poster-hover>
                     <p>{{ episode.getAirDayName() }}</p>
                     <p>{{ episode.episodeNumber }}</p>
                   </hgroup>
                 </div>
                 <hgroup class="media-name" ng-show="!episode.getAirDate()">
-                  <p>{{ episode.showName }}</p>
+                  <p>{{ episode.seriesName }}</p>
                 </hgroup>
                 <img eh-poster url="episode.image" />
               </div>

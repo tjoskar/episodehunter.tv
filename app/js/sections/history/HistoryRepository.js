@@ -1,4 +1,4 @@
-/* global Collection: true, HistoryTvModel: true, PopularMovieModel: true */
+/* global Collection: true, HistoryTvModel: true, HistoryMovieModel: true */
 
 /**
  * Repository for the history section
@@ -32,7 +32,7 @@ angular.module("EHW").factory('historyRepository', function(historyResource, aut
         }
 
         for (var m in media.movies) {
-            unsorted_history.add(new PopularMovieModel(media.movies[m]));
+            unsorted_history.add(new HistoryMovieModel(media.movies[m]));
         }
 
         for (var t in media.tv_shows) {
@@ -63,7 +63,7 @@ angular.module("EHW").factory('historyRepository', function(historyResource, aut
             found_collection.add(value);
         });
 
-        $scope.infiniteScrollDisabled = false;
+        $scope.infiniteScrollDisabled = true;
     };
 
     /**
@@ -82,7 +82,9 @@ angular.module("EHW").factory('historyRepository', function(historyResource, aut
                     populateCollection(media, $scope);
                 });
             } else {
-                populateCollection(media, $scope);
+                setTimeout(function() {
+                    populateCollection(media, $scope);
+                }, 10);
             }
         });
 

@@ -4,13 +4,13 @@ function PopularEpisodeModel(_popular) {
         return null;
     }
 
-    this.title = _popular.show_name || '';
+    this.title = _popular.series_name || '';
     this.url = '/tv/' + _popular.tv_id + '/' + EH.urlTitle(this.title);
-    this.poster = EH.url.show.poster + EH.url.defaultImage.poster;
+    this.poster = EH.url.series.poster + EH.url.defaultImage.poster;
     this.views = _popular.views || 0;
 
     if (_popular.image) {
-        this.poster = EH.url.show.poster + _popular.image;
+        this.poster = EH.url.series.poster + _popular.image;
     }
 
 }

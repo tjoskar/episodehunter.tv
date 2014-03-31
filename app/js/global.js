@@ -8,7 +8,7 @@ EH.url = {
         'poster': 'http://img.episodehunter.tv/movie/poster/',
         'fanart': 'http://img.episodehunter.tv/movie/fanart/'
     },
-    'show': {
+    'series': {
         'poster': 'http://img.episodehunter.tv/serie/poster/',
         'fanart': 'http://img.episodehunter.tv/',
         'episode': 'http://img.episodehunter.tv/episode/'
@@ -170,9 +170,12 @@ EH.getFutureDate = function(n) {
  * @return string
  */
 EH.urlTitle = function(text) {
-    return text.toLowerCase()
-               .replace(/[^\w ]+/g,'')
-               .replace(/ +/g,'-');
+    if (text) {
+        return text.toLowerCase()
+                   .replace(/[^\w ]+/g,'')
+                   .replace(/ +/g,'-');
+    }
+    return '';
 };
 
 /**

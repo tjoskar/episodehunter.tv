@@ -19,7 +19,7 @@ module.exports = function(lineman) {
             "vendor/js/jquery.knob.js",
             "vendor/js/momentjs/moment.js",
             "vendor/js/moment-timezone/moment-timezone.js",
-            "vendor/js/moment-timezone-data.js"
+            "vendor/js/moment.timezone.data.js"
         ],
 
         ehw: [

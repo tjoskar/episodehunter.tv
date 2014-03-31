@@ -1,13 +1,13 @@
 /**
  * Upcoming controller
  */
-angular.module("EHW").controller('UpcomingController', function($scope, upcomingRepositories, nowWatchingRepositories) {
+angular.module("EHW").controller('UpcomingController', function($scope, upcomingRepository, nowWatchingRepository) {
 
     // Useful to determine if the user is following any series
     $scope.loading_complete = false;
 
-    upcomingRepositories.populate($scope);
+    upcomingRepository.populate($scope);
 
-    nowWatchingRepositories.populate($scope);
+    nowWatchingRepository.populate($scope);
 
 });

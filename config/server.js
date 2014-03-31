@@ -46,7 +46,7 @@ module.exports = {
                         [{
                           "tv_id": "24",
                           "episode_id": null,
-                          "shown_name": "The Walking Dead",
+                          "series_name": "The Walking Dead",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -56,7 +56,7 @@ module.exports = {
                         {
                           "tv_id": "168",
                           "episode_id": null,
-                          "shown_name": "The Newsroom (2012)",
+                          "series_name": "The Newsroom (2012)",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -66,7 +66,7 @@ module.exports = {
                         {
                           "tv_id": "17",
                           "episode_id": null,
-                          "shown_name": "Sons of Anarchy",
+                          "series_name": "Sons of Anarchy",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -76,7 +76,7 @@ module.exports = {
                         {
                           "tv_id": "528",
                           "episode_id": null,
-                          "shown_name": "The Blacklist",
+                          "series_name": "The Blacklist",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -86,7 +86,7 @@ module.exports = {
                         {
                           "tv_id": "12",
                           "episode_id": null,
-                          "shown_name": "Hell on Wheels",
+                          "series_name": "Hell on Wheels",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -96,7 +96,7 @@ module.exports = {
                         {
                           "tv_id": "20",
                           "episode_id": null,
-                          "shown_name": "The Big Bang Theory",
+                          "series_name": "The Big Bang Theory",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -106,7 +106,7 @@ module.exports = {
                         {
                           "tv_id": "160",
                           "episode_id": null,
-                          "shown_name": "Marvel's Agents of S.H.I.E.L.D.",
+                          "series_name": "Marvel's Agents of S.H.I.E.L.D.",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -116,7 +116,7 @@ module.exports = {
                         {
                           "tv_id": "67",
                           "episode_id": null,
-                          "shown_name": "Arrow",
+                          "series_name": "Arrow",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -126,7 +126,7 @@ module.exports = {
                         {
                           "tv_id": "159",
                           "episode_id": null,
-                          "shown_name": "Ray Donovan",
+                          "series_name": "Ray Donovan",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -136,7 +136,7 @@ module.exports = {
                         {
                           "tv_id": "144",
                           "episode_id": null,
-                          "shown_name": "Vikings",
+                          "series_name": "Vikings",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -146,7 +146,7 @@ module.exports = {
                         {
                           "tv_id": "158",
                           "episode_id": null,
-                          "shown_name": "Under The Dome",
+                          "series_name": "Under The Dome",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -156,7 +156,7 @@ module.exports = {
                         {
                           "tv_id": "26",
                           "episode_id": null,
-                          "shown_name": "True Blood",
+                          "series_name": "True Blood",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -166,7 +166,7 @@ module.exports = {
                         {
                           "tv_id": "8",
                           "episode_id": null,
-                          "shown_name": "Family Guy",
+                          "series_name": "Family Guy",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -176,7 +176,7 @@ module.exports = {
                         {
                           "tv_id": "165",
                           "episode_id": null,
-                          "shown_name": "Orange Is the New Black",
+                          "series_name": "Orange Is the New Black",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -186,7 +186,7 @@ module.exports = {
                         {
                           "tv_id": "23",
                           "episode_id": null,
-                          "shown_name": "The Vampire Diaries",
+                          "series_name": "The Vampire Diaries",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -196,7 +196,7 @@ module.exports = {
                         {
                           "tv_id": "10",
                           "episode_id": null,
-                          "shown_name": "Game of Thrones",
+                          "series_name": "Game of Thrones",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -206,7 +206,7 @@ module.exports = {
                         {
                           "tv_id": "139",
                           "episode_id": null,
-                          "shown_name": "Suits",
+                          "series_name": "Suits",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -216,7 +216,7 @@ module.exports = {
                         {
                           "tv_id": "52",
                           "episode_id": null,
-                          "shown_name": "Solsidan",
+                          "series_name": "Solsidan",
                           "timestamp": null,
                           "season": null,
                           "episode": null,
@@ -226,7 +226,7 @@ module.exports = {
                         {
                           "tv_id": "74",
                           "episode_id": "46266",
-                          "shown_name": "Homeland",
+                          "series_name": "Homeland",
                           "timestamp": getFutureDate(1),
                           "season": "3",
                           "episode": "12",
@@ -236,7 +236,7 @@ module.exports = {
                         {
                           "tv_id": "14",
                           "episode_id": "16745",
-                          "shown_name": "How I Met Your Mother",
+                          "series_name": "How I Met Your Mother",
                           "timestamp": getFutureDate(2),
                           "season": "9",
                           "episode": "13",
@@ -246,7 +246,7 @@ module.exports = {
                         {
                           "tv_id": "106",
                           "episode_id": "39390",
-                          "shown_name": "Justified",
+                          "series_name": "Justified",
                           "timestamp": getFutureDate(3),
                           "season": "5",
                           "episode": "1",
@@ -256,7 +256,7 @@ module.exports = {
                         {
                           "tv_id": "108",
                           "episode_id": "14038",
-                          "shown_name": "Banshee",
+                          "series_name": "Banshee",
                           "timestamp": getFutureDate(7),
                           "season": "2",
                           "episode": "1",
@@ -266,7 +266,7 @@ module.exports = {
                         {
                           "tv_id": "107",
                           "episode_id": "52557",
-                          "shown_name": "The Following",
+                          "series_name": "The Following",
                           "timestamp": getFutureDate(7),
                           "season": "2",
                           "episode": "1",
@@ -276,7 +276,7 @@ module.exports = {
                         {
                           "tv_id": "110",
                           "episode_id": "77648",
-                          "shown_name": "The Americans (2013)",
+                          "series_name": "The Americans (2013)",
                           "timestamp": getFutureDate(8),
                           "season": "2",
                           "episode": "1",
@@ -286,7 +286,7 @@ module.exports = {
                         {
                           "tv_id": "111",
                           "episode_id": "39130",
-                          "shown_name": "House Of Cards (2013)",
+                          "series_name": "House Of Cards (2013)",
                           "timestamp": getFutureDate(8),
                           "season": "2",
                           "episode": "1",
@@ -296,7 +296,7 @@ module.exports = {
                         {
                           "tv_id": "5",
                           "episode_id": "37961",
-                          "shown_name": "Continuum",
+                          "series_name": "Continuum",
                           "timestamp": getFutureDate(100),
                           "season": "3",
                           "episode": "1",
@@ -306,7 +306,7 @@ module.exports = {
                         {
                           "tv_id": "7",
                           "episode_id": "37960",
-                          "shown_name": "Falling Skies",
+                          "series_name": "Falling Skies",
                           "timestamp": getFutureDate(121),
                           "season": "4",
                           "episode": "1",
@@ -337,12 +337,12 @@ module.exports = {
               'tv_shows':[
                 {
                   'tv_id': '24',
-                  'shown_name': 'The Walking Dead',
+                  'series_name': 'The Walking Dead',
                   'progress': '0.4',
                   'image': '525b1c9cf2968.jpg'
                 },{
                   'tv_id': '24',
-                  'shown_name': 'Sherlock',
+                  'series_name': 'Sherlock',
                   'progress': '0.2',
                   'image': '50b220731c0b4.jpg'
                 }
@@ -360,61 +360,61 @@ module.exports = {
                         'value': [
                             {
                                 'tv_id': '24',
-                                'shown_name': 'The Walking Dead',
+                                'series_name': 'The Walking Dead',
                                 'views': '1027',
                                 'image': '525b1c9cf2968.jpg',
                                 'order': '1'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '509',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '2'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '1008',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '3'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '1123',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '4'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '423',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '5'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '987',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '6'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '223',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '7'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '123',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '8'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '58',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '9'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '79',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '10'
@@ -428,31 +428,31 @@ module.exports = {
                         'value': [
                             {
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '1027',
                                 'image': '525b1c9cf2968.jpg',
                                 'order': '1'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'The Walking Dead',
+                                'series_name': 'The Walking Dead',
                                 'views': '509',
                                 'image': '504241d7e6a13-2.jpg',
                                 'order': '2'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Game of thrones',
+                                'series_name': 'Game of thrones',
                                 'views': '1008',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '3'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '1123',
                                 'image': '50b220731c0b4.jpg',
                                 'order': '4'
                             },{
                                 'tv_id': '24',
-                                'shown_name': 'Sherlock',
+                                'series_name': 'Sherlock',
                                 'views': '423',
                                 'image': '504241d7e6a13-2.jpg',
                                 'order': '5'
@@ -774,7 +774,7 @@ module.exports = {
                 'tv_shows': [
                 {
                     "tv_id": "67",
-                    "show_name": "Arrow",
+                    "series_name": "Arrow",
                     "episode_id": "5929",
                     "episode_name": "Vertigo",
                     "image": "52aa88b7540ac.jpg",
@@ -785,7 +785,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "703",
-                    "show_name": "Black Sails",
+                    "series_name": "Black Sails",
                     "episode_id": "52333",
                     "episode_name": "III.",
                     "image": "525b1c95ec228.jpg",
@@ -796,7 +796,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "14",
-                    "show_name": "How I Met Your Mother",
+                    "series_name": "How I Met Your Mother",
                     "episode_id": "38357",
                     "episode_name": "How Your Mother Met Me",
                     "image": "52e1e7a8e8907.jpg",
@@ -807,7 +807,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "14",
-                    "show_name": "How I Met Your Mother",
+                    "series_name": "How I Met Your Mother",
                     "episode_id": "41172",
                     "episode_name": "Unpause",
                     "image": "52e0961fc8782.jpg",
@@ -818,7 +818,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "14",
-                    "show_name": "How I Met Your Mother",
+                    "series_name": "How I Met Your Mother",
                     "episode_id": "38356",
                     "episode_name": "Slapsgiving 3: Slappointment in Slapmarra ",
                     "image": "52cccf9d66ac4.jpg",
@@ -829,7 +829,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "88",
-                    "show_name": "Sherlock",
+                    "series_name": "Sherlock",
                     "episode_id": "7136",
                     "episode_name": "The Great Game",
                     "image": "50b22072c3c57.jpg",
@@ -840,7 +840,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "1246",
-                    "show_name": "Helix",
+                    "series_name": "Helix",
                     "episode_id": "95944",
                     "episode_name": "The White Room",
                     "image": "52e48a9b65a0b.jpg",
@@ -851,7 +851,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "703",
-                    "show_name": "Black Sails",
+                    "series_name": "Black Sails",
                     "episode_id": "52332",
                     "episode_name": "II.",
                     "image": "525b1c94c6251.jpg",
@@ -862,7 +862,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "14",
-                    "show_name": "How I Met Your Mother",
+                    "series_name": "How I Met Your Mother",
                     "episode_id": "16745",
                     "episode_name": "Bass Player Wanted",
                     "image": "52aa88b6f1b7d.jpg",
@@ -873,7 +873,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "8",
-                    "show_name": "Family Guy",
+                    "series_name": "Family Guy",
                     "episode_id": "93526",
                     "episode_name": "Grimm Job",
                     "image": "52d3672fdcfb2.jpg",
@@ -884,7 +884,7 @@ module.exports = {
                 },
                 {
                     "tv_id": "703",
-                    "show_name": "Black Sails",
+                    "series_name": "Black Sails",
                     "episode_id": "52331",
                     "episode_name": "I.",
                     "image": "525b1c9378db2.jpg",

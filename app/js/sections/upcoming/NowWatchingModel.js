@@ -4,13 +4,13 @@ function nowWatchingTvModel(_nowWatching) {
         return null;
     }
 
-    this.title = _nowWatching.shown_name || '';
+    this.title = _nowWatching.series_name || '';
     this.url = '/tv/' + _nowWatching.tv_id + '/' + EH.urlTitle(this.title);
-    this.poster = EH.url.shows.poster + EH.url.defaultImage.poster;
+    this.poster = EH.url.series.poster + EH.url.defaultImage.poster;
     this.progress = _nowWatching.progress || 0;
 
     if (_nowWatching.image) {
-        this.poster = EH.url.shows.poster + _nowWatching.image;
+        this.poster = EH.url.series.poster + _nowWatching.image;
     }
 
 }

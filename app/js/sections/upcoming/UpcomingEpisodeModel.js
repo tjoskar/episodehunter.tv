@@ -6,13 +6,13 @@ function UpcomingEpisode(_episode) {
     this.showID      = _episode.tv_id        || 0;
     this.episodeID   = _episode.episode_id   || 0;
     this.episodeName = _episode.episode_name || '';
-    this.showName    = _episode.shown_name   || '';
+    this.seriesName  = _episode.series_name   || '';
     this.progress    = _episode.progress     || 0;
-    this.image       = EH.url.shows.poster + EH.url.defaultImage.poster; // Default image
-    this.url         = '/tv/' + this.showID + '/' + EH.urlTitle(this.showName);
+    this.image       = EH.url.series.poster + EH.url.defaultImage.poster; // Default image
+    this.url         = '/tv/' + this.showID + '/' + EH.urlTitle(this.seriesName);
 
     if (_episode.image) {
-        this.image = EH.url.shows.poster + _episode.image;
+        this.image = EH.url.series.poster + _episode.image;
     }
 
     var _date      = null;
@@ -39,8 +39,7 @@ function UpcomingEpisode(_episode) {
             }
 
             return SE;
-        },
-        value: 'String'
+        }
     });
 
     this.getAirDate = function() {

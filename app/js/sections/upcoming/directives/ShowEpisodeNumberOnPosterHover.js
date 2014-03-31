@@ -1,7 +1,7 @@
 /**
- * Show TV series name on poster hover
+ * Show TV series episode number and air date on poster hover
  */
-angular.module('EHW').directive('ehShowSeriesNameOnPosterHover', function() {
+angular.module('EHW').directive('ehShowEpisodeNumberOnPosterHover', function() {
     return {
         link : function(scope, element) {
 

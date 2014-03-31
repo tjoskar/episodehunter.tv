@@ -8,7 +8,7 @@ angular.module('EHW').directive('ehPoster', function() {
         },
 
         link: function(scope, element) {
-            element.attr('src', EH.url.show.poster + EH.url.defaultImage.poster);
+            element.attr('src', EH.url.series.poster + EH.url.defaultImage.poster);
             element.attr('alt', '');
             element.attr('width', '160');
 
