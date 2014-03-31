@@ -39,7 +39,8 @@ function UpcomingEpisode(_episode) {
             }
 
             return SE;
-        }
+        },
+        value: 'String'
     });
 
     this.getAirDate = function() {

@@ -1,7 +1,17 @@
 /* global Collection: true, UpcomingEpisode: true */
-angular.module("EHW").factory('upcomingRepository', function(upcomingResource) {
+
+/**
+ * Repository for upcoming TV series
+ */
+angular.module('EHW').factory('upcomingRepository', function(upcomingResource) {
     var upcomingRepository = {};
 
+    /**
+     * Populate scope variable with upcoming episodes
+     * @param  {array} episodes Array of episodes model
+     * @param  {scope} $scope   Current scope variable
+     * @return {null}
+     */
     var populateCollection = function(episodes, $scope) {
         var episode, d;
         var thisWeek = new Collection('this week');
@@ -48,8 +58,13 @@ angular.module("EHW").factory('upcomingRepository', function(upcomingResource) {
         $scope.loading_complete = true;
     };
 
-    upcomingRepository.populate = function($scope, force) {
-        var promise = upcomingResource.get(force);
+    /**
+     * Get upcoming episodes from storage or remote server it not exist
+     * @param  {scope} $scope
+     * @return {null}
+     */
+    upcomingRepository.populate = function($scope) {
+        var promise = upcomingResource.get();
         promise.then(function(episodes) {
             populateCollection(episodes, $scope);
         });

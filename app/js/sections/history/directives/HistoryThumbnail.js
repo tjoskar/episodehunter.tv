@@ -1,4 +1,4 @@
-angular.module("EHW").directive('ehHistoryThumbnail', function() {
+angular.module('EHW').directive('ehHistoryThumbnail', function() {
     return {
 
         scope: {
@@ -15,12 +15,12 @@ angular.module("EHW").directive('ehHistoryThumbnail', function() {
             if (scope.url) {
                 element.attr('class', '');
 
-                if (element.is(":in-viewport")) {
+                if (element.is(':in-viewport')) {
                     element.attr('src', scope.url);
                 } else {
                     element.attr('data-original', scope.url);
                     element.lazyload({
-                        effect: "fadeIn",
+                        effect: 'fadeIn',
                         threshold: 50
                     });
                 }

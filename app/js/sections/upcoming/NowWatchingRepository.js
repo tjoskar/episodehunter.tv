@@ -1,7 +1,17 @@
 /* global Collection: true, nowWatchingTvModel: true, nowWatchingMovieModel: true */
+
+/**
+ * Repository for now watching movies/TV series
+ */
 angular.module('EHW').factory('nowWatchingRepository', function(nowWatchingResource) {
     var nowWatchingRepository = {};
 
+    /**
+     * Populate scope variable with now watching movies/TV series
+     * @param  {scope}      $scope
+     * @param  {object}
+     * @return {null}
+     */
     var populateCollection = function(media, $scope) {
         var nowWatching = new Collection();
 
@@ -18,8 +28,13 @@ angular.module('EHW').factory('nowWatchingRepository', function(nowWatchingResou
         $scope.nowWatching = nowWatching;
     };
 
-    nowWatchingRepository.populate = function($scope, force) {
-        var promise = nowWatchingResource.get(force);
+    /**
+     * Get populate now watching movies/TV series from storage or remote server if not exist
+     * @param  {scope}  $scope
+     * @return {null}
+     */
+    nowWatchingRepository.populate = function($scope) {
+        var promise = nowWatchingResource.get();
 
         promise.then(function(episodes) {
             populateCollection(episodes, $scope);

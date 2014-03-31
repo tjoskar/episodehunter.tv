@@ -1,10 +1,38 @@
+/**
+ * Popular TV controller
+ */
 angular.module("EHW").controller('PopularTvController', function($scope, popularTvRepository) {
 
+    /**
+     * Current selected time-stamp
+     * @type {Number}
+     */
     $scope.time = 0;
+
+    /**
+     * Headline for the current page
+     * @type {String}
+     */
     $scope.headline = 'popular tv shows';
+
+    /**
+     * Collection that holds all series models
+     * @type {object}   Collection
+     */
     $scope.collection = undefined;
+
+    /**
+     * Are we collecting new data right now?
+     * This variable is setting to true before and data fetching
+     * and back to false after fetching
+     * @type {Boolean}
+     */
     $scope.processing = false;
 
+    /**
+     * The different buttons with their timestamps
+     * @type {Array}
+     */
     $scope.buttons = [
         {
             'text': 'All Time',
@@ -33,7 +61,11 @@ angular.module("EHW").controller('PopularTvController', function($scope, popular
         }
     ];
 
-
+    /**
+     * Fetch new data and populate the $scope
+     * @param  {object}     button
+     * @return {null}
+     */
     $scope.get = function(button) {
         if (!$scope.processing) {
             $scope.processing = true;

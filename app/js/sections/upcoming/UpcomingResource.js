@@ -1,6 +1,19 @@
+/**
+ * Resource for upcoming episodes
+ */
 angular.module('EHW').factory('upcomingResource', function($q, resource, storage) {
     var upcomingResource = {};
+
+    /**
+     * Name for the object in storage
+     * @type {String}
+     */
     var storageName = 'upcoming_episode';
+
+    /**
+     * Time for the object to be valid in storage
+     * @type {Number}
+     */
     var cacheTime = 86400000; // 24*60*60*1000
 
     upcomingResource.get = function(force) {

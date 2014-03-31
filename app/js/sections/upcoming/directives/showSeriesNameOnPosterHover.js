@@ -1,4 +1,7 @@
-angular.module("EHW").directive('ehShowSeriesNameOnPosterHover', function() {
+/**
+ * Show TV series name on poster hover
+ */
+angular.module('EHW').directive('ehShowSeriesNameOnPosterHover', function() {
     return {
         link : function(scope, element) {
 

@@ -1,3 +1,6 @@
+/**
+ * History Controller
+ */
 angular.module('EHW').controller('HistoryController', function($scope, historyRepository) {
 
     var batch = 0;
