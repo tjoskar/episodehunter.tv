@@ -2,9 +2,10 @@
 
 /node_modules
 /node_modules
-/vendor/js/
+/vendor/js/*
 !/vendor/js/jquery.knob.js
 !/vendor/js/jquery.lazyload.min.js
+!/vendor/js/moment.timezone.data.js
 
 /dist
 /generated

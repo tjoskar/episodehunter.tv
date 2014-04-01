@@ -1,6 +1,6 @@
 # Based on Brandon Tilley's infiniteScroll: https://github.com/sroze/ngInfiniteScroll
 
-angular.module("EHW").directive 'infiniteScroll', ($rootScope, $window, $timeout) ->
+angular.module('EHW').directive 'infiniteScroll', ($rootScope, $window, $timeout) ->
 
     link: (scope, elem, attrs) ->
         $window = angular.element($window)
@@ -22,13 +22,9 @@ angular.module("EHW").directive 'infiniteScroll', ($rootScope, $window, $timeout
         # once it switches back to false the infinite scroll function
         # will be triggered again.
         scrollEnabled = true
-        checkWhenEnabled = false
         if attrs.infiniteScrollDisabled?
             scope.$watch attrs.infiniteScrollDisabled, (value) ->
                 scrollEnabled = !value
-                if scrollEnabled && checkWhenEnabled
-                    checkWhenEnabled = false
-                    handler()
 
         # infinite-scroll specifies a function to call when the window
         # is scrolled within a certain range from the bottom of the
@@ -46,8 +42,6 @@ angular.module("EHW").directive 'infiniteScroll', ($rootScope, $window, $timeout
                     scope.$eval attrs.infiniteScroll
                 else
                     scope.$apply attrs.infiniteScroll
-            else if shouldScroll
-                checkWhenEnabled = true
 
         $window.on 'scroll', handler
         scope.$on '$destroy', ->

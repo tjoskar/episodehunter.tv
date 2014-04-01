@@ -1,4 +1,4 @@
-/* exported local */
+/* exported local, p */
 var EH = {};
 var local = true;
 
@@ -8,7 +8,7 @@ EH.url = {
         'poster': 'http://img.episodehunter.tv/movie/poster/',
         'fanart': 'http://img.episodehunter.tv/movie/fanart/'
     },
-    'shows': {
+    'series': {
         'poster': 'http://img.episodehunter.tv/serie/poster/',
         'fanart': 'http://img.episodehunter.tv/',
         'episode': 'http://img.episodehunter.tv/episode/'
@@ -23,6 +23,14 @@ EH.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sa
 EH.month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 EH.monthShortName = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
+
+/**
+ * Shortcut for printing
+ * @return {null}
+ */
+function p() {
+    console.log.apply(console, arguments);
+}
 
 /**
  * Determines if a reference is a string
@@ -170,9 +178,12 @@ EH.getFutureDate = function(n) {
  * @return string
  */
 EH.urlTitle = function(text) {
-    return text.toLowerCase()
-               .replace(/[^\w ]+/g,'')
-               .replace(/ +/g,'-');
+    if (text) {
+        return text.toLowerCase()
+                   .replace(/[^\w ]+/g,'')
+                   .replace(/ +/g,'-');
+    }
+    return '';
 };
 
 /**
