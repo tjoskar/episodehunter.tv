@@ -1,4 +1,4 @@
-/* exported local */
+/* exported local, p */
 var EH = {};
 var local = true;
 
@@ -23,6 +23,14 @@ EH.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sa
 EH.month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 EH.monthShortName = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
+
+/**
+ * Shortcut for printing
+ * @return {null}
+ */
+function p() {
+    console.log.apply(console, arguments);
+}
 
 /**
  * Determines if a reference is a string
