@@ -5,7 +5,7 @@ angular.module('EHW').controller('HistoryController', function($scope, historyRe
 
     var batch = 0;
 
-    $scope.history = [];
+    $scope.history_collection = [];
 
     historyRepository.getNumberOfWatched($scope);
 

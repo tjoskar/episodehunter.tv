@@ -48,22 +48,23 @@ angular.module("EHW").factory('historyRepository', function(historyResource, aut
             var key = m.format('dddd, MMM D YYYY');
             var found_collection = null;
 
-            for (var i in $scope.history) {
-                if ($scope.history[i].headline === key) {
-                    found_collection = $scope.history[i];
+            for (var i in $scope.history_collection) {
+                if ($scope.history_collection[i].headline === key) {
+                    found_collection = $scope.history_collection[i];
                     break;
                 }
             }
 
             if (!found_collection) {
                 found_collection = new Collection(key);
-                $scope.history.push(found_collection);
+                $scope.history_collection.push(found_collection);
             }
 
             found_collection.add(value);
         });
 
-        $scope.infiniteScrollDisabled = true;
+        $scope.infiniteScrollDisabled = false;
+
     };
 
     /**
@@ -82,9 +83,7 @@ angular.module("EHW").factory('historyRepository', function(historyResource, aut
                     populateCollection(media, $scope);
                 });
             } else {
-                setTimeout(function() {
-                    populateCollection(media, $scope);
-                }, 10);
+                populateCollection(media, $scope);
             }
         });
 
