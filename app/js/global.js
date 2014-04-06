@@ -194,16 +194,20 @@ EH.urlTitle = function(text) {
  */
 EH.episodeNumber = function(season, episode) {
     var SE = 'S';
+
     if (season < 10) {
         SE += '0' + season;
     } else {
         SE += season;
     }
+
     SE += 'E';
+
     if (episode < 10) {
         SE += '0' + episode;
     } else {
         SE += episode;
     }
+
     return SE;
 };

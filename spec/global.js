@@ -103,4 +103,12 @@ describe('helper function', function(){
         expect(EH.urlTitle('hello - You-'), 'hello-you');
     });
 
+    it('should return an episode number', function() {
+       expect(EH.episodeNumber(0, 0), 'S00E00');
+       expect(EH.episodeNumber(10, 1), 'S10E01');
+       expect(EH.episodeNumber(1, 10), 'S01E10');
+       expect(EH.episodeNumber('1', '1'), 'S01E01');
+       expect(EH.episodeNumber('11', '11'), 'S11E11');
+    });
+
 });
