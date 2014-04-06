@@ -44,274 +44,274 @@ module.exports = {
                 'message': 'OK',
                 'value':
                     [{
-                        "tv_id": "24",
-                        "episode_id": null,
-                        "series_name": "The Walking Dead",
-                        "timestamp": null,
+                        "seriesID": "24",
+                        "id": null,
+                        "seriesName": "The Walking Dead",
+                        "airDate": null,
                         "season": null,
                         "episode": null,
-                        "episode_name": null,
-                        "image": "525b1c9cf2968.jpg"
+                        "episodeName": null,
+                        "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "168",
-                      "episode_id": null,
-                      "series_name": "The Newsroom (2012)",
-                      "timestamp": null,
+                      "seriesID": "168",
+                      "id": null,
+                      "seriesName": "The Newsroom (2012)",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "17",
-                      "episode_id": null,
-                      "series_name": "Sons of Anarchy",
-                      "timestamp": null,
+                      "seriesID": "17",
+                      "id": null,
+                      "seriesName": "Sons of Anarchy",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "528",
-                      "episode_id": null,
-                      "series_name": "The Blacklist",
-                      "timestamp": null,
+                      "seriesID": "528",
+                      "id": null,
+                      "seriesName": "The Blacklist",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "12",
-                      "episode_id": null,
-                      "series_name": "Hell on Wheels",
-                      "timestamp": null,
+                      "seriesID": "12",
+                      "id": null,
+                      "seriesName": "Hell on Wheels",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "20",
-                      "episode_id": null,
-                      "series_name": "The Big Bang Theory",
-                      "timestamp": null,
+                      "seriesID": "20",
+                      "id": null,
+                      "seriesName": "The Big Bang Theory",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "160",
-                      "episode_id": null,
-                      "series_name": "Marvel's Agents of S.H.I.E.L.D.",
-                      "timestamp": null,
+                      "seriesID": "160",
+                      "id": null,
+                      "seriesName": "Marvel's Agents of S.H.I.E.L.D.",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": ""
+                      "episodeName": null,
+                      "poster": ""
                     },
                     {
-                      "tv_id": "67",
-                      "episode_id": null,
-                      "series_name": "Arrow",
-                      "timestamp": null,
+                      "seriesID": "67",
+                      "id": null,
+                      "seriesName": "Arrow",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "159",
-                      "episode_id": null,
-                      "series_name": "Ray Donovan",
-                      "timestamp": null,
+                      "seriesID": "159",
+                      "id": null,
+                      "seriesName": "Ray Donovan",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "144",
-                      "episode_id": null,
-                      "series_name": "Vikings",
-                      "timestamp": null,
+                      "seriesID": "144",
+                      "id": null,
+                      "seriesName": "Vikings",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "158",
-                      "episode_id": null,
-                      "series_name": "Under The Dome",
-                      "timestamp": null,
+                      "seriesID": "158",
+                      "id": null,
+                      "seriesName": "Under The Dome",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "26",
-                      "episode_id": null,
-                      "series_name": "True Blood",
-                      "timestamp": null,
+                      "seriesID": "26",
+                      "id": null,
+                      "seriesName": "True Blood",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "8",
-                      "episode_id": null,
-                      "series_name": "Family Guy",
-                      "timestamp": null,
+                      "seriesID": "8",
+                      "id": null,
+                      "seriesName": "Family Guy",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "165",
-                      "episode_id": null,
-                      "series_name": "Orange Is the New Black",
-                      "timestamp": null,
+                      "seriesID": "165",
+                      "id": null,
+                      "seriesName": "Orange Is the New Black",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "23",
-                      "episode_id": null,
-                      "series_name": "The Vampire Diaries",
-                      "timestamp": null,
+                      "seriesID": "23",
+                      "id": null,
+                      "seriesName": "The Vampire Diaries",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "10",
-                      "episode_id": null,
-                      "series_name": "Game of Thrones",
-                      "timestamp": null,
+                      "seriesID": "10",
+                      "id": null,
+                      "seriesName": "Game of Thrones",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "139",
-                      "episode_id": null,
-                      "series_name": "Suits",
-                      "timestamp": null,
+                      "seriesID": "139",
+                      "id": null,
+                      "seriesName": "Suits",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "52",
-                      "episode_id": null,
-                      "series_name": "Solsidan",
-                      "timestamp": null,
+                      "seriesID": "52",
+                      "id": null,
+                      "seriesName": "Solsidan",
+                      "airDate": null,
                       "season": null,
                       "episode": null,
-                      "episode_name": null,
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": null,
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "74",
-                      "episode_id": "46266",
-                      "series_name": "Homeland",
-                      "timestamp": getFutureDate(1),
+                      "seriesID": "74",
+                      "id": "46266",
+                      "seriesName": "Homeland",
+                      "airDate": getFutureDate(1),
                       "season": "3",
                       "episode": "12",
-                      "episode_name": "TBA",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "TBA",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "14",
-                      "episode_id": "16745",
-                      "series_name": "How I Met Your Mother",
-                      "timestamp": getFutureDate(2),
+                      "seriesID": "14",
+                      "id": "16745",
+                      "seriesName": "How I Met Your Mother",
+                      "airDate": getFutureDate(2),
                       "season": "9",
                       "episode": "13",
-                      "episode_name": "Bass Player Wanted",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "Bass Player Wanted",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "106",
-                      "episode_id": "39390",
-                      "series_name": "Justified",
-                      "timestamp": getFutureDate(3),
+                      "seriesID": "106",
+                      "id": "39390",
+                      "seriesName": "Justified",
+                      "airDate": getFutureDate(3),
                       "season": "5",
                       "episode": "1",
-                      "episode_name": "A Murder Of Crowes",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "A Murder Of Crowes",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "108",
-                      "episode_id": "14038",
-                      "series_name": "Banshee",
-                      "timestamp": getFutureDate(7),
+                      "seriesID": "108",
+                      "id": "14038",
+                      "seriesName": "Banshee",
+                      "airDate": getFutureDate(7),
                       "season": "2",
                       "episode": "1",
-                      "episode_name": "Armies Of One",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "Armies Of One",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "107",
-                      "episode_id": "52557",
-                      "series_name": "The Following",
-                      "timestamp": getFutureDate(7),
+                      "seriesID": "107",
+                      "id": "52557",
+                      "seriesName": "The Following",
+                      "airDate": getFutureDate(7),
                       "season": "2",
                       "episode": "1",
-                      "episode_name": "Resurrection",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "Resurrection",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "110",
-                      "episode_id": "77648",
-                      "series_name": "The Americans (2013)",
-                      "timestamp": getFutureDate(8),
+                      "seriesID": "110",
+                      "id": "77648",
+                      "seriesName": "The Americans (2013)",
+                      "airDate": getFutureDate(8),
                       "season": "2",
                       "episode": "1",
-                      "episode_name": "Comrades",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "Comrades",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "111",
-                      "episode_id": "39130",
-                      "series_name": "House Of Cards (2013)",
-                      "timestamp": getFutureDate(8),
+                      "seriesID": "111",
+                      "id": "39130",
+                      "seriesName": "House Of Cards (2013)",
+                      "airDate": getFutureDate(8),
                       "season": "2",
                       "episode": "1",
-                      "episode_name": "TBA",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "TBA",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "5",
-                      "episode_id": "37961",
-                      "series_name": "Continuum",
-                      "timestamp": getFutureDate(100),
+                      "seriesID": "5",
+                      "id": "37961",
+                      "seriesName": "Continuum",
+                      "airDate": getFutureDate(100),
                       "season": "3",
                       "episode": "1",
-                      "episode_name": "TBA",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "TBA",
+                      "poster": "525b1c9cf2968.jpg"
                     },
                     {
-                      "tv_id": "7",
-                      "episode_id": "37960",
-                      "series_name": "Falling Skies",
-                      "timestamp": getFutureDate(121),
+                      "seriesID": "7",
+                      "id": "37960",
+                      "seriesName": "Falling Skies",
+                      "airDate": getFutureDate(121),
                       "season": "4",
                       "episode": "1",
-                      "episode_name": "Ghost in the Machine",
-                      "image": "525b1c9cf2968.jpg"
+                      "episodeName": "Ghost in the Machine",
+                      "poster": "525b1c9cf2968.jpg"
                     }]
             });
         });
@@ -323,28 +323,28 @@ module.exports = {
                 'value': {
                     'movies': [
                         {
-                          'movie_id': '1',
+                          'id': '1',
                           'title': 'The Hunger Games',
                           'progress': '0.7',
-                          'image': '504238b57b1e2.jpg'
+                          'poster': '504238b57b1e2.jpg'
                         }, {
-                          'movie_id': '1178',
+                          'id': '1178',
                           'title': 'The Hunger Games',
                           'progress': '0.3',
-                          'image': '52261a42c6e5c.jpg'
+                          'poster': '52261a42c6e5c.jpg'
                         }
                     ],
                     'tv_shows': [
                         {
-                          'tv_id': '24',
+                          'series_id': '24',
                           'series_name': 'The Walking Dead',
                           'progress': '0.4',
-                          'image': '525b1c9cf2968.jpg'
+                          'poster': '525b1c9cf2968.jpg'
                         },{
-                          'tv_id': '24',
+                          'series_id': '24',
                           'series_name': 'Sherlock',
                           'progress': '0.2',
-                          'image': '50b220731c0b4.jpg'
+                          'poster': '50b220731c0b4.jpg'
                         }
                     ]
                 }
@@ -359,64 +359,64 @@ module.exports = {
                         'message': 'OK',
                         'value': [
                             {
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'The Walking Dead',
                                 'views': '1027',
-                                'image': '525b1c9cf2968.jpg',
+                                'poster': '525b1c9cf2968.jpg',
                                 'order': '1'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '509',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '2'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '1008',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '3'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '1123',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '4'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '423',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '5'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '987',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '6'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '223',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '7'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '123',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '8'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '58',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '9'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '79',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '10'
                             }
                         ]
@@ -427,34 +427,34 @@ module.exports = {
                         'message': 'OK',
                         'value': [
                             {
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '1027',
-                                'image': '525b1c9cf2968.jpg',
+                                'poster': '525b1c9cf2968.jpg',
                                 'order': '1'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'The Walking Dead',
                                 'views': '509',
-                                'image': '504241d7e6a13-2.jpg',
+                                'poster': '504241d7e6a13-2.jpg',
                                 'order': '2'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Game of thrones',
                                 'views': '1008',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '3'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '1123',
-                                'image': '50b220731c0b4.jpg',
+                                'poster': '50b220731c0b4.jpg',
                                 'order': '4'
                             },{
-                                'tv_id': '24',
+                                'series_id': '24',
                                 'series_name': 'Sherlock',
                                 'views': '423',
-                                'image': '504241d7e6a13-2.jpg',
+                                'poster': '504241d7e6a13-2.jpg',
                                 'order': '5'
                             }
                         ]
@@ -474,61 +474,61 @@ module.exports = {
                                 'id': '24',
                                 'title': 'The Wolverine',
                                 'views': '1027',
-                                'image': '520a7b2c85e78.jpg',
+                                'poster': '520a7b2c85e78.jpg',
                                 'order': '1'
                             },{
                                 'id': '24',
                                 'title': 'Escape Plan',
                                 'views': '509',
-                                'image': '527d71a2c065c.jpg',
+                                'poster': '527d71a2c065c.jpg',
                                 'order': '2'
                             },{
                                 'id': '24',
                                 'title': 'Escape Plan',
                                 'views': '1008',
-                                'image': '527d71a2c065c.jpg',
+                                'poster': '527d71a2c065c.jpg',
                                 'order': '3'
                             },{
                                 'id': '24',
                                 'title': 'Escape Plan',
                                 'views': '1123',
-                                'image': '527d71a2c065c.jpg',
+                                'poster': '527d71a2c065c.jpg',
                                 'order': '4'
                             },{
                                 'id': '24',
                                 'title': 'Escape Plan',
                                 'views': '423',
-                                'image': '527d71a2c065c.jpg',
+                                'poster': '527d71a2c065c.jpg',
                                 'order': '5'
                             },{
                                 'id': '24',
                                 'title': 'Escape Plan',
                                 'views': '987',
-                                'image': '527d71a2c065c.jpg',
+                                'poster': '527d71a2c065c.jpg',
                                 'order': '6'
                             },{
                                 'id': '24',
                                 'title': 'World War Z',
                                 'views': '223',
-                                'image': '52261a42c6e5c.jpg',
+                                'poster': '52261a42c6e5c.jpg',
                                 'order': '7'
                             },{
                                 'id': '24',
                                 'title': 'World War Z',
                                 'views': '123',
-                                'image': '52261a42c6e5c.jpg',
+                                'poster': '52261a42c6e5c.jpg',
                                 'order': '8'
                             },{
                                 'id': '24',
                                 'title': 'World War Z',
                                 'views': '58',
-                                'image': '52261a42c6e5c.jpg',
+                                'poster': '52261a42c6e5c.jpg',
                                 'order': '9'
                             },{
                                 'id': '24',
                                 'title': 'World War Z',
                                 'views': '79',
-                                'image': '52261a42c6e5c.jpg',
+                                'poster': '52261a42c6e5c.jpg',
                                 'order': '10'
                             }
                         ]
@@ -542,31 +542,31 @@ module.exports = {
                                 'id': '24',
                                 'title': 'World War Z',
                                 'views': '1027',
-                                'image': '52261a42c6e5c.jpg',
+                                'poster': '52261a42c6e5c.jpg',
                                 'order': '1'
                             },{
                                 'id': '24',
                                 'title': 'Prisoners',
                                 'views': '509',
-                                'image': '5288a1b355181.jpg',
+                                'poster': '5288a1b355181.jpg',
                                 'order': '2'
                             },{
                                 'id': '24',
                                 'title': 'Oblivion',
                                 'views': '1008',
-                                'image': '51f0984449972.jpg',
+                                'poster': '51f0984449972.jpg',
                                 'order': '3'
                             },{
                                 'id': '24',
                                 'title': 'World War Z',
                                 'views': '1123',
-                                'image': '52261a42c6e5c.jpg',
+                                'poster': '52261a42c6e5c.jpg',
                                 'order': '4'
                             },{
                                 'id': '24',
                                 'title': 'World War Z',
                                 'views': '423',
-                                'image': '52261a42c6e5c.jpg',
+                                'poster': '52261a42c6e5c.jpg',
                                 'order': '5'
                             }
                         ]
@@ -608,294 +608,295 @@ module.exports = {
                         'value': {
                             'movies': [
                             {
-                                'movie_id': '1',
+                                'id': '1',
                                 'title': 'The Hunger Games',
-                                'utc_timestamp': '1341508668',
-                                'image': '504238b57b1e2.jpg'
+                                'utcTimestamp': '1341508668',
+                                'thumbnail': '504238b57b1e2.jpg',
+                                'watchedID': '15162',
                             },
                             {
-                                "movie_id": "2380",
+                                "id": "2380",
                                 "title": "Thor: The Dark World",
-                                "image": "52754703ecf68.jpg",
-                                "watched_id": "15162",
-                                "utc_timestamp": "1392067934"
+                                "thumbnail": "52754703ecf68.jpg",
+                                "watchedID": "15162",
+                                "utcTimestamp": "1392067934"
                             },
                             {
-                                "movie_id": "2827",
+                                "id": "2827",
                                 "title": "Ender's Game",
-                                "image": "52a0f73d53161.jpg",
-                                "watched_id": "14604",
-                                "utc_timestamp": "1391378523"
+                                "thumbnail": "52a0f73d53161.jpg",
+                                "watchedID": "14604",
+                                "utcTimestamp": "1391378523"
                             },
                             {
-                                "movie_id": "376",
+                                "id": "376",
                                 "title": "Silver Linings Playbook",
-                                "image": "5158f8370df31.jpg",
-                                "watched_id": "14522",
-                                "utc_timestamp": "1391293298"
+                                "thumbnail": "5158f8370df31.jpg",
+                                "watchedID": "14522",
+                                "utcTimestamp": "1391293298"
                             },
                             {
-                                "movie_id": "97",
+                                "id": "97",
                                 "title": "Gladiator",
-                                "image": "504238ddc03fa.jpg",
-                                "watched_id": "14513",
-                                "utc_timestamp": "1391284779"
+                                "thumbnail": "504238ddc03fa.jpg",
+                                "watchedID": "14513",
+                                "utcTimestamp": "1391284779"
                             },
                             {
-                                "movie_id": "97",
+                                "id": "97",
                                 "title": "Gladiator",
-                                "image": "504238ddc03fa.jpg",
-                                "watched_id": "14043",
-                                "utc_timestamp": "1391120740"
+                                "thumbnail": "504238ddc03fa.jpg",
+                                "watchedID": "14043",
+                                "utcTimestamp": "1391120740"
                             },
                             {
-                                "movie_id": "1",
+                                "id": "1",
                                 "title": "The Hunger Games",
-                                "image": "504238b58ea27.jpg",
-                                "watched_id": "12810",
-                                "utc_timestamp": "1390604020"
+                                "thumbnail": "504238b58ea27.jpg",
+                                "watchedID": "12810",
+                                "utcTimestamp": "1390604020"
                             },
                             {
-                                "movie_id": "2140",
+                                "id": "2140",
                                 "title": "Runner Runner",
-                                "image": "526dce836274d.jpg",
-                                "watched_id": "11985",
-                                "utc_timestamp": "1390082432"
+                                "thumbnail": "526dce836274d.jpg",
+                                "watchedID": "11985",
+                                "utcTimestamp": "1390082432"
                             },
                             {
-                                "movie_id": "1019",
+                                "id": "1019",
                                 "title": "Pacific Rim",
-                                "image": "5212642ba69f5.jpg",
-                                "watched_id": "11832",
-                                "utc_timestamp": "1389909514"
+                                "thumbnail": "5212642ba69f5.jpg",
+                                "watchedID": "11832",
+                                "utcTimestamp": "1389909514"
                             },
                             {
-                                "movie_id": "2842",
+                                "id": "2842",
                                 "title": "Escape Plan",
-                                "image": "52a0f73283abc.jpg",
-                                "watched_id": "11178",
-                                "utc_timestamp": "1389389355"
+                                "thumbnail": "52a0f73283abc.jpg",
+                                "watchedID": "11178",
+                                "utcTimestamp": "1389389355"
                             },
                             {
-                                "movie_id": "70",
+                                "id": "70",
                                 "title": "Red",
-                                "image": "504238d220b6b.jpg",
-                                "watched_id": "10715",
-                                "utc_timestamp": "1389128253"
+                                "thumbnail": "504238d220b6b.jpg",
+                                "watchedID": "10715",
+                                "utcTimestamp": "1389128253"
                             },
                             {
-                                "movie_id": "3143",
+                                "id": "3143",
                                 "title": "The Hobbit: The Desolation of Smaug",
-                                "image": "52bf766a9db52.jpg",
-                                "watched_id": "10192",
-                                "utc_timestamp": "1388838337"
+                                "thumbnail": "52bf766a9db52.jpg",
+                                "watchedID": "10192",
+                                "utcTimestamp": "1388838337"
                             },
                             {
-                                "movie_id": "3091",
+                                "id": "3091",
                                 "title": "Easy Money 3",
-                                "image": "52b72afb22e64.jpg",
-                                "watched_id": "9850",
-                                "utc_timestamp": "1388700621"
+                                "thumbnail": "52b72afb22e64.jpg",
+                                "watchedID": "9850",
+                                "utcTimestamp": "1388700621"
                             },
                             {
-                                "movie_id": "1261",
+                                "id": "1261",
                                 "title": "Riddick",
-                                "image": "52326f4b51a21.jpg",
-                                "watched_id": "9799",
-                                "utc_timestamp": "1388613597"
+                                "thumbnail": "52326f4b51a21.jpg",
+                                "watchedID": "9799",
+                                "utcTimestamp": "1388613597"
                             },
                             {
-                                "movie_id": "2673",
+                                "id": "2673",
                                 "title": "Don Jon",
-                                "image": "528b9916c6250.jpg",
-                                "watched_id": "9714",
-                                "utc_timestamp": "1388441488"
+                                "thumbnail": "528b9916c6250.jpg",
+                                "watchedID": "9714",
+                                "utcTimestamp": "1388441488"
                             },
                             {
-                                "movie_id": "1193",
+                                "id": "1193",
                                 "title": "Kick-Ass 2",
-                                "image": "5227cbdb31e2a.jpg",
-                                "watched_id": "8734",
-                                "utc_timestamp": "1386454473"
+                                "thumbnail": "5227cbdb31e2a.jpg",
+                                "watchedID": "8734",
+                                "utcTimestamp": "1386454473"
                             },
                             {
-                                "movie_id": "1940",
+                                "id": "1940",
                                 "title": "Only God Forgives",
-                                "image": "525ae902a5d1b.jpg",
-                                "watched_id": "8690",
-                                "utc_timestamp": "1386368084"
+                                "thumbnail": "525ae902a5d1b.jpg",
+                                "watchedID": "8690",
+                                "utcTimestamp": "1386368084"
                             },
                             {
-                                "movie_id": "1217",
+                                "id": "1217",
                                 "title": "The World's End",
-                                "image": "522b33bb02dcd.jpg",
-                                "watched_id": "8689",
-                                "utc_timestamp": "1386367592"
+                                "thumbnail": "522b33bb02dcd.jpg",
+                                "watchedID": "8689",
+                                "utcTimestamp": "1386367592"
                             },
                             {
-                                "movie_id": "2569",
+                                "id": "2569",
                                 "title": "Prisoners",
-                                "image": "5288a1b37de7a.jpg",
-                                "watched_id": "8330",
-                                "utc_timestamp": "1385852912"
+                                "thumbnail": "5288a1b37de7a.jpg",
+                                "watchedID": "8330",
+                                "utcTimestamp": "1385852912"
                             },
                             {
-                                "movie_id": "759",
+                                "id": "759",
                                 "title": "Elysium",
-                                "image": "520a7b2d1bf61.jpg",
-                                "watched_id": "8313",
-                                "utc_timestamp": "1385816913"
+                                "thumbnail": "520a7b2d1bf61.jpg",
+                                "watchedID": "8313",
+                                "utcTimestamp": "1385816913"
                             },
                             {
-                                "movie_id": "759",
+                                "id": "759",
                                 "title": "Elysium",
-                                "image": "520a7b2d1bf61.jpg",
-                                "watched_id": "8297",
-                                "utc_timestamp": "1385764084"
+                                "thumbnail": "520a7b2d1bf61.jpg",
+                                "watchedID": "8297",
+                                "utcTimestamp": "1385764084"
                             },
                             {
-                                "movie_id": "344",
+                                "id": "344",
                                 "title": "Life of Pi",
-                                "image": "512ae1e184607.jpg",
-                                "watched_id": "7302",
-                                "utc_timestamp": "1384688264"
+                                "thumbnail": "512ae1e184607.jpg",
+                                "watchedID": "7302",
+                                "utcTimestamp": "1384688264"
                             },
                             {
-                                "movie_id": "1262",
+                                "id": "1262",
                                 "title": "This Is the End",
-                                "image": "523294cbf3df3.jpg",
-                                "watched_id": "7267",
-                                "utc_timestamp": "1384552810"
+                                "thumbnail": "523294cbf3df3.jpg",
+                                "watchedID": "7267",
+                                "utcTimestamp": "1384552810"
                             },
                             {
-                                "movie_id": "758",
+                                "id": "758",
                                 "title": "The Wolverine",
-                                "image": "520a7b2c9ff85.jpg",
-                                "watched_id": "6903",
-                                "utc_timestamp": "1384035876"
+                                "thumbnail": "520a7b2c9ff85.jpg",
+                                "watchedID": "6903",
+                                "utcTimestamp": "1384035876"
                             },
                             ],
                             'tv_shows': [
                             {
-                                "tv_id": "67",
-                                "series_name": "Arrow",
-                                "episode_id": "5929",
-                                "episode_name": "Vertigo",
-                                "image": "52aa88b7540ac.jpg",
+                                "seriesID": "67",
+                                "seriesName": "Arrow",
+                                "id": "5929",
+                                "episodeName": "Vertigo",
+                                "thumbnail": "52aa88b7540ac.jpg",
                                 "season": "1",
                                 "episode": "12",
-                                "watched_id": "325656",
-                                "utc_timestamp": "1392241578"
+                                "watchedID": "325656",
+                                "utcTimestamp": "1392241578"
                             },
                             {
-                                "tv_id": "703",
-                                "series_name": "Black Sails",
-                                "episode_id": "52333",
-                                "episode_name": "III.",
-                                "image": "525b1c95ec228.jpg",
+                                "seriesID": "703",
+                                "seriesName": "Black Sails",
+                                "id": "52333",
+                                "episodeName": "III.",
+                                "thumbnail": "525b1c95ec228.jpg",
                                 "season": "1",
                                 "episode": "3",
-                                "watched_id": "325654",
-                                "utc_timestamp": "1392241457"
+                                "watchedID": "325654",
+                                "utcTimestamp": "1392241457"
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "38357",
-                                "episode_name": "How Your Mother Met Me",
-                                "image": "52e1e7a8e8907.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "38357",
+                                "episodeName": "How Your Mother Met Me",
+                                "thumbnail": "52e1e7a8e8907.jpg",
                                 "season": "9",
                                 "episode": "16",
-                                "watched_id": "316664",
-                                "utc_timestamp": "1392156280"
+                                "watchedID": "316664",
+                                "utcTimestamp": "1392156280"
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "41172",
-                                "episode_name": "Unpause",
-                                "image": "52e0961fc8782.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "41172",
+                                "episodeName": "Unpause",
+                                "thumbnail": "52e0961fc8782.jpg",
                                 "season": "9",
                                 "episode": "15",
-                                "watched_id": "314596",
-                                "utc_timestamp": "1392136948"
+                                "watchedID": "314596",
+                                "utcTimestamp": "1392136948"
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "38356",
-                                "episode_name": "Slapsgiving 3: Slappointment in Slapmarra ",
-                                "image": "52cccf9d66ac4.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "38356",
+                                "episodeName": "Slapsgiving 3: Slappointment in Slapmarra ",
+                                "thumbnail": "52cccf9d66ac4.jpg",
                                 "season": "9",
                                 "episode": "14",
-                                "watched_id": "308010",
-                                "utc_timestamp": "1392055102"
+                                "watchedID": "308010",
+                                "utcTimestamp": "1392055102"
                             },
                             {
-                                "tv_id": "88",
-                                "series_name": "Sherlock",
-                                "episode_id": "7136",
-                                "episode_name": "The Great Game",
-                                "image": "50b22072c3c57.jpg",
+                                "seriesID": "88",
+                                "seriesName": "Sherlock",
+                                "id": "7136",
+                                "episodeName": "The Great Game",
+                                "thumbnail": "50b22072c3c57.jpg",
                                 "season": "1",
                                 "episode": "3",
-                                "watched_id": "305550",
-                                "utc_timestamp": "1391982913"
+                                "watchedID": "305550",
+                                "utcTimestamp": "1391982913"
                             },
                             {
-                                "tv_id": "1246",
-                                "series_name": "Helix",
-                                "episode_id": "95944",
-                                "episode_name": "The White Room",
-                                "image": "52e48a9b65a0b.jpg",
+                                "seriesID": "1246",
+                                "seriesName": "Helix",
+                                "id": "95944",
+                                "episodeName": "The White Room",
+                                "thumbnail": "52e48a9b65a0b.jpg",
                                 "season": "1",
                                 "episode": "5",
-                                "watched_id": "300188",
-                                "utc_timestamp": "1391635613"
+                                "watchedID": "300188",
+                                "utcTimestamp": "1391635613"
                             },
                             {
-                                "tv_id": "703",
-                                "series_name": "Black Sails",
-                                "episode_id": "52332",
-                                "episode_name": "II.",
-                                "image": "525b1c94c6251.jpg",
+                                "seriesID": "703",
+                                "seriesName": "Black Sails",
+                                "id": "52332",
+                                "episodeName": "II.",
+                                "thumbnail": "525b1c94c6251.jpg",
                                 "season": "1",
                                 "episode": "2",
-                                "watched_id": "291518",
-                                "utc_timestamp": "1391464042"
+                                "watchedID": "291518",
+                                "utcTimestamp": "1391464042"
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "16745",
-                                "episode_name": "Bass Player Wanted",
-                                "image": "52aa88b6f1b7d.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "16745",
+                                "episodeName": "Bass Player Wanted",
+                                "thumbnail": "52aa88b6f1b7d.jpg",
                                 "season": "9",
                                 "episode": "13",
-                                "watched_id": "290010",
-                                "utc_timestamp": "1391458921"
+                                "watchedID": "290010",
+                                "utcTimestamp": "1391458921"
                             },
                             {
-                                "tv_id": "8",
-                                "series_name": "Family Guy",
-                                "episode_id": "93526",
-                                "episode_name": "Grimm Job",
-                                "image": "52d3672fdcfb2.jpg",
+                                "seriesID": "8",
+                                "seriesName": "Family Guy",
+                                "id": "93526",
+                                "episodeName": "Grimm Job",
+                                "thumbnail": "52d3672fdcfb2.jpg",
                                 "season": "12",
                                 "episode": "10",
-                                "watched_id": "282800",
-                                "utc_timestamp": "1391108607"
+                                "watchedID": "282800",
+                                "utcTimestamp": "1391108607"
                             },
                             {
-                                "tv_id": "703",
-                                "series_name": "Black Sails",
-                                "episode_id": "52331",
-                                "episode_name": "I.",
-                                "image": "525b1c9378db2.jpg",
+                                "seriesID": "703",
+                                "seriesName": "Black Sails",
+                                "id": "52331",
+                                "episodeName": "I.",
+                                "thumbnail": "525b1c9378db2.jpg",
                                 "season": "1",
                                 "episode": "1",
-                                "watched_id": "275683",
-                                "utc_timestamp": "1391034579"
+                                "watchedID": "275683",
+                                "utcTimestamp": "1391034579"
                             }]
                         }
                     });
@@ -908,151 +909,151 @@ module.exports = {
                         'value': {
                             'movies': [
                             {
-                                'movie_id': '1',
+                                'id': '1',
                                 'title': 'The Hunger Games',
-                                'image': '504238b57b1e2.jpg',
-                                "watched_id": "15162",
-                                'utc_timestamp': '1341508668' - date_diff
+                                'thumbnail': '504238b57b1e2.jpg',
+                                "watchedID": "15162",
+                                'utcTimestamp': '1341508668' - date_diff
                             },
                             {
-                                "movie_id": "2380",
+                                "id": "2380",
                                 "title": "Thor: The Dark World",
-                                "image": "52754703ecf68.jpg",
-                                "watched_id": "15162",
-                                "utc_timestamp": "1392067934" - date_diff
+                                "thumbnail": "52754703ecf68.jpg",
+                                "watchedID": "15162",
+                                "utcTimestamp": "1392067934" - date_diff
                             },
                             {
-                                "movie_id": "2827",
+                                "id": "2827",
                                 "title": "Ender's Game",
-                                "image": "52a0f73d53161.jpg",
-                                "watched_id": "14604",
-                                "utc_timestamp": "1391378523" - date_diff
+                                "thumbnail": "52a0f73d53161.jpg",
+                                "watchedID": "14604",
+                                "utcTimestamp": "1391378523" - date_diff
                             },
                             {
-                                "movie_id": "376",
+                                "id": "376",
                                 "title": "Silver Linings Playbook",
-                                "image": "5158f8370df31.jpg",
-                                "watched_id": "14522",
-                                "utc_timestamp": "1391293298" - date_diff
+                                "thumbnail": "5158f8370df31.jpg",
+                                "watchedID": "14522",
+                                "utcTimestamp": "1391293298" - date_diff
                             },
                             {
-                                "movie_id": "97",
+                                "id": "97",
                                 "title": "Gladiator",
-                                "image": "504238ddc03fa.jpg",
-                                "watched_id": "14513",
-                                "utc_timestamp": "1391284779" - date_diff
+                                "thumbnail": "504238ddc03fa.jpg",
+                                "watchedID": "14513",
+                                "utcTimestamp": "1391284779" - date_diff
                             }
                             ],
                             'tv_shows': [
                             {
-                                "tv_id": "67",
-                                "series_name": "Arrow",
-                                "episode_id": "5929",
-                                "episode_name": "Vertigo",
-                                "image": "52aa88b7540ac.jpg",
+                                "seriesID": "67",
+                                "seriesName": "Arrow",
+                                "id": "5929",
+                                "episodeName": "Vertigo",
+                                "thumbnail": "52aa88b7540ac.jpg",
                                 "season": "1",
                                 "episode": "12",
-                                "watched_id": "325656",
-                                "utc_timestamp": "1392241578" - date_diff
+                                "watchedID": "325656",
+                                "utcTimestamp": "1392241578" - date_diff
                             },
                             {
-                                "tv_id": "703",
-                                "series_name": "Black Sails",
-                                "episode_id": "52333",
-                                "episode_name": "III.",
-                                "image": "525b1c95ec228.jpg",
+                                "seriesID": "703",
+                                "seriesName": "Black Sails",
+                                "id": "52333",
+                                "episodeName": "III.",
+                                "thumbnail": "525b1c95ec228.jpg",
                                 "season": "1",
                                 "episode": "3",
-                                "watched_id": "325654",
-                                "utc_timestamp": "1392241457" - date_diff
+                                "watchedID": "325654",
+                                "utcTimestamp": "1392241457" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "38357",
-                                "episode_name": "How Your Mother Met Me",
-                                "image": "52e1e7a8e8907.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "38357",
+                                "episodeName": "How Your Mother Met Me",
+                                "thumbnail": "52e1e7a8e8907.jpg",
                                 "season": "9",
                                 "episode": "16",
-                                "watched_id": "316664",
-                                "utc_timestamp": "1392156280" - date_diff
+                                "watchedID": "316664",
+                                "utcTimestamp": "1392156280" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "41172",
-                                "episode_name": "Unpause",
-                                "image": "52e0961fc8782.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "41172",
+                                "episodeName": "Unpause",
+                                "thumbnail": "52e0961fc8782.jpg",
                                 "season": "9",
                                 "episode": "15",
-                                "watched_id": "314596",
-                                "utc_timestamp": "1392136948" - date_diff
+                                "watchedID": "314596",
+                                "utcTimestamp": "1392136948" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "38356",
-                                "episode_name": "Slapsgiving 3: Slappointment in Slapmarra ",
-                                "image": "52cccf9d66ac4.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "38356",
+                                "episodeName": "Slapsgiving 3: Slappointment in Slapmarra ",
+                                "thumbnail": "52cccf9d66ac4.jpg",
                                 "season": "9",
                                 "episode": "14",
-                                "watched_id": "308010",
-                                "utc_timestamp": "1392055102" - date_diff
+                                "watchedID": "308010",
+                                "utcTimestamp": "1392055102" - date_diff
                             },
                             {
-                                "tv_id": "88",
-                                "series_name": "Sherlock",
-                                "episode_id": "7136",
-                                "episode_name": "The Great Game",
-                                "image": "50b22072c3c57.jpg",
+                                "seriesID": "88",
+                                "seriesName": "Sherlock",
+                                "id": "7136",
+                                "episodeName": "The Great Game",
+                                "thumbnail": "50b22072c3c57.jpg",
                                 "season": "1",
                                 "episode": "3",
-                                "watched_id": "305550",
-                                "utc_timestamp": "1391982913" - date_diff
+                                "watchedID": "305550",
+                                "utcTimestamp": "1391982913" - date_diff
                             },
                             {
-                                "tv_id": "1246",
-                                "series_name": "Helix",
-                                "episode_id": "95944",
-                                "episode_name": "The White Room",
-                                "image": "52e48a9b65a0b.jpg",
+                                "seriesID": "1246",
+                                "seriesName": "Helix",
+                                "id": "95944",
+                                "episodeName": "The White Room",
+                                "thumbnail": "52e48a9b65a0b.jpg",
                                 "season": "1",
                                 "episode": "5",
-                                "watched_id": "300188",
-                                "utc_timestamp": "1391635613" - date_diff
+                                "watchedID": "300188",
+                                "utcTimestamp": "1391635613" - date_diff
                             },
                             {
-                                "tv_id": "703",
-                                "series_name": "Black Sails",
-                                "episode_id": "52332",
-                                "episode_name": "II.",
-                                "image": "525b1c94c6251.jpg",
+                                "seriesID": "703",
+                                "seriesName": "Black Sails",
+                                "id": "52332",
+                                "episodeName": "II.",
+                                "thumbnail": "525b1c94c6251.jpg",
                                 "season": "1",
                                 "episode": "2",
-                                "watched_id": "291518",
-                                "utc_timestamp": "1391464042" - date_diff
+                                "watchedID": "291518",
+                                "utcTimestamp": "1391464042" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "16745",
-                                "episode_name": "Bass Player Wanted",
-                                "image": "52aa88b6f1b7d.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "16745",
+                                "episodeName": "Bass Player Wanted",
+                                "thumbnail": "52aa88b6f1b7d.jpg",
                                 "season": "9",
                                 "episode": "13",
-                                "watched_id": "290010",
-                                "utc_timestamp": "1391458921" - date_diff
+                                "watchedID": "290010",
+                                "utcTimestamp": "1391458921" - date_diff
                             },
                             {
-                                "tv_id": "8",
-                                "series_name": "Family Guy",
-                                "episode_id": "93526",
-                                "episode_name": "Grimm Job",
-                                "image": "52d3672fdcfb2.jpg",
+                                "seriesID": "8",
+                                "seriesName": "Family Guy",
+                                "id": "93526",
+                                "episodeName": "Grimm Job",
+                                "thumbnail": "52d3672fdcfb2.jpg",
                                 "season": "12",
                                 "episode": "10",
-                                "watched_id": "282800",
-                                "utc_timestamp": "1391108607" - date_diff
+                                "watchedID": "282800",
+                                "utcTimestamp": "1391108607" - date_diff
                             }
                             ]
                         }
@@ -1066,151 +1067,151 @@ module.exports = {
                         'value': {
                             'movies': [
                             {
-                                'movie_id': '1',
+                                'id': '1',
                                 'title': 'The Hunger Games',
-                                'image': '504238b57b1e2.jpg',
-                                "watched_id": "15162",
-                                'utc_timestamp': '1341508668' - date_diff
+                                'thumbnail': '504238b57b1e2.jpg',
+                                "watchedID": "15162",
+                                'utcTimestamp': '1341508668' - date_diff
                             },
                             {
-                                "movie_id": "2380",
+                                "id": "2380",
                                 "title": "Thor: The Dark World",
-                                "image": "52754703ecf68.jpg",
-                                "watched_id": "15162",
-                                "utc_timestamp": "1392067934" - date_diff
+                                "thumbnail": "52754703ecf68.jpg",
+                                "watchedID": "15162",
+                                "utcTimestamp": "1392067934" - date_diff
                             },
                             {
-                                "movie_id": "2827",
+                                "id": "2827",
                                 "title": "Ender's Game",
-                                "image": "52a0f73d53161.jpg",
-                                "watched_id": "14604",
-                                "utc_timestamp": "1391378523" - date_diff
+                                "thumbnail": "52a0f73d53161.jpg",
+                                "watchedID": "14604",
+                                "utcTimestamp": "1391378523" - date_diff
                             },
                             {
-                                "movie_id": "376",
+                                "id": "376",
                                 "title": "Silver Linings Playbook",
-                                "image": "5158f8370df31.jpg",
-                                "watched_id": "14522",
-                                "utc_timestamp": "1391293298" - date_diff
+                                "thumbnail": "5158f8370df31.jpg",
+                                "watchedID": "14522",
+                                "utcTimestamp": "1391293298" - date_diff
                             },
                             {
-                                "movie_id": "97",
+                                "id": "97",
                                 "title": "Gladiator",
-                                "image": "504238ddc03fa.jpg",
-                                "watched_id": "14513",
-                                "utc_timestamp": "1391284779" - date_diff
+                                "thumbnail": "504238ddc03fa.jpg",
+                                "watchedID": "14513",
+                                "utcTimestamp": "1391284779" - date_diff
                             }
                             ],
                             'tv_shows': [
                             {
-                                "tv_id": "67",
-                                "series_name": "Arrow",
-                                "episode_id": "5929",
-                                "episode_name": "Vertigo",
-                                "image": "52aa88b7540ac.jpg",
+                                "seriesID": "67",
+                                "seriesName": "Arrow",
+                                "id": "5929",
+                                "episodeName": "Vertigo",
+                                "thumbnail": "52aa88b7540ac.jpg",
                                 "season": "1",
                                 "episode": "12",
-                                "watched_id": "325656",
-                                "utc_timestamp": "1392241578" - date_diff
+                                "watchedID": "325656",
+                                "utcTimestamp": "1392241578" - date_diff
                             },
                             {
-                                "tv_id": "703",
-                                "series_name": "Black Sails",
-                                "episode_id": "52333",
-                                "episode_name": "III.",
-                                "image": "525b1c95ec228.jpg",
+                                "seriesID": "703",
+                                "seriesName": "Black Sails",
+                                "id": "52333",
+                                "episodeName": "III.",
+                                "thumbnail": "525b1c95ec228.jpg",
                                 "season": "1",
                                 "episode": "3",
-                                "watched_id": "325654",
-                                "utc_timestamp": "1392241457" - date_diff
+                                "watchedID": "325654",
+                                "utcTimestamp": "1392241457" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "38357",
-                                "episode_name": "How Your Mother Met Me",
-                                "image": "52e1e7a8e8907.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "38357",
+                                "episodeName": "How Your Mother Met Me",
+                                "thumbnail": "52e1e7a8e8907.jpg",
                                 "season": "9",
                                 "episode": "16",
-                                "watched_id": "316664",
-                                "utc_timestamp": "1392156280" - date_diff
+                                "watchedID": "316664",
+                                "utcTimestamp": "1392156280" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "41172",
-                                "episode_name": "Unpause",
-                                "image": "52e0961fc8782.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "41172",
+                                "episodeName": "Unpause",
+                                "thumbnail": "52e0961fc8782.jpg",
                                 "season": "9",
                                 "episode": "15",
-                                "watched_id": "314596",
-                                "utc_timestamp": "1392136948" - date_diff
+                                "watchedID": "314596",
+                                "utcTimestamp": "1392136948" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "38356",
-                                "episode_name": "Slapsgiving 3: Slappointment in Slapmarra ",
-                                "image": "52cccf9d66ac4.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "38356",
+                                "episodeName": "Slapsgiving 3: Slappointment in Slapmarra ",
+                                "thumbnail": "52cccf9d66ac4.jpg",
                                 "season": "9",
                                 "episode": "14",
-                                "watched_id": "308010",
-                                "utc_timestamp": "1392055102" - date_diff
+                                "watchedID": "308010",
+                                "utcTimestamp": "1392055102" - date_diff
                             },
                             {
-                                "tv_id": "88",
-                                "series_name": "Sherlock",
-                                "episode_id": "7136",
-                                "episode_name": "The Great Game",
-                                "image": "50b22072c3c57.jpg",
+                                "seriesID": "88",
+                                "seriesName": "Sherlock",
+                                "id": "7136",
+                                "episodeName": "The Great Game",
+                                "thumbnail": "50b22072c3c57.jpg",
                                 "season": "1",
                                 "episode": "3",
-                                "watched_id": "305550",
-                                "utc_timestamp": "1391982913" - date_diff
+                                "watchedID": "305550",
+                                "utcTimestamp": "1391982913" - date_diff
                             },
                             {
-                                "tv_id": "1246",
-                                "series_name": "Helix",
-                                "episode_id": "95944",
-                                "episode_name": "The White Room",
-                                "image": "52e48a9b65a0b.jpg",
+                                "seriesID": "1246",
+                                "seriesName": "Helix",
+                                "id": "95944",
+                                "episodeName": "The White Room",
+                                "thumbnail": "52e48a9b65a0b.jpg",
                                 "season": "1",
                                 "episode": "5",
-                                "watched_id": "300188",
-                                "utc_timestamp": "1391635613" - date_diff
+                                "watchedID": "300188",
+                                "utcTimestamp": "1391635613" - date_diff
                             },
                             {
-                                "tv_id": "703",
-                                "series_name": "Black Sails",
-                                "episode_id": "52332",
-                                "episode_name": "II.",
-                                "image": "525b1c94c6251.jpg",
+                                "seriesID": "703",
+                                "seriesName": "Black Sails",
+                                "id": "52332",
+                                "episodeName": "II.",
+                                "thumbnail": "525b1c94c6251.jpg",
                                 "season": "1",
                                 "episode": "2",
-                                "watched_id": "291518",
-                                "utc_timestamp": "1391464042" - date_diff
+                                "watchedID": "291518",
+                                "utcTimestamp": "1391464042" - date_diff
                             },
                             {
-                                "tv_id": "14",
-                                "series_name": "How I Met Your Mother",
-                                "episode_id": "16745",
-                                "episode_name": "Bass Player Wanted",
-                                "image": "52aa88b6f1b7d.jpg",
+                                "seriesID": "14",
+                                "seriesName": "How I Met Your Mother",
+                                "id": "16745",
+                                "episodeName": "Bass Player Wanted",
+                                "thumbnail": "52aa88b6f1b7d.jpg",
                                 "season": "9",
                                 "episode": "13",
-                                "watched_id": "290010",
-                                "utc_timestamp": "1391458921" - date_diff
+                                "watchedID": "290010",
+                                "utcTimestamp": "1391458921" - date_diff
                             },
                             {
-                                "tv_id": "8",
-                                "series_name": "Family Guy",
-                                "episode_id": "93526",
-                                "episode_name": "Grimm Job",
-                                "image": "52d3672fdcfb2.jpg",
+                                "seriesID": "8",
+                                "seriesName": "Family Guy",
+                                "id": "93526",
+                                "episodeName": "Grimm Job",
+                                "thumbnail": "52d3672fdcfb2.jpg",
                                 "season": "12",
                                 "episode": "10",
-                                "watched_id": "282800",
-                                "utc_timestamp": "1391108607" - date_diff
+                                "watchedID": "282800",
+                                "utcTimestamp": "1391108607" - date_diff
                             }
                             ]
                         }

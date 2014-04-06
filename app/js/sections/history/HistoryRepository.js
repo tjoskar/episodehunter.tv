@@ -1,4 +1,4 @@
-/* global Collection: true, HistoryTvModel: true, HistoryMovieModel: true */
+/* global Collection: true, EpisodeModel: true, MovieModel: true, HistoryModel: true */
 
 /**
  * Repository for the history section
@@ -32,11 +32,15 @@ angular.module("EHW").factory('historyRepository', function(historyResource, aut
         }
 
         for (var m in media.movies) {
-            unsorted_history.add(new HistoryMovieModel(media.movies[m]));
+            var movie = media.movies[m];
+            movie['parent'] = MovieModel;
+            unsorted_history.add(new HistoryModel(movie));
         }
 
         for (var t in media.tv_shows) {
-            unsorted_history.add(new HistoryTvModel(media.tv_shows[t]));
+            var series = media.tv_shows[t];
+            series['parent'] = EpisodeModel;
+            unsorted_history.add(new HistoryModel(series));
         }
 
         // Sort the collection after the time-stamp and to it in reverse order

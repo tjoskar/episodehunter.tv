@@ -15,8 +15,8 @@
                             <span class="clock">{{ media.utcTimestamp | moment:'HH:mm' }}</span>
                             <span class="remove">remove</span>
 
-                            <a ng-href="#{{ media.url }}">
-                                <img eh-history-thumbnail url="media.image">
+                            <a ng-href="{{ media.url }}">
+                                <img eh-history-thumbnail url="media.thumbnail">
                             </a>
                             <p>{{ media.title }}</p>
                             <p>{{ media.extraInfo() }}</p>

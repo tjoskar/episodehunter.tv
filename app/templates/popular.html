@@ -10,7 +10,7 @@
 
         <div class="overflow_hidden poster_holder">
             <div ng-repeat="media in collection.getAll()">
-                <a ng-href="#{{ media.url }}">
+                <a ng-href="{{ media.url }}">
                     <div class="poster">
                         <hgroup class="view-data">
                             <p class="views">{{ media.views }}</p>

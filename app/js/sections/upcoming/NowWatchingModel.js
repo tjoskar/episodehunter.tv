@@ -1,32 +1,8 @@
-/* exported nowWatchingTvModel, nowWatchingMovieModel */
-function nowWatchingTvModel(_nowWatching) {
-    if (!(this instanceof nowWatchingTvModel)) {
-        return null;
+/* exported NowWatchingModel */
+
+function NowWatchingModel(options) {
+    if (options.parent) {
+        options.parent.call(this, options);
     }
-
-    this.title = _nowWatching.series_name || '';
-    this.url = '/tv/' + _nowWatching.tv_id + '/' + EH.urlTitle(this.title);
-    this.poster = EH.url.series.poster + EH.url.defaultImage.poster;
-    this.progress = _nowWatching.progress || 0;
-
-    if (_nowWatching.image) {
-        this.poster = EH.url.series.poster + _nowWatching.image;
-    }
-
-}
-
-function nowWatchingMovieModel(_nowWatching) {
-    if (!(this instanceof nowWatchingMovieModel)) {
-        return null;
-    }
-
-    this.title = _nowWatching.title || '';
-    this.url = '/movie/' + _nowWatching.movie_id + '/' + EH.urlTitle(this.title);
-    this.poster = EH.url.movie.poster + EH.url.defaultImage.poster;
-    this.progress = _nowWatching.progress || 0;
-
-    if (_nowWatching.image) {
-        this.poster = EH.url.movie.poster + _nowWatching.image;
-    }
-
+    this.progress  = options.progress || 0;
 }

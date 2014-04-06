@@ -1,4 +1,4 @@
-/* global Collection: true, PopularEpisodeModel: true */
+/* global Collection: true, PopularModel: true, EpisodeModel: true */
 
 /**
  * Repository for popular TV series
@@ -15,9 +15,15 @@ angular.module("EHW").factory('popularTvRepository', function(popularTvResource)
     var populateCollection = function($scope, episodes) {
         var collection = new Collection();
 
-        for (var i in episodes) {
-            collection.add(new PopularEpisodeModel(episodes[i]));
-        }
+        episodes.forEach(function(episode) {
+            collection.add(new PopularModel({
+                parent: EpisodeModel,
+                seriesID: episode.series_id,
+                seriesName: episode.series_name,
+                poster: episode.poster,
+                views: episode.views
+            }));
+        });
 
         $scope.collection = collection;
         $scope.processing = false;

@@ -1,4 +1,4 @@
-/* global Collection: true, UpcomingEpisode: true */
+/* global Collection: true, UpcomingModel: true */
 
 /**
  * Repository for upcoming TV series
@@ -25,19 +25,16 @@ angular.module('EHW').factory('upcomingRepository', function(upcomingResource) {
 
         for (var i in episodes) {
             episode = episodes[i];
-            d = new Date((episode.timestamp || '2014-01-01') + ' 00:00:00');
+            d = new Date((episode.airDate || '1970-01-01') + ' 00:00:00');
 
-            if (!episode.episode_id || d <= now) {
-                TBA.add(new UpcomingEpisode(episode, $scope));
-                continue;
-            }
-
-            if (d <= thisSunday) {
-                thisWeek.add(new UpcomingEpisode(episode, $scope));
+            if (!episode.id || d <= now) {
+                TBA.add(new UpcomingModel(episode, $scope));
+            } else if (d <= thisSunday) {
+                thisWeek.add(new UpcomingModel(episode, $scope));
             } else if (thisSunday < d && d <= nextSunday) {
-                nextWeek.add(new UpcomingEpisode(episode, $scope));
+                nextWeek.add(new UpcomingModel(episode, $scope));
             } else {
-                upcoming.add(new UpcomingEpisode(episode, $scope));
+                upcoming.add(new UpcomingModel(episode, $scope));
             }
         }
 

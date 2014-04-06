@@ -1,4 +1,4 @@
-/* global Collection: true, nowWatchingTvModel: true, nowWatchingMovieModel: true */
+/* global Collection: true, NowWatchingModel: true, MovieModel: true, EpisodeModel: true */
 
 /**
  * Repository for now watching movies/TV series
@@ -16,11 +16,25 @@ angular.module('EHW').factory('nowWatchingRepository', function(nowWatchingResou
         var nowWatching = new Collection();
 
         for (var m in media.movies) {
-            nowWatching.add(new nowWatchingMovieModel(media.movies[m]));
+            var movie = media.movies[m];
+            nowWatching.add(new NowWatchingModel({
+                parent: MovieModel,
+                id: movie.id,
+                title: movie.title,
+                poster: movie.poster,
+                progress: movie.progress
+            }));
         }
 
         for (var t in media.tv_shows) {
-            nowWatching.add(new nowWatchingTvModel(media.tv_shows[t]));
+            var episode = media.tv_shows[t];
+            nowWatching.add(new NowWatchingModel({
+                parent: EpisodeModel,
+                seriesID: episode.series_id,
+                seriesName: episode.series_name,
+                poster: episode.poster,
+                progress: episode.progress
+            }));
         }
 
         nowWatching.shuffle();

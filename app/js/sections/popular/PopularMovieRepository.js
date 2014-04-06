@@ -1,4 +1,4 @@
-/* global Collection: true, PopularMovieModel: true */
+/* global Collection: true, PopularModel: true, MovieModel: true */
 
 /**
  * Repository for popular movies
@@ -15,9 +15,15 @@ angular.module("EHW").factory('popularMovieRepository', function(popularMovieRes
     var populateCollection = function($scope, movies) {
         var collection = new Collection();
 
-        for (var i in movies) {
-            collection.add(new PopularMovieModel(movies[i]));
-        }
+        movies.forEach(function(movie) {
+            collection.add(new PopularModel({
+                parent: MovieModel,
+                id: movie.id,
+                title: movie.title,
+                poster: movie.poster,
+                views: movie.views
+            }));
+        });
 
         $scope.collection = collection;
         $scope.processing = false;
