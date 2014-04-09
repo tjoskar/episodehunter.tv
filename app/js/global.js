@@ -26,7 +26,7 @@ EH.monthShortName = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SE
 
 /**
  * Shortcut for printing
- * @return {null}
+ * @return undefined
  */
 function p() {
     console.log.apply(console, arguments);
