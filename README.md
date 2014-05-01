@@ -1,6 +1,6 @@
 # Source code for episodehunter.tv  [![Build Status](https://api.travis-ci.org/tjoskar/episodehunter.tv.svg?branch=master)](https://travis-ci.org/tjoskar/episodehunter.tv)
 
-Ongoing project to create a single-page app for [episodehunter.tv](episodehunter.tv)
+Ongoing project to create a single-page app for [http://episodehunter.tv](episodehunter.tv)
 
 ## Requirement
 [Node.js](http://nodejs.org)   
