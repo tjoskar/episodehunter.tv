@@ -39,7 +39,7 @@
 </head>
 <body>
     <div id="one-div-to-rule-them-all">
-        <div class="loader"></div>
+        <div class="loader" eh-loading></div>
         <div class="header">
             <div class="logga">
                 <a href="/"><img src="/img/logga.png" width="75" height="75" /> </a>
@@ -52,7 +52,7 @@
                     <li>
                         <a>{{ username }}</a>
                         <ul>
-			    <li><a href="#/history">History</a></li>
+                            <li><a href="#/history">History</a></li>
                             <li><a href="/shows/whattowatch">Episode to watch</a></li>
                             <li><a href="/rating">Rated</a></li>
                             <li><a href="/rating/unrated">Unrated</a></li>
@@ -61,7 +61,7 @@
                         </ul>
                     </li>
                     <li><a id="search-button" href="#Search">Search</a></li>
-                </lu>
+                </ul>
             </nav>
         </div>
 

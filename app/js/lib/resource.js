@@ -1,7 +1,7 @@
 /**
  * Helper function to make HTTP calls
  */
-angular.module("EHW").factory('resource', function($rootScope, $http, $q) {
+angular.module("EHW").factory('resource', function($http, $q) {
 
     /**
      * Number of ongoing HTTP calls
@@ -11,32 +11,28 @@ angular.module("EHW").factory('resource', function($rootScope, $http, $q) {
 
     /**
      * Start "loading" effect if it is the first call.
-     * Broadcast 'httpStart' on $rootScope
+     * Broadcast 'httpStart' event
      * @return {null}
      */
     var httpStart = function() {
         ongoingHTTPCounter++;
 
         if (ongoingHTTPCounter === 1) {
-            EH.ajaxStart();
+            EH.trigger('httpStart', ongoingHTTPCounter);
         }
-
-        $rootScope.$broadcast('httpStart', ongoingHTTPCounter);
     };
 
     /**
      * Stop "loading" effect
-     * Broadcast 'httpEnd' on $rootScope
+     * Broadcast 'httpEnd' event
      * @return {null}
      */
     var httpEnd = function() {
         ongoingHTTPCounter--;
 
         if (ongoingHTTPCounter === 0) {
-            EH.ajaxStop();
+            EH.trigger('httpEnd', ongoingHTTPCounter);
         }
-
-        $rootScope.$broadcast('httpEnd', ongoingHTTPCounter);
     };
 
     /**

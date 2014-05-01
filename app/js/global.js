@@ -102,35 +102,6 @@ EH.jsonParse = function(obj) {
 };
 
 /**
- * Start "loading" effect
- * @return undefined
- */
-EH.ajaxStart = function() {
-    var $loader = $('.loader');
-    $loader.fadeIn("fast");
-    $loader.animate({
-        width: "80%",
-    }, 800 );
-};
-
-/**
- * Stop "loading" effect
- * @return undefined
- */
-EH.ajaxStop = function() {
-    var $loader = $('.loader');
-    $loader.animate({
-        width: "100%",
-    }, 200 );
-
-    setTimeout(function() {
-        $loader.fadeOut("slow", function() {
-            $loader.css({'width': '0%'});
-        });
-    }, 200);
-};
-
-/**
  * Convert a UTC date to a local timezone
  * @param  int unixtimestamp
  * @return Date
