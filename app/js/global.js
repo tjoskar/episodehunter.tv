@@ -1,6 +1,5 @@
-/* exported local, p */
+/* exported p */
 var EH = {};
-var local = true;
 
 EH.url = {
     'api': '/api/',
