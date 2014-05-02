@@ -1,4 +1,4 @@
-describe("poster directive tests that", function() {
+describe("Poster directive: ", function() {
     var default_image;
     var image;
 
@@ -24,15 +24,13 @@ describe("poster directive tests that", function() {
     }));
 
 
-    describe("empty url", function() {
-        it("should return default img", function() {
-            expect(default_image.attr('src')).toEqual('http://img.episodehunter.tv/serie/poster/1363113862.png');
-            expect(default_image.attr('data-original')).toBeUndefined();
-        });
+    it("should return default image if url is not set", function() {
+        expect(default_image.attr('src')).toEqual('http://img.episodehunter.tv/serie/poster/1363113862.png');
+        expect(default_image.attr('data-original')).toBeUndefined();
+    });
 
-        it("should return image.jpg", function() {
-            expect(image.attr('src')).toEqual('http://img.episodehunter.tv/serie/poster/1363113862.png');
-            expect(image.attr('data-original')).toEqual('image.jpg');
-        });
+    it("should return a given image if url is set", function() {
+        expect(image.attr('src')).toEqual('http://img.episodehunter.tv/serie/poster/1363113862.png');
+        expect(image.attr('data-original')).toEqual('image.jpg');
     });
 });

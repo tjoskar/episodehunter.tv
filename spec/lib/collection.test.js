@@ -1,5 +1,5 @@
 /* global Collection: true */
-describe('CollectionTest', function(){
+describe('Collection: ', function(){
     var collection;
 
     beforeEach(module('EHW'));
@@ -8,7 +8,7 @@ describe('CollectionTest', function(){
         collection = new Collection();
     });
 
-    it('should get all media', function() {
+    it('should be able to get all objects after insertion', function() {
         expect(collection.getAll()).toEqual([]);
 
         collection.add('el');
@@ -18,7 +18,7 @@ describe('CollectionTest', function(){
         expect(collection.getAll()).toEqual(['el', 'em', 'en', 'ts']);
     });
 
-    it('should get the current size', function() {
+    it('should get the current size of an collection of various size', function() {
         expect(collection.size()).toEqual(0);
         expect(collection.length).toEqual(0);
         collection.add('el');
@@ -38,7 +38,7 @@ describe('CollectionTest', function(){
         expect(collection.length).toEqual(0);
     });
 
-    it('should be able to sort on key', function() {
+    it('should be able to sort on a specific key', function() {
         collection.add({'o': 0});
         collection.add({'o': 5});
         collection.add({'o': 2});

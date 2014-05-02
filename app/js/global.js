@@ -70,12 +70,12 @@ EH.time = function() {
 };
 
 /**
- * Determines if a reference is defined
+ * Determines if a reference is defined or not null
  * @param  object variable
  * @return boolean
  */
-EH.isset = function(variable) {
-    console.warn('using EH.isset');
+EH.isSet = function(variable) {
+    console.warn('using EH.isSet');
     return (typeof(variable) !== 'undefined' && variable !== null);
 };
 
@@ -93,7 +93,7 @@ EH.int = function(obj) {
  * @param  string obj
  * @return object
  */
-EH.jsonParse = function(obj) {
+EH.jsonParser = function(obj) {
     console.warn('EH.jsonParse is obsolescent, use angular.fromJson(value) instead');
     try {
         obj = JSON.parse(obj);

@@ -1,10 +1,10 @@
-describe('EventTest', function(){
+describe('Event: ', function(){
 
     beforeEach(function() {
         EH.deleteAllEvents();
     });
 
-    it('should receive message', function() {
+    it('should receive message on trigger', function() {
         var context = {'called': 0};
         EH.on('eventName', function() {
             this.called++;
@@ -14,7 +14,7 @@ describe('EventTest', function(){
         expect(context.called).toEqual(1);
     });
 
-    it('should accept arguments', function() {
+    it('the "on" method should accept arguments', function() {
         var context = {'called': 0, 'result': 1};
         EH.on('eventName', function(n) {
             this.called++;
