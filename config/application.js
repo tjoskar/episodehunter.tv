@@ -15,9 +15,23 @@ module.exports = function(lineman) {
   //Override application configuration here. Common examples follow in the comments.
   return {
 
+    prependTasks: {
+        common: [],
+        dev: [],
+        dist: []
+    },
+
+    loadNpmTasks: ['grunt-karma'],
+
     ngtemplates: {
         options: {
             module: "EHW"
+        }
+    },
+
+    karma: {
+        options: {
+            configFile: 'config/karma.config.js',
         }
     },
 
