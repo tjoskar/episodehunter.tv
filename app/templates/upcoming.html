@@ -43,7 +43,7 @@
     <h1>What the community is watching right now</h1>
     <div class="overflow_hidden poster_holder" id="watching">
       <div ng-repeat="media in nowWatching.getAll()">
-        <a ng-href="#{{ media.url }}">
+        <a ng-href="{{ media.url }}">
           <div class="poster">
             <hgroup class="watchng-data">
               <p>{{ media.title }}</p>
