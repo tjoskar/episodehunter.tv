@@ -14,7 +14,7 @@ function EpisodeModel(options) {
      * If episode id is false, use the series id instead
      * @type {Integer}
      */
-    this.id = options.id || options.seriesId;
+    this.id = options.id || options.seriesID;
 
     /**
      * Series id
