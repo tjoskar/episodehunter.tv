@@ -11,7 +11,7 @@ var EH = EH || {};
 (function(exports) {
 
     /**
-     * Array of registered events
+     * List of registered events
      * @type {Object}
      */
     var eventList = {};
