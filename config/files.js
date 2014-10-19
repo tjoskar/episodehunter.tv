@@ -5,11 +5,16 @@
  *
  *   - https://github.com/linemanjs/lineman/blob/master/config/files.coffee
  */
-module.exports = function(lineman) {
+module.exports = function() {
   //Override file patterns here
   return {
 
     js: {
+
+        app: [
+            "app/js/app.js",
+            "app/js/**/*.js"
+        ],
 
         vendor: [
             "vendor/js/jquery/dist/jquery.js",
@@ -20,13 +25,18 @@ module.exports = function(lineman) {
             "vendor/js/momentjs/moment.js",
             "vendor/js/moment-timezone/moment-timezone.js",
             "vendor/js/moment.timezone.data.js"
-        ],
-
-        ehw: [
-            "app/js/app.js",
-            "app/js/**/*.js"
         ]
 
+    },
+
+    css: {
+        vendor: [
+            "vendor/js/foundation/css/foundation.css", "vendor/css/**/*.css"
+        ]
+    },
+
+    sass: {
+        main: "app/css/main.sass"
     }
 
   };
