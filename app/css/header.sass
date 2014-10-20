@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    #HEADER
+/*------------------------------------*/
+
+.header
+  position: relative
+  width: 100%
+  height: rem-calc(90)
+  background-color: rgba($ghost, 0.98)
+  z-index: 100
+  border-bottom: 1px solid $lightgray
+  padding: 8px 25px
+
+  .logo
+    min-width: 75px
+    height: 100%
+    float: left
+    background-image: url(/img/logga.png)
+    background-repeat: no-repeat
+    background-size: contain
+
+  .header-menu
+    position: absolute
+    top: 35%
+    right: 20px
+
+    ul
+      margin: 0
+      list-style: none
+      list-style-image: none
+      list-style-type: none
+
+      ul
+        position: absolute
+        top: rem-calc(41px)
+        background-color: $green
+        display: none
+
+        li
+          overflow: hidden
+          padding: 10px
+          float: none !important
+
+          a
+            color: #fff !important
+
+            &:hover
+              color: #000 !important
+
+      li
+        float: left
+        margin-left: 10px
+
+        &:hover > ul
+          display: block
+
+        &:hover > a
+          color: $white
+          background-color: $green
+
+        a
+          padding: rem-calc(20px)
+          font-size: rem-calc(12px)
+          text-decoration: none
+          text-transform: uppercase
+          color: $oil
+          transition: all .2s ease-out
+
+          &:hover
+            background-color: $green
+            color: $white

@@ -11,27 +11,13 @@
  *   $ lineman config #=> to print the entire config
  *   $ lineman config concat.js #=> to see the JS config for the concat task.
  */
-module.exports = function(lineman) {
+module.exports = function() {
   //Override application configuration here. Common examples follow in the comments.
   return {
-
-    prependTasks: {
-        common: [],
-        dev: [],
-        dist: []
-    },
-
-    loadNpmTasks: ['grunt-karma'],
 
     ngtemplates: {
         options: {
             module: "EHW"
-        }
-    },
-
-    karma: {
-        options: {
-            configFile: 'config/karma.config.js',
         }
     },
 

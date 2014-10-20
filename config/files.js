@@ -19,19 +19,15 @@ module.exports = function() {
         vendor: [
             "vendor/js/jquery/dist/jquery.js",
             "vendor/js/angular/angular.js",
-            "vendor/js/angular-route/angular-route.js",
-            "vendor/js/jquery.lazyload.min.js",
-            "vendor/js/jquery.knob.js",
-            "vendor/js/momentjs/moment.js",
-            "vendor/js/moment-timezone/moment-timezone.js",
-            "vendor/js/moment.timezone.data.js"
+            "vendor/js/angular-route/angular-route.js"
         ]
 
     },
 
     css: {
         vendor: [
-            "vendor/js/foundation/css/foundation.css", "vendor/css/**/*.css"
+            "vendor/js/foundation/css/normalize.css",
+            "vendor/css/**/*.css"
         ]
     },
 
