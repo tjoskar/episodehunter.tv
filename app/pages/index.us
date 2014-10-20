@@ -40,29 +40,27 @@
 <body>
     <div id="one-div-to-rule-them-all">
         <div class="loader" eh-loading></div>
-        <div class="header">
-            <div class="logga">
-                <a href="/"><img src="/img/logga.png" width="75" height="75" /> </a>
-            </div>
-            <nav class="header_menu">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#/movie/popular">Popular movies</a></li>
-                    <li><a href="#/tv/popular">Popular Shows</a></li>
-                    <li>
-                        <a>{{ username }}</a>
-                        <ul>
-                            <li><a href="#/history">History</a></li>
-                            <li><a href="/shows/whattowatch">Episode to watch</a></li>
-                            <li><a href="/rating">Rated</a></li>
-                            <li><a href="/rating/unrated">Unrated</a></li>
-                            <li><a href="/user/settings">Settings</a></li>
-                            <li><a href="#/logout">Sign Out</a></li>
-                        </ul>
-                    </li>
-                    <li><a id="search-button" href="#Search">Search</a></li>
-                </ul>
-            </nav>
+        <nav class="header">
+          <div class="logo"></div>
+          <div class="header-menu">
+            <ul>
+              <li><a href="/#upcoming">Upcoming</a></li>
+              <li><a href="/#popular/movie">Popular movies</a></li>
+              <li><a href="/#popular/shows">Popular Shows</a></li>
+              <li>
+                <a href="#">tjoskar</a>
+                  <ul>
+                    <li><a href="/#history">History</a></li>
+                    <li><a href="/#shows/whattowatch">Episode to watch</a></li>
+                    <li><a href="/#following">Following</a></li>
+                    <li><a href="/#rating">Ratings</a></li>
+                    <li><a href="/#user/settings">Settings</a></li>
+                    <li><a href="/#logout">Sign Out</a></li>
+                  </ul>
+              </li>
+              <li><a id="js-button-search" href="/#search">Search</a></li>
+            </ul>
+          </nav>
         </div>
 
         <div id="view" ng-view></div>
