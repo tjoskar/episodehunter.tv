@@ -48,7 +48,7 @@
   <div id="one-div-to-rule-them-all">
 
     <div class="header">
-      <div class="logo"></div>
+      <a href="/"><div class="logo"></div></a>
       <nav class="header-menu">
         <ul>
           <li><a href="#sign-in">Sign in</a></li>
@@ -57,6 +57,8 @@
         </ul>
       </nav>
     </div>
+
+    <ng-view></ng-view>
 
   </div>
   <script type="text/javascript" src="<%= js %>"></script>

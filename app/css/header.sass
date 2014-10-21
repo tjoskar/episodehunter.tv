@@ -5,11 +5,17 @@
 .header
   position: fixed
   width: 100%
-  height: rem-calc(90)
+  height: rem-calc(10)
   background-color: rgba($ghost, 0.98)
   z-index: 100
   border-bottom: 1px solid $lightgray
   padding: 8px 25px
+
+  @media #{$medium-up}
+    height: rem-calc(70)
+
+  @media #{$large-up}
+    height: rem-calc(90)
 
   .logo
     min-width: 75px
