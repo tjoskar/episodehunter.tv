@@ -1,4 +1,4 @@
-angular.module("EHW", ["ngRoute"]);
+angular.module("EHW", ["ngRoute", "ngMaterial"]);
 
 angular.module("EHW").run(function() {
 

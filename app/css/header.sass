@@ -5,7 +5,7 @@
 .header
   position: fixed
   width: 100%
-  height: rem-calc(10)
+  height: rem-calc(54)
   background-color: rgba($ghost, 0.98)
   z-index: 100
   border-bottom: 1px solid $lightgray
@@ -24,54 +24,69 @@
     background-image: url(/img/logga.png)
     background-repeat: no-repeat
     background-size: contain
+    display: none
 
-  .header-menu
-    position: absolute
-    top: 35%
-    right: 20px
+    @media #{$medium-up}
+      display: block
+
+.hamburger-menu
+  font-size: 1.7rem
+  margin-top: rem-calc(4)
+
+  @media #{$medium-up}
+    display: none
+
+.header-menu
+  position: absolute
+  top: 35%
+  right: 20px
+  display: none
+
+  @media #{$medium-up}
+    display: block
+
+  ul
+    margin: 0
+    list-style: none
+    list-style-image: none
+    list-style-type: none
 
     ul
-      margin: 0
-      list-style: none
-      list-style-image: none
-      list-style-type: none
-
-      ul
-        position: absolute
-        top: rem-calc(41px)
-        background-color: $green
-        display: none
-
-        li
-          overflow: hidden
-          padding: 10px
-          float: none !important
-
-          a
-            color: #fff !important
-
-            &:hover
-              color: #000 !important
+      position: absolute
+      top: rem-calc(41px)
+      background-color: $green
+      display: none
 
       li
-        float: left
-        margin-left: 10px
-
-        &:hover > ul
-          display: block
-
-        &:hover > a
-          color: $white
-          background-color: $green
+        overflow: hidden
+        padding: 10px
+        float: none !important
 
         a
-          padding: rem-calc(20px)
-          font-size: rem-calc(12px)
-          text-decoration: none
-          text-transform: uppercase
-          color: $oil
-          transition: all .2s ease-out
+          color: #fff !important
 
           &:hover
-            background-color: $green
-            color: $white
+            color: #000 !important
+
+    li
+      float: left
+      margin-left: 10px
+
+      &:hover > ul
+        display: block
+
+      &:hover > a
+        color: $white
+        background-color: $green
+
+      a
+        padding: rem-calc(20px)
+        font-size: rem-calc(12px)
+        text-decoration: none
+        text-transform: uppercase
+        color: $oil
+        transition: all .2s ease-out
+
+        &:hover
+          background-color: $green
+          color: $white
