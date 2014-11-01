@@ -17,38 +17,39 @@ module.exports = function() {
 
     ngtemplates: {
         options: {
-            module: "EHW"
+            module: 'EHW'
         }
     },
 
     jshint: {
         options: {
-            "curly": true,
-            "eqeqeq": true,
-            "immed": true,
-            "latedef": true,
-            "newcap": true,
-            "noarg": true,
-            "sub": true,
-            "undef": true,
-            "unused": true,
-            "boss": true,
-            "eqnull": true,
-            "node": true,
-            "globals": {
-                "$": true,
-                "jQuery": false,
-                "angular": true,
-                "window": false,
-                "document": false,
-                "EH": true,
-                "moment": true,
-                "describe": true,
-                "beforeEach": true,
-                "it": true,
-                "expect": true,
-                "spyOn": true,
-                "inject": true
+            'camelcase': true,
+            'curly': true,
+            'eqeqeq': true,
+            'immed': true,
+            'latedef': 'nofunc',
+            'newcap': true,
+            'noarg': true,
+            'quotmark': 'single',
+            'sub': true,
+            'undef': true,
+            'unused': true,
+            'boss': false,
+            'eqnull': true,
+            'node': true,
+            'globals': {
+                '$': true,
+                'jQuery': false,
+                'angular': true,
+                'window': false,
+                'document': false,
+                'EH': true,
+                'moment': true,
+                'describe': true,
+                'beforeEach': true,
+                'it': true,
+                'expect': true,
+                'spyOn': true
             }
         }
     },

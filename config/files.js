@@ -12,32 +12,32 @@ module.exports = function() {
     js: {
 
         app: [
-            "app/js/app.js",
-            "app/js/**/*.js"
+            'app/js/app.js',
+            'app/js/**/*.js'
         ],
 
         vendor: [
-            "vendor/js/jquery/dist/jquery.js",
-            "vendor/js/angular/angular.js",
-            "vendor/js/angular-route/angular-route.js",
-            "vendor/js/angular-aria/angular-aria.js",
-            "vendor/js/angular-animate/angular-animate.js",
-            "vendor/js/hammerjs/hammer.js",
-            "vendor/js/angular-material/angular-material.js",
+            'vendor/js/jquery/dist/jquery.js',
+            'vendor/js/angular/angular.js',
+            'vendor/js/angular-route/angular-route.js',
+            'vendor/js/angular-aria/angular-aria.js',
+            'vendor/js/angular-animate/angular-animate.js',
+            'vendor/js/hammerjs/hammer.js',
+            'vendor/js/angular-material/angular-material.js',
         ]
 
     },
 
     css: {
         vendor: [
-            "vendor/js/foundation/css/normalize.css",
-            "vendor/js/angular-material/angular-material.css",
-            "vendor/css/**/*.css"
+            'vendor/js/foundation/css/normalize.css',
+            'vendor/js/angular-material/angular-material.css',
+            'vendor/css/**/*.css'
         ]
     },
 
     sass: {
-        main: "app/css/main.sass"
+        main: 'app/css/main.sass'
     }
 
   };
