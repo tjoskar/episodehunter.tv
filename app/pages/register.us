@@ -47,7 +47,7 @@
 
   <div id="one-div-to-rule-them-all">
 
-    <div class="header" ng-controller="HeaderController">
+    <div eh-header class="header">
       <a href="/"><div class="logo"></div></a>
       <nav class="header-menu">
         <ul>

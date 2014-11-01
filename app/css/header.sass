@@ -6,9 +6,8 @@
   position: fixed
   width: 100%
   height: rem-calc(54)
-  background-color: rgba($ghost, 0.98)
+  background-color: rgba($ghost, 0)
   z-index: 100
-  border-bottom: 1px solid $lightgray
   padding: 8px 25px
 
   @media #{$medium-up}
@@ -76,15 +75,15 @@
         display: block
 
       &:hover > a
-        color: $white
+        color: $white !important
         background-color: $green
 
       a
         padding: rem-calc(20px)
-        font-size: rem-calc(12px)
+        font-size: rem-calc(14px)
         text-decoration: none
         text-transform: uppercase
-        color: $oil
+        color: $white
         transition: all .2s ease-out
 
         &:hover
