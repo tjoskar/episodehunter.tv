@@ -47,15 +47,6 @@
 
   <div id="one-div-to-rule-them-all">
 
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2" component-id="left">
-      <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
-      </md-toolbar>
-      <md-content class="md-content-padding">
-        Hello, this is a sidenav
-      </md-content>
-    </md-sidenav>
-
     <div class="header" ng-controller="HeaderController">
       <a href="/"><div class="logo"></div></a>
       <nav class="header-menu">
@@ -65,8 +56,91 @@
           <li><a href="#problems">Problems</a></li>
         </ul>
       </nav>
-      <div class="hamburger-menu" ng-click="toggleSidenav()">&#9776;</div>
+      <div class="hamburger-menu">&#9776;</div>
     </div>
+
+    <div class="fanart"></div>
+
+    <div class="content-wrapper">
+
+      <h1 class="horizontal-line">POPULAR SHOWS</h1>
+
+      <div class="poster-container">
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+
+        <div class="poster">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </div>
+      </div>
+
+
+
+      <div class="window"></div>
+
+    </div>
+
+
 
     <ng-view></ng-view>
 

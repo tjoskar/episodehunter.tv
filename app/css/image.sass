@@ -1,0 +1,40 @@
+.fanart
+  min-height: 60%
+  width: 100%
+  position: fixed
+  right: 0
+  top: 0
+  background-image: url(http://thetvdb.com/banners/fanart/original/121361-15.jpg)
+  background-position: 50% -15%
+  background-size: cover
+
+.window
+  background: url(http://img.episodehunter.tv/serie/fanart/504242b7ca765.jpg) no-repeat center center fixed
+  background-size: cover
+  height: 200px
+  z-index: 30
+
+.poster-container
+  width: 80%
+  margin: 0 auto
+  overflow: hidden
+
+.poster
+  position: relative
+  float: left
+  width: 50%
+  text-align: center
+  padding: 1rem 0
+
+  @media #{$medium-up}
+    width: 33.3%
+
+  @media #{$large-up}
+    width: 20%
+
+
+
+.poster-image
+  border: solid 1px #D0D0C5
+  max-width: 185px
+  min-width: 100px

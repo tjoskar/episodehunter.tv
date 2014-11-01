@@ -1,0 +1,24 @@
+h1
+  color: $gray
+  font-family: $font-lato
+  font-size: 1.8rem
+  font-weight: $font-weight-normal
+  line-height: 1.3
+
+  &.horizontal-line
+    position: relative
+    text-align: center
+
+    &:before, &:after
+      content: '\a0'
+      width: 48%
+      top: 50%
+      height: 1px
+      position: absolute
+      background-color: $gray
+
+    &:before
+      margin-left: -50%
+
+    &:after
+      margin-left: 2%
