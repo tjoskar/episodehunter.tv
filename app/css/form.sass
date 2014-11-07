@@ -1,0 +1,35 @@
+input:focus
+  outline: none
+
+.field
+  position: relative
+  margin-bottom: 1em
+  padding-bottom: 1em
+
+.field > label
+  position: absolute
+  top: -14px
+  color: #428bca
+  font-size: 0.8em
+
+.field > input
+  border: 0
+  margin: 0
+  padding: 0.5em 0
+  box-shadow: none
+  border-radius: 0
+  border-bottom: 1px solid $oil
+  width: 100%
+  transition: border 500ms ease-out
+
+  &:focus
+    border-bottom: 1px solid $green
+
+.short-input
+  max-width: 400px
+  display: block
+
+.registration-form
+  max-width: 500px
+  margin: 0 auto
+  padding-top: 10%

@@ -11,9 +11,29 @@
  *   $ lineman config #=> to print the entire config
  *   $ lineman config concat.js #=> to see the JS config for the concat task.
  */
-module.exports = function() {
+module.exports = function(lineman) {
   //Override application configuration here. Common examples follow in the comments.
   return {
+
+    loadNpmTasks: lineman.config.application.loadNpmTasks.concat('grunt-contrib-copy'),
+
+    appendTasks: {
+        common: 'copy:dev',
+        dist: 'copy:dist'
+    },
+
+    copy: {
+        dev: {
+            files: [
+                { expand: true, cwd: 'vendor/js/paper-input', src: '**', dest: 'generated/polymer/paper-input' }
+            ]
+        },
+        dist: {
+            files: [
+                { expand: true, cwd: 'vendor/js/paper-input', src: '**', dest: 'dist/polymer/paper-input' }
+            ]
+        }
+    },
 
     ngtemplates: {
         options: {

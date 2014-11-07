@@ -1,4 +1,4 @@
-angular.module('EHW', ['ngRoute', 'ngMaterial']);
+angular.module('EHW', ['ngRoute', 'ngAnimate']);
 
 angular.module('EHW').run(function() {
 

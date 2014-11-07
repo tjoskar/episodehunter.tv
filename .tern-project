@@ -1,0 +1,15 @@
+{
+  "exclude": [
+    "vendor/**",
+    "node_modules/**"
+  ],
+  "libs": [
+    "ecma5",
+    "browser",
+    "jquery"
+  ],
+  "plugins": {
+    "angular": "/Users/tjoskar/Library/Application Support/Sublime Text 3/Packages/tern_for_sublime/node_modules/tern/plugin/angular.js",
+    "doc_comment": "/Users/tjoskar/Library/Application Support/Sublime Text 3/Packages/tern_for_sublime/node_modules/tern/plugin/doc_comment.js"
+  }
+}
