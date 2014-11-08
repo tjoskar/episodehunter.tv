@@ -65,74 +65,76 @@
 
       <h1 class="horizontal-line">POPULAR SHOWS</h1>
 
-      <div class="poster-container">
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
 
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-        <div class="poster">
-          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
 
-        <div class="poster">
+      <ul class="poster-list container">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
+        </li>
 
-        <div class="poster">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
 
-        <div class="poster">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
+        </li>
 
-        <div class="poster">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
+        </li>
 
-        <div class="poster">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
+        </li>
 
-        <div class="poster">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
+        </li>
 
-        <div class="poster">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
+        </li>
 
-        <div class="poster">
+        <li class="poster-item">
           <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
-        </div>
-      </div>
+        </li>
+
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+
+        <li class="poster-item">
+          <img src="http://img.episodehunter.tv/serie/poster/50424242ce7ae.jpg" class="poster-image">
+        </li>
+      </ul>
 
       <div class="window"></div>
 
