@@ -138,9 +138,8 @@
 
       <div class="window"></div>
 
-      <div class="dark-section">
+      <div class="dark-section apple-promo">
         <h1 class="green">A PICTURE IS WORTH A THOUSAND WORDS</h1>
-        <img src="/img/apple.png" class="apple-promo">
       </div>
 
       <div class="window site-promo"></div>
