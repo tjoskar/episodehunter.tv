@@ -22,10 +22,12 @@
     "document": false,
     "EH": true,
     "moment": true,
+
     "describe": true,
     "beforeEach": true,
     "it": true,
     "expect": true,
-    "spyOn": true
+    "spyOn": true,
+    "inject": true
   }
 }
