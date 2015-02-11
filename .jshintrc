@@ -14,6 +14,7 @@
   "boss": false,
   "eqnull": true,
   "node": true,
+  "esnext": true,
   "globals": {
     "$": true,
     "jQuery": false,
