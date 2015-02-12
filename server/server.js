@@ -1,7 +1,14 @@
 var app = require('express')();
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.json([{
+      'title': 'Katten'
+  }]);
 });
 
 var server = app.listen(8080, function () {
