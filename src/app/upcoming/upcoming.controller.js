@@ -5,7 +5,7 @@ class UpcomingCtrl {
     constructor(upcoming) {
         upcoming
             .get()
-            .then(data => this.shows = data.data);
+            .then(shows => this.shows = shows);
     }
 
 }

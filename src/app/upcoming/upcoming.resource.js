@@ -1,15 +1,18 @@
 'use strict';
 
-class UpcomingResource {
+import BaseResource from '../lib/resource';
 
-    constructor($http) {
-        this._http = $http;
+class UpcomingResource extends BaseResource {
+
+    constructor(http) {
+        super(http);
     }
 
     get() {
-        return this._http.get('http://localhost:8080/');
+        return super.get('http://localhost:8080/yoo');
     }
 
 }
 
+UpcomingResource.$inject = ['$http'];
 export default UpcomingResource;
