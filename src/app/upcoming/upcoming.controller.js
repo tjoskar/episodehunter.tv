@@ -2,8 +2,8 @@
 
 class UpcomingCtrl {
 
-    constructor(upcoming) {
-        upcoming
+    constructor(resource) {
+        resource
             .get()
             .then(shows => this.shows = shows);
     }
