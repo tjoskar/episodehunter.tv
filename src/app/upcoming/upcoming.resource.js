@@ -2,12 +2,12 @@
 
 class UpcomingResource {
 
+    constructor($http) {
+        this._http = $http;
+    }
+
     get() {
-        return [
-            {
-                'title': 'Oskar'
-            }
-        ];
+        return this._http.get('http://localhost:8080/');
     }
 
 }

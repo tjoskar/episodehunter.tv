@@ -3,8 +3,9 @@
 class UpcomingCtrl {
 
     constructor(upcoming) {
-        console.log(upcoming);
-        this.shows = upcoming.get();
+        upcoming
+            .get()
+            .then(data => this.shows = data.data);
     }
 
 }
