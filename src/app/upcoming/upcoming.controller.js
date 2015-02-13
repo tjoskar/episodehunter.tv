@@ -2,13 +2,13 @@
 
 class UpcomingCtrl {
 
-    constructor(resource) {
-        resource
+    constructor(repository) {
+        repository
             .get()
             .then(shows => this.shows = shows);
     }
 
 }
 
-UpcomingCtrl.$inject = ['UpcomingResource'];
+UpcomingCtrl.$inject = ['UpcomingRepository'];
 export default UpcomingCtrl;

@@ -1,5 +1,5 @@
 /**
- * Resource
+ * Repository
  * Wrapper for all HTTP cals
  * This file should be loaded as a module; no IIFE needed
  */
@@ -54,7 +54,7 @@ var errorHandler = function errorHandler(error) {
 
 
 
-class BaseResource {
+class BaseRepository {
 
     constructor(http) {
         this.http = http;
@@ -94,4 +94,4 @@ class BaseResource {
 
 }
 
-export default BaseResource;
+export default BaseRepository;

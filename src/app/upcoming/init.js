@@ -1,13 +1,13 @@
 'use strict';
 
 import UpcomingCtrl from './upcoming.controller';
-import UpcomingResource from './upcoming.resource';
+import UpcomingRepository from './upcoming.repository';
 
 let bind = () => {
     angular
         .module('EH')
         .controller('UpcomingCtrl', UpcomingCtrl)
-        .service('UpcomingResource', UpcomingResource);
+        .service('UpcomingRepository', UpcomingRepository);
 };
 
 export default {bind};
