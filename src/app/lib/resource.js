@@ -4,7 +4,7 @@
  * This file should be loaded as a module; no IIFE needed
  */
 
-import asyncEvent from './event';
+import syncEvent from './event';
 
 /**
  * Number of ongoing HTTP calls
@@ -21,7 +21,7 @@ var httpStart = function httpStart() {
     ongoingHTTPCounter++;
 
     if (ongoingHTTPCounter === 1) {
-        asyncEvent.trigger('httpStart', ongoingHTTPCounter);
+        syncEvent.trigger('httpStart', ongoingHTTPCounter);
     }
 };
 
@@ -34,7 +34,7 @@ var httpEnd = function httpEnd() {
     ongoingHTTPCounter--;
 
     if (ongoingHTTPCounter === 0) {
-        asyncEvent.trigger('httpEnd', ongoingHTTPCounter);
+        syncEvent.trigger('httpEnd', ongoingHTTPCounter);
     }
 };
 
