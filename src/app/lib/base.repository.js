@@ -68,6 +68,8 @@ class BaseRepository {
     get(url) {
         httpStart();
 
+        url = url || this.apiEndpoint;
+
         return this.http
             .get(url)
             .then(data => data.data)
@@ -83,6 +85,8 @@ class BaseRepository {
      */
     post(url, postData) {
         httpStart();
+
+        url = url || this.apiEndpoint;
 
         return this.http
             .post(url, postData)

@@ -1,7 +1,10 @@
 <div>
 
-  <div ng-repeat="show in vm.shows">
-    <p>{{show.title}}</p>
+  <div ng-repeat="groupe in vm.shows">
+    <h1>{{groupe.headline}}</h1>
+    <div ng-repeat="episode in groupe.episodes">
+      <p>{{episode.title}}</p>
+    </div>
   </div>
 
 </div>
