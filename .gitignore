@@ -5,8 +5,6 @@
 /bower_components
 /dist
 /node_modules
-/vendor/js/*
-!/vendor/js/jquery.knob.js
-!/vendor/js/jquery.lazyload.min.js
-!/vendor/js/moment.timezone.data.js
+/vendor/*
+!/vendor/.gitkeep
 /ref
