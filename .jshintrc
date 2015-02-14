@@ -21,7 +21,7 @@
     "angular": true,
     "window": false,
     "document": false,
-    "EH": true,
+    "_": true,
     "moment": true,
 
     "describe": true,
