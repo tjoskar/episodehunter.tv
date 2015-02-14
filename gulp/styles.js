@@ -1,48 +1,24 @@
 'use strict';
 
 var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-ruby-sass');
+var mainBowerFiles = require('main-bower-files');
+var filter = require('gulp-filter');
 
 var paths = gulp.paths;
 
-var $ = require('gulp-load-plugins')();
+gulp.task('dev-fonts', function () {
+  return gulp.src(mainBowerFiles(), {base: paths.vendor + '/materialize/font/'})
+    .pipe(filter('**/*.{eot,svg,ttf,woff}'))
+    .pipe(gulp.dest(paths.tmp + '/serve/font/'));
+});
 
-gulp.task('styles', function () {
-
-  var sassOptions = {
-    style: 'expanded'
-  };
-
-  var injectFiles = gulp.src([
-    paths.src + '/app/**/*.scss',
-    '!' + paths.src + '/app/index.scss',    // ignore
-    '!' + paths.src + '/app/vendor.scss'    // ignore
-  ], { read: false });
-
-  var injectOptions = {
-    transform: function(filePath) {
-      filePath = filePath.replace(paths.src + '/app/', '');
-      return '@import \'' + filePath + '\';';
-    },
-    starttag: '// injector',
-    endtag: '// endinjector',
-    addRootSlash: false
-  };
-
-  var indexFilter = $.filter('index.scss');
-
-  return gulp.src([
-    paths.src + '/app/index.scss',
-    paths.src + '/app/vendor.scss'
-  ])
-    .pipe(indexFilter)
-    .pipe($.inject(injectFiles, injectOptions))
-    .pipe(indexFilter.restore())
-    .pipe($.sass(sassOptions))
-
-  .pipe($.autoprefixer())
-    .on('error', function handleError(err) {
-      console.error(err.toString());
-      this.emit('end');
-    })
-    .pipe(gulp.dest(paths.tmp + '/serve/app/'));
+gulp.task('styles', ['dev-fonts'], function() {
+    return sass(paths.src + '/app/index.scss', { sourcemap: true })
+        .on('error', function (err) {
+            console.error('Error!', err.message);
+        })
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths.tmp + '/serve/app/'));
 });
