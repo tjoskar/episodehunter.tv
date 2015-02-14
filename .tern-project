@@ -1,16 +1,23 @@
 {
   "exclude": [
+    ".git/**",
+    ".idea/**",
+    "e2e/**",
+    "dist/**",
+    "ref/**",
+    "server/**",
     "vendor/**",
     "node_modules/**"
   ],
   "libs": [
-    "ecma6",
     "browser",
-    "jquery"
     "underscore"
   ],
   "plugins": {
-    "angular": "/Users/tjoskar/Library/Application Support/Sublime Text 3/Packages/tern_for_sublime/node_modules/tern/plugin/angular.js",
-    "doc_comment": "/Users/tjoskar/Library/Application Support/Sublime Text 3/Packages/tern_for_sublime/node_modules/tern/plugin/doc_comment.js"
+    "node": {},
+    "angular": {},
+    "doc_comment": {
+      "fullDocs": true
+    }
   }
 }
