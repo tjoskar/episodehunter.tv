@@ -1,54 +1,29 @@
 'use strict';
 
 var gulp = require('gulp');
-var util = require('util');
-var browserSync = require('browser-sync');
-var middleware = require('./proxy');
+var connect = require('gulp-connect');
 var paths = gulp.paths;
 
-function browserSyncInit(baseDir, files, browser) {
-  browser = browser === undefined ? 'default' : browser;
-
-  var routes = null;
-  if(baseDir === paths.src || (util.isArray(baseDir) && baseDir.indexOf(paths.src) !== -1)) {
-    routes = {
-      '/vendor': 'vendor'
-    };
-  }
-
-  browserSync.instance = browserSync.init(files, {
-    startPath: '/',
-    server: {
-      baseDir: baseDir,
-      middleware: middleware,
-      routes: routes
-    },
-    browser: browser
+function serverInit(baseDir) {
+  connect.server({
+    root: baseDir,
+    port: 9000,
+    livereload: false
   });
 }
 
 gulp.task('serve', ['watch'], function () {
-  browserSyncInit([
-    paths.tmp + '/serve',
-    paths.src
-  ], [
-    // paths.tmp + '/serve/app/**/*.css',
-    // paths.tmp + '/serve/app/**/*.js',
-    // paths.src + 'src/assets/images/**/*',
-    // paths.tmp + '/serve/*.html',
-    // paths.tmp + '/serve/app/**/*.html',
-    // paths.src + '/app/**/*.html'
-  ]);
+  serverInit(paths.tmp + '/serve');
 });
 
 gulp.task('serve:dist', ['build'], function () {
-  browserSyncInit(paths.dist);
+  serverInit(paths.dist);
 });
 
 gulp.task('serve:e2e', ['inject'], function () {
-  browserSyncInit([paths.tmp + '/serve', paths.src], null, []);
+  serverInit(paths.tmp + '/serve');
 });
 
 gulp.task('serve:e2e-dist', ['build'], function () {
-  browserSyncInit(paths.dist, null, []);
+  serverInit(paths.dist);
 });

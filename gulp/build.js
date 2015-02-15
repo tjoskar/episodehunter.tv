@@ -8,23 +8,7 @@ var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });
 
-gulp.task('partials', function () {
-  return gulp.src([
-    paths.src + '/app/**/*.html',
-    paths.tmp + '/app/**/*.html'
-  ])
-    .pipe($.minifyHtml({
-      empty: true,
-      spare: true,
-      quotes: true
-    }))
-    .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'test'
-    }))
-    .pipe(gulp.dest(paths.tmp + '/partials/'));
-});
-
-gulp.task('html', ['inject', 'partials'], function () {
+gulp.task('html', ['inject'], function () {
   var partialsInjectFile = gulp.src(paths.tmp + '/partials/templateCacheHtml.js', { read: false });
   var partialsInjectOptions = {
     starttag: '<!-- inject:partials -->',
@@ -37,26 +21,26 @@ gulp.task('html', ['inject', 'partials'], function () {
   var cssFilter = $.filter('**/*.css');
   var assets;
 
-  return gulp.src(paths.tmp + '/serve/*.html')
+  return gulp.src(paths.tmp + '/serve/index.html')
     .pipe($.inject(partialsInjectFile, partialsInjectOptions))
     .pipe(assets = $.useref.assets())
-    .pipe($.rev())
-    .pipe(jsFilter)
-    .pipe($.ngAnnotate())
-    .pipe($.uglify({preserveComments: $.uglifySaveLicense}))
-    .pipe(jsFilter.restore())
-    .pipe(cssFilter)
-    .pipe($.csso())
-    .pipe(cssFilter.restore())
+      .pipe($.rev()) // add revision on file, eg. unicorn.css -> unicorn-098f6bcd.css
+      .pipe(jsFilter)
+        .pipe($.ngAnnotate())
+        .pipe($.uglify({preserveComments: $.uglifySaveLicense}))
+      .pipe(jsFilter.restore())
+      .pipe(cssFilter)
+        .pipe($.csso())
+      .pipe(cssFilter.restore())
     .pipe(assets.restore())
     .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
-    .pipe($.minifyHtml({
-      empty: true,
-      spare: true,
-      quotes: true
-    }))
+      .pipe($.minifyHtml({
+        empty: true,
+        spare: true,
+        quotes: true
+      }))
     .pipe(htmlFilter.restore())
     .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size({ title: paths.dist + '/', showFiles: true }));
