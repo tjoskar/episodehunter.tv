@@ -1,10 +1,13 @@
-<div>
+<h4>Upcoming</h4>
+<div class="divider"></div>
+<div ng-repeat="groupe in vm.shows" class="section">
+  <h5>{{groupe.headline}}</h5>
+  <div ng-repeat="episode in groupe.episodes" class="card small no-content">
 
-  <div ng-repeat="groupe in vm.shows">
-    <h1>{{groupe.headline}}</h1>
-    <div ng-repeat="episode in groupe.episodes">
-      <p>{{episode.title}}</p>
+    <div class="card-image">
+      <img style="background-image: url('{{episode.show.fanart}}')">
+      <span class="card-title">{{episode.show.title}}</span>
     </div>
-  </div>
 
+  </div>
 </div>
