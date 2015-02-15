@@ -42,12 +42,14 @@ var UpcomingModel = function UpcomingModel(options) {
         var now = new Date();
         var thisSunday = u.time.nextSunday(now);
         var nextSunday = u.time.nextSunday(thisSunday);
-        if (air === null) {
+        if (air === undefined) {
             return upcomingEnum.TBA;
         }
 
         if (!u.is.set(scope.id) || air <= now) {
             return upcomingEnum.TBA;
+        } else if (air < now) {
+            return upcomingEnum.JUST_AIRED;
         } else if (air <= thisSunday) {
             return upcomingEnum.THIS_WEEK;
         } else if (thisSunday < air && air <= nextSunday) {
