@@ -36,5 +36,11 @@
 @import "../../vendor/materialize/sass/components/date_picker/default.scss";
 @import "../../vendor/materialize/sass/components/date_picker/default.date.scss";
 @import "../../vendor/materialize/sass/components/date_picker/default.time.scss";
+
+@import "./style/variables";
+@import "./style/header.scss";
+@import "./style/card.scss";
+@import "./style/typography.scss";
+
 // injector
 // endinjector
