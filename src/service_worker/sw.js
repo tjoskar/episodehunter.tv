@@ -1,4 +1,4 @@
-importScripts('cache.js');
+importScripts('serviceworker-cache-polyfill.js');
 
 var staticCacheName = 'cache-static-v1';
 var imgCacheName = 'cache-img-v1';
