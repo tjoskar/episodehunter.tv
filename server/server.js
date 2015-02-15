@@ -13,10 +13,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/user/upcoming', function(req, res) {
-    var k = upcoming(15);
-    console.log(k);
-    console.log(upcoming);
-    res.json(k);
+    res.json(upcoming(15));
 });
 
 var server = app.listen(8080, function () {
