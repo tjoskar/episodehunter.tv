@@ -50,9 +50,7 @@ function ShowModel(options) {
      * Return URL to a fanart for this show
      * @return {string}
      */
-    this.fanart = (function() {
-        return '';
-    })();
+    this.fanart = options.fanart;
 
 }
 
