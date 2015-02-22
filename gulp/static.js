@@ -13,7 +13,9 @@ gulp.task('dev-images', function () {
 });
 
 gulp.task('dev-misc', function () {
-  return gulp.src(paths.src + '/**/*.ico')
+  gulp.src(paths.src + '/**/*.ico')
+    .pipe(gulp.dest(paths.tmp + '/serve/'));
+  return gulp.src(paths.src + '/*.gif')
     .pipe(gulp.dest(paths.tmp + '/serve/'));
 });
 
