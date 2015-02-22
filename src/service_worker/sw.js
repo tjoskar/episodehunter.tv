@@ -1,3 +1,5 @@
+/* global self, importScripts, URL, caches, fetch, Notification, WindowClient */
+
 importScripts('serviceworker-cache-polyfill.js');
 
 var staticCacheName = 'cache-static-v1';
@@ -66,6 +68,31 @@ self.addEventListener('fetch', function(event) {
     }
 
     return event.respondWith(response);
+});
+
+self.addEventListener('push', function(event) {
+    console.log('Push Event Received');
+
+    if (!(self.Notification && self.Notification.permission === 'granted')) {
+        console.error('Failed to display notification - not supported');
+        return;
+    }
+
+    var data = event.data.json();
+    var title = data.title || 'Default title';
+    var message = data.message || 'Default message';
+
+    return new Notification(title, {
+        body: message,
+        icon: '/assets/images/logo.png'
+    });
+});
+
+self.addEventListener('notificationclick', function(event) {
+    // Assume that all of the resources needed to render
+    // the new view is cached before open it up.
+    console.log(event);
+    return new WindowClient('/mb');
 });
 
 function ehRespose(request, cacheName) {
