@@ -27,7 +27,7 @@ gulp.task('dev-fonts', function () {
 
 gulp.task('dev-service-worker', function () {
   return gulp.src(paths.src + '/service_worker/*')
-    .pipe(gulp.dest(paths.tmp + '/serve/service_worker/'));
+    .pipe(gulp.dest(paths.tmp + '/serve/'));
 });
 
 gulp.task('dev-vendor-js', function() {
