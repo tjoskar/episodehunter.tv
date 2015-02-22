@@ -9,18 +9,13 @@ var staticFiles = [
   '/',
   '/app/index.css',
   '/app/boot.js',
+  '/vendor.js',
   '/assets/images/logo.png',
   '/font/material-design-icons/Material-Design-Icons.woff',
   '/font/roboto/Roboto-Regular.ttf',
   '/font/roboto/Roboto-Thin.ttf',
   '/font/roboto/Roboto-Light.ttf',
-  '/offline.gif',
-
-  '/vendor/angular/angular.js',
-  '/vendor/angular-animate/angular-animate.js',
-  '/vendor/angular-route/angular-route.js',
-  '/vendor/lodash/lodash.js',
-  '/vendor/materialize/bin/materialize.js'
+  '/offline.gif'
 ];
 
 self.addEventListener('install', function(event) {
