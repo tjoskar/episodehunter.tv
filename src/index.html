@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Oskar Karlsson</title>
+    <link rel="manifest" href="manifest.json">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -61,6 +62,34 @@
           }, function(err) {
             console.log('ಠ_ಠ', err);
           });
+
+        window.requestNotificationPermission = function() {
+          if (!Notification) {
+            console.log('Ooops Notifications Not Supported');
+            return;
+          }
+
+          Notification.requestPermission(function(result) {
+            console.log('We request and get: ', result);
+            if (result !== 'granted') {
+              console.log('Permission wasn\'t granted. Allow a retry.');
+              return;
+            }
+          });
+        };
+
+        window.requestPushPermission = function() {
+          navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+            serviceWorkerRegistration.pushManager.subscribe()
+              .then(function(pushSubscription) {
+                console.log('We got: (save it) ', pushSubscription);
+              })
+              .catch(function(e) {
+                console.error('Unable to register for push', e);
+              });
+          });
+        };
+
       }
     </script>
 
