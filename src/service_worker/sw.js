@@ -51,20 +51,19 @@ self.addEventListener('fetch', function(event) {
         response = fetch(event.request)
             .catch(function() {
                 console.log('No internet, checking cache', event.request.url);
-                return caches.match(event.request)
-                    .then(function(response) {
-                        if (response) {
-                            console.log('Found cache', event.request.url);
-                            return response;
-                        }
-                        if (/\.(png|jpg|jpeg|gif)$/.test(requestURL.pathname)) {
-                            console.log('offline.gif', event.request.url);
-                            return caches.match('/offline.gif');
-                        }
-                        console.log('nothing we can do', event.request.url);
-                        return Promise.reject('Can not fetch requested item :(');
-                    });
-                });
+                return caches.match(event.request);
+            }).then(function(response) {
+                if (response) {
+                    console.log('Found cache', event.request.url);
+                    return response;
+                }
+                if (/\.(png|jpg|jpeg|gif)$/.test(requestURL.pathname)) {
+                    console.log('offline.gif', event.request.url);
+                    return caches.match('/offline.gif');
+                }
+                console.log('nothing we can do', event.request.url);
+                return Promise.reject('Can not fetch requested item :(');
+            });
     }
 
     return event.respondWith(response);
