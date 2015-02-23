@@ -49,18 +49,15 @@ self.addEventListener('fetch', function(event) {
 
     if (requestURL.hostname === 'img.episodehunter.tv') {
         console.log('Trying to fetch images from EH eh?');
-        response = ehRespose(event.request, imgCacheName);
+        response = cacheFallbackOnNetwork(event.request, apiCacheName);
     } else if(requestURL.pathname === '/user/upcoming') {
         console.log('Fetching API');
-        response = ehRespose(event.request, apiCacheName);
+        response = networkFallbackOnCache(event.request, apiCacheName);
     } else if (location.hostname === requestURL.hostname) {
-
-    } else {
-        console.log('Checking cache', event.request.url);
+        console.log('Fetching from this host');
         response = caches.match(event.request)
             .then(function(cacheMatch) {
                 if (cacheMatch) {
-                    console.log('Found cache', event.request.url);
                     return cacheMatch;
                 }
                 return Promise.reject('Can not find requested item in cache :(');
@@ -73,26 +70,12 @@ self.addEventListener('fetch', function(event) {
                     console.log('offline.gif', event.request.url);
                     return caches.match('/offline.gif');
                 }
-                console.error('Nothing we can do about', event.request.url);
+                console.error('Nothing we can do about it', event.request.url);
                 return Promise.reject('Can not fetch requested item :(');
             });
-
-        // response = fetch(event.request)
-        //     .catch(function() {
-        //         console.log('No internet, checking cache', event.request.url);
-        //         return caches.match(event.request);
-        //     }).then(function(response) {
-        //         if (response) {
-        //             console.log('Found cache', event.request.url);
-        //             return response;
-        //         }
-        //         if (/\.(png|jpg|jpeg|gif)$/.test(requestURL.pathname)) {
-        //             console.log('offline.gif', event.request.url);
-        //             return caches.match('/offline.gif');
-        //         }
-        //         console.log('nothing we can do', event.request.url);
-        //         return Promise.reject('Can not fetch requested item :(');
-        //     });
+    } else {
+        console.log('Unknown data, go for the internet', event.request.url);
+        return fetch(event.request);
     }
 
     return event.respondWith(response);
@@ -124,28 +107,42 @@ self.addEventListener('notificationclick', function(event) {
     // });
 });
 
-function ehRespose(request, cacheName) {
-    return caches
-        .match(request)
-        .then(function(response) {
-            if (response) {
-                return response;
-            }
-
+/**
+ * Send request -> save in cache -> reply with response
+ * If network fail => reply with cache value
+ * @param {Request} request   request from event
+ * @param {String} cacheName cache name
+ * @return {Promise}
+ */
+function networkFallbackOnCache(request, cacheName) {
+    return caches.open(cacheName).then(function(cache) {
+        return cache.match(request.clone()).then(function(response) {
             return fetch(request.clone())
-                .then(function(response) {
-                    caches
-                        .open(cacheName)
-                        .then(function(cache) {
-                            cache.put(request, response)
-                                .then(function() {
-                                    console.log('yey img cache');
-                                }, function() {
-                                    console.log('nay img cache');
-                                });
-                        });
-
-                    return response.clone();
+                .then(function(networkResponse) {
+                    cache.put(request, networkResponse.clone());
+                    return networkResponse;
+                })
+                .catch(function() {
+                    return response;
                 });
         });
+    });
+}
+
+/**
+ * Check if we have the request in cache, if we do: response, else make a network request and update the cache.
+ * @param  {Request} request
+ * @param  {String} cacheName
+ * @return {Promise}
+ */
+function cacheFallbackOnNetwork(request, cacheName) {
+    return caches.open(cacheName).then(function(cache) {
+        return cache.match(request.clone()).then(function(response) {
+            var fetchPromise = fetch(request.clone()).then(function(networkResponse) {
+                cache.put(request, networkResponse.clone());
+                    return networkResponse;
+                });
+            return response || fetchPromise;
+        });
+    });
 }
