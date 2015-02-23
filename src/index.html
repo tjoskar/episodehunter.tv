@@ -66,12 +66,12 @@
           });
 
         window.requestNotificationPermission = function() {
-          if (!Notification) {
+          if (!window.Notification) {
             console.log('Ooops Notifications Not Supported');
             return;
           }
 
-          Notification.requestPermission(function(result) {
+          window.Notification.requestPermission(function(result) {
             console.log('We request and get: ', result);
             if (result !== 'granted') {
               console.log('Permission wasn\'t granted. Allow a retry.');
@@ -81,7 +81,7 @@
         };
 
         window.requestPushPermission = function() {
-          navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+          window.navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
             serviceWorkerRegistration.pushManager.subscribe()
               .then(function(pushSubscription) {
                 console.log('We got: (save it) ', pushSubscription);
