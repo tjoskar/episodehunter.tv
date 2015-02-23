@@ -2,6 +2,7 @@
 .idea
 *.sublime-project
 *.sublime-workspace
+**/.tern-port
 .tmp
 .sass-cache
 /bower_components
