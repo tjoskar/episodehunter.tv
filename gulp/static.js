@@ -15,6 +15,8 @@ gulp.task('dev-images', function () {
 gulp.task('dev-misc', function () {
   gulp.src(paths.src + '/**/*.ico')
     .pipe(gulp.dest(paths.tmp + '/serve/'));
+  gulp.src(paths.src + '/manifest.json')
+    .pipe(gulp.dest(paths.tmp + '/serve/'));
   return gulp.src(paths.src + '/*.gif')
     .pipe(gulp.dest(paths.tmp + '/serve/'));
 });
