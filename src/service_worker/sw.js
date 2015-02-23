@@ -1,4 +1,4 @@
-/* global self, importScripts, URL, caches, fetch, Notification, WindowClient */
+/* global self, importScripts, URL, caches, fetch, WindowClient, registration */
 
 importScripts('serviceworker-cache-polyfill.js');
 
@@ -65,28 +65,20 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('push', function(event) {
-    console.log('Push Event Received');
+    console.log('Push Event Received', event);
 
-    if (!(self.Notification && self.Notification.permission === 'granted')) {
-        console.error('Failed to display notification - not supported');
-        return;
-    }
-
-    var data = event.data.json();
-    var title = data.title || 'Default title';
-    var message = data.message || 'Default message';
-
-    return new Notification(title, {
-        body: message,
-        icon: '/assets/images/logo.png'
+    registration.showNotification('Episodehunter', {
+        body: 'Braking bad starting in 15 minutes',
+        icon: '/assets/images/logo.png',
+        tag: 'new-episode'
     });
 });
 
 self.addEventListener('notificationclick', function(event) {
-    // Assume that all of the resources needed to render
-    // the new view is cached before open it up.
+    console.log('Clicking on notification');
+    console.log(WindowClient);
     console.log(event);
-    return new WindowClient('/mb');
+    // return new WindowClient('/mb');
 });
 
 function ehRespose(request, cacheName) {
