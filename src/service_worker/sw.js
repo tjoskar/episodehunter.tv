@@ -75,7 +75,7 @@ self.addEventListener('fetch', function(event) {
             });
     } else {
         console.log('Unknown data, go for the internet', event.request.url);
-        return fetch(event.request);
+        response = fetch(event.request);
     }
 
     return event.respondWith(response);
