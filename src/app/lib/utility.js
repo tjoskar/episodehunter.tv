@@ -1,3 +1,5 @@
+import md5 from './md5';
+
 var utility = {
 
     /**
@@ -167,7 +169,12 @@ var utility = {
         }
 
         return SE;
-    }
+    },
+
+    /**
+     * @type {md5}
+     */
+    md5: md5
 
 };
 
