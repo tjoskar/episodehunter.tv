@@ -9,6 +9,12 @@ let routeTable = ($routeProvider) => {
             controllerAs: 'vm'
         })
 
+        .when('/register', {
+            templateUrl: 'app/authentication/register.html',
+            controller: 'AuthenticationCtrl',
+            controllerAs: 'vm'
+        })
+
         .otherwise({
             redirectTo: '/'
         });
