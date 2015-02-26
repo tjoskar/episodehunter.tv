@@ -41,7 +41,7 @@ var httpEnd = function httpEnd() {
 /**
  * An global error handler
  * @param  {object} error   Error object
- * @return {null}
+ * @return {promise}
  */
 var errorHandler = function errorHandler(error) {
     if (error.status === 401) {

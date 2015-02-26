@@ -1,8 +1,8 @@
 <h4>Upcoming</h4>
 <div class="divider"></div>
-<div ng-repeat="groupe in vm.shows" class="section">
-  <h5>{{groupe.headline}}</h5>
-  <div ng-repeat="episode in groupe.episodes" class="card small no-content">
+<div ng-repeat="group in vm.shows" class="section">
+  <h5>{{group.headline}}</h5>
+  <div ng-repeat="episode in group.episodes" class="card small no-content">
 
     <div class="card-image">
       <img style="background-image: url('{{episode.show.fanart}}')">
