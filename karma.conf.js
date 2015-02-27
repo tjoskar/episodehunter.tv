@@ -6,13 +6,14 @@ module.exports = function(config) {
         frameworks: ['browserify', 'jasmine'],
         files: [
             '.tmp/serve/vendor.js',
+            'vendor/angular-mocks/angular-mocks.js',
             '.tmp/serve/app/boot.js',
             'spec/**/*.js'
         ],
         logLevel: config.LOG_WARN,
         reporters: ['dots'],
         preprocessors: {
-              'spec/**/*.js': [ 'browserify' ]
+              'spec/**/*.es6.js': [ 'browserify' ]
         },
         browserify: {
             debug: true,
