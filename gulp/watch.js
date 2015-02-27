@@ -6,7 +6,7 @@ var paths = gulp.paths;
 
 gulp.task('watch', ['inject'], function () {
   gulp.watch([
-    paths.src + '/*.html',
+    paths.src + '/app/**/*.html',
     paths.src + '/app/**/*.scss',
     paths.src + '/app/**/*.js',
     'bower.json'

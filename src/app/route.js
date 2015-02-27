@@ -13,6 +13,12 @@ let routeTable = ($routeProvider) => {
             template: '<img src="/mb.gif">',
         })
 
+        .when('/register', {
+            templateUrl: 'app/authentication/register.html',
+            controller: 'AuthenticationCtrl',
+            controllerAs: 'vm'
+        })
+
         .otherwise({
             redirectTo: '/'
         });

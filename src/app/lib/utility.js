@@ -1,3 +1,5 @@
+import md5 from './md5';
+
 var utility = {
 
     /**
@@ -16,7 +18,9 @@ var utility = {
          * @return {boolean}
          */
         string: function(str) {
-            console.warn('EH.isString is obsolescent, use angular.isString(value) instead');
+            if (typeof angular !== 'undefined') {
+                return angular.isString(str);
+            }
             return (typeof str === 'string' || str instanceof String);
         },
 
@@ -66,7 +70,7 @@ var utility = {
 
         /**
          * Return the local time
-         * @return {undefined}
+         * @return {integer}    Unixtimestamp * 1000
          */
         now: function() {
             return new Date().getTime();
@@ -103,8 +107,8 @@ var utility = {
          * @return {string} on form YYYY-MM-DD
          */
         futureDate: function(n) {
-            var d = new Date();
-            d = new Date(this.time() + (n || 0) * 86400000);
+            var timestamp = new Date().getTime();
+            var d = new Date(timestamp + (n || 0) * 86400000);
             var month = d.getMonth() + 1;
             return [
                 d.getFullYear(),
@@ -121,7 +125,6 @@ var utility = {
      * @return {object}
      */
     jsonParser: function(obj) {
-        console.warn('EH.jsonParse is obsolescent, use angular.fromJson(value) instead');
         try {
             return JSON.parse(obj);
         } catch(e) {
@@ -167,7 +170,12 @@ var utility = {
         }
 
         return SE;
-    }
+    },
+
+    /**
+     * @type {md5}
+     */
+    md5: md5
 
 };
 

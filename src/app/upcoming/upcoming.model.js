@@ -24,7 +24,7 @@ var UpcomingModel = function UpcomingModel(options) {
      * URL series page for this episode
      * @type {string}
      */
-    this.url = (function(scope) {
+    this.url = (scope => {
         var url = scope.show.url;
         if (scope.id) {
             url += '/' + scope.id;

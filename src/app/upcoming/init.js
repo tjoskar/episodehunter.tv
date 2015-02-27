@@ -3,11 +3,15 @@
 import UpcomingCtrl from './upcoming.controller';
 import UpcomingRepository from './upcoming.repository';
 
-let bind = () => {
+var bind = () => {
+    var moduleName = 'EH.upcoming';
+
     angular
-        .module('EH')
+        .module(moduleName, [])
         .controller('UpcomingCtrl', UpcomingCtrl)
         .service('UpcomingRepository', UpcomingRepository);
+
+    return moduleName;
 };
 
 export default {bind};

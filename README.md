@@ -7,10 +7,10 @@ Ongoing project to create a single-page app for [episodehunter.tv](http://episod
 
 
 ## Running
-``` $ gulp static ```
-``` $ gulp serve ```
-``` $ cd server && node server.js ```
-Visit [http://localhost:8000/](http://localhost:8000/)
+``` $ gulp static ```   
+``` $ gulp serve ```   
+``` $ cd server && node server.js ```   
+Visit [http://localhost:8000/](http://localhost:8000/)   
 Change the server API by modifying ```/server/*.js```
 
 
