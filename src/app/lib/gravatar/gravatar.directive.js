@@ -1,10 +1,13 @@
 function GravatarDirective(GravatarFactory) {
     var directive = {
-        link: link
+        link: link,
+        scope: {
+            gravatarEmail: '='
+        }
     };
 
     function link(scope, element, attrs) {
-        scope.$watch(attrs.gravatarEmail, function (email) {
+        scope.$watch('gravatarEmail', function (email) {
             console.log(email);
 
             if (email && email.match(/.*@.*\..{2}/) !== null) {
