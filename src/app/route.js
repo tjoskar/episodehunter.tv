@@ -9,6 +9,10 @@ let routeTable = ($routeProvider) => {
             controllerAs: 'vm'
         })
 
+        .when('/mb', {
+            template: '<img src="/mb.gif">',
+        })
+
         .otherwise({
             redirectTo: '/'
         });
