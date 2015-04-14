@@ -97,36 +97,417 @@ var faker = {
 
 };
 
+var upcomingStatic = {
+    "episodes": [
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 1872
+                },
+                "title": "Fargo",
+                "poster": "534e0bfb6dc01.jpg",
+                "fanart": "534e0bfa0ba3d.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 2850
+                },
+                "title": "Marco Polo (2014)",
+                "poster": "548c9869f08f7.jpg",
+                "fanart": "548c9869eb7d1.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 108
+                },
+                "title": "Banshee",
+                "poster": "50e1526b8fa07.jpg",
+                "fanart": "50e1526c80642.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 1246
+                },
+                "title": "Helix",
+                "poster": "52c83e12a258f.jpg",
+                "fanart": "52c83e1262557.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 2188
+                },
+                "title": "The Leftovers",
+                "poster": "53a9c1537f466.jpg",
+                "fanart": "53a9c152cdf93.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 88
+                },
+                "title": "Sherlock",
+                "poster": "50b220731c0b4.jpg",
+                "fanart": "50b22073538d6.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 1166
+                },
+                "title": "True Detective",
+                "poster": "52b1b87280ffd.jpg",
+                "fanart": "52b1b8724aa92.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 12
+                },
+                "title": "Hell on Wheels",
+                "poster": "504241dd5199c.jpg",
+                "fanart": "504241ddb05a1.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 2064
+                },
+                "title": "Halt and Catch Fire",
+                "poster": "53814ea3908eb.jpg",
+                "fanart": "53814ea2c7bad.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 74
+                },
+                "title": "Homeland",
+                "poster": "50b21fde1c798.jpg",
+                "fanart": "50b21fdebd663.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 703
+                },
+                "title": "Black Sails",
+                "poster": "525b1c9cf2968.jpg",
+                "fanart": "525b1c9d44edf.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 52
+                },
+                "title": "Solsidan",
+                "poster": "5060d41e064a5.jpg",
+                "fanart": "5060d41ee3959.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 159
+                },
+                "title": "Ray Donovan",
+                "poster": "51aba65035752.jpg",
+                "fanart": "259866-5.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 2034
+                },
+                "title": "The Strain",
+                "poster": "53764b1acc3b4.jpg",
+                "fanart": "53764b1aaabe3.png"
+            }
+        },
+        {
+            "ids": {
+                "id": null
+            },
+            "title": null,
+            "season": null,
+            "episode": null,
+            "airs": null,
+            "show": {
+                "ids": {
+                    "id": 24
+                },
+                "title": "The Walking Dead",
+                "poster": "504242b726b5d.jpg",
+                "fanart": "504242b7ca765.png"
+            }
+        },
+        {
+            "ids": {
+                "id": 233048
+            },
+            "title": "Breaking Point",
+            "season": 3,
+            "episode": 9,
+            "airs": "2015-04-16",
+            "show": {
+                "ids": {
+                    "id": 144
+                },
+                "title": "Vikings",
+                "poster": "512ae1dfd1ecc.jpg",
+                "fanart": "512ae1e0c63e0.png"
+            }
+        },
+        {
+            "ids": {
+                "id": 234452
+            },
+            "title": "I Could Never Love Like That",
+            "season": 6,
+            "episode": 18,
+            "airs": "2015-04-16",
+            "show": {
+                "ids": {
+                    "id": 23
+                },
+                "title": "The Vampire Diaries",
+                "poster": "504242aef0a0c.jpg",
+                "fanart": "504242af75cd7.png"
+            }
+        },
+        {
+            "ids": {
+                "id": 237229
+            },
+            "title": "The Communication Deterioration",
+            "season": 8,
+            "episode": 21,
+            "airs": "2015-04-16",
+            "show": {
+                "ids": {
+                    "id": 20
+                },
+                "title": "The Big Bang Theory",
+                "poster": "50424242ce7ae.jpg",
+                "fanart": "5042424330b51.png"
+            }
+        },
+        {
+            "ids": {
+                "id": 234475
+            },
+            "title": "The House of Black and White",
+            "season": 5,
+            "episode": 2,
+            "airs": "2015-04-19",
+            "show": {
+                "ids": {
+                    "id": 10
+                },
+                "title": "Game of Thrones",
+                "poster": "504241d7e6a13-2.jpg",
+                "fanart": "504241d8bbe1d-1.png"
+            }
+        },
+        {
+            "ids": {
+                "id": 234683
+            },
+            "title": "Under the Knife",
+            "season": 1,
+            "episode": 20,
+            "airs": "2015-04-20",
+            "show": {
+                "ids": {
+                    "id": 2051
+                },
+                "title": "Gotham",
+                "poster": "537ba50415891.jpg",
+                "fanart": "537ba503d6ce4.png"
+            }
+        },
+        {
+            "ids": {
+                "id": 237769
+            },
+            "title": "Fighting Irish",
+            "season": 13,
+            "episode": 15,
+            "airs": "2015-04-19",
+            "show": {
+                "ids": {
+                    "id": 8
+                },
+                "title": "Family Guy",
+                "poster": "504241ce27d6b.jpg",
+                "fanart": "504241ce81356.png"
+            }
+        },
+        {
+            "ids": {
+                "id": 237928
+            },
+            "title": "TBA",
+            "season": 4,
+            "episode": 1,
+            "airs": "2015-07-26",
+            "show": {
+                "ids": {
+                    "id": 5
+                },
+                "title": "Continuum",
+                "poster": "5042419505b92.jpg",
+                "fanart": "504241956e53f.png"
+            }
+        }
+    ]
+};
+
 /**
  * Generate n number of upcoming episodes
  * @param  {integer} n
  * @return {object}
  */
 module.exports = function(n) {
-    var upcoming = [];
-    for (var i = 0; i < n; i++) {
-        upcoming.push({
-            ids: {
-                id: faker.episodeId(),
-                show: faker.showId()
-            },
-            title: faker.episodeTitle(),
-            season: faker.season(),
-            episode: faker.episode(),
-            airs: randomDate().toISOString(),
-            thumbnail: 'something.jpg',
-            show: {
-                ids: {
-                    id: faker.showId()
-                },
-                title: faker.showTitle(),
-                year: faker.year(),
-                poster: 'poster.jpg',
-                fanart: faker.fanart()
-            }
-        });
-    }
-    return {
-        'episodes': upcoming
-    };
+    return upcomingStatic;
+    // var upcoming = [];
+    // for (var i = 0; i < n; i++) {
+    //     upcoming.push({
+    //         ids: {
+    //             id: faker.episodeId(),
+    //             show: faker.showId()
+    //         },
+    //         title: faker.episodeTitle(),
+    //         season: faker.season(),
+    //         episode: faker.episode(),
+    //         airs: randomDate().toISOString(),
+    //         thumbnail: 'something.jpg',
+    //         show: {
+    //             ids: {
+    //                 id: faker.showId()
+    //             },
+    //             title: faker.showTitle(),
+    //             year: faker.year(),
+    //             poster: 'poster.jpg',
+    //             fanart: faker.fanart()
+    //         }
+    //     });
+    // }
+
+    // return {
+    //     'episodes': upcoming
+    // };
 };
