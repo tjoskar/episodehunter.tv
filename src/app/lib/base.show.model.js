@@ -6,6 +6,11 @@
 import u from './utility';
 
 /**
+ * @type {config}
+ */
+import config from '../config'
+
+/**
  * Base class for show
  * @param {Object} options
  */
@@ -39,18 +44,16 @@ function ShowModel(options) {
     this.url = '#/tv/' + this.id + '/' + u.urlTitle(this.title);
 
     /**
-     * Return URL to a poster for this episode
+     * Return URL to a poster for this series
      * @return {string}
      */
-    this.poster = (function() {
-        return '';
-    })();
+    this.poster = config.url.series.poster + options.poster;
 
     /**
      * Return URL to a fanart for this show
      * @return {string}
      */
-    this.fanart = options.fanart;
+    this.fanart = config.url.series.fanart + options.fanart;
 
 }
 
