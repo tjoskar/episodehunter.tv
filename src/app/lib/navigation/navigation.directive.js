@@ -5,7 +5,7 @@ function NavigationDirective(AuthenticationRepository) {
     };
 
     function link(scope, element) {
-        if (!AuthenticationRepository.areLoggedin()) {
+        if (!AuthenticationRepository.isLoggedIn()) {
             element.hide();
         }
     }

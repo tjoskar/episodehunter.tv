@@ -8,7 +8,7 @@ class AuthenticationRepository extends BaseRepository {
         super(http);
     }
 
-    areLoggedin() {
+    isLoggedIn() {
         return false;
     }
 }
