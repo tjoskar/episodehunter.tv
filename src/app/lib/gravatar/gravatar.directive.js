@@ -1,3 +1,5 @@
+'use strict';
+
 function GravatarDirective(GravatarFactory) {
     var directive = {
         link: link,
@@ -7,13 +9,12 @@ function GravatarDirective(GravatarFactory) {
     };
 
     function link(scope, element, attrs) {
-        scope.$watch('gravatarEmail', function (email) {
-            console.log(email);
+        scope.$watch('gravatarEmail', email => {
 
             if (email && email.match(/.*@.*\..{2}/) !== null) {
                 var cssClass = attrs.gravatarCssClass || '';
                 var src = GravatarFactory.getImageSrc(email, attrs.gravatarSecure);
-                var tag = '<img class="' + cssClass + '" src="' + src + '" >';
+                var tag = `<img class="${cssClass}" src="${src}">`;
 
                 element.find('img').remove();
                 element.append(tag);
@@ -29,5 +30,7 @@ function GravatarDirective(GravatarFactory) {
     return directive;
 
 }
+
+GravatarDirective.$inject = ['gravatarFactory'];
 
 export default GravatarDirective;

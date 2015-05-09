@@ -8,7 +8,7 @@ import u from './utility';
 /**
  * @type {config}
  */
-import config from '../config'
+import config from '../config';
 
 /**
  * Base class for show

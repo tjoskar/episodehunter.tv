@@ -1,3 +1,5 @@
+'use strict';
+
 import NavigationDirective from './navigation.directive';
 
 var bind = () => {

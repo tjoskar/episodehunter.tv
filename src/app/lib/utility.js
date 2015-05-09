@@ -1,3 +1,5 @@
+'use strict';
+
 import md5 from './md5';
 
 var utility = {
@@ -48,7 +50,7 @@ var utility = {
          * @return {boolean}
          */
         set: function(variable) {
-            return (typeof(variable) !== 'undefined' && variable !== null);
+            return (typeof variable !== 'undefined' && variable !== null);
         }
 
     },
@@ -140,8 +142,8 @@ var utility = {
     urlTitle: function(text) {
         if (text) {
             return text.toLowerCase()
-                       .replace(/[^\w ]+/g,'')
-                       .replace(/ +/g,'-');
+                       .replace(/[^\w ]+/g, '')
+                       .replace(/ +/g, '-');
         }
         return '';
     },

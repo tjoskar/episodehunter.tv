@@ -1,3 +1,5 @@
+'use strict';
+
 function NavigationDirective(AuthenticationRepository) {
     var directive = {
         templateUrl: 'app/lib/navigation/navigation.html',

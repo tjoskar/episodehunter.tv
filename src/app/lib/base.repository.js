@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Repository
  * Wrapper for all HTTP cals

@@ -1,3 +1,5 @@
+'use strict';
+
 import md5 from '../md5';
 
 function GravatarFactory() {

@@ -1,3 +1,5 @@
+'use strict';
+
 // http://kevin.vanzonneveld.net
 // +   original by: Webtoolkit.info (http://www.webtoolkit.info/)
 // + namespaced by: Michael White (http://getsprink.com)

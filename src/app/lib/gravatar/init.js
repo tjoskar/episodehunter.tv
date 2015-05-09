@@ -1,3 +1,5 @@
+'use strict';
+
 import GravatarDirective from './gravatar.directive';
 import GravatarFactory from './gravatar.factory';
 
@@ -7,7 +9,7 @@ var bind = () => {
     angular
         .module(directiveName, [])
         .factory('gravatarFactory', GravatarFactory)
-        .directive('gravatarImage', ['gravatarFactory', GravatarDirective]);
+        .directive('gravatarImage', GravatarDirective);
 
     return directiveName;
 };

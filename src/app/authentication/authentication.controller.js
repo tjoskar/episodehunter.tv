@@ -2,10 +2,9 @@
 
 class AuthenticationCtrl {
 
-    constructor() {
-        console.log('AuthenticationCtrl');
+    constructor(scroll) {
         this.username = '';
-        this.emailadress = 'epost';
+        this.emailadress = '';
         this.password = '';
     }
 

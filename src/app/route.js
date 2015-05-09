@@ -10,7 +10,7 @@ let routeTable = ($routeProvider) => {
         })
 
         .when('/mb', {
-            template: '<img src="/mb.gif">',
+            template: '<img src="/mb.gif">'
         })
 
         .when('/register', {

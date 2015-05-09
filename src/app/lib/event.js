@@ -1,3 +1,5 @@
+'use strict';
+
 // Events
 // ---------------
 // Bind a callback function to an event.

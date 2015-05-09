@@ -16,10 +16,10 @@ class UpcomingRepository extends BaseRepository {
                 return _(data.episodes)
                     .map(e => new UpcomingModel(e))
                     .groupBy(u => u.group.order)
-                    .map(a => {
+                    .map(groupedEpisodeList => {
                         return {
-                            headline: _.first(a).group.headline,
-                            episodes: _.sortBy(a, (a) => a.airs)
+                            headline: _.first(groupedEpisodeList).group.headline,
+                            episodes: _.sortBy(groupedEpisodeList, episode => episode.airs)
                         };
                     })
                     .value();

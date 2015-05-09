@@ -1,3 +1,4 @@
+/*eslint-disable strict */
 /* global self, importScripts, URL, caches, fetch, registration, clients, location */
 
 importScripts('serviceworker-cache-polyfill.js');

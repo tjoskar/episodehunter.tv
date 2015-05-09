@@ -1,4 +1,4 @@
-'use string';
+'use strict';
 
 import BaseEpisodeModel from '../lib/base.episode.model';
 import BaseShowModel from '../lib/base.show.model';
