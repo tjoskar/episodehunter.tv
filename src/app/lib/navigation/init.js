@@ -5,7 +5,7 @@ var bind = () => {
 
     angular
         .module(directiveName, [])
-        .directive('ehNav', [NavigationDirective]);
+        .directive('ehNav', NavigationDirective);
 
     return directiveName;
 };

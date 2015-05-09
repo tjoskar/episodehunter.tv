@@ -1,11 +1,11 @@
-function NavigationDirective() {
+function NavigationDirective(AuthenticationRepository) {
     var directive = {
         templateUrl: 'app/lib/navigation/navigation.html',
         link: link
     };
 
     function link(scope, element) {
-        if (false) {
+        if (!AuthenticationRepository.areLoggedin()) {
             element.hide();
         }
     }
@@ -13,5 +13,7 @@ function NavigationDirective() {
     return directive;
 
 }
+
+NavigationDirective.$inject = ['AuthenticationRepository'];
 
 export default NavigationDirective;
