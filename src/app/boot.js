@@ -1,6 +1,7 @@
 'use strict';
 
 import gravatar from './lib/gravatar/init';
+import scroll from './lib/scroll/init';
 import navigation from './lib/navigation/init';
 import authentication from './authentication/init';
 import upcoming from './upcoming/init';
@@ -10,6 +11,7 @@ angular
     .module('EH', [
         'ngAnimate',
         'ngRoute',
+        scroll.bind(),
         authentication.bind(),
         upcoming.bind(),
         gravatar.bind(),
