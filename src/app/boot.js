@@ -15,4 +15,14 @@ angular
         gravatar.bind(),
         navigation.bind()
     ])
-    .config(routeTable);
+    .config(routeTable)
+
+    // We should not check if the user are logged in for every view change. Check if we got an 401-response instead
+    .run(['$rootScope', '$location', 'AuthenticationRepository', ($root, $location, Auth) => {
+        $root.$on('$routeChangeStart', () => {
+            if (!Auth.isLoggedIn()) {
+                // event.preventDefault();
+                $location.path('/register');
+            }
+        });
+    }]);
