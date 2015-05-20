@@ -3,9 +3,13 @@
 function ScrollFactory() {
     var Scroll = {};
 
-    Scroll.toElement = function (id, speed = 2000, callback) {
+    Scroll.toElementById = function (id, speed = 2000, callback) {
+        Scroll.toElement(window.$('#' + id), speed, callback);
+    };
+
+    Scroll.toElement = function (element, speed = 2000, callback) {
         window.$('html, body').animate({
-            scrollTop: window.$('#' + id).offset().top
+            scrollTop: element.offset().top
         }, speed, callback);
     };
 

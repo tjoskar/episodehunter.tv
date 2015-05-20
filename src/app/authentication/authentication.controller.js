@@ -16,6 +16,18 @@ class AuthenticationCtrl {
         });
     }
 
+    register() {
+        console.log('register', this.emailadress, this.username, this.password, arguments);
+    }
+
+    login() {
+        console.log('login', this.username, this.password, arguments);
+    }
+
+    forgot() {
+        console.log('forgot', this.username, this.password, arguments);
+    }
+
 }
 
 AuthenticationCtrl.$inject = ['scrollToElement'];

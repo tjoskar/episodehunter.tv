@@ -1,49 +1,60 @@
-<div class="full-window-container" style="background-image: url('http://thetvdb.com/banners/fanart/original/121361-83.jpg');">
+<div register-form> <!-- transclude -->
 
-    <div class="auth--info-box">
-        <h1>Welcome to Episod<span>EH</span>unter</h1>
-        <p>Automatically track what you are watching on your media center and build a completely<br>history record of every TV show and movie you are watching and be notified about what<br>to see next.<br><br>Register and meet pure awesomeness</p>
-    </div>
+    <div class="full-window-container" style="background-image: url('http://thetvdb.com/banners/fanart/original/121361-83.jpg');">
 
-    <div class="auth--register-button">
-        <a class="waves-effect waves-light btn-large" ng-click="vm.scrollAndFocus('js-register-section', 'email')"><i class="mdi-hardware-keyboard-arrow-down left"></i>Register</a>
-    </div>
-
-</div>
-
-<div class="full-window-container" id="js-register-section">
-
-    <div class="container vertical-align">
-        <div class="row">
-
-            <form class="col s12">
-
-                <div class="auth--registration-profile-image-holder">
-                    <div gravatar-image gravatar-email="vm.emailadress" gravatar-css-class="profile-image"></div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email" type="text" class="validate" ng-model="vm.emailadress">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="username" type="text" class="validate" ng-model="vm.username">
-                        <label for="username">Username</label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" ng-model="vm.password">
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-
-            </form>
+        <div class="auth--info-box">
+            <h1>Welcome to Episod<span>EH</span>unter</h1>
+            <p>Automatically track what you are watching on your media center and build a completely<br>history record of every TV show and movie you are watching and be notified about what<br>to see next.<br><br>Register and meet pure awesomeness</p>
         </div>
+
+        <div class="auth--register-button">
+            <a class="waves-effect waves-light btn-large" ng-click="dir.registerButton()"><i class="mdi-hardware-keyboard-arrow-down left"></i>Register</a>
+        </div>
+
     </div>
+
+    <div class="full-window-container" id="js-register-section">
+
+        <div class="container vertical-align">
+            <div class="row">
+
+                <form class="col s12">
+
+                    <div class="auth--registration-profile-image-holder">
+                        <div gravatar-image gravatar-email="vm.emailadress" gravatar-css-class="profile-image"></div>
+                    </div>
+
+                    <div class="row" id="js-email-row">
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate" ng-model="vm.emailadress">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="validate" ng-model="vm.username">
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+
+                    <div class="row" id="js-password-row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate" ng-model="vm.password">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+
+                    <div class="row" style="text-align: center">
+                        <button ng-click="dir.submit()" class="btn waves-effect waves-light" type="submit" name="action">{{dir.submitButtonText}}
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
 </div>
