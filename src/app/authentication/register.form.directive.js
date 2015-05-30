@@ -62,6 +62,7 @@ function RegisterForm(scroll) {
                 scope.dir.flyingButton();
             },
             flyingButton: nextState => {
+                scope.vm.emailadress = '';
                 state = STATES[nextState || state.next];
                 scope.dir.submitButtonText = state.submitText;
                 scope.dir.flyingButtonText = state.flyingButtonText;

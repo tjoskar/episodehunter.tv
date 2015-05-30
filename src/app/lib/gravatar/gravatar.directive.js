@@ -22,6 +22,8 @@ function GravatarDirective(GravatarFactory) {
                 element.find('img').bind('error', function() {
                     element.find('img').remove();
                 });
+            } else if (email === '') {
+                element.find('img').remove();
             }
 
         });
