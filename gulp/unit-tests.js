@@ -15,7 +15,7 @@ gulp.task('test', ['browserify'], function(done) {
   runTests(true, ['Chrome'], done);
 });
 
-gulp.task('test:ci', ['browserify'], function(done) {
+gulp.task('test:ci', ['dev-vendor-js', 'browserify'], function(done) {
   runTests(true, ['Firefox'], done);
 });
 
