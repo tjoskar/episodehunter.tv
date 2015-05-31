@@ -14,12 +14,30 @@ function RegisterForm(scroll) {
     };
 
     function link(scope, element) {
+        var form = element.find('form');
         var registerSection = element.find('#js-register-section');
-        var emailRow = element.find('#js-email-row');
-        var passwordRow = element.find('#js-password-row');
-        var emailInput = element.find('#email');
-        var usernameInput = element.find('#username');
+        var emailRow = form.find('#js-email-row');
+        var passwordRow = form.find('#js-password-row');
+        var emailInput = form.find('#email');
+        var usernameInput = form.find('#username');
+        var submitButton = form.find('button');
         var state;
+        var submit = action => {
+            form.css('opacity', '0.2');
+            scope.dir.showSpinner = true;
+            submitButton.addClass('disabled');
+            action.call(scope.vm)
+                .catch(error => {
+                    if (error.show) {
+                        error.show();
+                    }
+                })
+                .finally(() => {
+                    form.css('opacity', '1');
+                    scope.dir.showSpinner = false;
+                    submitButton.removeClass('disabled');
+                });
+        };
 
         const STATES = {
             login: {
@@ -28,7 +46,7 @@ function RegisterForm(scroll) {
                 fadeOut: [emailRow],
                 fadeIn: [passwordRow],
                 focus: usernameInput,
-                submit: scope.vm.login.bind(scope.vm),
+                submit: submit.bind(undefined, scope.vm.login),
                 next: 'register'
             },
             register: {
@@ -37,7 +55,7 @@ function RegisterForm(scroll) {
                 fadeOut: [],
                 fadeIn: [passwordRow, emailRow],
                 focus: emailInput,
-                submit: scope.vm.register.bind(scope.vm),
+                submit: submit.bind(undefined, scope.vm.register),
                 next: 'login'
             },
             forgot: {
@@ -46,7 +64,7 @@ function RegisterForm(scroll) {
                 fadeOut: [emailRow, passwordRow],
                 fadeIn: [],
                 focus: usernameInput,
-                submit: scope.vm.forgot.bind(scope.vm),
+                submit: submit.bind(undefined, scope.vm.forgot),
                 next: 'login'
             }
         };
@@ -54,6 +72,7 @@ function RegisterForm(scroll) {
         state = STATES.register;
 
         scope.dir = {
+            showSpinner: false,
             flyingButtonText: state.flyingButtonText,
             submitButtonText: state.submitText,
 
@@ -73,7 +92,9 @@ function RegisterForm(scroll) {
                 });
             },
             submit: () => {
-                state.submit();
+                if (!scope.dir.showSpinner) {
+                    state.submit();
+                }
             }
         };
     }
