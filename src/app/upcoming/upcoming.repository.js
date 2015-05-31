@@ -5,8 +5,8 @@ import UpcomingModel from './upcoming.model';
 
 class UpcomingRepository extends BaseRepository {
 
-    constructor(http) {
-        super(http);
+    constructor(http, notify) {
+        super(http, notify);
         this.apiEndpoint = 'http://localhost:8080/user/upcoming';
     }
 
@@ -27,5 +27,5 @@ class UpcomingRepository extends BaseRepository {
     }
 }
 
-UpcomingRepository.$inject = ['$http'];
+UpcomingRepository.$inject = ['$http', 'notify'];
 export default UpcomingRepository;

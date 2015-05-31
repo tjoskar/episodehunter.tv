@@ -40,26 +40,12 @@ var httpEnd = function httpEnd() {
     }
 };
 
-/**
- * An global error handler
- * @param  {object} error   Error object
- * @return {promise}
- */
-var errorHandler = function errorHandler(error) {
-    if (error.status === 401) {
-        console.log('Logout user');
-    } else {
-        console.log('Show error message', error);
-    }
-    return Promise.reject(error);
-};
-
-
 
 class BaseRepository {
 
-    constructor(http) {
+    constructor(http, notify) {
         this.http = http;
+        this.notify = notify;
     }
 
     /**
@@ -75,7 +61,7 @@ class BaseRepository {
         return this.http
             .get(url)
             .then(data => data.data)
-            .catch(errorHandler)
+            .catch(error => this.errorHandler(error))
             .finally(httpEnd);
     }
 
@@ -85,18 +71,34 @@ class BaseRepository {
      * @param  {object} postData
      * @return {promise}
      */
-    post(url, postData) {
+    post(url, postData, config = {}) {
         httpStart();
 
         url = url || this.apiEndpoint;
 
         return this.http
-            .post(url, postData)
-            .then(data => data.value)
-            .catch(errorHandler)
+            .post(url, postData, config)
+            .then(data => data.data)
+            .catch(error => this.errorHandler(error))
             .finally(httpEnd);
     }
 
+    /**
+     * An global error handler
+     * @param  {object} error   Error object
+     * @return {promise}
+     */
+    errorHandler(error) {
+        var serverError;
+        if (error.status === 401) {
+            console.log('Logout user');
+            serverError = this.notify.createError('action', 'Logout user');
+        } else {
+            var errorObject = (error && error.data && error.data.error) ? error.data.error : {};
+            serverError = this.notify.createError(errorObject.type, errorObject.humanError);
+        }
+        return Promise.reject(serverError);
+    };
 
 }
 

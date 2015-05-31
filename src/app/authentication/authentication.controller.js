@@ -2,18 +2,12 @@
 
 class AuthenticationCtrl {
 
-    constructor(scroll) {
+    constructor(authService) {
         this.username = '';
         this.emailadress = '';
         this.password = '';
 
-        this.scroll = scroll;
-    }
-
-    scrollAndFocus(sectionId, focusId) {
-        this.scroll.toElement(sectionId, 200, () => {
-            this.scroll.focus(focusId);
-        });
+        this.authService = authService;
     }
 
     register() {
@@ -21,7 +15,9 @@ class AuthenticationCtrl {
     }
 
     login() {
-        console.log('login', this.username, this.password, arguments);
+        return this.authService.login(this.username, this.password).then(data => {
+            console.log('All went well: ', data);
+        });
     }
 
     forgot() {
@@ -30,6 +26,6 @@ class AuthenticationCtrl {
 
 }
 
-AuthenticationCtrl.$inject = ['scrollToElement'];
+AuthenticationCtrl.$inject = ['AuthenticationService'];
 
 export default AuthenticationCtrl;
