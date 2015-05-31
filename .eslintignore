@@ -1,0 +1,2 @@
+src/app/lib/md5.js
+src/service_worker/serviceworker-cache-polyfill.js
