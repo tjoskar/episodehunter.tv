@@ -1,37 +1,24 @@
 'use strict';
 
 var gulp = require('gulp');
+var karma = require('karma').server;
 
-var $ = require('gulp-load-plugins')();
-
-var wiredep = require('wiredep');
-
-var paths = gulp.paths;
-
-function runTests (singleRun, done) {
-  var bowerDeps = wiredep({
-    directory: 'vendor',
-    exclude: ['bootstrap-sass-official'],
-    dependencies: true,
-    devDependencies: true
-  });
-
-  var testFiles = bowerDeps.js.concat([
-    paths.tmp + '/serve/app/index.js',
-    paths.src + '/app/**/*.spec.js',
-    paths.src + '/app/**/*.mock.js'
-  ]);
-
-  gulp.src(testFiles)
-    .pipe($.karma({
-      configFile: 'karma.conf.js',
-      action: (singleRun)? 'run': 'watch'
-    }))
-    .on('error', function (err) {
-      // Make sure failed tests cause gulp to exit non-zero
-      throw err;
-    });
+function runTests (singleRun, browsers, done) {
+  karma.start({
+    configFile: __dirname + '/../karma.conf.js',
+    singleRun: singleRun,
+    browsers: browsers
+  }, done);
 }
 
-gulp.task('test', ['browserify'], function (done) { runTests(true /* singleRun */, done) });
-gulp.task('test:auto', ['browserify'], function (done) { runTests(false /* singleRun */, done) });
+gulp.task('test', ['browserify'], function(done) {
+  runTests(true, ['Chrome'], done);
+});
+
+gulp.task('test:ci', ['browserify'], function(done) {
+  runTests(true, ['Firefox'], done);
+});
+
+gulp.task('test:auto', ['browserify'], function(done) {
+  runTests(false, ['Chrome'], done);
+});

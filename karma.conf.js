@@ -2,7 +2,7 @@
 
 module.exports = function(config) {
     config.set({
-        browsers : ['Chrome'],
+        browsers: ['Firefox'],
         frameworks: ['browserify', 'jasmine'],
         files: [
             '.tmp/serve/vendor.js',
@@ -19,6 +19,6 @@ module.exports = function(config) {
             debug: true,
             extensions: ['.js'],
             transform: ['6to5ify']
-        },
+        }
     });
 };
