@@ -1,4 +1,6 @@
 'use strict';
+import timezoneGuess from '../lib/guess.timezone';
+
 
 class AuthenticationCtrl {
 
@@ -6,6 +8,7 @@ class AuthenticationCtrl {
         this.username = '';
         this.emailadress = '';
         this.password = '';
+        this.timeZone = timezoneGuess();
 
         this.authService = authService;
     }
