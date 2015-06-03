@@ -4,11 +4,11 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var paths = gulp.paths;
 
-gulp.task('browserify', function () {
+gulp.task('browserify', ['lint'], function () {
   return gulp.src(paths.src + '/app/boot.js', { read: false })
     .pipe($.browserify({
         debug: true,
-        transform: ['6to5ify']
+        transform: ['babelify']
     }))
     .on('error', function handleError(err) {
       console.error(err.toString());
