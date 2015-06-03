@@ -1,2 +1,3 @@
 src/app/lib/md5.js
+src/app/lib/guess.timezone.js
 src/service_worker/serviceworker-cache-polyfill.js

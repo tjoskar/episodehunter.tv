@@ -62,7 +62,7 @@ exports.off = function(eventName, callback) {
             delete eventList[eventName];
         } else {
             var evList = eventList[eventName];
-            for (var i = evList.length-1; i >= 0; i--) {
+            for (var i = evList.length - 1; i >= 0; i--) {
                 if (evList[i].callback === callback) {
                     evList.splice(i, 1);
                 }

@@ -1,3 +1,4 @@
+/* global Materialize */
 'use strict';
 
 class NotifyError {

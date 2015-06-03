@@ -41,7 +41,7 @@ var utility = {
          * @return {boolean}
          */
         int: function(n) {
-            return n === +n && n === (n|0);
+            return n === +n && n === (n | 0);
         },
 
         /**
@@ -63,7 +63,7 @@ var utility = {
          * @return {integer}
          */
         int: function(obj) {
-            return obj|0;
+            return obj | 0;
         }
 
     },
