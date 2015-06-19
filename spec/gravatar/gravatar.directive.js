@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Gravatar directive', function() {
     var element;
 
