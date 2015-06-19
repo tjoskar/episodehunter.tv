@@ -21,43 +21,43 @@
     <div ng-view></div>
 
     <script>
-      if ('serviceWorker' in window.navigator) {
-        window.navigator.serviceWorker.register('/sw.js')
-          .then(function(reg) {
-            window.oskar = reg;
-            console.log('◕‿◕', reg);
-          }, function(err) {
-            console.log('ಠ_ಠ', err);
-          });
+      // if ('serviceWorker' in window.navigator) {
+      //   window.navigator.serviceWorker.register('/sw.js')
+      //     .then(function(reg) {
+      //       window.oskar = reg;
+      //       console.log('◕‿◕', reg);
+      //     }, function(err) {
+      //       console.log('ಠ_ಠ', err);
+      //     });
 
-        window.requestNotificationPermission = function() {
-          if (!window.Notification) {
-            console.log('Ooops Notifications Not Supported');
-            return;
-          }
+      //   window.requestNotificationPermission = function() {
+      //     if (!window.Notification) {
+      //       console.log('Ooops Notifications Not Supported');
+      //       return;
+      //     }
 
-          window.Notification.requestPermission(function(result) {
-            console.log('We request and get: ', result);
-            if (result !== 'granted') {
-              console.log('Permission wasn\'t granted. Allow a retry.');
-              return;
-            }
-          });
-        };
+      //     window.Notification.requestPermission(function(result) {
+      //       console.log('We request and get: ', result);
+      //       if (result !== 'granted') {
+      //         console.log('Permission wasn\'t granted. Allow a retry.');
+      //         return;
+      //       }
+      //     });
+      //   };
 
-        window.requestPushPermission = function() {
-          window.navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-            serviceWorkerRegistration.pushManager.subscribe()
-              .then(function(pushSubscription) {
-                console.log('We got: (save it) ', pushSubscription);
-              })
-              .catch(function(e) {
-                console.error('Unable to register for push', e);
-              });
-          });
-        };
+      //   window.requestPushPermission = function() {
+      //     window.navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+      //       serviceWorkerRegistration.pushManager.subscribe()
+      //         .then(function(pushSubscription) {
+      //           console.log('We got: (save it) ', pushSubscription);
+      //         })
+      //         .catch(function(e) {
+      //           console.error('Unable to register for push', e);
+      //         });
+      //     });
+      //   };
 
-      }
+      // }
     </script>
 
 

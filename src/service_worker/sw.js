@@ -56,24 +56,25 @@ self.addEventListener('fetch', function(event) {
         response = networkFallbackOnCache(event.request, apiCacheName);
     } else if (location.hostname === requestURL.hostname) {
         console.log('Fetching from this host');
-        response = caches.match(event.request)
-            .then(function(cacheMatch) {
-                if (cacheMatch) {
-                    return cacheMatch;
-                }
-                return Promise.reject('Can not find requested item in cache :(');
-            })
-            .catch(function() {
-                return fetch(event.request);
-            })
-            .catch(function() {
-                if (/\.(png|jpg|jpeg|gif)$/.test(requestURL.pathname)) {
-                    console.log('offline.gif', event.request.url);
-                    return caches.match('/offline.gif');
-                }
-                console.error('Nothing we can do about it', event.request.url);
-                return Promise.reject('Can not fetch requested item :(');
-            });
+        response = fetch(event.request);
+        // response = caches.match(event.request)
+        //     .then(function(cacheMatch) {
+        //         if (cacheMatch) {
+        //             return cacheMatch;
+        //         }
+        //         return Promise.reject('Can not find requested item in cache :(');
+        //     })
+        //     .catch(function() {
+        //         return fetch(event.request);
+        //     })
+        //     .catch(function() {
+        //         if (/\.(png|jpg|jpeg|gif)$/.test(requestURL.pathname)) {
+        //             console.log('offline.gif', event.request.url);
+        //             return caches.match('/offline.gif');
+        //         }
+        //         console.error('Nothing we can do about it', event.request.url);
+        //         return Promise.reject('Can not fetch requested item :(');
+        //     });
     } else {
         console.log('Unknown data, go for the internet', event.request.url);
         response = fetch(event.request);
@@ -94,7 +95,7 @@ self.addEventListener('push', function(event) {
 
 self.addEventListener('notificationclick', function(event) {
     console.log('Clicking on notification', event);
-    clients.openWindow('/#/mb');
+    clients.openWindow('/mb.gif');
     // clients.matchAll().then(function(allClients) {
     //     return allClients.filter(function(c) {
     //         return (new URL(c.url).pathname === '/');
