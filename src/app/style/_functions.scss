@@ -1,0 +1,5 @@
+@function rem($size) {
+    // This value is hardcoded by materialize (on big screens)
+    $remSize: $size / 15px;
+    @return #{$remSize}rem;
+}
