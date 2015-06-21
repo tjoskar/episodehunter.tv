@@ -11,5 +11,6 @@ gulp.task('styles', function() {
             console.error('Error!', err.message);
         })
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.tmp + '/serve/app/'));
+        .pipe(gulp.dest(paths.tmp + '/serve/app/'))
+        .pipe(gulp.dest(paths.dist));
 });

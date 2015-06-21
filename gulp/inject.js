@@ -1,40 +1,47 @@
 'use strict';
 
 var gulp = require('gulp');
+var inject = require('gulp-inject');
+var rev = require('gulp-rev');
 
 var paths = gulp.paths;
 
-var $ = require('gulp-load-plugins')();
+gulp.task('inject:dev', ['static', 'vendor', 'styles', 'browserify', 'template_cache'], function () {
 
-gulp.task('inject', ['styles', 'browserify', 'template_cache'], function () {
+    var injectFile = gulp.src([
+        paths.tmp + '/serve/app/index.css',
+        paths.tmp + '/serve/vendor.js',
+        paths.tmp + '/serve/app/boot.js',
+        paths.tmp + '/serve/template_cache.js'
+    ], { read: false });
 
-  var injectStyles = gulp.src(paths.tmp + '/serve/app/index.css', { read: false });
-  var injectScripts = gulp.src(paths.tmp + '/serve/app/boot.js', { read: false });
-  var partialsInjectFile = gulp.src(paths.tmp + '/serve/template_cache.js', { read: false });
-  var injectVendor = gulp.src(paths.tmp + '/serve/vendor.js', { read: false });
+    var injectOptions = {
+        ignorePath: [paths.src, paths.tmp + '/serve'],
+        addRootSlash: false
+    };
 
-  var injectOptions = {
-    ignorePath: [paths.src, paths.tmp + '/serve'],
-    addRootSlash: false
-  };
+    return gulp.src(paths.src + '/index.html')
+        .pipe(inject(injectFile, injectOptions))
+        .pipe(gulp.dest(paths.tmp + '/serve'));
 
-  var partialsInjectOptions = {
-    starttag: '<!-- inject:partials -->',
-    ignorePath: paths.tmp + '/serve',
-    addRootSlash: true
-  };
+});
 
-  var injectVendorOptions = {
-    starttag: '<!-- inject:vendor -->',
-    ignorePath: paths.tmp + '/serve',
-    addRootSlash: true
-  };
+gulp.task('inject', ['concat'], function () {
 
-  return gulp.src(paths.src + '/index.html')
-    .pipe($.inject(injectStyles, injectOptions))
-    .pipe($.inject(injectScripts, injectOptions))
-    .pipe($.inject(partialsInjectFile, partialsInjectOptions))
-    .pipe($.inject(injectVendor, injectVendorOptions))
-    .pipe(gulp.dest(paths.tmp + '/serve'));
+    var injectFile = gulp.src([
+        paths.dist + '/one_file_to_rule_them_all.js',
+        paths.dist + '/one_file_to_rule_them_all.css'
+    ])
+    .pipe(rev())
+    .pipe(gulp.dest(paths.dist));
+
+    var injectOptions = {
+        ignorePath: [paths.src, paths.tmp + '/serve', paths.dist],
+        addRootSlash: false
+    };
+
+    return gulp.src(paths.src + '/index.html')
+        .pipe(inject(injectFile, injectOptions))
+        .pipe(gulp.dest(paths.dist));
 
 });
