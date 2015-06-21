@@ -4,20 +4,26 @@
 
 ng-atomic-notify {
     position: fixed;
-    right: 10px;
     z-index: 100000;
+
+    @media #{$medium-and-up} {
+        right: 10px;
+    }
 }
 
 .atomic-notify .atomic-notify-item {
     display: table;
     position: relative;
-    margin: 20px auto 0;
-    width: 500px;
     background-color: #0074D9;
     color: #fff;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     padding: 0px;
+
+    @media #{$medium-and-up} {
+        margin: 20px auto 0;
+        width: 500px;
+    }
 }
 
 .atomic-notify .atomic-notify-item .icon {
