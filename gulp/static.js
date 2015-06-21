@@ -40,4 +40,10 @@ gulp.task('dev-vendor-js', function() {
     .pipe(gulp.dest(paths.tmp + '/serve/'));
 });
 
+gulp.task('dev-vendor-css', function() {
+  return gulp.src($.mainBowerFiles())
+    .pipe($.filter('**/*.css'))
+    .pipe(gulp.dest(paths.tmp + '/serve/'));
+});
+
 gulp.task('static', ['dev-fonts', 'dev-misc', 'dev-images', 'dev-vendor-js', 'dev-service-worker']);
