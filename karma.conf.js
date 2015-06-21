@@ -18,7 +18,7 @@ module.exports = function(config) {
         browserify: {
             debug: true,
             extensions: ['.js'],
-            transform: ['6to5ify']
+            transform: ['babelify']
         }
     });
 };
