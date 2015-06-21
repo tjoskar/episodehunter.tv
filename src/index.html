@@ -9,14 +9,14 @@
     <link rel="icon" href="/favicon-16.ico" type="image/x-icon" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- build:css({.tmp/serve,src,dist}) styles/app.css -->
     <!-- inject:css -->
     <!-- css files will be automaticaly insert here -->
     <!-- endinject -->
     <!-- endbuild -->
   </head>
   <body>
-      <ng-atomic-notify></ng-atomic-notify>
+    <ng-atomic-notify></ng-atomic-notify>
     <nav eh-nav></nav>
 
     <div ng-view></div>
@@ -62,17 +62,9 @@
     </script>
 
 
-    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
-    <!-- inject:vendor -->
-    <!-- vendor js files will be placed here -->
-    <!-- endinject -->
-
+    <!-- build:js({.tmp/serve,.tmp/partials,src,dist}) scripts/app.js -->
     <!-- inject:js -->
     <!-- js files will be automaticaly insert here -->
-    <!-- endinject -->
-
-    <!-- inject:partials -->
-    <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
 
