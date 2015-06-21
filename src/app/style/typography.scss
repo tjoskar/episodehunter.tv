@@ -1,4 +1,18 @@
 // Header Styles
+html{
+    @media only screen and (min-width: 0) {
+        font-size: 14px;
+    }
+
+    @media only screen and (min-width: $medium-screen) {
+        font-size: 14px;
+    }
+
+    @media only screen and (min-width: $large-screen) {
+        font-size: 16px;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
 }

@@ -41,6 +41,10 @@
 @import "./style/mixins";
 @import "./style/functions";
 @import "./style/helpers.scss";
+
+@import "./style/angular.scss";
+@import "./style/notify.scss";
+
 @import "./style/header.scss";
 @import "./style/card.scss";
 @import "./style/auth.scss";

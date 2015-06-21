@@ -4,6 +4,8 @@ import BaseRepository from '../lib/base.repository';
 
 class AuthenticationRepository extends BaseRepository {
 
+    static $inject = ['$http', '$q', 'notify'];
+
     constructor(http, $q, notify) {
         super(http, notify);
         this.$q = $q;
@@ -15,14 +17,6 @@ class AuthenticationRepository extends BaseRepository {
     }
 
     login(username, password) {
-        if (!username || !password) {
-            var deferred = this.$q.defer();
-            deferred.reject(
-                this.notify.createError('intern', 'You have to enter both username and password')
-            );
-            return deferred.promise;
-        }
-
         return this.post(this.url + 'login', {username, password}, {withCredentials: true})
             .then(user => {
                 if (user && user.data && user.data.username && user.data.key) {
@@ -33,7 +27,23 @@ class AuthenticationRepository extends BaseRepository {
                 );
             });
     }
+
+    register({email, username, password, timezone}) {
+        return this.post(this.url + 'register', {email, username, password, timezone}, {withCredentials: true})
+            .then(user => {
+                if (user && user.data && user.data.username && user.data.key) {
+                    return user;
+                }
+                return this.$q.reject(
+                    this.notify.createError('global', 'Server error')
+                );
+            });
+    }
+
+    forgotPassword(username) {
+        return this.post(this.url + 'resetpassword', {username});
+    }
+
 }
 
-AuthenticationRepository.$inject = ['$http', '$q', 'notify'];
 export default AuthenticationRepository;

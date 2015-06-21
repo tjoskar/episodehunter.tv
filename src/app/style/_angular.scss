@@ -1,0 +1,39 @@
+input {
+    &.ng-invalid,
+    &.ng-invalid-email {
+        border-bottom: 1px solid #F44336 !important;
+        box-shadow: 0 1px 0 0 #F44336 !important;
+    }
+}
+
+.form-error {
+    color: #F44336;
+}
+
+.animate-enter,
+.animate-leave {
+    -webkit-transition: 20s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 20s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 20s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 20s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 20s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space:nowrap;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+    opacity: 1;
+    width: 150px;
+    height: 30px;
+}
