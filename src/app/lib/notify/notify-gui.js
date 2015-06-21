@@ -91,7 +91,7 @@ angular
         return exports;
 
     }])
-    .directive('ngAtomicNotify', function($compile, $timeout){
+    .directive('ngAtomicNotify', ['$compile', '$timeout', function($compile, $timeout){
 
         var link = function($scope, element, attr){
             var template = `
@@ -116,7 +116,7 @@ angular
             $compile(element.contents())($scope);
         };
 
-        var controller = function($scope){
+        var controller = ['$scope', function($scope){
             $scope.items = [];
 
             $scope.addItem = function(options, delay){
@@ -136,7 +136,7 @@ angular
             $scope.discoverClass = function(item){
                 return 'atomic-notify-' + item.type;
             };
-        };
+        }];
 
         return {
             scope: {},
@@ -145,7 +145,7 @@ angular
             controller: controller
         };
 
-    });
+    }]);
 
 export default moduleName;
 export {moduleName as NotifyGui};

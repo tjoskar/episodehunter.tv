@@ -2,6 +2,8 @@
 
 class AuthenticationService {
 
+    static $inject = ['AuthenticationRepository', 'storage', '$q'];
+
     constructor(authRepo, storage, $q) {
         this.authRepo = authRepo;
         this.storage = storage;
@@ -53,5 +55,4 @@ class AuthenticationService {
     }
 }
 
-AuthenticationService.$inject = ['AuthenticationRepository', 'storage', '$q'];
 export default AuthenticationService;

@@ -22,7 +22,7 @@ angular
         notify.bind(),
         navigation.bind()
     ])
-    .config(routeTable)
+    .config(['$routeProvider', routeTable])
 
     // We should not check if the user are logged in for every view change. Check if we got an 401-response instead
     .run(['$rootScope', '$location', 'AuthenticationService', ($root, $location, Auth) => {
