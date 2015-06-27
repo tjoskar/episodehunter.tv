@@ -19,7 +19,7 @@ class AuthenticationCtrl {
 
     register() {
         if (!this.username || !this.emailadress || !this.password) {
-            return this.notify.reject('intern', 'You have to enter a username, password and email');
+            return this.notify.reject('You have to enter a username, password and email');
         }
 
         return this.authService
@@ -52,7 +52,7 @@ class AuthenticationCtrl {
         return this.authService
             .forgotPassword(this.username)
             .then(data => {
-                console.log('gött', data);
+                this.notify.createInfo(data.data).show();
                 return data;
             });
     }

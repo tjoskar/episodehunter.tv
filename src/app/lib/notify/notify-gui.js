@@ -58,7 +58,7 @@ angular
         exports.error = function(message, delay){
             displayNotify({
                 type: 'error',
-                icon: 'mdi-alert-error',
+                icon: 'error_outline',
                 text: message,
                 delay: delay
             }, delay);
@@ -67,7 +67,7 @@ angular
         exports.info = function(message, delay){
             displayNotify({
                 type: 'info',
-                icon: 'fa fa-bell-o',
+                icon: 'info_outline',
                 text: message
             }, delay);
         };
@@ -98,7 +98,7 @@ angular
                 <div class="atomic-notify">
                     <div class="atomic-notify-item" ng-repeat="item in items" ng-class="discoverClass(item)">
                         <div class="icon" ng-if="item.icon">
-                            <i ng-class="item.icon"></i>
+                            <i class="material-icons">{{item.icon}}</i>
                         </div>
                         <div class="body">
                             <p>{{item.text}}</p>

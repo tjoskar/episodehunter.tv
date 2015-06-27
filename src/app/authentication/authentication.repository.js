@@ -23,7 +23,7 @@ class AuthenticationRepository extends BaseRepository {
                     return user;
                 }
                 return this.$q.reject(
-                    this.notify.createError('global', 'Server error')
+                    this.notify.createError('Server error')
                 );
             });
     }
@@ -35,7 +35,7 @@ class AuthenticationRepository extends BaseRepository {
                     return user;
                 }
                 return this.$q.reject(
-                    this.notify.createError('global', 'Server error')
+                    this.notify.createError('Server error')
                 );
             });
     }

@@ -92,10 +92,10 @@ class BaseRepository {
         var serverError;
         if (error.status === 401) {
             console.log('Logout user');
-            serverError = this.notify.createError('action', 'Logout user');
+            serverError = this.notify.createError('Logout user');
         } else {
             var errorObject = (error && error.data && error.data.error) ? error.data.error : {};
-            serverError = this.notify.createError(errorObject.type, errorObject.humanError);
+            serverError = this.notify.createError(errorObject.humanError);
         }
         return Promise.reject(serverError);
     };

@@ -1,6 +1,6 @@
 'use strict';
 
-class NotifyError {
+class NotifyMessage {
 
     constructor(atomicNotify, type, humanError) {
         this.atomicNotify = atomicNotify;
@@ -9,8 +9,15 @@ class NotifyError {
     }
 
     show(timeout = 500000) {
-        this.atomicNotify.error(this.humanError, timeout);
+        if (this.type === 'error') {
+            this.atomicNotify.error(this.humanError, timeout);
+        } else if (this.type === 'info') {
+            this.atomicNotify.info(this.humanError, timeout);
+        } else {
+            this.atomicNotify.info(this.humanError, timeout);
+        }
     }
+
 }
 
 class Notify {
@@ -22,12 +29,20 @@ class Notify {
         this.atomicNotify = atomicNotify;
     }
 
-    createError(type, humanError) {
-        return new NotifyError(this.atomicNotify, type, humanError);
+    createNotify(type, humanError) {
+        return new NotifyMessage(this.atomicNotify, type, humanError);
     }
 
-    reject() {
-        return this.$q.reject(this.createError(...arguments));
+    createError(humanError) {
+        return this.createNotify('error', humanError);
+    }
+
+    createInfo(message) {
+        return this.createNotify('info', message);
+    }
+
+    reject(humanError) {
+        return this.$q.reject(this.createError(humanError));
     }
 
 }
