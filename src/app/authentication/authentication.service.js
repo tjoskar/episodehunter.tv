@@ -47,6 +47,12 @@ class AuthenticationService {
             .forgotPassword(username);
     }
 
+    logout() {
+        this.user.username = '';
+        this.user.key = '';
+        this.storage.clearAll();
+    }
+
     saveUser(user) {
         this.user.username = user.username;
         this.user.key = user.key;

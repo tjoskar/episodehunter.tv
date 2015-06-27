@@ -2,7 +2,8 @@
 
 class UpcomingCtrl {
 
-    constructor() {
+    constructor(auth) {
+        auth.logout();
         window.location.replace('http://episodehunter.tv/');
         // repository
         //     .get()
@@ -11,5 +12,5 @@ class UpcomingCtrl {
 
 }
 
-UpcomingCtrl.$inject = ['UpcomingRepository'];
+UpcomingCtrl.$inject = ['AuthenticationService', 'UpcomingRepository'];
 export default UpcomingCtrl;
