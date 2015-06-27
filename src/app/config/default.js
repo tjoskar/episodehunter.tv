@@ -5,7 +5,7 @@ export default {
             poster: 'http://img.episodehunter.tv/serie/poster/'
         },
         api: {
-            auth: 'http://episodehunter.tv/api/auth/'
+            auth: '/api/auth/'
         }
     }
 };
