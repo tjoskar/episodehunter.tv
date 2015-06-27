@@ -2,10 +2,11 @@
 
 class UpcomingCtrl {
 
-    constructor(repository) {
-        repository
-            .get()
-            .then(shows => this.shows = shows);
+    constructor() {
+        window.location.replace('http://episodehunter.tv/');
+        // repository
+        //     .get()
+        //     .then(shows => this.shows = shows);
     }
 
 }
