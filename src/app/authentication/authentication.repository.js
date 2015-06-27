@@ -1,6 +1,7 @@
 'use strict';
 
 import BaseRepository from '../lib/base.repository';
+import config from '../config';
 
 class AuthenticationRepository extends BaseRepository {
 
@@ -9,7 +10,7 @@ class AuthenticationRepository extends BaseRepository {
     constructor(http, $q, notify) {
         super(http, notify);
         this.$q = $q;
-        this.url = 'http://episodehunter.dev/api/auth/';
+        this.url = config.url.api.auth;
     }
 
     isLoggedIn() {
