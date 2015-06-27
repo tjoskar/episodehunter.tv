@@ -4,9 +4,9 @@ import timezoneGuess from '../lib/guess.timezone';
 
 class AuthenticationCtrl {
 
-    static $inject = ['AuthenticationService', 'notify'];
+    static $inject = ['$location', 'AuthenticationService', 'notify'];
 
-    constructor(authService, notify) {
+    constructor($location, authService, notify) {
         this.username = '';
         this.emailadress = '';
         this.password = '';
@@ -14,6 +14,7 @@ class AuthenticationCtrl {
 
         this.notify = notify;
         this.authService = authService;
+        this.$location = $location;
     }
 
     register() {
@@ -36,13 +37,13 @@ class AuthenticationCtrl {
 
     login() {
         if (!this.username || !this.password) {
-            return this.notify.reject('intern', 'You have to enter both username and password');
+            return this.notify.reject('You have to enter both username and password');
         }
 
         return this.authService
             .login(this.username, this.password)
             .then(data => {
-                console.log('All went well: ', data);
+                this.$location.path('/');
                 return data;
             });
     }
