@@ -41,7 +41,7 @@ function RegisterForm(scroll) {
 
         const STATES = {
             login: {
-                submitText: 'Login',
+                submitText: 'Let me in',
                 flyingButtonText: 'Register',
                 fadeOut: [emailRow],
                 fadeIn: [passwordRow],
