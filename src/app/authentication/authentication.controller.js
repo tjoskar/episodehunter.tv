@@ -30,7 +30,7 @@ class AuthenticationCtrl {
                 timezone: this.timezone
             })
             .then(data => {
-                console.log('gött', data);
+                this.$location.path('/');
                 return data;
             });
     }
