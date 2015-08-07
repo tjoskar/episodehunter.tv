@@ -1,6 +1,8 @@
 'use strict';
 
-function GravatarDirective(GravatarFactory) {
+interface F { (): any; $inject: string[]; }
+
+var GravatarDirective = <F>function GravatarDirective(GravatarFactory) {
     var directive = {
         link: link,
         scope: {
@@ -35,4 +37,5 @@ function GravatarDirective(GravatarFactory) {
 
 GravatarDirective.$inject = ['gravatarFactory'];
 
+export {GravatarDirective};
 export default GravatarDirective;

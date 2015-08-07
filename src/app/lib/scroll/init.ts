@@ -1,6 +1,6 @@
 'use strict';
 
-import ScrollFactory from './scrollToElement.factory';
+import {ScrollFactory} from './scrollToElement.factory';
 
 var bind = () => {
     var directiveName = 'EH.factory.scroll';

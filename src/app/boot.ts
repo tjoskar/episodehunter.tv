@@ -1,3 +1,5 @@
+/// <reference path="./contracts/c.d.ts"/>
+
 'use strict';
 
 import gravatar from './lib/gravatar/init';

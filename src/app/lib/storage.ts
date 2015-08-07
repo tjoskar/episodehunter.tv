@@ -22,7 +22,7 @@ class Storage {
      */
     remove(key) {
         window.localStorage.removeItem(this.prefix + key);
-    };
+    }
 
     /**
      * Get an object from storage
@@ -51,7 +51,7 @@ class Storage {
         }
 
         return undefined;
-    };
+    }
 
     /**
      * Get an object from storage and update its expiration date
@@ -65,7 +65,7 @@ class Storage {
             this.set(key, storageObject.data, expiration);
         }
         return storageObject;
-    };
+    }
 
     /**
      * Save a object to storage
@@ -86,7 +86,7 @@ class Storage {
             data: jsonValue
         }));
         return value;
-    };
+    }
 
     /**
      * Delete the whole storage
@@ -94,7 +94,7 @@ class Storage {
      */
     clearAll() {
         window.localStorage.clear();
-    };
+    }
 }
 
 var bind = () => {

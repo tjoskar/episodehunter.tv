@@ -217,4 +217,5 @@ var md5 = function(str) {
     return temp.toLowerCase();
 };
 
+export {md5};
 export default md5;
