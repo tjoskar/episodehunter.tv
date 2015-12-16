@@ -7,7 +7,7 @@
 .sass-cache
 /bower_components
 /dist
-/node_modules
-/vendor/*
+node_modules
+vendor/*
 !/vendor/.gitkeep
 /ref
