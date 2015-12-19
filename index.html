@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <base href="/">
+    <title>Angular 2 QuickStart</title>
+  </head>
+
+  <body>
+    <episodehunter>Loading...</episodehunter>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+    <script type="text/javascript">
+      System.config({
+        packages: {
+          dist: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('dist/boot').then(null, console.error.bind(console));
+    </script>
+  </body>
+</html>
