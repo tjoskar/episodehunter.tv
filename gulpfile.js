@@ -1,18 +1,23 @@
 'use strict';
 
-var gulp = require('gulp');
-var loadThemAll = require('require-dir');
+const gulp = require('gulp');
+const loadThemAll = require('require-dir');
 
 gulp.paths = {
     src: 'src',
-    dist: 'dist',
-    tmp: '.tmp',
-    e2e: 'e2e',
-    vendor: 'vendor'
+    dist: 'dist'
 };
 
 loadThemAll('./gulp');
 
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
-});
+gulp.task('default', [
+    'script',
+    'sass',
+    'copy-template'
+], () => {});
+
+gulp.task('watch', [
+    'script:watch',
+    'sass:watch',
+    'copy-template:watch'
+], () => {});
