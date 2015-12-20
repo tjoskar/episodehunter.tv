@@ -1,11 +1,11 @@
 import {Component} from 'angular2/core';
 import UpcomingComponent from './upcomming/upcoming.component';
-import {RouteConfig, RouterOutlet} from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Component({
     selector: 'episodehunter',
     templateUrl: 'src/base-template.html',
-    directives: [RouterOutlet]
+    directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
     {path: '/upcoming', name: 'UpcomingShows', component: UpcomingComponent, useAsDefault: true}

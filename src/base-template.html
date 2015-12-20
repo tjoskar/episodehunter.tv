@@ -1,3 +1,32 @@
-<h1>Episodehunter</h1>
+<div id="one-div-to-rule-them-all">
+  <div class="loader"></div>
+  <div class="nav-wrapper row">
+    <div class="col s12">
+      <a href="#!" class="brand-logo">
+        <img alt="" src="/assets/images/logo.png" />
+      </a>
+      <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a> -->
+      <ul class="right hide-on-med-and-down">
+        <li><a [routerLink]="['UpcomingShows']">HOME</a></li>
+        <li><a href="#">POPULAR MOVIES</a></li>
+        <li><a href="#">POPULAR SHOWS</a></li>
+        <li><a href="#">TJOSKAR</a></li>
+        <li><a href="#">SEARCH</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">POPULAR MOVIES</a></li>
+        <li><a href="#">POPULAR SHOWS</a></li>
+        <li><a href="#">TJOSKAR</a></li>
+        <li><a href="#">SEARCH</a></li>
+      </ul>
+    </div>
+  </div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
+  <footer>
+    <p><a href="/aboutus" target="_blank">&#169;EpisodeHunter 2014</a> | <a href="/chart">Chart</a> | <a href="/privacypolicy" target="_blank">Privacy Policy</a> | <a href="/termsofservice" target="_blank">Terms Of Service</a> | <a href="/shows/featured">Featured</a> | <a href="/user/settings">Settings</a> | <a href="/xbmc">XBMC&#9829;</a> | <a href="/logout">Logout</a></p>
+  </footer>
+
+</div>
