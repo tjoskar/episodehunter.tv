@@ -17,12 +17,19 @@
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.js"></script>
 
     <script type="text/javascript">
       System.config({
+        map: {
+          rxjs: 'node_modules/rxjs'
+        },
         packages: {
           dist: {
             format: 'register',
+            defaultExtension: 'js'
+          },
+          rxjs: {
             defaultExtension: 'js'
           }
         }
