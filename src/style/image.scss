@@ -1,0 +1,64 @@
+.poster {
+  position: relative;
+  border: solid 1px #d0d0c5;
+  float: left;
+  margin: 0 15px 10px 0;
+
+  hgroup {
+    position: absolute;
+    color: white;
+    z-index: 100;
+    background-color: #333333;
+    opacity: 0.9;
+
+    &.date {
+      top: 0;
+      left: 0;
+      padding: 10px 10px;
+      font-weight: 100;
+      text-align: center;
+
+      p.day {
+        font-size: 1.7rem;
+        margin: 0;
+        line-height: 1;
+        padding: 0;
+      }
+      p.month {
+        font-size: 1rem;
+        text-transform: uppercase;
+        line-height: 0;
+      }
+      p.year {
+        font-size: 0.8rem;
+        line-height: 0;
+      }
+    }
+
+    &.episode-data {
+      display: none;
+      bottom: 0;
+      padding: 5px 0 8px 0;
+      width: 100%;
+
+      p {
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+    &.show-name {
+      bottom: 0;
+      width: 100%;
+      transition: all 0.1s ease-out;
+
+      p {
+        font-size: .9rem;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+  }
+}
