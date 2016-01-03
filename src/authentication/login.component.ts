@@ -1,15 +1,15 @@
 import {Component, Output, EventEmitter} from 'angular2/core';
+import Spinner from '../lib/spinner.component';
 
 @Component({
     selector: 'eh-login',
     templateUrl: 'dist/authentication/templates/login.html',
-    directives: [],
-    providers: [],
+    directives: [Spinner]
 })
 class LoginComponent {
-    @Output() submit = new EventEmitter();
     serrverError = {};
     model;
+    loading = false;
 
     constructor() {
         this.model = {
@@ -19,6 +19,7 @@ class LoginComponent {
     }
 
     onSubmit() {
+        this.loading = true;
         this.submit.emit('loadding');
     }
 
