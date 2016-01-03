@@ -20,7 +20,6 @@ class LoginComponent {
 
     onSubmit() {
         this.loading = true;
-        this.submit.emit('loadding');
     }
 
 }
