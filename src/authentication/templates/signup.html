@@ -1,0 +1,74 @@
+<div>
+    <div class="full-window-container auth--fanart">
+        <div class="auth--info-box">
+            <h1>Welcome to Episod<span>EH</span>unter</h1>
+            <p>Automatically track what you are watching on your media center and build a completely<br>history record of every TV show and movie you are watching and be notified about what<br>to see next.<br><br>Register and meet pure awesomeness</p>
+        </div>
+        <div class="auth--register-button">
+            <a class="waves-effect waves-light btn-large" [routeAndScroll]="['/Register']" [view]="routerOutlet">Register</a>
+        </div>
+    </div>
+
+    <div class="full-window-container" id="js-register-section">
+        <div class="container vertical-align">
+            <div class="row">
+
+                <div class="auth--spinner-holder" [hidden]="!showSpinner">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-yellow">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <router-outlet #routerOutlet></router-outlet>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

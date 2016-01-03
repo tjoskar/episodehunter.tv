@@ -1,0 +1,41 @@
+<form class="col s12" name="register_form" (ngSubmit)="onSubmit()">
+
+    <!-- <div class="auth--registration-profile-image-holder">
+        <div gravatar-image gravatar-email="vm.emailadress" gravatar-css-class="profile-image"></div>
+    </div> -->
+
+    <div class="row" id="js-email-row">
+        <div class="input-field col s12">
+            <input id="email" name="email" type="email" [(ngModel)]="model.email" maxlength=255>
+            <label for="email">Email</label>
+            <p class="form-error" [hidden]="!serrverError.email">
+                {{serrverError.email}}
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="username" name="username" type="text" [(ngModel)]="model.username" minlength=3 maxlength=32>
+            <label for="username">Username</label>
+            <p class="form-error" [hidden]="!serrverError.username">
+                {{serrverError.username}}
+            </p>
+        </div>
+    </div>
+
+    <div class="row" id="js-password-row">
+        <div class="input-field col s12">
+            <input id="password" name="password" type="password" [(ngModel)]="model.password" minlength=6>
+            <label for="password">Password</label>
+            <p class="form-error" [hidden]="!serrverError.password">
+                {{serrverError.password}}
+            </p>
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center">
+        <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="showSpinner">Register</button>
+    </div>
+
+</form>
