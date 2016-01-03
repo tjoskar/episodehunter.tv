@@ -4,6 +4,8 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 import {bootstrap} from 'angular2/platform/browser';
 import {HTTP_PROVIDERS} from 'angular2/http';
 import RegisterComponent from './register.component';
+import ForgotComponent from './forgot.component';
+import LoginComponent from './login.component';
 import RouteAndScroll from '../lib/route-and-scroll.directive';
 
 @Component({
@@ -12,7 +14,9 @@ import RouteAndScroll from '../lib/route-and-scroll.directive';
     directives: [ROUTER_DIRECTIVES, RouteAndScroll]
 })
 @RouteConfig([
-    {path: '/', name: 'Register', component: RegisterComponent, useAsDefault: true}
+    {path: '/register', name: 'Register', component: RegisterComponent, useAsDefault: true},
+    {path: '/login', name: 'Login', component: LoginComponent},
+    {path: '/forgot', name: 'Forgot', component: ForgotComponent}
 ])
 class AuthComponent {
     serrverError = {};

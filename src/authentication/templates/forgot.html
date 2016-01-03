@@ -1,0 +1,17 @@
+<form class="col s12" name="register_form" (ngSubmit)="onSubmit()">
+
+    <div class="row" id="js-email-row">
+        <div class="input-field col s12">
+            <input id="email" name="email" type="email" [(ngModel)]="model.email" maxlength=255 required="">
+            <label for="email">Email</label>
+            <p class="form-error" [hidden]="!serrverError.email">
+                {{serrverError.email}}
+            </p>
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center">
+        <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="showSpinner">Request new password</button>
+    </div>
+
+</form>
