@@ -1,10 +1,6 @@
 <form class="col s12" name="register_form" (ngSubmit)="onSubmit()">
 
-    <!-- <div class="auth--registration-profile-image-holder">
-        <div gravatar-image gravatar-email="vm.emailadress" gravatar-css-class="profile-image"></div>
-    </div> -->
-
-    <div class="row" id="js-email-row">
+    <div class="row">
         <div class="input-field col s12">
             <input id="email" name="email" type="email" [(ngModel)]="model.email" maxlength=255 required="">
             <label for="email">Email</label>
@@ -24,7 +20,7 @@
         </div>
     </div>
 
-    <div class="row" id="js-password-row">
+    <div class="row">
         <div class="input-field col s12">
             <input id="password" name="password" type="password" [(ngModel)]="model.password" minlength=6 required="">
             <label for="password">Password</label>
