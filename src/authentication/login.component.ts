@@ -1,5 +1,6 @@
-import {Component, Output, EventEmitter} from 'angular2/core';
+import {Component} from 'angular2/core';
 import Spinner from '../lib/spinner.component';
+import AuthService from './auth.service';
 
 @Component({
     selector: 'eh-login',
@@ -7,11 +8,13 @@ import Spinner from '../lib/spinner.component';
     directives: [Spinner]
 })
 class LoginComponent {
-    serrverError = {};
+    serrverError = '';
     model;
     loading = false;
+    authService: AuthService;
 
-    constructor() {
+    constructor(authService: AuthService) {
+        this.authService = authService;
         this.model = {
             username: '',
             password: ''
@@ -20,6 +23,16 @@ class LoginComponent {
 
     onSubmit() {
         this.loading = true;
+        this.authService
+            .createToken(this.model.username, this.model.password)
+            // .finally(() => {
+            //     this.loading = false;
+            //     console.log('Done');
+            // })
+            .subscribe(
+                done => console.log(done),
+                error => this.serrverError = error.message
+            );
     }
 
 }

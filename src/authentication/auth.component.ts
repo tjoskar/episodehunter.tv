@@ -7,6 +7,8 @@ import RegisterComponent from './register.component';
 import ForgotComponent from './forgot.component';
 import LoginComponent from './login.component';
 import RouteAndScroll from '../lib/route-and-scroll.directive';
+import AuthService from './auth.service';
+import {LocalStorage} from '../lib/storage';
 
 @Component({
     selector: 'eh-auth',
@@ -30,7 +32,9 @@ class AuthComponent {
 
 bootstrap(AuthComponent, [
     HTTP_PROVIDERS,
-    ROUTER_PROVIDERS
+    ROUTER_PROVIDERS,
+    AuthService,
+    LocalStorage
 ]);
 
 export default AuthComponent;
