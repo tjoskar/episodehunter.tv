@@ -94,5 +94,6 @@
     background-color: gainsboro;
     @media only screen and (min-width: $small-screen) {
         background-image: url('http://img.episodehunter.tv/serie/fanart/got-auth.jpg');
+        min-height: 600px;
     }
 }
