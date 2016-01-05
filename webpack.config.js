@@ -3,9 +3,13 @@ const webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
-    entry: './src/script/boot.ts',
+    entry: {
+        index: './src/script/boot.ts',
+        register: './src/script/authentication/auth.component.ts'
+    },
     output: {
-        filename: 'output.js'
+        path: './src/',
+        filename: 'one-file-to-rule-them-all.[name].js'
     },
     module: {
         loaders: [{

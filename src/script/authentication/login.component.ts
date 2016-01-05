@@ -4,7 +4,7 @@ import AuthService from './auth.service';
 
 @Component({
     selector: 'eh-login',
-    templateUrl: 'dist/authentication/templates/login.html',
+    templateUrl: 'script/authentication/templates/login.html',
     directives: [Spinner]
 })
 class LoginComponent {

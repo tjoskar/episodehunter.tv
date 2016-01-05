@@ -3,7 +3,7 @@ import {Component, Output, EventEmitter} from 'angular2/core';
 
 @Component({
     selector: 'eh-register',
-    templateUrl: 'dist/authentication/templates/register.html',
+    templateUrl: 'script/authentication/templates/register.html',
     directives: [],
     providers: [],
 })

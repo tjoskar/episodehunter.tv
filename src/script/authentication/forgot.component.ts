@@ -2,7 +2,7 @@ import {Component, Output, EventEmitter} from 'angular2/core';
 
 @Component({
     selector: 'eh-forgot',
-    templateUrl: 'dist/authentication/templates/forgot.html',
+    templateUrl: 'script/authentication/templates/forgot.html',
     directives: [],
     providers: [],
 })

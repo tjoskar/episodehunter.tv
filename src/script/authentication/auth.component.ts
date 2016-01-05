@@ -1,4 +1,9 @@
-import 'rxjs/add/operator/map';
+import '../../style/index.scss';
+import 'es6-shim';
+import 'reflect-metadata';
+import 'rxjs';
+import 'zone.js/dist/zone-microtask';
+import 'zone.js/dist/long-stack-trace-zone';
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {bootstrap} from 'angular2/platform/browser';
@@ -12,7 +17,7 @@ import {LocalStorage} from '../lib/storage';
 
 @Component({
     selector: 'eh-auth',
-    templateUrl: 'dist/authentication/templates/signup.html',
+    templateUrl: 'script/authentication/templates/signup.html',
     directives: [ROUTER_DIRECTIVES, RouteAndScroll]
 })
 @RouteConfig([
