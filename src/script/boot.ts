@@ -8,8 +8,14 @@ import {bootstrap} from 'angular2/platform/browser';
 import {ROUTER_PROVIDERS} from 'angular2/router';
 import {HTTP_PROVIDERS} from 'angular2/http';
 import {AppComponent} from './app.component';
+import {HttpService} from './lib/http';
+import AuthService from './authentication/auth.service';
+import {LocalStorage} from './lib/storage';
 
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
-    HTTP_PROVIDERS
+    HTTP_PROVIDERS,
+    HttpService,
+    AuthService,
+    LocalStorage
 ]);
