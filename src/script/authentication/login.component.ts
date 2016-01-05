@@ -23,15 +23,13 @@ class LoginComponent {
 
     onSubmit() {
         this.loading = true;
+        this.serrverError = '';
         this.authService
             .createToken(this.model.username, this.model.password)
-            // .finally(() => {
-            //     this.loading = false;
-            //     console.log('Done');
-            // })
+            .finally(() => this.loading = false)
             .subscribe(
-                done => console.log(done),
-                error => this.serrverError = error.message
+                done => window.location.href = '/',
+                error => this.serrverError = error
             );
     }
 

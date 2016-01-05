@@ -1,6 +1,7 @@
 import {Injectable} from 'angular2/core';
 import {Http, Headers} from 'angular2/http';
 import {LocalStorage} from '../lib/storage';
+import {Observable} from 'rxjs'
 
 @Injectable()
 class AuthService {
@@ -20,7 +21,22 @@ class AuthService {
             }
         )
         .map(res => res.json())
-        .map(res => res.token);
+        .map(res => res.token)
+        .map(token => this.saveToken(token))
+        .catch(error => {
+            if (error && error._body) {
+                const err = JSON.parse(error._body);
+                if (err && err.message) {
+                    return Observable.throw(err.message);
+                }
+            }
+            return Observable.throw(error);
+        });
+    }
+
+    saveToken(token) {
+        this.storage.save('token', token);
+        return token;
     }
 
     removeToken() {
