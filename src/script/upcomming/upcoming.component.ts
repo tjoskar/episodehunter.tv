@@ -6,7 +6,7 @@ import EpisodeRenderer from './episode.renderer';
 @Component({
     selector: 'eh-upcoming',
     styles: ['episode-renderer {display: inline-block}'],
-    templateUrl: 'src/upcomming/upcoming.html',
+    templateUrl: 'script/upcomming/upcoming.html',
     directives: [EpisodeRenderer],
     providers: [UpcomingService, UpcomingRepository]
 })

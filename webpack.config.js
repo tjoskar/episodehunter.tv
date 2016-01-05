@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
-    entry: './src/boot.ts',
+    entry: './src/script/boot.ts',
     output: {
         filename: 'output.js'
     },
@@ -25,7 +25,7 @@ module.exports = {
         inline: true,
         hot: true,
         historyApiFallback: true,
-        contentBase: 'public'
+        contentBase: 'src'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

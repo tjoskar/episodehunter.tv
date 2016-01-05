@@ -1,4 +1,4 @@
-import './index.scss';
+import '../style/index.scss';
 import 'es6-shim';
 import 'reflect-metadata';
 import 'rxjs';

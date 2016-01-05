@@ -4,7 +4,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Component({
     selector: 'episodehunter',
-    templateUrl: 'src/base-template.html',
+    templateUrl: 'script/base-template.html',
     directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
