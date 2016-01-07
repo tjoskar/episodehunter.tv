@@ -2,6 +2,7 @@ import {Injectable} from 'angular2/core';
 import {Http, Headers} from 'angular2/http';
 import {Observable} from 'rxjs';
 import {LocalStorage} from '../lib/storage';
+import utility from '../lib/utility';
 
 @Injectable()
 class AuthService {
@@ -25,10 +26,13 @@ class AuthService {
         .map(token => this.saveToken(token))
         .catch(error => {
             if (error && error._body) {
-                const err = JSON.parse(error._body);
-                if (err && err.message) {
-                    return Observable.throw(err.message);
+                if (utility.is.string(error._body)) {
+                    const err = JSON.parse(error._body);
+                    if (err && err.message) {
+                        return Observable.throw(err.message);
+                    }
                 }
+                return Observable.throw('An unknown error has occurred');
             }
             return Observable.throw(error);
         });
