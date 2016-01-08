@@ -2,9 +2,9 @@
 <div class="divider"></div>
 
 <div class="button-list">
-  <button class="waves-effect waves-light btn">All Time</button>
-  <button class="waves-effect waves-light btn" >1 Year</button>
-  <button class="waves-effect waves-light btn" >3 Months</button>
-  <button class="waves-effect waves-light btn" >1 Month</button>
-  <button class="waves-effect waves-light btn" >1 Week</button>
+  <button (click)="onClick(5)" [class.selected]="since == 5" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">All Time</button>
+  <button (click)="onClick(4)" [class.selected]="since == 4" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Year</button>
+  <button (click)="onClick(3)" [class.selected]="since == 3" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">3 Months</button>
+  <button (click)="onClick(2)" [class.selected]="since == 2" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Month</button>
+  <button (click)="onClick(1)" [class.selected]="since == 1" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Week</button>
 </div>

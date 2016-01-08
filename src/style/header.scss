@@ -42,10 +42,40 @@
 
 }
 
-a.brand-logo {
-  @media #{$large-and-up} {
-    img {
-      height: 75px;
-    }
+.mdl-layout__header-row {
+  height: inherit;
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  transition: all .2s ease-out;
+  border-bottom: 3px solid rgba(0,0,0, 0);
+
+  &.router-link-active, &:hover {
+    border-bottom: 3px solid #03a37e;
   }
+
+}
+
+.logo-image {
+  height: 50;
+}
+
+.mdl-layout__header {
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+
+  @media #{$large-and-up} {
+    background-color: rgba(253, 253, 253, .98);
+    opacity: 1;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+  color: #333;
 }

@@ -3,7 +3,10 @@
 @import "./variables";
 
 // TODO: Do we really need all css from materialize?
-@import "../../node_modules/materialize-css/sass/materialize.scss";
+//@import "../../node_modules/materialize-css/sass/materialize.scss";
+@import "../../node_modules/materialize-css/sass/components/mixins";
+@import "../../node_modules/materialize-css/sass/components/color";
+@import "../../node_modules/materialize-css/sass/components/variables";
 
 @import "./mixins";
 @import "./functions";
