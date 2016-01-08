@@ -5,10 +5,10 @@ import PopularShowComponet from './popular-show.component';
 @Component({
     selector: 'eh-popular',
     template: '<router-outlet></router-outlet>',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-    {path: 'shows', name: 'PopularShows', component: PopularShowComponet, useAsDefault: true}
+    {path: 'shows/:since', name: 'PopularShows', component: PopularShowComponet, useAsDefault: true}
 ])
 class PopularComponent {
 
