@@ -124,6 +124,13 @@ const utility = {
 
         padDateWithZero(n) {
             return ('0' + n).slice(-2);
+        },
+
+        convertToDateString(d: Date): string {
+            const year = d.getFullYear();
+            const month = utility.time.padDateWithZero(d.getMonth() + 1);
+            const date = utility.time.padDateWithZero(d.getDate());
+            return `${year}-${month}-${date}`;
         }
 
     },

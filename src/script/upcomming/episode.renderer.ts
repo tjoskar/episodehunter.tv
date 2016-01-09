@@ -11,7 +11,7 @@ import utility from '../lib/utility';
                 <p class="month">{{month}}</p>
                 <p class="year">{{year}}</p>
             </hgroup>
-            <hgroup class="show-name">
+            <hgroup class="title">
                 <p>{{episode.show.title}}</p>
             </hgroup>
             <hgroup class="episode-data" style="display: none;">

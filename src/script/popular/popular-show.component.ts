@@ -1,26 +1,34 @@
-import {Component} from 'angular2/core';
+import {Component, EventEmitter} from 'angular2/core';
 import {RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
+import PopularService from './popular.service';
+import {ShowRenderer} from './show.renderer';
 
 @Component({
     selector: 'eh-popular-shows',
     templateUrl: 'script/popular/template/popular-shows.html',
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES, ShowRenderer],
+    providers: [PopularService]
 })
 class PopularShowComponet {
+    click = new EventEmitter<number>();
+    popularShows = [];
     since;
 
-    constructor(params: RouteParams) {
-        this.since = params.get('since');
-        console.log('Popular shows', this.since);
+    constructor(params: RouteParams, service: PopularService) {
+        this.click.map(since => {
+                return service.getPopularShows(since);
+            })
+            .mergeAll()
+            .subscribe(
+                shows => this.popularShows = shows,
+                error => console.error(error)
+            );
+        this.onClick(params.get('since') || 1);
     }
 
-    routerCanReuse() {
-        return true;
-    }
-
-    routerOnReuse(nextInstruction) {
-        this.since = nextInstruction.params.since;
-        console.log(this.since);
+    onClick(since) {
+        this.since = since;
+        this.click.emit(since);
     }
 
 }

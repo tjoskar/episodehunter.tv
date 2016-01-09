@@ -22,8 +22,9 @@ h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($
 h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 200;
-    color: #8f8f8f;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #8f8f8f;
 }
 
 h1 {
@@ -40,4 +41,8 @@ h2 {
 
 h5 {
     text-transform: uppercase;
+}
+
+p {
+  font-weight: 300;
 }

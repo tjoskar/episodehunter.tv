@@ -8,3 +8,7 @@
   <button (click)="onClick(2)" [class.selected]="since == 2" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Month</button>
   <button (click)="onClick(1)" [class.selected]="since == 1" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Week</button>
 </div>
+
+<div>
+  <show-renderer *ngFor="#show of popularShows" [show]="show"></show-renderer>
+</div>

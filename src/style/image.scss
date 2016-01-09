@@ -11,23 +11,23 @@
     background-color: #333333;
     opacity: 0.9;
 
-    &.date {
+    &.date, &.views {
       top: 0;
       left: 0;
       padding: 10px 10px;
       font-weight: 100;
       text-align: center;
 
-      p.day {
+      p.day, p.views {
         font-size: 1.7rem;
         margin: 0;
         line-height: 1;
         padding: 0;
       }
-      p.month {
+      p.month, p.text {
         font-size: 1rem;
         text-transform: uppercase;
-        line-height: 0;
+        line-height: 1;
       }
       p.year {
         font-size: 0.8rem;
@@ -48,7 +48,7 @@
       }
     }
 
-    &.show-name {
+    &.title {
       bottom: 0;
       width: 100%;
       transition: all 0.1s ease-out;
@@ -57,6 +57,7 @@
         font-size: .9rem;
         text-transform: uppercase;
         text-align: center;
+        margin: 10px 2px;
       }
     }
 
