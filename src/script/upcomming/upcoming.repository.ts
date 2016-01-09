@@ -1,8 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {Observable} from 'rxjs';
 import Http from '../lib/http';
-
-const token = '';
 
 @Injectable()
 class UpcomingRepository {
