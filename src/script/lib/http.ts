@@ -2,6 +2,7 @@ import {Injectable} from 'angular2/core';
 import {Http, Headers} from 'angular2/http';
 import {Observable} from 'rxjs';
 import AuthService from '../authentication/auth.service';
+import {config} from '../config';
 
 @Injectable()
 class HttpService {
@@ -16,7 +17,7 @@ class HttpService {
     get(url, initHeaders = {}) {
         const headers = this.createHeaders(initHeaders);
         return this.http
-            .get(url, { headers })
+            .get(this.generateUrl(url), { headers })
             .map(res => res.json())
             .catch(error => this.catchError(error));
     }
@@ -32,6 +33,14 @@ class HttpService {
             }
         }
         return Observable.throw(error);
+    }
+
+    generateUrl(url: string) {
+        if (url[0] === '/') {
+            return `${config.apiUrl}${url}`;
+        } else {
+            return url;
+        }
     }
 
     redirectUserToLogin() {
