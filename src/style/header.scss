@@ -1,3 +1,8 @@
+header {
+  display: block;
+  position: fixed;
+}
+
 .nav-wrapper {
   @extend .teal;
   box-shadow: none;
