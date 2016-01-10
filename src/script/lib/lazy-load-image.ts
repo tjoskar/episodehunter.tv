@@ -9,6 +9,7 @@ class LazyLoadImage {
     @Input() defaultImg;
     @Input() offset;
     scrollSubscription: Subscription<Event>;
+    errorSubscription: Subscription<Event>;
     viewportSize = {
         height: 0,
         width: 0
@@ -20,12 +21,18 @@ class LazyLoadImage {
     }
 
     ngAfterContentInit() {
+        this.setDefaultImage();
         this.updateViewportOffset();
+
+        this.errorSubscription = Observable
+            .fromEvent(this.elementRef.nativeElement, 'error')
+            .take(1)
+            .subscribe(() => this.setDefaultImage());
+
         if (this.isVisible()) {
             this.setImage();
             return;
         }
-        this.elementRef.nativeElement.src = this.defaultImg || '';
 
         this.scrollSubscription = Observable
             .fromEvent(window, 'scroll')
@@ -38,8 +45,12 @@ class LazyLoadImage {
             .subscribe();
     }
 
-    setImage() {
-        this.elementRef.nativeElement.src = this.src;
+    setImage(image = this.src) {
+        this.elementRef.nativeElement.src = image;
+    }
+
+    setDefaultImage() {
+        this.setImage(this.defaultImg || '');
     }
 
     isVisible() {
@@ -58,9 +69,9 @@ class LazyLoadImage {
     }
 
     ngOnDestroy() {
-        if (this.scrollSubscription && !this.scrollSubscription.isUnsubscribed) {
-            this.scrollSubscription.unsubscribe();
-        }
+        [this.scrollSubscription, this.errorSubscription]
+            .filter(subscription => subscription && !subscription.isUnsubscribed)
+            .forEach(subscription => subscription.unsubscribe());
     }
 }
 
