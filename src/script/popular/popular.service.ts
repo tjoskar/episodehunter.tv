@@ -30,6 +30,20 @@ class PopularService {
         }
     }
 
+    getPopularMovies(since: number): Observable<any> {
+        const moviesFromStorage = this.storage.get(`popular-movies-${since}`);
+        if (moviesFromStorage && moviesFromStorage.data) {
+            const cacheObservable = Observable.of(moviesFromStorage.data);
+            if (moviesFromStorage.obsolete) {
+                return cacheObservable.concat(this.fetchPopularMoviesFromServer(since));
+            } else {
+                return cacheObservable;
+            }
+        } else {
+            return this.fetchPopularMoviesFromServer(since);
+        }
+    }
+
     fetchPopularShowsFromServer(since: number) {
         const fromDate = this.convertToDate(since);
         const url = `${this.showsUrl}${fromDate}`;
@@ -39,6 +53,18 @@ class PopularService {
             .map(shows => {
                 this.storage.save(`popular-shows-${since}`, shows, 172800000);
                 return shows;
+            });
+    }
+
+    fetchPopularMoviesFromServer(since: number) {
+        const fromDate = this.convertToDate(since);
+        const url = `${this.moviesUrl}${fromDate}`;
+        return this.http
+            .get(url)
+            .map(data => data.movies)
+            .map(movies => {
+                this.storage.save(`popular-movies-${since}`, movies, 172800000);
+                return movies;
             });
     }
 
