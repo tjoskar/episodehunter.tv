@@ -1,19 +1,43 @@
 import {Injectable} from 'angular2/core';
-import UpcomingRepository from './upcoming.repository';
+import {Observable} from 'rxjs';
+import Http from '../lib/http';
+import LocalStorage from '../lib/storage';
 import utility from '../lib/utility';
 
 @Injectable()
 class UpcomingService {
-    repo: UpcomingRepository;
+    http: Http;
+    storage: LocalStorage;
 
-    constructor(repo: UpcomingRepository) {
-        this.repo = repo;
+    constructor(http: Http, storage: LocalStorage) {
+        this.http = http;
+        this.storage = storage;
+    }
+
+    fetchFromServer() {
+        const url = '/user/upcoming/episodes';
+        return this.http
+            .get(url)
+            .map(upcoming => upcoming.episodes)
+            .map(episodes => this.groupeEpisodes(episodes))
+            .map(episodes => {
+                this.storage.save('upcoming', episodes, 43200000);
+                return episodes;
+            });
     }
 
     get() {
-        return this.repo
-            .get()
-            .map(episodes => this.groupeEpisodes(episodes));
+        const showsFromStorage = this.storage.get('upcoming');
+        if (showsFromStorage && showsFromStorage.data) {
+            const cacheObservable = Observable.of(showsFromStorage.data);
+            if (showsFromStorage.obsolete) {
+                return cacheObservable.concat(this.fetchFromServer());
+            } else {
+                return cacheObservable;
+            }
+        } else {
+            return this.fetchFromServer();
+        }
     }
 
     groupeEpisodes(upcomingEpisodes) {

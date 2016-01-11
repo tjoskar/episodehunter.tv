@@ -20,38 +20,32 @@ import {LazyLoadImage} from '../lib/lazy-load-image';
                 <p>Sunday</p>
                 <p>S05E12</p>
             </hgroup>
-            <img src="{{showPoster}}" alt="" width="185" style="display: inline;">
+            <img alt="" [defaultImg]="'http://img.episodehunter.tv/serie/poster/1363113862.png'" [lazyLoad]="showPoster" [offset]="500" style="display: inline;" width="185">
         </div>
     </a>`
 })
 class EpisodeRenderer {
     @Input() episode;
+    day;
+    month;
+    year;
+    showLink;
+    showPoster;
 
     hasAirDate() {
         return this.episode.airs instanceof Date;
     }
 
-    get day() {
-        return utility.time.padDateWithZero(this.episode.airs.getDate());
-    }
-
-    get month() {
-        return utility.time.shortMonth(this.episode.airs);
-    }
-
-    get year() {
-        console.log('Getting year for ' + this.episode.show.title);
-        return this.episode.airs.getFullYear();
-    }
-
-    get showLink() {
-        // Todo: Fix this when we have a show page
+    ngAfterContentInit() {
         const urlFrendlyShowName = utility.urlTitle(this.episode.show.title);
-        return `http://episodehunter.tv/shows/${this.episode.show.ids.id}/${urlFrendlyShowName}`;
-    }
+        this.showLink = `http://episodehunter.tv/shows/${this.episode.show.ids.id}/${urlFrendlyShowName}`;
+        this.showPoster = `http://img.episodehunter.tv/serie/poster/${this.episode.show.poster}`;
 
-    get showPoster() {
-        return `http://img.episodehunter.tv/serie/poster/${this.episode.show.poster}`;
+        if (this.hasAirDate()) {
+            this.day = utility.time.padDateWithZero(this.episode.airs.getDate());
+            this.month = utility.time.shortMonth(this.episode.airs);
+            this.year = this.episode.airs.getFullYear();
+        }
     }
 
 }
