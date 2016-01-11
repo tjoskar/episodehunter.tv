@@ -1,8 +1,10 @@
 import {Component, Input} from 'angular2/core';
 import utility from '../lib/utility';
+import {LazyLoadImage} from '../lib/lazy-load-image';
 
 @Component({
     selector: 'episode-renderer',
+    directives: [LazyLoadImage],
     template: `
     <a href="{{showLink}}">
         <div class="poster">
