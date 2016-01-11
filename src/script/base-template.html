@@ -1,6 +1,7 @@
 <div id="one-div-to-rule-them-all">
   <div class="loader"></div>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <eh-search *ngIf="showSerachDialog" (closeDialog)="closeSearchDialog()"></eh-search>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" [class.blur]="showSerachDialog">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
@@ -14,6 +15,7 @@
         <a class="mdl-navigation__link" [routerLink]="['UpcomingShows']">HOME</a>
         <a class="mdl-navigation__link" [routerLink]="['Popular', 'PopularMovies', {since: 3}]">POPULAR MOVIES</a>
         <a class="mdl-navigation__link" [routerLink]="['Popular', 'PopularShows', {since: 3}]">POPULAR SHOWS</a>
+        <p class="mdl-navigation__link" (click)="toogleSeach()" >SEARCH</p>
       </nav>
     </div>
   </header>

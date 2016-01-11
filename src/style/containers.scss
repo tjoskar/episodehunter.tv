@@ -23,3 +23,19 @@
 show-renderer {
   display: inline-block;
 }
+
+.hide {
+  display: none;
+}
+
+.blur {
+  -webkit-filter: blur(10px);
+     -moz-filter: blur(10px);
+       -o-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transform: translateZ(0);
+     -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+       -o-transform: translateZ(0);
+          transform: translateZ(0);
+}

@@ -58,8 +58,9 @@ header {
   color: #333;
   transition: all .2s ease-out;
   border-bottom: 3px solid rgba(0,0,0, 0);
+  cursor: pointer;
 
-  &.router-link-active, &:hover {
+  &:hover {
     border-bottom: 3px solid #03a37e;
   }
 

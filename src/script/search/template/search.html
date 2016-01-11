@@ -1,0 +1,20 @@
+<div>
+  <div id="close" (click)="closeDialog.emit(true)">
+    <i class="material-icons">highlight_off</i>
+  </div>
+  <input ngModel (ngModelChange)="searchEmitter.next($event)" id="search-input" type="text" autofocus="" placeholder="Search for a tv show or movie"/>
+
+  <div>
+    <div [class.hide]="!shows.length">
+      <h2>Shows</h2>
+      <show-renderer *ngFor="#show of shows" [show]="show"></show-renderer>
+    </div>
+
+    <div [class.hide]="!movies.length">
+      <h2>Movies</h2>
+      <movie-renderer *ngFor="#movie of movies" [movie]="movie"></movie-renderer>
+    </div>
+
+  </div>
+
+</div>

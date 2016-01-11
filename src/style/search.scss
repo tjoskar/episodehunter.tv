@@ -1,0 +1,35 @@
+eh-search {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0;
+  margin: 0;
+
+  &> div {
+    margin: 100px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 36px;
+    color: #555555;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin: 10px;
+  }
+
+  #close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    i {
+      font-size: 36px;
+      cursor: pointer;
+    }
+  }
+}
