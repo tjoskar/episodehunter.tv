@@ -75,7 +75,7 @@ header {
   box-shadow: none;
 
   @media #{$large-and-up} {
-    background-color: rgba(253, 253, 253, .98);
+    background-color: rgba(253, 253, 253, .9);
     opacity: 1;
     border-bottom: 1px solid #d8d8d8;
   }
