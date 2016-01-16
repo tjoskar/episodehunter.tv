@@ -1,0 +1,44 @@
+<div style="background-image: url(https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?ixlib=rb-0.3.5&q=80&fm=jpg);" class="fanart"></div>
+
+<div class="media--header">
+  <div class="media--summary">
+    <div class="container">
+      <div class="poster-wrapper">
+        <!-- <img src="" alt=""> -->
+      </div>
+      <div class="info">
+        <h1>{{showName}}</h1>
+        <eh-rating></eh-rating>
+
+        <p>In the high-tech gold rush of modern Silicon Valley, the people most qualified to succeed are the least capable of handling success. A comedy partially inspired by Mike Judge's own experiences as a Silicon Valley engineer in the late 1980s.</p>
+        <!-- <eh-following-button [showId]="showId"></eh-following-button> -->
+      </div>
+    </div>
+  </div>
+  <div class="info-content">
+    <div class="container">
+      <div class="media--info">
+        <h3>Facts</h3>
+        <p><span>Airs:</span> Sunday at 9:00 PM on AMC</p>
+        <p><span>Premiered:</span> 2010-10-31</p>
+        <p><span>Language:</span> en</p>
+        <p><span>Runtime:</span> 45 min</p>
+        <p><span>Genres:</span> Action, Drama, Horror, Suspense</p>
+        <p><span>Status:</span>Continuing</p>
+        <p><span>Followers:</span> 1171</p>
+      </div>
+      <div class="media--info">
+        <eh-progress [showId]="showId" [updateEmitter]="updateEpisodeWatchStatus"></eh-progress>
+      </div>
+      <div class="media--info">
+        <eh-next-episode [showId]="showId" [updateEmitter]="updateEpisodeWatchStatus"></eh-next-episode>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="media--content">
+  <div class="container">
+    <eh-episode-list [showId]="showId" (toggleWatchStatus)="updateEpisodeWatchStatus.emit($event)"></eh-episode-list>
+  </div>
+</div>

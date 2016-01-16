@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import UpcomingComponent from './upcomming/upcoming.component';
 import PopularComponent from './popular/popular.component';
 import SearchComponet from './search/search.component';
+import ShowComponent from './show/show.component';
 
 @Component({
     selector: 'episodehunter',
@@ -11,7 +12,8 @@ import SearchComponet from './search/search.component';
 })
 @RouteConfig([
     {path: '/upcoming', name: 'UpcomingShows', component: UpcomingComponent, useAsDefault: true},
-    {path: '/popular/...', name: 'Popular', component: PopularComponent}
+    {path: '/popular/...', name: 'Popular', component: PopularComponent},
+    {path: '/show/:id', name: 'Show', component: ShowComponent}
 ])
 class AppComponent {
     showSerachDialog = false;

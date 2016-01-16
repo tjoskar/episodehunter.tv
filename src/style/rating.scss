@@ -1,0 +1,70 @@
+.rating-holder {
+  font-size: 28px;
+  line-height: initial;
+  font-weight: 300;
+  color: #03a37e;
+  margin-right: 13px;
+  padding-bottom: 5px;
+  height: 50px;
+
+  .rating-bar-holder {
+    width: 70%;
+    height: 20px;
+    border: 1px solid #03a37e;
+    float: left;
+    margin-top: 3px;
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+  }
+  .rating-bar-content {
+    height: 100%;
+    background-color: #03a37e;
+    transition: all .5s ease-out;
+  }
+  .text-holder {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1px;
+  }
+  span {
+    font-size: 14px;
+    color: #333;
+    font-style: italic;
+  }
+  #user-vote {
+    float: left;
+    font-size: 24px;
+    margin-left: 50px;
+  }
+}
+
+.bar-rating {
+  height: 34px;
+  position: absolute;
+  padding: 30px 0 0 70px;
+
+  p {
+    display: block;
+    width: 52px;
+    height: 24px;
+    float: left;
+    background-color: #03a37e;
+    margin: 1px;
+    text-align: center;
+    opacity: .3;
+    cursor: pointer;
+
+    span {
+      color: #fff;
+      font-size: 14px;
+      position: absolute;
+      margin: 3px 0 0 -3px;
+    }
+  }
+}
+.bar-rating p.active, .bar-rating p.selected {
+  opacity: 1;
+}
