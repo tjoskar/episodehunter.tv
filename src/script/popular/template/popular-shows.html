@@ -1,14 +1,16 @@
-<h2>POPULAR SHOWS</h2>
-<div class="divider"></div>
+<div class="page-content">
+  <h2>POPULAR SHOWS</h2>
+  <div class="divider"></div>
 
-<div class="button-list">
-  <button (click)="onClick(5)" [class.selected]="since == 5" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">All Time</button>
-  <button (click)="onClick(4)" [class.selected]="since == 4" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Year</button>
-  <button (click)="onClick(3)" [class.selected]="since == 3" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">3 Months</button>
-  <button (click)="onClick(2)" [class.selected]="since == 2" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Month</button>
-  <button (click)="onClick(1)" [class.selected]="since == 1" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Week</button>
-</div>
+  <div class="button-list">
+    <button (click)="onClick(5)" [class.selected]="since == 5" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">All Time</button>
+    <button (click)="onClick(4)" [class.selected]="since == 4" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Year</button>
+    <button (click)="onClick(3)" [class.selected]="since == 3" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">3 Months</button>
+    <button (click)="onClick(2)" [class.selected]="since == 2" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Month</button>
+    <button (click)="onClick(1)" [class.selected]="since == 1" class="flat mdl-button mdl-js-button mdl-js-ripple-effect">1 Week</button>
+  </div>
 
-<div>
-  <show-renderer *ngFor="#show of popularShows" [show]="show"></show-renderer>
+  <div>
+    <show-renderer *ngFor="#show of popularShows" [show]="show"></show-renderer>
+  </div>
 </div>
