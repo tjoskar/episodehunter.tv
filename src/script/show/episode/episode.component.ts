@@ -7,14 +7,14 @@ import {EpisodeService} from './episode.service';
     template: `
     <div class="episode">
         <div class="episode-info--img">
-            <span>{{watchDate}}</span>
-            <img src="{{episodeImage}}" alt="">
+            <span>{{model.watchDate}}</span>
+            <img src="{{model.episodeImage}}" alt="">
         </div>
         <div class="episode-info">
-            <h3>{{episode.name}}</h3>
-            <span>{{episodeNumber}} {{airDate}}</span>
-            <p>{{episode.overview}}</p>
-            <button (click)="toggleWatched()" class="mdl-button mdl-js-button mdl-js-ripple-effect">{{watchedButtonText}}</button>
+            <h3>{{model.name}}</h3>
+            <span>{{model.episodeNumber}} {{model.airDate}}</span>
+            <p>{{model.overview}}</p>
+            <button (click)="toggleWatched()" class="mdl-button mdl-js-button mdl-js-ripple-effect">{{model.watchedButtonText}}</button>
         </div>
     </div>`,
     directives: [],
@@ -22,11 +22,28 @@ import {EpisodeService} from './episode.service';
 })
 class EpisodeComponent {
     service: EpisodeService;
+    model;
     @Input() episode;
     @Output() toggleWatchStatus = new EventEmitter();
 
     constructor(service: EpisodeService) {
         this.service = service;
+    }
+
+    ngOnChanges() {
+        if (this.episode) {
+            this.model = {
+                watchDate: this.watchDate(this.episode.watched),
+                episodeImage: this.episodeImage(this.episode.image),
+                name: this.episode.name,
+                episodeNumber: this.episodeNumber(this.episode.season, this.episode.episode),
+                airDate: this.airDate(this.episode.firstAired),
+                overview: this.episode.overview,
+                watchedButtonText: this.watchedButtonText(this.episode.watched)
+            };
+        } else {
+            this.model = {};
+        }
     }
 
     toggleWatched() {
@@ -46,40 +63,37 @@ class EpisodeComponent {
         );
     }
 
-    get watchDate() {
-        if (this.episode.watched) {
-            const date = new Date(this.episode.watched);
+    watchDate(watched) {
+        if (watched) {
+            const date = new Date(watched);
             return utility.time.convertToDateString(date);
         }
+        return '';
     }
 
-    get episodeImage() {
-        if (this.episode.image) {
-            return `http://img.episodehunter.tv/episode/${this.episode.image}`;
-        } else {
-            return `http://img.episodehunter.tv/episode/1363113862.png`;
-        }
+    episodeImage(image) {
+        return `http://img.episodehunter.tv/episode/${image || '1363113862.png'}`;
     }
 
-    get airDate() {
-        if (this.episode.firstAired) {
-            const date = new Date(this.episode.firstAired);
+    airDate(firstAired) {
+        if (firstAired) {
+            const date = new Date(firstAired);
             if (date.getTime() > utility.time.now()) {
-                return `Airs ${this.episode.firstAired}`;
+                return `Airs ${firstAired}`;
             } else {
-                return `Aired ${this.episode.firstAired}`;
+                return `Aired ${firstAired}`;
             }
         } else {
             return '-';
         }
     }
 
-    get episodeNumber() {
-        return `S${('0' + this.episode.season).slice(-2)}E${('0' + this.episode.episode).slice(-2)}`;
+    episodeNumber(season, episode) {
+        return `S${('0' + season).slice(-2)}E${('0' + episode).slice(-2)}`;
     }
 
-    get watchedButtonText() {
-        return this.episode.watched ? 'Mark as unwatched' : 'Mark as watched';
+    watchedButtonText(watched) {
+        return watched ? 'Mark as unwatched' : 'Mark as watched';
     }
 
 }
