@@ -91,7 +91,7 @@
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="username" name="username" type="text" ng-pattern="/^[a-z][a-zA-Z0-9_]*$/" ng-minlength=3 ng-maxlength=32 ng-model="vm.username" ng-model-options="{ updateOn: 'blur' }">
+                            <input id="username" name="username" type="text" ng-pattern="/^[a-zA-Z0-9_-]+$/" ng-minlength=3 ng-maxlength=32 ng-model="vm.username" ng-model-options="{ updateOn: 'blur' }">
                             <label for="username">Username</label>
                             <p class="form-error" ng-show="register_form.username.$error.pattern">
                                 Your username must only contain alpha-numeric characters and underscores.
