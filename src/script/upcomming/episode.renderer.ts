@@ -5,22 +5,23 @@ import {LazyLoadImage} from '../lib/lazy-load-image';
 @Component({
     selector: 'episode-renderer',
     directives: [LazyLoadImage],
+    styles: [ require('!raw!sass!./episode.scss') ],
     template: `
     <a href="{{showLink}}">
         <div class="poster">
-            <hgroup class="date" *ngIf="hasAirDate()" >
-                <p class="day">{{day}}</p>
-                <p class="month">{{month}}</p>
-                <p class="year">{{year}}</p>
+            <hgroup>
+                <div class="info-row">
+                    <p class="title">{{episode.show.title}}</p>
+                    <p>Sunday</p>
+                </div>
+                <div class="info-row">
+                    <p>S07E12</p>
+                    <p>2015-04-12</p>
+                </div>
             </hgroup>
-            <hgroup class="title">
-                <p>{{episode.show.title}}</p>
-            </hgroup>
-            <hgroup class="episode-data" style="display: none;">
-                <p>Sunday</p>
-                <p>S05E12</p>
-            </hgroup>
-            <img alt="" [defaultImg]="'http://img.episodehunter.tv/serie/poster/1363113862.png'" [lazyLoad]="showPoster" [offset]="500" style="display: inline;" width="185">
+            <div class="backdrop" style="
+                background-image: url('{{showFanart}}');
+            "></div>
         </div>
     </a>`
 })
@@ -30,7 +31,7 @@ class EpisodeRenderer {
     month;
     year;
     showLink;
-    showPoster;
+    showFanart;
 
     hasAirDate() {
         return this.episode.airs instanceof Date;
@@ -39,7 +40,7 @@ class EpisodeRenderer {
     ngAfterContentInit() {
         const urlFrendlyShowName = utility.urlTitle(this.episode.show.title);
         this.showLink = `http://episodehunter.tv/shows/${this.episode.show.ids.id}/${urlFrendlyShowName}`;
-        this.showPoster = `http://img.episodehunter.tv/serie/poster/${this.episode.show.poster}`;
+        this.showFanart = `http://img.episodehunter.tv/serie/fanart/${this.episode.show.fanart}`;
 
         if (this.hasAirDate()) {
             this.day = utility.time.padDateWithZero(this.episode.airs.getDate());
