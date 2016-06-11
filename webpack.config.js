@@ -1,38 +1,68 @@
-require('es6-shim');
+const path = require('path');
 const webpack = require('webpack');
+const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+
+const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
+const HMR = true;
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
+    cache: true,
+    debug: false,
+
     entry: {
-        index: './src/script/boot.ts',
-        register: './src/script/authentication/auth.component.ts'
+        'polyfills': './src/polyfills.ts',
+        'vendor': './src/vendor.ts',
+        'main': './src/boot.ts'
     },
+
     output: {
-        path: './src/',
-        filename: 'one-file-to-rule-them-all.[name].js'
+        path: './public',
+        filename: '[name].bundle.js',
+        sourceMapFilename: '[name].js.map',
+        chunkFilename: '[id].chunk.js'
     },
+
     module: {
-        loaders: [{
-            test: /\.ts$/, loader: 'ts', exclude: /node_modules/
-        }, {
-            test: /\.scss$/, loader: 'style!css!sass'
-        }, {
-            test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000'
-        }],
-        noParse: [/zone\.js\/dist\/.+/]
+        preLoaders: [
+            {
+                test: /\.js$/,
+                loader: 'source-map-loader',
+                exclude: [
+                    // these packages have problems with their sourcemaps
+                    path.resolve(__dirname, 'node_modules/rxjs'),
+                    path.resolve(__dirname, 'node_modules/@angular')
+                ]
+            }
+        ],
+        loaders: [
+            { test: /\.ts$/, loader: 'awesome-typescript-loader' },
+
+            // Support for CSS as raw text
+            { test: /\.css$/, loader: 'raw-loader' },
+
+            { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },
+
+            // support for .html as raw text
+            { test: /\.html$/,  loader: 'raw-loader', exclude: [ './src/index.html' ] }
+        ]
     },
-    resolve: {
-        extensions: ['', '.ts', '.js']
-    },
+
+    plugins: [
+        new ForkCheckerPlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(true),
+        new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor', 'polyfills'], minChunks: Infinity }),
+        new webpack.DefinePlugin({
+            HMR,
+            ENV: JSON.stringify(ENV)
+        })
+    ],
+
     devServer: {
-        port: 9000,
+        port: 8001,
         inline: true,
         hot: true,
         historyApiFallback: true,
         contentBase: 'src'
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.optimize.DedupePlugin()
-    ]
+    }
 };

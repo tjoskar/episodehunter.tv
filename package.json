@@ -5,8 +5,8 @@
   "author": "Oskar Karlsson <kontakta@oskarkarlsson.nu",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --progress",
-    "build": "webpack --progress -p"
+    "start": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached --hot",
+    "build": "webpack --config webpack.prod.config.js --profile --display-error-details --display-cache"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
