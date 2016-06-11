@@ -12,3 +12,4 @@ vendor/*
 !/vendor/.gitkeep
 /ref
 npm-debug.log
+typings
