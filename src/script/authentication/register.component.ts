@@ -1,5 +1,5 @@
 import 'rxjs/add/operator/map';
-import {Component, Output, EventEmitter} from 'angular2/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'eh-register',

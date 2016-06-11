@@ -12,7 +12,7 @@ module.exports = {
 
     entry: {
         'polyfills': './src/polyfills.ts',
-        'vendor': './src/vendor.ts',
+        'vendor': './src/vendors.ts',
         'main': './src/boot.ts'
     },
 

@@ -1,5 +1,5 @@
-import {Component, EventEmitter} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
+import {Component, EventEmitter} from '@angular/core';
+import {RouteParams} from '@angular/router-deprecated';
 import RatingComponent from '../lib/rating.component';
 import FollowingButtonComponent from './following.component';
 import ProgressComponent from './progress/progress.component';

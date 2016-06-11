@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Renderer, Input} from 'angular2/core';
+import {Directive, ElementRef, Renderer, Input} from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
 
 @Directive({
@@ -8,8 +8,8 @@ class LazyLoadImage {
     @Input('lazyLoad') src;
     @Input() defaultImg;
     @Input() offset;
-    scrollSubscription: Subscription<Event>;
-    errorSubscription: Subscription<Event>;
+    scrollSubscription: Subscription;
+    errorSubscription: Subscription;
     viewportSize = {
         height: 0,
         width: 0

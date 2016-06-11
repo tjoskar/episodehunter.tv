@@ -1,5 +1,5 @@
-import {Directive, Input} from 'angular2/core';
-import {Router} from 'angular2/router';
+import {Directive, Input} from '@angular/core';
+import {Router} from '@angular/router-deprecated';
 
 @Directive({
     selector: '[routeAndScroll]',

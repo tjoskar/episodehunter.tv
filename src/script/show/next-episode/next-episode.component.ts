@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 import utility from '../../lib/utility';
 import {NextEpisodeService} from './next-episode.service';
 

@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import utility from '../../lib/utility';
 import {EpisodeService} from './episode.service';
 

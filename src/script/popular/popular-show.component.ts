@@ -1,5 +1,5 @@
-import {Component, EventEmitter} from 'angular2/core';
-import {RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, EventEmitter} from '@angular/core';
+import {RouteParams, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import PopularService from './popular.service';
 import {ShowRenderer} from './show.renderer';
 

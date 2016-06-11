@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import UpcomingService from './upcoming.service';
 import EpisodeRenderer from './episode.renderer';
 

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from 'angular2/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {SearchService} from './search.service';
 import MovieRenderer from './movie.renderer';
 import ShowRenderer from './show.renderer';
