@@ -9,25 +9,32 @@
     "build": "webpack --progress -p"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.0",
-    "es6-shim": "~0.33.13",
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "@ngrx/store": "1.5.0",
+    "es6-shim": "0.35.0",
     "reflect-metadata": "0.1.2",
-    "rxjs": "~5.0.0-beta.0",
-    "zone.js": "~0.5.10"
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^1.0.0",
     "css-loader": "^0.23.1",
-    "file-loader": "^0.8.5",
-    "materialize-css": "^0.97.3",
+    "materialize-css": "^0.97.6",
     "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
-    "sass-loader": "^3.1.2",
+    "sass-loader": "^3.2.0",
+    "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.0",
-    "ts-loader": "~0.7.2",
-    "typescript": "~1.7.5",
-    "url-loader": "^0.5.7",
-    "webpack": "~1.12.9",
-    "webpack-dev-server": "~1.14.0"
+    "typescript": "~1.8.1",
+    "typings": "^1.0.5",
+    "webpack": "~1.13.1",
+    "webpack-dev-server": "~1.14.1"
   },
   "engines": {
     "node": ">=4.0.0"
