@@ -7,7 +7,7 @@ import ShowComponent from './show/show.component';
 
 @Component({
     selector: 'episodehunter',
-    templateUrl: require('script/base-template.html'),
+    template: require('./base-template.html'),
     directives: [SearchComponet, ROUTER_DIRECTIVES]
 })
 @RouteConfig([
