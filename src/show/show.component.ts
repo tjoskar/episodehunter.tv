@@ -8,7 +8,7 @@ import NextEpisodeComponent from './next-episode/next-episode.component';
 
 @Component({
     selector: 'eh-show',
-    templateUrl: 'script/show/template/show.html',
+    template: require('./template/show.html'),
     directives: [RatingComponent, FollowingButtonComponent, ProgressComponent, NextEpisodeComponent, EpisodeListComponent],
     providers: []
 })

@@ -5,7 +5,7 @@ import {ShowRenderer} from './show.renderer';
 
 @Component({
     selector: 'eh-popular-shows',
-    templateUrl: 'script/popular/template/popular-shows.html',
+    templateUrl: require('./template/popular-shows.html'),
     directives: [ROUTER_DIRECTIVES, ShowRenderer],
     providers: [PopularService]
 })

@@ -4,7 +4,7 @@ import EpisodeComponent from './episode.component';
 
 @Component({
     selector: 'eh-episode-list',
-    templateUrl: 'script/show/episode/template/episode-list.html',
+    templateUrl: require('./template/episode-list.html'),
     directives: [EpisodeComponent],
     providers: [EpisodeService]
 })

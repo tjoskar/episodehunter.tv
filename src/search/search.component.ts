@@ -5,7 +5,7 @@ import ShowRenderer from './show.renderer';
 
 @Component({
     selector: 'eh-search',
-    templateUrl: 'script/search/template/search.html',
+    template: require('./template/search.html'),
     directives: [MovieRenderer, ShowRenderer],
     providers: [SearchService]
 })

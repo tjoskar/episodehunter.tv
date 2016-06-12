@@ -5,7 +5,7 @@ import {MovieRenderer} from './movie.renderer';
 
 @Component({
     selector: 'eh-popular-movies',
-    templateUrl: 'script/popular/template/popular-movies.html',
+    template: require('./template/popular-movies.html'),
     directives: [ROUTER_DIRECTIVES, MovieRenderer],
     providers: [PopularService]
 })
