@@ -16,6 +16,10 @@ module.exports = {
         'main': './src/boot.ts'
     },
 
+    resolve: {
+        extensions: ['', '.ts', '.js']
+    },
+
     output: {
         path: './public',
         filename: '[name].bundle.js',
@@ -60,9 +64,12 @@ module.exports = {
 
     devServer: {
         port: 8001,
-        inline: true,
-        hot: true,
+        host: 'localhost',
         historyApiFallback: true,
-        contentBase: 'src'
+        contentBase: path.resolve(__dirname, 'public'),
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: 1000
+        }
     }
 };
