@@ -7,15 +7,6 @@ import { HttpService } from './lib/http';
 import AuthService from './authentication/auth.service';
 import { LocalStorage } from './lib/storage';
 
-bootstrap(AppComponent, [
-    ROUTER_PROVIDERS,
-    HTTP_PROVIDERS,
-    HttpService,
-    AuthService,
-    LocalStorage
-]);
-
-
 function main() {
     return bootstrap(AppComponent, [
         ROUTER_PROVIDERS,
