@@ -1,31 +1,32 @@
-import {Component, Input} from '@angular/core';
-import utility from '../lib/utility';
-import {LazyLoadImage} from '../lib/lazy-load-image';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import utility from '../../../lib/utility';
 
 @Component({
     selector: 'episode-renderer',
-    directives: [LazyLoadImage],
     styles: [ require('!raw!sass!./episode.scss') ],
     template: `
-    <a href="{{showLink}}">
-        <div class="poster">
-            <hgroup>
-                <div class="info-row">
-                    <p class="title">{{episode.show.title}}</p>
-                    <p>Sunday</p>
+        <a href="{{showLink}}">
+            <div class="poster">
+                <hgroup>
+                    <div class="info-row">
+                        <p class="title">{{episode.show.title}}</p>
+                        <p>Sunday</p>
+                    </div>
+                    <div class="info-row">
+                        <p>S07E12</p>
+                        <p>2015-04-12</p>
+                    </div>
+                </hgroup>
+                <div
+                    [ngStyle]="{'background-image': 'url(' + showFanart + ')'}"
+                    class="backdrop">
                 </div>
-                <div class="info-row">
-                    <p>S07E12</p>
-                    <p>2015-04-12</p>
-                </div>
-            </hgroup>
-            <div class="backdrop" style="
-                background-image: url('{{showFanart}}');
-            "></div>
-        </div>
-    </a>`
+            </div>
+        </a>
+    `,
+    changeDetection: ChangeDetectionStrategy.Detached
 })
-class EpisodeRenderer {
+export class EpisodeRenderer {
     @Input() episode;
     day;
     month;
@@ -37,7 +38,7 @@ class EpisodeRenderer {
         return this.episode.airs instanceof Date;
     }
 
-    ngAfterContentInit() {
+    ngOnInit() {
         const urlFrendlyShowName = utility.urlTitle(this.episode.show.title);
         this.showLink = `http://episodehunter.tv/shows/${this.episode.show.ids.id}/${urlFrendlyShowName}`;
         this.showFanart = `http://img.episodehunter.tv/serie/fanart/${this.episode.show.fanart}`;
@@ -50,5 +51,3 @@ class EpisodeRenderer {
     }
 
 }
-
-export default EpisodeRenderer;

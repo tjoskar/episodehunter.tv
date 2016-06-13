@@ -14,7 +14,7 @@ class HttpService {
         this.authService = authService;
     }
 
-    get(url, initHeaders = {}) {
+    get<T>(url, initHeaders = {}): Observable<T> {
         const headers = this.createHeaders(initHeaders);
         return this.http
             .get(this.generateUrl(url), { headers })
@@ -67,4 +67,4 @@ class HttpService {
 }
 
 export default HttpService;
-export {HttpService};
+export { HttpService };

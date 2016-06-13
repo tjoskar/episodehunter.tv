@@ -1,46 +1,30 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import Http from '../lib/http';
-import LocalStorage from '../lib/storage';
+import { Injectable } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { UpcomingShows, UpcomingEpisode, ApplicationModel } from '../model';
+import { actions } from './upcomming.reducer';
+import { HttpService } from '../lib/http';
 import utility from '../lib/utility';
 
 @Injectable()
-class UpcomingService {
-    http: Http;
-    storage: LocalStorage;
+export class UpcomingService {
+    http: HttpService;
+    store: Store<ApplicationModel>;
 
-    constructor(http: Http, storage: LocalStorage) {
+    constructor(http: HttpService, store: Store<ApplicationModel>) {
         this.http = http;
-        this.storage = storage;
+        this.store = store;
     }
 
-    fetchFromServer() {
+    updateModel() {
         const url = '/user/upcoming/episodes';
         return this.http
-            .get(url)
+            .get<{episodes: UpcomingEpisode[]}>(url)
             .map(upcoming => upcoming.episodes)
-            .map(episodes => this.groupeEpisodes(episodes))
-            .map(episodes => {
-                this.storage.save('upcoming', episodes, 43200000);
-                return episodes;
-            });
+            .map(episodes => this.groupEpisodes(episodes))
+            .do(episodes => this.store.dispatch({type: actions.UPDATE_UPCOMING_SHOWS, payload: episodes}));
     }
 
-    get() {
-        const showsFromStorage = this.storage.get('upcoming');
-        if (showsFromStorage && showsFromStorage.data) {
-            const cacheObservable = Observable.of(showsFromStorage.data);
-            if (showsFromStorage.obsolete) {
-                return cacheObservable.concat(this.fetchFromServer());
-            } else {
-                return cacheObservable;
-            }
-        } else {
-            return this.fetchFromServer();
-        }
-    }
-
-    groupeEpisodes(upcomingEpisodes) {
+    groupEpisodes(upcomingEpisodes: UpcomingEpisode[]): UpcomingShows {
         const justAired = [];
         const thisWeek = [];
         const nextWeek = [];
@@ -52,7 +36,7 @@ class UpcomingService {
         const nextWeekTimestamp = utility.time.nextSunday(thisWeekTimestamp);
 
         upcomingEpisodes.forEach(episode => {
-            episode.airs = episode.airs ? new Date(episode.airs) : -1;
+            episode.airs = episode.airs ? new Date(<string>episode.airs) : undefined;
             if (episode.airs <= justAiredTimestamp) {
                 tba.push(episode);
             } else if (episode.airs <= nowTimestamp) {
@@ -70,6 +54,3 @@ class UpcomingService {
     }
 
 }
-
-
-export default UpcomingService;

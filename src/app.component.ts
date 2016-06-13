@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
-import UpcomingComponent from './upcomming/upcoming.component';
+import { UpcomingComponent } from './upcomming/upcoming.component';
 import PopularComponent from './popular/popular.component';
 import SearchComponet from './search/search.component';
 import ShowComponent from './show/show.component';
