@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
+import { PopularShows, PopularMovies } from '../contracts/server';
 import {HttpService} from '../lib/http';
 import {LocalStorage} from '../lib/storage';
 import utility from '../lib/utility';
@@ -48,7 +49,7 @@ class PopularService {
         const fromDate = this.convertToDate(since);
         const url = `${this.showsUrl}${fromDate}`;
         return this.http
-            .get(url)
+            .get<PopularShows>(url)
             .map(data => data.shows)
             .map(shows => {
                 this.storage.save(`popular-shows-${since}`, shows, 172800000);
@@ -60,7 +61,7 @@ class PopularService {
         const fromDate = this.convertToDate(since);
         const url = `${this.moviesUrl}${fromDate}`;
         return this.http
-            .get(url)
+            .get<PopularMovies>(url)
             .map(data => data.movies)
             .map(movies => {
                 this.storage.save(`popular-movies-${since}`, movies, 172800000);
@@ -69,6 +70,7 @@ class PopularService {
     }
 
     convertToDate(since: number): string {
+        // TODDO: this is bad! Use an enum instead
         switch (since) {
             case 1:
                 return utility.time.convertToDateString(utility.time.futureDate(-7));

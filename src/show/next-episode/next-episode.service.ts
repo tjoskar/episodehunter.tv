@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {HttpService} from '../../lib/http';
-import {LocalStorage} from '../../lib/storage';
-import {Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpService } from '../../lib/http';
+import { LocalStorage } from '../../lib/storage';
+import { Observable } from 'rxjs';
 
 @Injectable()
 class NextEpisodeService {
@@ -19,7 +19,8 @@ class NextEpisodeService {
         return Observable.of(this.storage.get(name))
             .filter(d => d && d.data)
             .concat(
-                this.http.get(url)
+                // TODO: Fix this any
+                this.http.get<any>(url)
                     .map(n => n.episode)
                     .map(n => {
                         this.storage.save(name, n);
@@ -29,5 +30,4 @@ class NextEpisodeService {
     }
 }
 
-export default NextEpisodeService;
-export {NextEpisodeService};
+export { NextEpisodeService };

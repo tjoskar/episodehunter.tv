@@ -1,8 +1,9 @@
-import {Injectable} from '@angular/core';
-import {HttpService} from '../lib/http';
+import { Injectable } from '@angular/core';
+import { HttpService } from '../lib/http';
+import { Serach } from '../contracts/server';
 
 @Injectable()
-class SearchService {
+export class SearchService {
     http: HttpService;
 
     constructor(http: HttpService) {
@@ -12,11 +13,8 @@ class SearchService {
     search(term: string) {
         const url = `/search/${term}`;
         return this.http
-            .get(url)
+            .get<Serach>(url)
             .map(data => data.result);
     }
 
 }
-
-export {SearchService};
-export default SearchService;

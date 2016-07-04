@@ -25,10 +25,12 @@ class EpisodeService {
 
     fetchEpisodesFromServer(showId: number) {
         const url = `/show/${showId}/episodes`;
-        return this.http.get(url).map(episodes => {
-            this.storage.save(`episodes-${showId}`, episodes.seasons, 0);
-            return episodes.seasons;
-        });
+        // TODO: fix this any
+        return this.http.get<any>(url)
+            .map(episodes => {
+                this.storage.save(`episodes-${showId}`, episodes.seasons, 0);
+                return episodes.seasons;
+            });
     }
 
     markEpisodeAsWatched(episodeId) {
