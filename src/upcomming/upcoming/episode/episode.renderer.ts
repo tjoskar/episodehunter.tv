@@ -24,7 +24,7 @@ import utility from '../../../lib/utility';
             </div>
         </a>
     `,
-    changeDetection: ChangeDetectionStrategy.Detached
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EpisodeRenderer {
     @Input() episode;
