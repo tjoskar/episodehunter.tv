@@ -70,6 +70,7 @@ module.exports = {
         watchOptions: {
             aggregateTimeout: 300,
             poll: 1000
-        }
+        },
+        stats: 'errors-only'
     }
 };
