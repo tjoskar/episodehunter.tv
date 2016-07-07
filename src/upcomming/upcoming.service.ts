@@ -30,20 +30,23 @@ export class UpcomingService {
         const nextWeek = [];
         const upcoming = [];
         const tba = [];
-        const justAiredTimestamp = utility.time.futureDate(-2);
         const nowTimestamp = utility.time.today();
-        const thisWeekTimestamp = utility.time.nextSunday(nowTimestamp);
-        const nextWeekTimestamp = utility.time.nextSunday(thisWeekTimestamp);
+        const thisWeekEndTimestamp = utility.time.nextSunday(nowTimestamp);
+        const nextWeekEndTimestamp = utility.time.nextSunday(thisWeekEndTimestamp);
 
+        /*
+        | invalid |  infinit  | next week | this week | today | days in the past |
+        |   tba   |  upcoming | next week | this week |      justAired           |
+        */
         upcomingEpisodes.forEach(episode => {
             episode.airs = episode.airs ? new Date(<string>episode.airs) : undefined;
-            if (episode.airs <= justAiredTimestamp) {
+            if (!utility.time.isValidDate(episode.airs)) {
                 tba.push(episode);
             } else if (episode.airs <= nowTimestamp) {
                 justAired.push(episode);
-            } else if (episode.airs <= thisWeekTimestamp) {
+            } else if (episode.airs <= thisWeekEndTimestamp) {
                 thisWeek.push(episode);
-            } else if (episode.airs <= nextWeekTimestamp) {
+            } else if (episode.airs <= nextWeekEndTimestamp) {
                 nextWeek.push(episode);
             } else {
                 upcoming.push(episode);

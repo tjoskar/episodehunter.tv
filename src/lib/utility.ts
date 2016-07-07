@@ -1,4 +1,4 @@
-const utility = {
+export const utility = {
     is: {
 
         /**
@@ -124,6 +124,10 @@ const utility = {
 
         padDateWithZero(n) {
             return ('0' + n).slice(-2);
+        },
+
+        isValidDate(d) {
+            return d instanceof Date && isFinite(d);
         },
 
         convertToDateString(d: Date): string {
