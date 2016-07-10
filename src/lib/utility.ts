@@ -147,7 +147,7 @@ export const utility = {
     jsonParser: function(obj) {
         try {
             return JSON.parse(obj);
-        } catch(e) {
+        } catch (e) {
             return null;
         }
     },
