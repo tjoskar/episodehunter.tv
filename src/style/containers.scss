@@ -14,10 +14,6 @@
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-
-  @media screen and (min-width: 1419px) { max-width: 1135px; }
-  @media screen and (min-width: 1640px) { max-width: 1312px; }
-  @media screen and (min-width: 1862px) { max-width: 1489px; }
 }
 
 show-renderer {
