@@ -22,7 +22,7 @@ const nextWeekDateString = () => {
 
 const upcomingDateString = () => {
     const date = new Date();
-    date.setDate(date.getDate() + 14);
+    date.setDate(date.getDate() + 15);
     return date.toString();
 };
 
