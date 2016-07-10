@@ -7,8 +7,6 @@ import { EpisodeRenderer } from './episode/episode.renderer';
     directives: [ EpisodeRenderer ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-class UpcomingShowsRenderer {
+export class UpcomingShowsRenderer {
     @Input() upcomingShows;
 }
-
-export { UpcomingShowsRenderer };

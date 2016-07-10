@@ -1,5 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-import utility from '../../../lib/utility';
+import { UpcomingEpisode } from '../../../model';
+import { WeekdayPipe } from '../../../pipes';
+import { utility, config } from '../../../lib';
 
 @Component({
     selector: 'episode-renderer',
@@ -10,11 +12,11 @@ import utility from '../../../lib/utility';
                 <hgroup>
                     <div class="info-row">
                         <p class="title">{{episode.show.title}}</p>
-                        <p>Sunday</p>
+                        <p>{{episode.airs | weekday}}</p>
                     </div>
                     <div class="info-row">
-                        <p>S07E12</p>
-                        <p>2015-04-12</p>
+                        <p>{{episodeNumber}}</p>
+                        <p>{{episode.airs | date: 'yyyy-MM-dd'}}</p>
                     </div>
                 </hgroup>
                 <div
@@ -24,13 +26,12 @@ import utility from '../../../lib/utility';
             </div>
         </a>
     `,
+    pipes: [ WeekdayPipe ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EpisodeRenderer {
-    @Input() episode;
-    day;
-    month;
-    year;
+    @Input() episode: UpcomingEpisode;
+    episodeNumber;
     showLink;
     showFanart;
 
@@ -39,14 +40,26 @@ export class EpisodeRenderer {
     }
 
     ngOnInit() {
-        const urlFrendlyShowName = utility.urlTitle(this.episode.show.title);
-        this.showLink = `http://episodehunter.tv/shows/${this.episode.show.ids.id}/${urlFrendlyShowName}`;
-        this.showFanart = `http://img.episodehunter.tv/serie/fanart/${this.episode.show.fanart}`;
+        this.episodeNumber = this.generateEpisodenumber(this.episode);
+        this.showLink = this.generateShowUrl(this.episode);
+        this.showFanart = this.generateFanartUrl(this.episode);
+    }
 
-        if (this.hasAirDate()) {
-            this.day = utility.time.padDateWithZero(this.episode.airs.getDate());
-            this.month = utility.time.shortMonth(this.episode.airs);
-            this.year = this.episode.airs.getFullYear();
+    generateFanartUrl(episode: UpcomingEpisode) {
+        if (this.episode.show.fanart) {
+            return config.baseShowFanartUrl + this.episode.show.fanart;
+        }
+        return '';
+    }
+
+    generateShowUrl(episode: UpcomingEpisode) {
+        const urlFrendlyShowName = utility.urlTitle(this.episode.show.title);
+        return `${config.baseShowUrl}${this.episode.show.ids.id}/${urlFrendlyShowName}`;
+    }
+
+    generateEpisodenumber(episode: UpcomingEpisode) {
+        if (utility.is.set(episode.season) && utility.is.set(episode.episode)) {
+            return utility.episodeNumber(episode.season, episode.episode);
         }
     }
 
