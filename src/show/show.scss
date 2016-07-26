@@ -29,3 +29,63 @@
 .ng2-lazyloaded {
     opacity: 1;
 }
+
+.header {
+    background: rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+    box-shadow: 0 0 10px #b4b4b4;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        overflow: visible;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+.summary {
+    background: rgba(58, 58, 58, 0.8);
+    min-height: 200px;
+    width: 100%;
+    margin-top: -70px;
+
+    .poster-wrapper {
+        position: relative;
+        margin: 0;
+        top: -40px;
+
+        img {
+            border-radius: 3px;
+            box-shadow: 0 0 2px #111;
+        }
+    }
+
+    .info {
+        margin: 0 0 20px 30px;
+        position: relative;
+
+        h1 {
+            font-size: 4rem;
+            margin-top: 0;
+            color: #ccc;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #e4e4e4;
+            font-size: 15px;
+            line-height: 20px;
+            overflow: hidden;
+        }
+    }
+}
+
+.media--info {
+    p {
+        margin: 0;
+    }
+    span {
+        color: #03a37e;
+    }
+}

@@ -28,50 +28,6 @@
   }
 }
 
-.media--summary {
-  background: rgba(58, 58, 58, 0.8);
-  min-height: 200px;
-  width: 100%;
-  margin-top: -70px;
-
-  .poster-wrapper {
-    position: relative;
-    margin: 0;
-    top: -40px;
-  }
-
-  .info {
-    margin: 0 0 20px 60px;
-    position: relative;
-
-    h1 {
-      font-size: 4rem;
-      margin-top: 0;
-      color: #ccc;
-      text-transform: uppercase;
-    }
-
-    p {
-      color: #e4e4e4;
-      font-size: 15px;
-      line-height: 20px;
-      overflow: hidden;
-    }
-
-  }
-}
-
-.media--info {
-  width: 33%;
-
-  p {
-    margin: 0;
-  }
-  span {
-    color: #03a37e;
-  }
-}
-
 .singel-episode-img {
   margin: 5px 0 5px 0;
   position: relative;
