@@ -1,5 +1,5 @@
 import { UpcomingShows } from './upcoming-shows';
 
-export interface ApplicationModel {
+export interface ApplicationState {
     upcomingShows: UpcomingShows;
 }

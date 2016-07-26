@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { UpcomingShows, UpcomingEpisode, ApplicationModel } from '../model';
+import { UpcomingShows, UpcomingEpisode, ApplicationState } from '../model';
 import { actions } from './upcomming.reducer';
 import { HttpService } from '../lib/http';
 import utility from '../lib/utility';
@@ -8,9 +8,9 @@ import utility from '../lib/utility';
 @Injectable()
 export class UpcomingService {
     http: HttpService;
-    store: Store<ApplicationModel>;
+    store: Store<ApplicationState>;
 
-    constructor(http: HttpService, store: Store<ApplicationModel>) {
+    constructor(http: HttpService, store: Store<ApplicationState>) {
         this.http = http;
         this.store = store;
     }

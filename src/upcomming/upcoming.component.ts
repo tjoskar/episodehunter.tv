@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ApplicationModel } from '../model';
+import { ApplicationState } from '../model';
 import { UpcomingService } from './upcoming.service';
 import { UpcomingShowsRenderer } from './upcoming/upcoming.renderer';
 
@@ -19,11 +19,11 @@ import { UpcomingShowsRenderer } from './upcoming/upcoming.renderer';
 })
 export class UpcomingComponent {
     service: UpcomingService;
-    store: Store<ApplicationModel>;
+    store: Store<ApplicationState>;
     upcomingShows$;
     upcoming;
 
-    constructor(service: UpcomingService, store: Store<ApplicationModel>) {
+    constructor(service: UpcomingService, store: Store<ApplicationState>) {
         this.service = service;
         this.store = store;
     }
