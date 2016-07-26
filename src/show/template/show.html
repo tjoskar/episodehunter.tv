@@ -27,14 +27,14 @@
                 <p><span>Language:</span> en</p>
                 <p><span>Runtime:</span> 45 min</p>
                 <p><span>Genres:</span> Action, Drama, Horror, Suspense</p>
-                <p><span>Status:</span>Continuing</p>
+                <p><span>Status:</span> Continuing</p>
                 <p><span>Followers:</span> 1171</p>
             </div>
             <div class="media--info">
-                <eh-progress [showId]="showId" [updateEmitter]="updateEpisodeWatchStatus"></eh-progress>
+                <eh-progress [numberWatchedEpisodes]="numberWatchedEpisodes" [numberTotalEpisodes]="numberTotalEpisodes"></eh-progress>
             </div>
             <div class="media--info">
-                <eh-next-episode [showId]="showId" [updateEmitter]="updateEpisodeWatchStatus"></eh-next-episode>
+                <eh-next-episode [nextEpisode]="nextEpisode"></eh-next-episode>
             </div>
         </div>
     </div>

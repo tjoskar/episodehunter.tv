@@ -1,21 +1,19 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { LazyLoadImageDirective } from 'ng2-lazyload-image';
-
 import RatingComponent from '../lib/rating.component';
 import FollowingButtonComponent from './following.component';
-import ProgressComponent from './progress/progress.component';
+import { ProgressComponent } from './progress/progress.component';
 import EpisodeListComponent from './episode/episode-list.component';
-import NextEpisodeComponent from './next-episode/next-episode.component';
+import { NextEpisodeComponent } from './next-episode/next-episode.component';
 
 @Component({
     selector: 'eh-show',
     template: require('./template/show.html'),
     styles: [ require('!raw!sass!./show.scss') ],
-    directives: [LazyLoadImageDirective, RatingComponent, FollowingButtonComponent, ProgressComponent, NextEpisodeComponent, EpisodeListComponent],
-    providers: []
+    directives: [ LazyLoadImageDirective, RatingComponent, FollowingButtonComponent, ProgressComponent, NextEpisodeComponent, EpisodeListComponent ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShowComponent {
-    updateEpisodeWatchStatus = new EventEmitter();
     showId;
     show;
 
@@ -31,16 +29,31 @@ export class ShowComponent {
         };
         this.show = result.show;
 
-        this.updateEpisodeWatchStatus.subscribe(
-            id => console.log('From show: ' + id),
-            error => console.log(error),
-            () => console.log('show says done')
-        );
     }
 
     get showName() {
         console.log('getting showName')
         return 'Silicon Valley';
+    }
+
+    get numberWatchedEpisodes() {
+        return 8;
+    }
+
+    get numberTotalEpisodes() {
+        return 10;
+    }
+
+    get nextEpisode() {
+        return {
+            id: 790,
+            name: 'Winter Is Coming',
+            episode: 1,
+            season: 1,
+            firstAired: new Date('2011-04-17'),
+            image: '',
+            watched: new Date('2012-09-01T17:44:01.000Z')
+        };
     }
 
     // ngAfterViewInit() {
