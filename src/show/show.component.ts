@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { LazyLoadImageDirective } from 'ng2-lazyload-image';
-import RatingComponent from '../lib/rating.component';
+import { RatingComponent } from '../components';
 import FollowingButtonComponent from './following.component';
 import { ProgressComponent } from './progress/progress.component';
 import EpisodeListComponent from './episode/episode-list.component';
@@ -56,8 +56,12 @@ export class ShowComponent {
         };
     }
 
-    // ngAfterViewInit() {
-    //     window['componentHandler'].upgradeAllRegistered()
-    // }
+    get voteResult() {
+        return {
+            totalScore: 100,
+            totalVotes: 14,
+            userVote: 6
+        };
+    }
 
 }
