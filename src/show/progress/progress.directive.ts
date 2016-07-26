@@ -8,8 +8,8 @@ export class ProgressDirective {
     private ctx;
     private zone: NgZone;
     private speed = 4;
-    private x = 100;
-    private y = 100;
+    private x = 75;
+    private y = 75;
     private radius = 50;
     private degrees;
     private _percent;

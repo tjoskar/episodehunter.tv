@@ -7,7 +7,7 @@ import { ProgressDirective } from './progress.directive';
         <h3>Your progress</h3>
         <p>You've seen <span>{{numberWatchedEpisodes}}</span> out of <span>{{numberTotalEpisodes}}</span> episodes.</p>
         <p *ngIf="showGoodWork"><span>Good work!</span></p>
-        <canvas height="200" width="200" progress [percent]="percent"></canvas>
+        <canvas style="margin: -25px 0 0 20px;" height="150" width="150" progress [percent]="percent"></canvas>
     `,
     directives: [ ProgressDirective ],
     changeDetection: ChangeDetectionStrategy.OnPush
