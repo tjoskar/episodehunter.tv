@@ -47,10 +47,11 @@ export class NextEpisodeComponent {
             return this.arir;
         }
         if (utility.time.isValidDate(firstAired)) {
-            if (firstAired.getTime() > utility.time.now()) {
-                this.arir = [`Aired: ${firstAired}`, '#03a37e'];
+            const dateString = firstAired.toISOString().substring(0, 10);
+            if (firstAired.getTime() < utility.time.now()) {
+                this.arir = [`Aired: ${dateString}`, '#03a37e'];
             } else {
-                this.arir = [`Airs: ${firstAired}`, '#D50000'];
+                this.arir = [`Airs: ${dateString}`, '#D50000'];
             }
         } else {
             this.arir = ['-', '#03a37e'];
