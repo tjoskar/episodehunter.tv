@@ -1,5 +1,4 @@
 import {Component, EventEmitter} from '@angular/core';
-import {RouteParams} from '@angular/router-deprecated';
 import RatingComponent from '../lib/rating.component';
 import FollowingButtonComponent from './following.component';
 import ProgressComponent from './progress/progress.component';
@@ -12,13 +11,13 @@ import NextEpisodeComponent from './next-episode/next-episode.component';
     directives: [RatingComponent, FollowingButtonComponent, ProgressComponent, NextEpisodeComponent, EpisodeListComponent],
     providers: []
 })
-class ShowComponent {
+export class ShowComponent {
     updateEpisodeWatchStatus = new EventEmitter();
     showId;
     show;
 
-    constructor(params: RouteParams) {
-        this.showId = params.get('id');
+    constructor() {
+        this.showId = 1;
 
         // Fetch from server
         const result = {
@@ -46,5 +45,3 @@ class ShowComponent {
     // }
 
 }
-
-export default ShowComponent;
