@@ -1,35 +1,33 @@
 <div id="one-div-to-rule-them-all">
-  <div class="loader"></div>
-  <eh-search *ngIf="showSerachDialog" (closeDialog)="closeSearchDialog()"></eh-search>
+    <div class="loader"></div>
+    <eh-search *ngIf="showSerachDialog" (closeDialog)="closeSearchDialog()"></eh-search>
 
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" [class.blur]="showSerachDialog">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title mdl-layout--large-screen-only">
-        <img alt="" class="logo-image" src="/assets/images/logo.png" />
-      </span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" linkTo="/">UPCOMING</a>
-        <a class="mdl-navigation__link">POPULAR MOVIES</a>
-        <a class="mdl-navigation__link">POPULAR SHOWS</a>
-        <p class="mdl-navigation__link" (click)="toogleSeach()" >SEARCH</p>
-      </nav>
+    <div class="layout" [class.blur]="showSerachDialog">
+        <header class="layout">
+            <div class="mdl-layout__header-row">
+                <a href="/" style="align-self: center;">
+                    <img alt="" class="logo-image" src="/assets/images/logo.png" />
+                </a>
+
+                <nav>
+                    <a linkTo="/">UPCOMING</a>
+                    <a linkTo="/show">SHOW</a>
+                    <a linkTo="/">POPULAR MOVIES</a>
+                    <a linkTo="/">POPULAR SHOWS</a>
+                    <p (click)="toogleSeach()">SEARCH</p>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <route-view></route-view>
+        </main>
+
+        <footer>
+            <p><a href="/aboutus" target="_blank">&#169;EpisodeHunter 2016</a> | <a href="/chart">Chart</a> | <a href="/privacypolicy" target="_blank">Privacy Policy</a> | <a href="/termsofservice" target="_blank">Terms Of Service</a> | <a href="/shows/featured">Featured</a> | <a href="/user/settings">Settings</a> | <a href="/kodi">Kodi&#9829;</a> | <a href="/plex">Plex&#9829;</a> | <a href="/logout">Logout</a></p>
+        </footer>
+
+        <div class="mobile-nav"></div>
+
     </div>
-  </header>
-
-  <main class="mdl-layout__content">
-    <route-view></route-view>
-  </main>
-
-  <footer>
-    <p><a href="/aboutus" target="_blank">&#169;EpisodeHunter 2016</a> | <a href="/chart">Chart</a> | <a href="/privacypolicy" target="_blank">Privacy Policy</a> | <a href="/termsofservice" target="_blank">Terms Of Service</a> | <a href="/shows/featured">Featured</a> | <a href="/user/settings">Settings</a> | <a href="/kodi">Kodi&#9829;</a> | <a href="/plex">Plex&#9829;</a> | <a href="/logout">Logout</a></p>
-  </footer>
-
-  <div class="mobile-nav"></div>
-
-  </div>
 </div>
