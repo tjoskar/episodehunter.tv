@@ -2,8 +2,8 @@ import './style/index.scss';
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { HTTP_PROVIDERS } from '@angular/http';
-import { provideStore, usePostMiddleware } from '@ngrx/store';
-import { REDUCERS, prevState, reducerPostMiddleware } from './reducers/reducers';
+import { provideStore } from '@ngrx/store';
+import { REDUCERS, prevState } from './reducers/reducers';
 import { AppComponent } from './app.component';
 
 import { HttpService } from './lib/http';
@@ -18,7 +18,6 @@ function main() {
         AuthService,
         LocalStorage,
         provideStore(REDUCERS, prevState()),
-        usePostMiddleware(reducerPostMiddleware)
     ])
     .then(() => '🦄')
     .catch(err => console.error(err));

@@ -2,13 +2,12 @@ import { upcomingShows } from '../upcomming/upcomming.reducer';
 
 const appStateName = 'appState';
 const REDUCERS = { upcomingShows };
+
 const prevState = () => {
     return window[appStateName];
 };
-const reducerPostMiddleware = state => {
-    return state.do(val => {
-        window[appStateName] = val;
-    });
+const saveState = state => {
+    window[appStateName] = state;
 };
 
-export { REDUCERS, reducerPostMiddleware, prevState };
+export { REDUCERS, saveState, prevState };

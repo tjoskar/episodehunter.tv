@@ -4,11 +4,13 @@ import { UpcomingComponent } from './upcomming/upcoming.component';
 import PopularComponent from './popular/popular.component';
 import SearchComponet from './search/search.component';
 import ShowComponent from './show/show.component';
+import { AppService } from './app.service';
 
 @Component({
     selector: 'episodehunter',
     template: require('./base-template.html'),
-    directives: [SearchComponet, ROUTER_DIRECTIVES]
+    directives: [SearchComponet, ROUTER_DIRECTIVES],
+    providers: [ AppService ]
 })
 @RouteConfig([
     {path: '/upcoming', name: 'UpcomingShows', component: UpcomingComponent, useAsDefault: true},
@@ -17,6 +19,10 @@ import ShowComponent from './show/show.component';
 ])
 class AppComponent {
     showSerachDialog = false;
+
+    constructor(appService: AppService) {
+        appService.syncCacheState();
+    }
 
     toogleSeach() {
         this.showSerachDialog = !this.showSerachDialog;
