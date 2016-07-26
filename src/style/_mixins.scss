@@ -1,5 +1,25 @@
+@import 'variables';
+
 @mixin vertical-align {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+@mixin tablet-and-up {
+    @media (min-width: $mq-mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $mq-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+	@media (min-width : $mq-tablet + 1) {
+		@content;
+	}
 }

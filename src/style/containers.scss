@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .mdl-layout {
   height: initial;
 }
@@ -38,4 +40,27 @@ show-renderer {
 
 .clear {
   clear: both;
+}
+
+.mobile-nav {
+    height: 56px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 7px 25px #888;
+    z-index: 1;
+
+    @include tablet-and-up {
+        display: none;
+    }
+}
+
+footer {
+    display: none;
+
+    @include tablet-and-up {
+        display: block;
+    }
 }
