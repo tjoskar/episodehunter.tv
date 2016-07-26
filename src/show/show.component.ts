@@ -1,4 +1,6 @@
-import {Component, EventEmitter} from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
+import { LazyLoadImageDirective } from 'ng2-lazyload-image';
+
 import RatingComponent from '../lib/rating.component';
 import FollowingButtonComponent from './following.component';
 import ProgressComponent from './progress/progress.component';
@@ -8,7 +10,8 @@ import NextEpisodeComponent from './next-episode/next-episode.component';
 @Component({
     selector: 'eh-show',
     template: require('./template/show.html'),
-    directives: [RatingComponent, FollowingButtonComponent, ProgressComponent, NextEpisodeComponent, EpisodeListComponent],
+    styles: [ require('!raw!sass!./show.scss') ],
+    directives: [LazyLoadImageDirective, RatingComponent, FollowingButtonComponent, ProgressComponent, NextEpisodeComponent, EpisodeListComponent],
     providers: []
 })
 export class ShowComponent {
