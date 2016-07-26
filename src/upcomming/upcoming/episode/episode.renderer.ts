@@ -1,4 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { LazyLoadImageDirective } from 'ng2-lazyload-image';
 import { UpcomingEpisode } from '../../../model';
 import { WeekdayPipe } from '../../../pipes';
 import { utility, config } from '../../../lib';
@@ -19,13 +20,11 @@ import { utility, config } from '../../../lib';
                         <p>{{episode.airs | date: 'yyyy-MM-dd'}}</p>
                     </div>
                 </hgroup>
-                <div
-                    [ngStyle]="{'background-image': 'url(' + showFanart + ')'}"
-                    class="backdrop">
-                </div>
+                <div class="backdrop" [lazyLoad]="showFanart" offset="100"></div>
             </div>
         </a>
     `,
+    directives: [ LazyLoadImageDirective ],
     pipes: [ WeekdayPipe ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })

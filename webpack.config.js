@@ -35,7 +35,8 @@ module.exports = {
                 exclude: [
                     // these packages have problems with their sourcemaps
                     path.resolve(__dirname, 'node_modules/rxjs'),
-                    path.resolve(__dirname, 'node_modules/@angular')
+                    path.resolve(__dirname, 'node_modules/@angular'),
+                    path.resolve(__dirname, 'node_modules/ng2-lazyload-image')
                 ]
             }
         ],

@@ -33,10 +33,15 @@ a {
   height: 221px;
   background-position: center;
   background-size: cover;
-  transition: all .2s ease;
+  transition: transform .2s ease, opacity 1s;
+  opacity: 0;
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.ng2-lazyloaded {
+    opacity: 1;
 }
 
 hgroup {
