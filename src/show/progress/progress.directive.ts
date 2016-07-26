@@ -1,11 +1,12 @@
-import {Directive, ElementRef, Input} from '@angular/core';
+import { Directive, ElementRef, Input, NgZone } from '@angular/core';
 
 @Directive({
     selector: '[progress]'
 })
-class ProgressDirective {
+export class ProgressDirective {
     @Input() percent;
     private ctx;
+    private zone: NgZone;
     private speed = 4;
     private x = 100;
     private y = 100;
@@ -15,8 +16,9 @@ class ProgressDirective {
     private _animationOffset;
     private _interval;
 
-    constructor(el: ElementRef) {
+    constructor(el: ElementRef, zone: NgZone) {
         this.ctx = el.nativeElement.getContext('2d');
+        this.zone = zone;
     }
 
     ngAfterContentChecked() {
@@ -42,7 +44,9 @@ class ProgressDirective {
     startAnimation() {
         this.clear();
         clearInterval(this._interval);
-        this._interval = setInterval(() => this.drawAnimation(), 10);
+        this._interval = this.zone.runOutsideAngular(() => {
+            this._interval = setInterval(() => this.drawAnimation(), 10);
+        });
     };
 
     drawArc() {
@@ -85,5 +89,3 @@ class ProgressDirective {
     };
 
 }
-
-export default ProgressDirective;
