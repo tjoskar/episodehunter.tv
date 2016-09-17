@@ -7,3 +7,7 @@ export interface Episode {
     image: string;
     watched: Date;
 };
+
+export interface Seasons {
+    [season: string]: Episode;
+}

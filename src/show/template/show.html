@@ -40,8 +40,8 @@
     </div>
 </div>
 
-<!-- <div class="media--content">
-  <div class="container">
-    <eh-episode-list [showId]="showId" (toggleWatchStatus)="updateEpisodeWatchStatus.emit($event)"></eh-episode-list>
-  </div>
-</div> -->
+<div class="media--content">
+    <div class="container">
+        <eh-episode-list [seasons]="seasons$ | async"></eh-episode-list>
+    </div>
+</div>

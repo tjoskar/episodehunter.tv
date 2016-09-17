@@ -1,20 +1,20 @@
 <div class="episode-wrapper wrapper">
-  <div class="content">
-    <h2>Episode List</h2>
-    <div class="button-list seasons">
-      <button id="season-action" class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">more_vert</i>
-      </button>
-      <ul class="mdl-menu mdl-js-menu" for="season-action">
-        <li class="mdl-menu__item">Mark selected season as watched</li>
-        <li class="mdl-menu__item">Mark all seasons as watched</li>
-      </ul>
-      <button *ngFor="#season of seasonNumbers" (click)="changeSeason(season)" [disabled]="selectedSeason === season" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Season {{season}}</button>
-    </div>
+    <div class="content">
+        <h2>Episode List</h2>
+        <div class="button-list seasons">
+            <button id="season-action" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu" for="season-action">
+                <li class="mdl-menu__item">Mark selected season as watched</li>
+                <li class="mdl-menu__item">Mark all seasons as watched</li>
+            </ul>
+            <button *ngFor="let season of seasons | seasonNumber" (click)="changeSeason(season)" [disabled]="selectedSeason === season" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Season {{season}}</button>
+        </div>
 
-    <div class="episode-list">
-      <episode-component *ngFor="#episode of episodes" [episode]="episode" (toggleWatchStatus)="toggleWatchStatus.emit($event)"></episode-component>
-    </div>
+        <!-- <div class="episode-list">
+            <episode-component *ngFor="#episode of episodes" [episode]="episode" (toggleWatchStatus)="toggleWatchStatus.emit($event)"></episode-component>
+        </div> -->
 
-  </div>
+    </div>
 </div>
