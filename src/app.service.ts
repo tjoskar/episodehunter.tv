@@ -13,7 +13,7 @@ export class AppService {
 
     syncCacheState() {
         this.store.subscribe(state => {
-            console.log('saving satet: ', state);
+            console.log('saving state: ', state);
             saveState(state);
         });
     }

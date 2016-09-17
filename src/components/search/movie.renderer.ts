@@ -1,6 +1,5 @@
-import {Component, Input} from '@angular/core';
-import utility from '../lib/utility';
-import {LazyLoadImage} from '../lib/lazy-load-image';
+import { Component, Input } from '@angular/core';
+import utility from '../../lib/utility';
 
 @Component({
     selector: 'movie-renderer',
@@ -13,15 +12,14 @@ import {LazyLoadImage} from '../lib/lazy-load-image';
     template: `
     <a href="{{movieLink}}">
         <div class="poster">
-            <img alt="" [defaultImg]="'http://img.episodehunter.tv/serie/poster/1363113862.png'" [lazyLoad]="moviePoster" [offset]="500">
-            <hgroup class="title">
+            <img src="http://img.episodehunter.tv/serie/poster/1363113862.png" alt="" [lazyLoad]="moviePoster" [offset]="500">
+            <div class="title">
                 <p>{{movieTitle}}</p>
-            </hgroup>
+            </div>
         </div>
     </a>`,
-    directives: [LazyLoadImage]
 })
-class MovieRenderer {
+export class MovieRenderer {
     @Input() movie;
 
     get movieTitle() {
@@ -42,6 +40,3 @@ class MovieRenderer {
     }
 
 }
-
-export default MovieRenderer;
-export {MovieRenderer};

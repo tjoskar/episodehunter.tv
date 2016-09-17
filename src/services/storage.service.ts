@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import utility from './utility';
+import { Injectable } from '@angular/core';
+import utility from '../lib/utility';
 
-interface storageObject {
-    data: any,
-    expiration: number,
-    obsolete: boolean
+interface StorageObject {
+    data: any;
+    expiration: number;
+    obsolete: boolean;
 };
 
 /**
@@ -15,8 +15,7 @@ interface storageObject {
  * }
  */
 @Injectable()
-class LocalStorage {
-
+export class LocalStorage {
     prefix;
 
     constructor() {
@@ -27,7 +26,7 @@ class LocalStorage {
         window.localStorage.removeItem(this.prefix + key);
     }
 
-    get(key: string): storageObject {
+    get(key: string): StorageObject {
         const strValue = window.localStorage.getItem(this.prefix + key);
         if (!strValue) {
             return undefined;
@@ -65,6 +64,3 @@ class LocalStorage {
         window.localStorage.clear();
     };
 }
-
-export default LocalStorage;
-export {LocalStorage};

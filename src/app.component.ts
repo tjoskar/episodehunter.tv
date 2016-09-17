@@ -1,14 +1,13 @@
+import './style/index.scss';
 import { Component } from '@angular/core';
-import SearchComponet from './search/search.component';
 import { AppService } from './app.service';
 
 @Component({
     selector: 'episodehunter',
     template: require('./base-template.html'),
-    directives: [ SearchComponet ],
     providers: [ AppService ]
 })
-class AppComponent {
+export class AppComponent {
     showSerachDialog = false;
 
     constructor(appService: AppService) {
@@ -23,5 +22,3 @@ class AppComponent {
         this.showSerachDialog = false;
     }
 }
-
-export {AppComponent};

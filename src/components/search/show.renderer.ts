@@ -1,6 +1,5 @@
-import {Component, Input} from '@angular/core';
-import utility from '../lib/utility';
-import {LazyLoadImage} from '../lib/lazy-load-image';
+import { Component, Input } from '@angular/core';
+import utility from '../../lib/utility';
 
 @Component({
     selector: 'show-renderer',
@@ -13,15 +12,14 @@ import {LazyLoadImage} from '../lib/lazy-load-image';
     template: `
     <a href="{{showLink}}">
         <div class="poster">
-            <img alt="" [defaultImg]="'http://img.episodehunter.tv/serie/poster/1363113862.png'" [lazyLoad]="showPoster" [offset]="500">
-            <hgroup class="title">
+            <img src="http://img.episodehunter.tv/serie/poster/1363113862.png" alt="" [lazyLoad]="showPoster" [offset]="500">
+            <div class="title">
                 <p>{{showName}}</p>
-            </hgroup>
+            </div>
         </div>
     </a>`,
-    directives: [LazyLoadImage]
 })
-class ShowRenderer {
+export class ShowRenderer {
     @Input() show;
 
     get showName() {
@@ -39,6 +37,3 @@ class ShowRenderer {
     }
 
 }
-
-export default ShowRenderer;
-export {ShowRenderer};

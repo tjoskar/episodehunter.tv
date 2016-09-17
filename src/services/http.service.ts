@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {Http, Headers} from '@angular/http';
-import {Observable} from 'rxjs';
-import AuthService from '../authentication/auth.service';
-import {config} from '../config';
+import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import { Observable } from 'rxjs';
+import { config } from '../lib/config';
+import { AuthService } from './auth.service';
 
 @Injectable()
-class HttpService {
+export class HttpService {
     http: Http;
     authService: AuthService;
 
@@ -37,7 +37,7 @@ class HttpService {
 
     generateUrl(url: string) {
         if (url[0] === '/') {
-            return `${config.apiUrl}${url}`;
+            return config.baseApiUrl + url;
         } else {
             return url;
         }
@@ -65,6 +65,3 @@ class HttpService {
     }
 
 }
-
-export default HttpService;
-export { HttpService };

@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {Http, Headers} from '@angular/http';
-import {Observable} from 'rxjs';
-import {LocalStorage} from '../lib/storage';
+import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import { Observable } from 'rxjs';
+import { LocalStorage } from './storage.service';
 import utility from '../lib/utility';
 
 @Injectable()
-class AuthService {
+export class AuthService {
     http: Http;
     storage: LocalStorage;
 
@@ -15,7 +15,8 @@ class AuthService {
     }
 
     createToken(username: string, password: string) {
-        return this.http.post('http://localhost:8000/auth/create-token',
+        return this.http.post(
+            'http://localhost:8000/auth/create-token',
             JSON.stringify({username, password}),
             {
                 headers: new Headers({'Content-Type': 'application/json'})
@@ -52,5 +53,3 @@ class AuthService {
     }
 
 }
-
-export default AuthService;

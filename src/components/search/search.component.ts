@@ -1,15 +1,12 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {SearchService} from './search.service';
-import MovieRenderer from './movie.renderer';
-import ShowRenderer from './show.renderer';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { SearchService } from './search.service';
 
 @Component({
     selector: 'eh-search',
-    template: require('./template/search.html'),
-    directives: [MovieRenderer, ShowRenderer],
-    providers: [SearchService]
+    template: require('./search.html'),
+    providers: [ SearchService ]
 })
-class SearchComponet {
+export class SearchComponet {
     @Output() closeDialog = new EventEmitter();
     searchEmitter = new EventEmitter<string>();
     service: SearchService;
@@ -34,6 +31,3 @@ class SearchComponet {
     }
 
 }
-
-export default SearchComponet;
-export {SearchComponet};
