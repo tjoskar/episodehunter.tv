@@ -2,27 +2,27 @@
     <div class="upcoming">
         <div *ngIf="!!upcomingShows?.justAired?.length">
             <h3>just aired</h3>
-            <episode-renderer *ngFor="let episode of upcomingShows.justAired" [episode]="episode"></episode-renderer>
+            <upcoming-episode *ngFor="let episode of upcomingShows.justAired" [episode]="episode"></upcoming-episode>
         </div>
 
         <div *ngIf="!!upcomingShows?.thisWeek?.length">
             <h3>this week</h3>
-            <episode-renderer *ngFor="let episode of upcomingShows.thisWeek" [episode]="episode"></episode-renderer>
+            <upcoming-episode *ngFor="let episode of upcomingShows.thisWeek" [episode]="episode"></upcoming-episode>
         </div>
 
         <div *ngIf="!!upcomingShows?.nextWeek?.length">
             <h3>next week</h3>
-            <episode-renderer *ngFor="let episode of upcomingShows.nextWeek" [episode]="episode"></episode-renderer>
+            <upcoming-episode *ngFor="let episode of upcomingShows.nextWeek" [episode]="episode"></upcoming-episode>
         </div>
 
         <div *ngIf="!!upcomingShows?.upcoming?.length">
             <h3>upcoming</h3>
-            <episode-renderer *ngFor="let episode of upcomingShows.upcoming" [episode]="episode"></episode-renderer>
+            <upcoming-episode *ngFor="let episode of upcomingShows.upcoming" [episode]="episode"></upcoming-episode>
         </div>
 
         <div *ngIf="!!upcomingShows?.tba?.length">
             <h3>tba</h3>
-            <episode-renderer *ngFor="let episode of upcomingShows.tba" [episode]="episode"></episode-renderer>
+            <upcoming-episode *ngFor="let episode of upcomingShows.tba" [episode]="episode"></upcoming-episode>
         </div>
     </div>
 </div>

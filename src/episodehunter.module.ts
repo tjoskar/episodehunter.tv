@@ -4,15 +4,19 @@ import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers, prevState } from './reducers/reducers';
+import { UpcomingModule } from './upcomming/upcomming.module';
 import * as Services from './services';
 import { SearchModule } from './components';
 import { AppComponent } from './app.component';
+import { routing } from './app.routing';
 
 const imports = [
     BrowserModule,
     HttpModule,
     StoreModule.provideStore(reducers, prevState()),
-    SearchModule
+    SearchModule,
+    UpcomingModule,
+    routing
 ];
 
 @NgModule({

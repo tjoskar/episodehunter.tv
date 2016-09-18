@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { UpcomingShows, UpcomingEpisode, ApplicationState } from '../model';
-import { actions } from './upcomming.reducer';
-import { HttpService } from '../lib/http';
+import { HttpService } from '../services/http.service';
 import utility from '../lib/utility';
+import { actions } from './upcomming.reducer';
 
 @Injectable()
 export class UpcomingService {

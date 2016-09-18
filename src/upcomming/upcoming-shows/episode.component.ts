@@ -1,38 +1,35 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-import { LazyLoadImageDirective } from 'ng2-lazyload-image';
-import { UpcomingEpisode } from '../../../model';
-import { WeekdayPipe } from '../../../pipes';
-import { utility, config } from '../../../lib';
+import { UpcomingEpisode } from '../../model';
+import { utility, config } from '../../lib';
 
 @Component({
-    selector: 'episode-renderer',
+    selector: 'upcoming-episode',
     styles: [ require('!raw!sass!./episode.scss') ],
     template: `
         <a href="{{showLink}}">
             <div class="poster">
-                <hgroup>
+                <div class="episode-info">
                     <div class="info-row">
                         <p class="title">{{episode.show.title}}</p>
-                        <p>{{episode.airs | weekday}}</p>
+                        <p style="color: #fff">{{episode.airs | weekday}}</p>
                     </div>
                     <div class="info-row">
-                        <p>{{episodeNumber}}</p>
-                        <p>{{episode.airs | date: 'yyyy-MM-dd'}}</p>
+                        <p style="color: #fff">{{episodeNumber}} - {{episodeName}}</p>
+                        <p style="color: #fff">{{episode.airs | date: 'yyyy-MM-dd'}}</p>
                     </div>
-                </hgroup>
+                </div>
                 <div class="backdrop" [lazyLoad]="showFanart" offset="100"></div>
             </div>
         </a>
     `,
-    directives: [ LazyLoadImageDirective ],
-    pipes: [ WeekdayPipe ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EpisodeRenderer {
+export class EpisodeComponent {
     @Input() episode: UpcomingEpisode;
     episodeNumber;
     showLink;
     showFanart;
+    episodeName;
 
     hasAirDate() {
         return this.episode.airs instanceof Date;
@@ -42,6 +39,7 @@ export class EpisodeRenderer {
         this.episodeNumber = this.generateEpisodenumber(this.episode);
         this.showLink = this.generateShowUrl(this.episode);
         this.showFanart = this.generateFanartUrl(this.episode);
+        this.episodeName = this.episode.title || 'TBA';
     }
 
     generateFanartUrl(episode: UpcomingEpisode) {
