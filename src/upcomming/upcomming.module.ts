@@ -5,12 +5,10 @@ import { PipesModule } from '../pipes/pipes.module';
 import { EpisodeComponent } from './upcoming-shows/episode.component';
 import { UpcomingShowsComponent } from './upcoming-shows/upcoming-shows.component';
 import { UpcomingComponent } from './upcoming.component';
-import { UpcomingService } from './upcoming.service';
 
 @NgModule({
     declarations: [ EpisodeComponent, UpcomingShowsComponent, UpcomingComponent ],
     imports: [ CommonModule, LazyLoadImageModule, PipesModule ],
-    exports: [ UpcomingComponent ],
-    providers: [ UpcomingService ]
+    exports: [ UpcomingComponent ]
 })
 export class UpcomingModule {}

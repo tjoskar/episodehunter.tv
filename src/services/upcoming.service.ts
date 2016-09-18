@@ -1,27 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { UpcomingShows, UpcomingEpisode, ApplicationState } from '../model';
-import { HttpService } from '../services/http.service';
+import { UpcomingShows, UpcomingEpisode } from '../model';
+import { HttpService } from './http.service';
 import utility from '../lib/utility';
-import { actions } from './upcomming.reducer';
 
 @Injectable()
 export class UpcomingService {
     http: HttpService;
-    store: Store<ApplicationState>;
 
-    constructor(http: HttpService, store: Store<ApplicationState>) {
+    constructor(http: HttpService) {
         this.http = http;
-        this.store = store;
     }
 
-    updateModel() {
+    getUpcomingEpisodes() {
         const url = '/user/upcoming/episodes';
         return this.http
             .get<{episodes: UpcomingEpisode[]}>(url)
             .map(upcoming => upcoming.episodes)
-            .map(episodes => this.groupEpisodes(episodes))
-            .do(episodes => this.store.dispatch({type: actions.UPDATE_UPCOMING_SHOWS, payload: episodes}));
+            .map(episodes => this.groupEpisodes(episodes));
     }
 
     groupEpisodes(upcomingEpisodes: UpcomingEpisode[]): UpcomingShows {

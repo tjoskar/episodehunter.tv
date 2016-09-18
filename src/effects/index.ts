@@ -1,3 +1,1 @@
-import { ApplicationEffects } from './application.effects';
-
-export const EFFECTS = [ ApplicationEffects ];
+export { UpcomingEffects } from './upcoming.effect';

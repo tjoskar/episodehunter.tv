@@ -1,7 +1,8 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ApplicationState } from '../model';
-import { UpcomingService } from './upcoming.service';
+import { upcomingActions } from '../actions';
+import { getUpcomingShows$ } from '../selectors';
 
 @Component({
     selector: 'upcoming',
@@ -15,18 +16,15 @@ import { UpcomingService } from './upcoming.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UpcomingComponent {
-    service: UpcomingService;
     store: Store<ApplicationState>;
     upcomingShows$;
-    upcoming;
 
-    constructor(service: UpcomingService, store: Store<ApplicationState>) {
-        this.service = service;
+    constructor(store: Store<ApplicationState>) {
         this.store = store;
     }
 
     ngOnInit() {
-        this.service.updateModel().subscribe();
-        this.upcomingShows$ = this.store.select(s => s.upcomingShows);
+        this.store.dispatch(upcomingActions.fetchShows());
+        this.upcomingShows$ = this.store.let(getUpcomingShows$());
     }
 }

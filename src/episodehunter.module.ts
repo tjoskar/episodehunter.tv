@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { UpcomingEffects } from './effects/upcoming.effect';
 import { reducers, prevState } from './reducers/reducers';
 import { UpcomingModule } from './upcomming/upcomming.module';
 import * as Services from './services';
@@ -14,6 +15,7 @@ const imports = [
     BrowserModule,
     HttpModule,
     StoreModule.provideStore(reducers, prevState()),
+    EffectsModule.run(UpcomingEffects),
     SearchModule,
     UpcomingModule,
     routing
