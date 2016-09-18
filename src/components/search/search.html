@@ -2,7 +2,12 @@
   <div id="close" (click)="closeDialog.emit(true)">
     <i class="material-icons">highlight_off</i>
   </div>
-  <input ngModel (ngModelChange)="searchEmitter.next($event)" id="search-input" type="text" autofocus="" placeholder="Search for a tv show or movie"/>
+  <input
+    id="search-input"
+    type="text"
+    autofocus
+    placeholder="Search for a tv show or movie"
+    (input)="searchEmitter.emit($event.target.value)">
 
   <div>
     <div [class.hide]="!shows.length">

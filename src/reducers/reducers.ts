@@ -1,7 +1,7 @@
-import { upcomingShows } from '../upcomming/upcomming.reducer';
+import { upcomingShows } from './upcoming-shows.reducer';
 
 const appStateName = 'appState';
-const REDUCERS = { upcomingShows };
+const reducers = { upcomingShows };
 
 const prevState = () => {
     return window[appStateName];
@@ -10,4 +10,4 @@ const saveState = state => {
     window[appStateName] = state;
 };
 
-export { REDUCERS, saveState, prevState };
+export { reducers, saveState, prevState };

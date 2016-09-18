@@ -34,3 +34,7 @@ interface ErrorConstructor extends ErrorStackTraceLimit {}
 interface Global extends GlobalEnvironment  {}
 interface NodeRequire extends WebpackRequire {}
 interface NodeModule extends WebpackModule {}
+
+interface Object {
+    values(object: any): any[];
+}

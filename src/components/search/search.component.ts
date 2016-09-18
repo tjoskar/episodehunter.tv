@@ -17,7 +17,7 @@ export class SearchComponet {
         this.service = service;
     }
 
-    ngAfterContentInit() {
+    ngOnInit() {
         this.searchEmitter
             .filter(term => term.length >= 2)
             .debounceTime(500)
