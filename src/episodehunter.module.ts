@@ -9,6 +9,7 @@ import { UpcomingModule } from './upcomming/upcomming.module';
 import * as Services from './services';
 import { SearchModule } from './components';
 import { AppComponent } from './app.component';
+import { ShowModule } from './show/show.model';
 import { routing } from './app.routing';
 
 const imports = [
@@ -18,6 +19,7 @@ const imports = [
     EffectsModule.run(UpcomingEffects),
     SearchModule,
     UpcomingModule,
+    ShowModule,
     routing
 ];
 

@@ -1,20 +1,12 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { LazyLoadImageDirective } from 'ng2-lazyload-image';
-import { RatingComponent } from '../components';
-import FollowingButtonComponent from './following.component';
-import { ProgressComponent } from './progress/progress.component';
-import EpisodeListComponent from './episode/episode-list.component';
-import { NextEpisodeComponent } from './next-episode/next-episode.component';
-import { ShowService } from './show.service';
+import { ShowService } from '../services/show.service';
 import { Seasons } from '../model';
 
 @Component({
     selector: 'eh-show',
-    template: require('./template/show.html'),
+    template: require('./show.html'),
     styles: [ require('!raw!sass!./show.scss') ],
-    directives: [ LazyLoadImageDirective, RatingComponent, FollowingButtonComponent, ProgressComponent, NextEpisodeComponent, EpisodeListComponent ],
-    providers: [ ShowService ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShowComponent {
