@@ -17,6 +17,8 @@ export interface Show {
     overview?: string;
     runtime?: string;
     status?: string;
+    pixelatedFanart?: string;
+    pixelatedPoster?: string;
     fanart?: string;
     poster?: string;
 }

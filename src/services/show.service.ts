@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
-import { Seasons } from '../model';
+import { Seasons, Show } from '../model';
 
 @Injectable()
 export class ShowService {
@@ -11,7 +11,9 @@ export class ShowService {
     }
 
     fetchShow(showId: number) {
-        throw new Error('NOT IMPLEMETED');
+        const url = `/show/${showId}`;
+        return this.http.get<{show: Show}>(url)
+            .map(data => data.show);
     }
 
     fetchEpisodes(showId: number) {

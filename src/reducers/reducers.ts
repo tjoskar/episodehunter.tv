@@ -1,7 +1,13 @@
-import { upcomingShows } from './upcoming-shows.reducer';
+import { shows, ShowsState } from './shows.reducers';
+import { upcomingShows, UpcomingShowsState } from './upcoming-shows.reducer';
+
+export interface ApplicationState {
+    upcomingShows: UpcomingShowsState;
+    shows: ShowsState;
+}
 
 const appStateName = 'appState';
-const reducers = { upcomingShows };
+const reducers = { upcomingShows, shows };
 
 const prevState = () => {
     return window[appStateName];

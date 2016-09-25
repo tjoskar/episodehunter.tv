@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import { showActions } from '../actions';
@@ -7,23 +8,24 @@ import { ApplicationState } from '../reducers/reducers';
 import { Seasons, Show } from '../model';
 
 @Component({
-    selector: 'eh-show',
-    template: require('./show.html'),
-    styles: [ require('!raw!sass!./show.scss') ],
+    selector: 'show-page',
+    template: `
+        <show></show>
+    `,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ShowComponent {
+export class ShowPageComponent {
     store: Store<ApplicationState>;
     seasons$: Observable<Seasons>;
-    showId;
-    show;
 
-    constructor(store: Store<ApplicationState>) {
+    constructor(store: Store<ApplicationState>, route: ActivatedRoute) {
         this.store = store;
         this.store.dispatch(showActions.fetchShow(10));
-        this.store.let(getShow$(10))
-            .subscribe(d => console.log(d));
-        this.showId = 10;
+        route
+            .params
+            .select<string>('id')
+            .map(id => Number(id))
+            .switchMap(id => store.let(getShow$(id)));
 
         // Fetch from server
         const show: Show = {
@@ -85,5 +87,4 @@ export class ShowComponent {
             userVote: 6
         };
     }
-
 }

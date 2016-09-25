@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ApplicationState } from '../model';
+import { ApplicationState } from '../reducers/reducers';
 import { upcomingActions } from '../actions';
 import { getUpcomingShows$ } from '../selectors';
 
